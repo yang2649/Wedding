@@ -1,0 +1,105 @@
+@charset "UTF-8";
+
+/* Box model 설정 */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* 전체 body 스타일 */
+body {
+  background-color: #f8f8f8;
+  font-size: 16px;
+}
+
+/* 링크 스타일 */
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+a:hover {
+  background-color: #f5f5f5;
+}
+
+/* 테이블 스타일 */
+table,
+th,
+td {
+  border: 1px solid #333;
+  border-collapse: collapse;
+}
+
+/* 메인 영역 스타일 */
+#main {
+  width: 80%;
+  margin: 50px auto 200px auto;
+}
+
+/* 제목 스타일 */
+h2 {
+  margin: 20px 10px;
+  text-align: center;
+}
+
+/* 목록 스타일 */
+ul {
+  margin: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin: 5px;
+}
+
+/* 슬라이딩 메뉴 스타일 */
+.slide-menu {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: #333;
+  transition: all 0.3s ease;
+  z-index: 999;
+}
+
+.slide-menu.show {
+  left: 0;
+}
+
+.slide-menu .menu-title {
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.slide-menu ul {
+  margin-top: 30px;
+  padding: 0 20px;
+}
+
+.slide-menu li {
+  margin-bottom: 10px;
+}
+
+.slide-menu a {
+  display: block;
+  padding: 10px;
+  color: #fff;
+  font-size: 16px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.slide-menu a:hover {
+  background-color: #f5f5f5;
+  color: #333;
+}
