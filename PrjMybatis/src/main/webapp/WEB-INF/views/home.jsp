@@ -12,4 +12,4 @@
    <p>${ tel }</p>
    <a href="/List">목록</a>
 </body>
-</html>
+</html>    
