@@ -13,6 +13,9 @@
 <link rel="stylesheet" href="/css/common.css">
 <link rel="stylesheet"
 	href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500&display=swap" rel="stylesheet">
 <style>
 /* 슬라이딩 메뉴 스타일 */
 ul.sliding-menu, ul.sliding-menu ul {
@@ -62,7 +65,8 @@ ul.sliding-menu li:hover > ul {
   margin: 0;
   padding: 0 15px;
   text-align: left;
-  font-size: 35px;
+  font-size: 30px;
+  font-family: 'Times New Roman';
 }
 
 .header span {
@@ -72,7 +76,7 @@ ul.sliding-menu li:hover > ul {
 .header a {
   text-decoration: none;
   color: #333;
-  font-size: 20px;
+  font-size: 16px;
   margin-left: auto; /* 이전에는 margin-right를 조절했는데 margin-left을 auto로 변경 */
   padding: 5px 3px;
   transition: background-color 0.3s ease;
@@ -96,13 +100,13 @@ ul.sliding-menu li:hover > ul {
   display: flex;
   padding: 15px;
   position: fixed;
-  top: 40px;
+  top: 35px;
   right: 45px;
   width: 35px;
   height: 35px;
   cursor: pointer;
   z-index: 1001;
-  font-family: 'Montserrat';
+  font-family: 'Cinzel', serif;
   font-size: 20px;
 }
 
@@ -132,6 +136,7 @@ ul.sliding-menu li:hover > ul {
   transition: right 1.0s ease;
   z-index: 999;
   font-weight: bold;
+  font-family: 'Cinzel', serif;
   overflow-y: auto;
   padding-bottom: 50px;
 }
@@ -185,6 +190,8 @@ ul.sliding-menu li:hover > ul {
 li {
   display: flex;
   justify-content: center;
+  font-family: 'Cinzel', serif;
+  font-size: 20px;
 }
 
 .header span {
@@ -281,11 +288,16 @@ li {
   </span>
 </div>
 	<div class="menu-toggle">MENU</div>
-  <span>Menu</span>
 <div class="sliding-menu">
   <ul>
     <li>
       <ul>
+      	</br>
+      	</br>
+      	</br>
+      	</br>
+      	</br>
+      	<li><a href="/User/Login">로그인</a><li></br></br>
         <li><a href="/User/List">사용자 목록</a></li>
         <li><a href="/User/WriteForm">사용자 등록</a></li>
         <li><hr></li>
@@ -318,7 +330,7 @@ li {
 		<div><img src="./img/part3.jpg" alt="Image 3"></div>
 	</div>
 	
-	<script>  
+	<script>
 	const menuButton = document.querySelector('.menu-toggle');
 	const slidingMenu = document.querySelector('.sliding-menu');
 	const slidingMenuOverlay = document.querySelector('.sliding-menu-overlay');
