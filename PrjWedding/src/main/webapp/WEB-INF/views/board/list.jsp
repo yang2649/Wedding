@@ -13,7 +13,7 @@
 <link rel="stylesheet" href="/css/common.css" />
     
 <style>     
-  #table td:not([colspan]) { text-align: center;  } 
+  #table            td:not([colspan]) { text-align: center;  } 
   #table th:nth-of-type(1) { width:100px;  }
   #table th:nth-of-type(2) { width:500px;  }
   #table th:nth-of-type(3) { width:100px;  }
