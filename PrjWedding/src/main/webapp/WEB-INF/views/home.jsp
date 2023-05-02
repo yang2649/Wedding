@@ -101,7 +101,7 @@ ul.sliding-menu li:hover > ul {
   padding: 15px;
   position: fixed;
   top: 35px;
-  right: 45px;
+  right: 65px;
   width: 35px;
   height: 35px;
   cursor: pointer;
@@ -117,6 +117,10 @@ ul.sliding-menu li:hover > ul {
   margin: 0 15px 0 0;
   transition: background-color 0.3s ease;
   padding: 10px 5px;
+}
+
+.menu-toggle.white {
+  color: #fff;
 }
 
 @media screen and (max-width: 768px) {
@@ -276,6 +280,10 @@ li {
   justify-content: center;
 }
 
+.gold {
+  color: #FFD700;
+}
+
 </style>
 
 </head>
@@ -363,24 +371,25 @@ li {
     let lastScrollTop = 0;
 
     $(window).scroll(function () {
-      const currentScrollTop = $(this).scrollTop();
-      const header = $('.header');
+        const currentScrollTop = $(this).scrollTop();
+        const header = $('.header');
 
-      if (currentScrollTop > lastScrollTop) {
-        header.addClass('hide-header');
-      } else {
-        header.removeClass('hide-header');
-      }
+        if (currentScrollTop > lastScrollTop) {
+          header.addClass('hide-header');
+        } else {
+          header.removeClass('hide-header');
+        }
 
-      if (currentScrollTop > 0) {
-        header.addClass('sticky');
-      } else {
-        header.removeClass('sticky');
-      }
-
-      lastScrollTop = currentScrollTop;
+        if (currentScrollTop > 0) {
+          header.addClass('sticky');
+          menuButton.classList.add('gold'); // 메뉴 버튼 색상 변경 코드 추가
+        } else {
+          header.removeClass('sticky');
+          menuButton.classList.remove('gold'); // 메뉴 버튼 색상 변경 코드 추가
+        }
+        lastScrollTop = currentScrollTop;
+      });
     });
-  });
 </script>
 </body>
 </html> 
