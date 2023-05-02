@@ -318,7 +318,7 @@ li {
 		<div><img src="./img/part3.jpg" alt="Image 3"></div>
 	</div>
 	
-	<script>
+	<script>  
 	const menuButton = document.querySelector('.menu-toggle');
 	const slidingMenu = document.querySelector('.sliding-menu');
 	const slidingMenuOverlay = document.querySelector('.sliding-menu-overlay');
