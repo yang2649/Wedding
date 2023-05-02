@@ -213,6 +213,12 @@ li {
   margin-right: 15px;
 }
 
+/* 헤더가 사라졌다 나타나는 기능을 위한 추가 스타일 */
+.hide-header {
+  transform: translateY(-100%);
+  transition: transform 0.3s ease-in-out;
+}
+
 
 #main-slider {
   position: relative;
@@ -269,8 +275,6 @@ li {
   display: flex;
   justify-content: center;
 }
-
-
 
 </style>
 
@@ -330,37 +334,51 @@ li {
 		<div><img src="./img/part3.jpg" alt="Image 3"></div>
 	</div>
 	
-	<script>
-	const menuButton = document.querySelector('.menu-toggle');
-	const slidingMenu = document.querySelector('.sliding-menu');
-	const slidingMenuOverlay = document.querySelector('.sliding-menu-overlay');
+<script>
+  const menuButton = document.querySelector('.menu-toggle');
+  const slidingMenu = document.querySelector('.sliding-menu');
+  const slidingMenuOverlay = document.querySelector('.sliding-menu-overlay');
 
-  menuButton.addEventListener('click', function() {
+  menuButton.addEventListener('click', function () {
     slidingMenu.classList.toggle('open');
     slidingMenuOverlay.classList.toggle('open');
   });
-  
-  slidingMenuOverlay.addEventListener('click', function() {
-	  slidingMenu.classList.remove('open');
-	  slidingMenuOverlay.classList.remove('open');
-	});
-  
-  $(window).scroll(function() {
-    if ($(this).scrollTop() > 0) {
-      $('header').addClass('sticky');
-    } else {
-      $('header').removeClass('sticky');
-    }
+
+  slidingMenuOverlay.addEventListener('click', function () {
+    slidingMenu.classList.remove('open');
+    slidingMenuOverlay.classList.remove('open');
   });
-  $(document).ready(function(){
+
+  $(document).ready(function () {
     $('#main-slider').bxSlider({
       auto: true,
       autoControls: true,
       stopAutoOnClick: true,
-      pager: true,   
+      pager: true,
       speed: 500,
       pause: 4000,
       slideMargin: 0
+    });
+
+    let lastScrollTop = 0;
+
+    $(window).scroll(function () {
+      const currentScrollTop = $(this).scrollTop();
+      const header = $('.header');
+
+      if (currentScrollTop > lastScrollTop) {
+        header.addClass('hide-header');
+      } else {
+        header.removeClass('hide-header');
+      }
+
+      if (currentScrollTop > 0) {
+        header.addClass('sticky');
+      } else {
+        header.removeClass('sticky');
+      }
+
+      lastScrollTop = currentScrollTop;
     });
   });
 </script>
