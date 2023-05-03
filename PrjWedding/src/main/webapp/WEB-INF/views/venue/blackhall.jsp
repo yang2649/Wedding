@@ -301,7 +301,7 @@ p {
 <h2 style="margin: 0; padding: 15px; text-align: center;" class="logo">Green<br>Wedding</h2>
 	
   <span style="margin-right: auto;">
-    <a href="#" style="margin: 0 5px;">VENUE</a>
+    <a href="/Venue01" style="margin: 0 5px;">VENUE</a>
     <a href="#" style="margin: 0 5px;">CATERRING</a>
     <a href="#" style="margin: 0 5px;">COOPERATIVE</a>
     <a href="#" style="margin: 0 5px;">RESERVATION</a>
