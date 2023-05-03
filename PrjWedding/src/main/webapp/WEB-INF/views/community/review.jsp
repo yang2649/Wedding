@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>공지사항</title>
+<title>Insert title here</title>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script
 	src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
@@ -16,7 +16,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
 <style>
 /* 슬라이딩 메뉴 스타일 */
 ul.sliding-menu, ul.sliding-menu ul {
@@ -286,7 +285,7 @@ nav  {
 </head>
 <body>
 
-   <div class="header">
+  <div class="header">
 <h2 style="margin: 0; padding: 15px; text-align: center;" class="logo">Green<br>Wedding</h2>
 	
   <span style="margin-right: auto;">
@@ -373,30 +372,57 @@ nav  {
       });
     });
 </script>
-
-      <h2 style= "text-align: center;">공지사항</h2>
     
-     <div class="customer-notic">
-       <!-- <c:forEach var="" items=""></c:forEach> -->
-       <hr>
-       <div class="noticetitle">
-         <ul class="shownotice">
-            <li>No</li>
-            <li class="tit">제목</li>
-            <li class="name" style="display:none">글쓴이</li>
-            <li class="date" style="display: ">날짜</li>
-            <li class="cont" style="display:">조회수</li>
-         </ul>
-         <hr>
-         <ul class="shownotice">
-            <li class="tit">와라라라라라</li>
-            <li class="name" style="display:none">글쓴이</li>
-            <li class="date" style="display: ">오늘</li>
-            <li class="cont" style="display:">12</li>
-            <li>공지</li>
-         </ul>
-       </div>
-     </div>
      
+<div class="container "  style="margin: auto; padding:15px 15px 15px 120px;">
+  <div class="row">
+
+<div class="card" style="width: 18rem; margin:20px;">
+  <img class="card-img-top" src="./img/review/review1.jpg" alt="Card image cap">
+  <div class="card-body">
+    <p class="card-text">김민경 고객님: 식장도넓고 주차장도 넓어서 하객들이 정말 좋아했습니다. 인생의 단 한번뿐인 결혼식을 행복하게 마무리하게 되어서 기뻐요!!</p>
+  </div>
+</div>
+
+<div class="card"  style="width: 18rem;  margin:20px;">
+  <img class="card-img-top" src="./img/review/review1.jpg" alt="Card image cap">
+  <div class="card-body">
+    <p class="card-text">김민경 고객님: 식장도넓고 주차장도 넓어서 하객들이 정말 좋아했습니다. 인생의 단 한번뿐인 결혼식을 행복하게 마무리하게 되어서 기뻐요!!</p>
+  </div>
+</div>
+
+<div class="card"  style="width: 18rem; margin:20px; ">
+  <img class="card-img-top" src="./img/review/review1.jpg" alt="Card image cap">
+  <div class="card-body">
+    <p class="card-text">김민경 고객님: 식장도넓고 주차장도 넓어서 하객들이 정말 좋아했습니다. 인생의 단 한번뿐인 결혼식을 행복하게 마무리하게 되어서 기뻐요!!</p>
+  </div>
+</div>
+
+<div class="card"  style="width: 18rem; margin:20px;">
+  <img class="card-img-top" src="./img/review/review1.jpg" alt="Card image cap">
+  <div class="card-body">
+    <p class="card-text">김민경 고객님: 식장도넓고 주차장도 넓어서 하객들이 정말 좋아했습니다. 인생의 단 한번뿐인 결혼식을 행복하게 마무리하게 되어서 기뻐요!!</p>
+  </div>
+</div>
+
+<div class="card"  style="width: 18rem; margin:20px;">
+  <img class="card-img-top" src="./img/review/review1.jpg" alt="Card image cap">
+  <div class="card-body">
+    <p class="card-text">김민경 고객님: 식장도넓고 주차장도 넓어서 하객들이 정말 좋아했습니다. 인생의 단 한번뿐인 결혼식을 행복하게 마무리하게 되어서 기뻐요!!</p>
+  </div>
+</div>
+
+<div class="card"  style="width: 18rem; margin:20px;">
+  <img class="card-img-top" src="./img/review/review1.jpg" alt="Card image cap">
+  <div class="card-body">
+    <p class="card-text">김민경 고객님: 식장도넓고 주차장도 넓어서 하객들이 정말 좋아했습니다. 인생의 단 한번뿐인 결혼식을 행복하게 마무리하게 되어서 기뻐요!!</p>
+  </div>
+</div>
+
+  </div>
+  </div>
+
+
+
 </body>
 </html>
