@@ -11,6 +11,11 @@
 	src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
 <link rel="shortcut icon" href="/img/favicon.ico">
 <link rel="stylesheet" href="/css/common.css">
+<!-- 글 폰트 -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100&display=swap" rel="stylesheet">
+
 <link rel="stylesheet"
 	href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -281,6 +286,13 @@ nav  {
   font-size: 20px;
 }
 
+p {
+  text-align: center;
+  margin: 10px;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 18px;
+}
+
 </style>
 
 </head>
@@ -320,9 +332,25 @@ nav  {
   <a class="nav-item nav-link" href="/Venue01" style="color: rgb(0, 0, 0)">greenhall</a>
   <a class="nav-item nav-link" href="/Venue02" style="color: rgb(0, 0, 0)" >redhall</a>
   <a class="nav-item nav-link active" href="/Venue03"  style="background-color: rgb(200, 200, 200)">bluehall</a>
+  <a class="nav-item nav-link" href="/Venue04" style="color: rgb(0, 0, 0)">blackhall</a>
+  <a class="nav-item nav-link" href="/Venue05" style="color: rgb(0, 0, 0)">VIPhall</a>
+  <a class="nav-item nav-link" href="/Venue06" style="color: rgb(0, 0, 0)">pyeback</a>
 </nav>	
 
-<br><br><br><br><br><br><br><br>
+<br><br><br><br>
+	<div id="text-table">
+		<h1 style="text-align: center;">
+			<span style="color: rgb(191, 131, 101);" ">Blue Hall</span></h1>
+		<p><br></p>
+		<p>싱그러운 자연 속, 눈부신 햇살 보다 빛나는</p>
+		<p> 단 하나뿐인 나만의 웨딩!</p>
+		<p> 나무처럼 듬직한 신랑님과 꽃보다 더 화사한 신부님을</p>
+		<p>새롭게 리뉴얼 한 루체홀에서 찾아 뵙도록 하겠습니다.</p>
+		<p> 영화 속, 숲 속 야외 웨딩에 대한 로망을</p>
+		<p>이제 CA웨딩컨벤션 루체홀과 함께 하세요.</p>
+		<p><br></p>
+		<p>“꽃보다 아름다운 당신”</p>
+	</div>
 <script>
   const menuButton = document.querySelector('.menu-toggle');
   const slidingMenu = document.querySelector('.sliding-menu');

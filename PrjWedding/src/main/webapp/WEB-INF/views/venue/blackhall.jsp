@@ -330,10 +330,10 @@ p {
 	
 <img src="./img/side_main.jpg" width="100%" height="100%">
 <nav class="nav nav-pills nav-justified">
-  <a class="nav-item nav-link " href="/Venue01" style="color: rgb(0, 0, 0)">greenhall</a>
-  <a class="nav-item nav-link active"  href="/Venue02"  style="background-color: rgb(200, 200, 200)" >redhall</a>
+  <a class="nav-item nav-link"  href="/Venue01" style="color: rgb(0, 0, 0)">greenhall</a>
+  <a class="nav-item nav-link"  href="/Venue02" style="color: rgb(0, 0, 0)">redhall</a>
   <a class="nav-item nav-link" style="color: rgb(0, 0, 0)" href="/Venue03">bluehall</a>
-  <a class="nav-item nav-link" href="/Venue04" style="color: rgb(0, 0, 0)">blackhall</a>
+  <a class="nav-item nav-link active" href="/Venue04" style="background-color: rgb(200, 200, 200)"  >blackhall</a>
   <a class="nav-item nav-link" href="/Venue05" style="color: rgb(0, 0, 0)">VIPhall</a>
   <a class="nav-item nav-link" href="/Venue06" style="color: rgb(0, 0, 0)">pyeback</a>
 </nav>	
@@ -341,7 +341,7 @@ p {
 <br><br><br><br>
 	<div id="text-table">
 		<h1 style="text-align: center;">
-			<span style="color: rgb(191, 131, 101);" ">Red Hall</span></h1>
+			<span style="color: rgb(191, 131, 101);" ">Black Hall</span></h1>
 		<p><br></p>
 		<p>싱그러운 자연 속, 눈부신 햇살 보다 빛나는</p>
 		<p> 단 하나뿐인 나만의 웨딩!</p>

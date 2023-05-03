@@ -21,4 +21,19 @@ public class VenueController {
 	public String venue03() {
 		return "venue/bluehall";
 	}
+	
+	@RequestMapping("/Venue04")
+	public String venue04() {
+		return "venue/blackhall";
+	}
+	
+	@RequestMapping("/Venue05")
+	public String venue05() {
+		return "venue/viphall";
+	}
+	
+	@RequestMapping("/Venue06")
+	public String venue06() {
+		return "venue/pyebaek";
+	}
 }

@@ -331,17 +331,17 @@ p {
 <img src="./img/side_main.jpg" width="100%" height="100%">
 <nav class="nav nav-pills nav-justified">
   <a class="nav-item nav-link " href="/Venue01" style="color: rgb(0, 0, 0)">greenhall</a>
-  <a class="nav-item nav-link active"  href="/Venue02"  style="background-color: rgb(200, 200, 200)" >redhall</a>
+  <a class="nav-item nav-link"  href="/Venue02" style="color: rgb(0, 0, 0)">redhall</a>
   <a class="nav-item nav-link" style="color: rgb(0, 0, 0)" href="/Venue03">bluehall</a>
   <a class="nav-item nav-link" href="/Venue04" style="color: rgb(0, 0, 0)">blackhall</a>
-  <a class="nav-item nav-link" href="/Venue05" style="color: rgb(0, 0, 0)">VIPhall</a>
-  <a class="nav-item nav-link" href="/Venue06" style="color: rgb(0, 0, 0)">pyeback</a>
+  <a class="nav-item nav-link" href="/Venue05" style="color: rgb(0, 0, 0)" >VIPhall</a>
+  <a class="nav-item nav-link active" href="/Venue06" style="background-color: rgb(200, 200, 200)" >pyeback</a>
 </nav>	
 
 <br><br><br><br>
 	<div id="text-table">
 		<h1 style="text-align: center;">
-			<span style="color: rgb(191, 131, 101);" ">Red Hall</span></h1>
+			<span style="color: rgb(191, 131, 101);" ">PYEBACK ROOM</span></h1>
 		<p><br></p>
 		<p>싱그러운 자연 속, 눈부신 햇살 보다 빛나는</p>
 		<p> 단 하나뿐인 나만의 웨딩!</p>
@@ -351,6 +351,33 @@ p {
 		<p>이제 CA웨딩컨벤션 루체홀과 함께 하세요.</p>
 		<p><br></p>
 		<p>“꽃보다 아름다운 당신”</p>
+	</div>
+	
+	<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  		<ol class="carousel-indicators">
+		    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+		    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+		    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+ 		 </ol>
+ 	 <div class="carousel-inner">
+    	<div class="carousel-item active">
+     		 <img class="d-block w-100" src="..." alt="First slide">
+   		</div>
+     <div class="carousel-item">
+     	 	 <img class="d-block w-100" src="..." alt="Second slide">
+     </div>
+     <div class="carousel-item">
+     		 <img class="d-block w-100" src="..." alt="Third slide">
+     </div>
+  	</div>
+	  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+	    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+	    <span class="sr-only">Previous</span>
+	  </a>
+	  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+	    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+	    <span class="sr-only">Next</span>
+	  </a>
 	</div>
 <script>
   const menuButton = document.querySelector('.menu-toggle');
