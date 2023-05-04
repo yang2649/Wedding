@@ -12,22 +12,19 @@
 <link rel="shortcut icon" href="/img/favicon.ico">
 <link rel="stylesheet" href="/css/common.css">
 <link rel="stylesheet" href="/css/styles.css">
+<link rel="stylesheet" href="/css/slide.css">
 <!-- 글 폰트 -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100&display=swap" rel="stylesheet">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-<!-- 슬라이드쇼 -->
-<link rel="stylesheet" href="/lib/w3.css">
-
 <style>
-
 /* body 메뉴 폰트 및 사이즈 */
 nav  {
   font-family: 'Times New Roman';
@@ -40,32 +37,6 @@ p {
   font-family: 'Noto Sans KR', sans-serif;
   font-size: 18px;
 }
-
-/* 슬라이드 */
-
-.w3-btn-floating {
-  position:absolute;
-  top:50%;
-  font-size: 50px;
-}
-
-.mySlides{
-  margin: auto;
-  display: block;
-  text-align: center;
-  width:50%;
-  
-  width: 1200px;
-  height: 700px;
-  margin: 0 auto;
-}
-
-.mySlides img {
-  width: 300px;
-  height: 300px;
-}
-
-
 
 </style>
 
@@ -209,19 +180,19 @@ p {
 
 <div class="sliding-menu-overlay"></div>
 
-			<!-- 메인 메뉴 -->
-			
-	<img src="./img/side_main.jpg" width="100%" height="100%" >
-	<nav class="nav nav-pills nav-justified">
-	  <a class="nav-item nav-link active"  href="/Venue01"  style="background-color: rgb(200, 200, 200)"" href="#">greenhall</a>
-	  <a class="nav-item nav-link" href="/Venue02" style="color: rgb(0, 0, 0)" >redhall</a>
-	  <a class="nav-item nav-link" href="/Venue03" style="color: rgb(0, 0, 0)">bluehall</a>
-	  <a class="nav-item nav-link" href="/Venue04" style="color: rgb(0, 0, 0)">blackhall</a>
-	  <a class="nav-item nav-link" href="/Venue05" style="color: rgb(0, 0, 0)">VIPhall</a>
-	  <a class="nav-item nav-link" href="/Venue06" style="color: rgb(0, 0, 0)">pyeback</a>
-	</nav>	
+		<!-- 메인 메뉴 -->
+		
+<img src="./img/side_main.jpg" width="100%" height="100%" >
+<nav class="nav nav-pills nav-justified" >
+  <a class="nav-item nav-link active" href="/Venue01" style="background-color: rgb(200, 200, 200)" >greenhall</a>
+  <a class="nav-item nav-link" href="/Venue02" style="color: rgb(0, 0, 0)">redhall</a>
+  <a class="nav-item nav-link" href="/Venue03"  style="color: rgb(0, 0, 0)" >bluehall</a>
+  <a class="nav-item nav-link" href="/Venue04" style="color: rgb(0, 0, 0)">blackhall</a>
+  <a class="nav-item nav-link" href="/Venue05" style="color: rgb(0, 0, 0)">VIPhall</a>
+  <a class="nav-item nav-link" href="/Venue06" style="color: rgb(0, 0, 0)">pyeback</a>
+</nav>	
 
-	<br><br><br><br>
+<br><br><br><br>
 	<div id="text-table">
 		<h1 style="text-align: center;">
 			<span style="color: rgb(191, 131, 101);" ">Green Hall</span></h1>
@@ -236,24 +207,46 @@ p {
 		<p>“꽃보다 아름다운 당신”</p>
 	</div>
 	
-	<br><br>
-	
-	<div class="w3-content" style="position:relative ">
-   
-   <img class="mySlides" src="./img/part1.jpg"  >
-   <img class="mySlides" src="./img/part2.jpg"  >
-   <img class="mySlides" src="./img/part3.jpg"  >
+	<!-- 슬라이드 -->
+	 <div class="slideshow-container">
 
-   
-   <a class="w3-btn-floating" style="left:300px; " onclick="plusDivs(-1)" >❮</a>
-   <a class="w3-btn-floating" style="right:300px;" onclick="plusDivs(1)">❯</a>
-   </div>
-	
+      <!-- Full-width images with number and caption text -->
+      <div class="mySlides">
+        <div class="numbertext">1 / 3</div>
+        <img src="./img/part1.jpg" style="width:100%">
+        <div class="text">GREEM WEDDING</div>
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">2 / 3</div>
+        <img src="./img/part2.jpg" style="width:100%">
+        <div class="text">GREEM WEDDING</div>
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">3 / 3</div>
+        <img src="./img/part3.jpg" style="width:100%">
+        <div class="text">GREEM WEDDING</div>
+      </div>
 
 
+      <!-- Next and previous buttons -->
+      <a class="prev" onclick="moveSlides(-1)">&#10094;</a>
+      <a class="next" onclick="moveSlides(1)">&#10095;</a>
+    </div>
+    <br/>
 
+    <!-- The dots/circles -->
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(0)"></span>
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot" onclick="currentSlide(4)"></span>
+      <span class="dot" onclick="currentSlide(5)"></span>
+    </div>
 
-<br><br><br><br><br><br><br><br>
+    
 <script>
 const menuButton = document.querySelector('.menu-toggle');
 const slidingMenu = document.querySelector('.sliding-menu');
@@ -294,23 +287,57 @@ $(window).scroll(function() {
   }
 });
 
-  // 슬라이드
-  var slideIndex = 1;
-showDivs(slideIndex);
+ //슬라이드
+ var slideIndex = 0; //slide index
 
-function plusDivs(n) {
-    showDivs(slideIndex += n);
+// HTML 로드가 끝난 후 동작
+window.onload=function(){
+  showSlides(slideIndex);
+
+  // Auto Move Slide
+  var sec = 3000;
+  setInterval(function(){
+    slideIndex++;
+    showSlides(slideIndex);
+
+  }, sec);
 }
 
-function showDivs(n) {
-    var i;
-    var x = document.getElementsByClassName("mySlides");
-    if (n > x.length) {slideIndex = 1}
-    if (n < 1) {slideIndex = x.length} ;
-    for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none";
-    }
-    x[slideIndex-1].style.display = "block";
+
+// Next/previous controls
+function moveSlides(n) {
+  slideIndex = slideIndex + n
+  showSlides(slideIndex);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  slideIndex = n;
+  showSlides(slideIndex);
+}
+
+function showSlides(n) {
+
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  var size = slides.length;
+
+  if ((n+1) > size) {
+    slideIndex = 0; n = 0;
+  }else if (n < 0) {
+    slideIndex = (size-1);
+    n = (size-1);
+  }
+
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+
+  slides[n].style.display = "block";
+  dots[n].className += " active";
 }
 
 </script>

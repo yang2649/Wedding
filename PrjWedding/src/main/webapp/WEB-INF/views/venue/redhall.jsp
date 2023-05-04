@@ -12,6 +12,7 @@
 <link rel="shortcut icon" href="/img/favicon.ico">
 <link rel="stylesheet" href="/css/common.css">
 <link rel="stylesheet" href="/css/styles.css">
+<link rel="stylesheet" href="/css/slide.css">
 <!-- 글 폰트 -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -180,13 +181,12 @@ p {
 <div class="sliding-menu-overlay"></div>
 
 		<!-- 메인 메뉴 -->
-	
-	
-<img src="./img/side_main.jpg" width="100%" height="100%">
-<nav class="nav nav-pills nav-justified">
-  <a class="nav-item nav-link " href="/Venue01" style="color: rgb(0, 0, 0)">greenhall</a>
-  <a class="nav-item nav-link active"  href="/Venue02"  style="background-color: rgb(200, 200, 200)" >redhall</a>
-  <a class="nav-item nav-link" style="color: rgb(0, 0, 0)" href="/Venue03">bluehall</a>
+		
+<img src="./img/side_main.jpg" width="100%" height="100%" >
+<nav class="nav nav-pills nav-justified" >
+  <a class="nav-item nav-link" href="/Venue01" style="color: rgb(0, 0, 0)">greenhall</a>
+  <a class="nav-item nav-link active" href="/Venue02" style="background-color: rgb(200, 200, 200)" >redhall</a>
+  <a class="nav-item nav-link" href="/Venue03"  style="color: rgb(0, 0, 0)" >bluehall</a>
   <a class="nav-item nav-link" href="/Venue04" style="color: rgb(0, 0, 0)">blackhall</a>
   <a class="nav-item nav-link" href="/Venue05" style="color: rgb(0, 0, 0)">VIPhall</a>
   <a class="nav-item nav-link" href="/Venue06" style="color: rgb(0, 0, 0)">pyeback</a>
@@ -206,6 +206,47 @@ p {
 		<p><br></p>
 		<p>“꽃보다 아름다운 당신”</p>
 	</div>
+	
+	<!-- 슬라이드 -->
+	 <div class="slideshow-container">
+
+      <!-- Full-width images with number and caption text -->
+      <div class="mySlides">
+        <div class="numbertext">1 / 3</div>
+        <img src="./img/part1.jpg" style="width:100%">
+        <div class="text">GREEM WEDDING</div>
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">2 / 3</div>
+        <img src="./img/part2.jpg" style="width:100%">
+        <div class="text">GREEM WEDDING</div>
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">3 / 3</div>
+        <img src="./img/part3.jpg" style="width:100%">
+        <div class="text">GREEM WEDDING</div>
+      </div>
+
+
+      <!-- Next and previous buttons -->
+      <a class="prev" onclick="moveSlides(-1)">&#10094;</a>
+      <a class="next" onclick="moveSlides(1)">&#10095;</a>
+    </div>
+    <br/>
+
+    <!-- The dots/circles -->
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(0)"></span>
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot" onclick="currentSlide(4)"></span>
+      <span class="dot" onclick="currentSlide(5)"></span>
+    </div>
+
+    
 <script>
 const menuButton = document.querySelector('.menu-toggle');
 const slidingMenu = document.querySelector('.sliding-menu');
@@ -245,6 +286,59 @@ $(window).scroll(function() {
     }
   }
 });
+
+ //슬라이드
+ var slideIndex = 0; //slide index
+
+// HTML 로드가 끝난 후 동작
+window.onload=function(){
+  showSlides(slideIndex);
+
+  // Auto Move Slide
+  var sec = 3000;
+  setInterval(function(){
+    slideIndex++;
+    showSlides(slideIndex);
+
+  }, sec);
+}
+
+
+// Next/previous controls
+function moveSlides(n) {
+  slideIndex = slideIndex + n
+  showSlides(slideIndex);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  slideIndex = n;
+  showSlides(slideIndex);
+}
+
+function showSlides(n) {
+
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  var size = slides.length;
+
+  if ((n+1) > size) {
+    slideIndex = 0; n = 0;
+  }else if (n < 0) {
+    slideIndex = (size-1);
+    n = (size-1);
+  }
+
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+
+  slides[n].style.display = "block";
+  dots[n].className += " active";
+}
 
 </script>
 </body>
