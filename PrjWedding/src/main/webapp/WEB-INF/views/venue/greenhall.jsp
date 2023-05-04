@@ -378,7 +378,7 @@ p {
       autoControls: true,
       stopAutoOnClick: true,
       pager: true,
-      speed: 500,
+      speed: 500, 
       pause: 4000,
       slideMargin: 0
     });
