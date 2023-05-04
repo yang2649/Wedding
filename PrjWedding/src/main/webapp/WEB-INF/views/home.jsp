@@ -30,6 +30,7 @@
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Nanum+Gothic:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@500&display=swap" rel="stylesheet">
 
 <!-- ajax 스타일 시트 -->
 <!-- owl css 사용 -->
@@ -368,7 +369,7 @@
 <!-- VIP 갤러리 끝 -->
 <div class="VIP-watching">
 <div style="height: 50px; background-color: #f7f5ef; margin-bottom: 0px;"></div>
- <h4><a href="#" style="text-decoration: none;">자세히 보기</a></h4>
+ <h4><a href="#" style="text-decoration: none; color: black;">자세히 보기</a></h4>
  <div style="height: 50px; background-color: #f7f5ef; margin-bottom: 0px;"></div>
 </div>
 

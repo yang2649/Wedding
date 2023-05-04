@@ -32,14 +32,12 @@ ul.sliding-menu li:hover > ul {
 ul.navbar-nav {
 	background-color: #FFFFFF;
 	transform: translateX(-150px);
-	
 }
 
 
  /* body 부분 배경색 */ 
  body {
     background-color: #FFFFFF; /* 원하는 배경색을 설정하세요. */
-      
 }
 
 .header {
@@ -635,8 +633,9 @@ h5{
   width: 100%;
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center center; /* 가로와 세로 중앙 정렬 */
   padding: 250px;
+
 }
 
 .text_wrap {
@@ -661,15 +660,21 @@ h5{
   font-weight: bold;
 }
 
+
+
 .slide_overlay {
   background-color: transparent;
 }
 
+
+
+
 VIP-watching {
 	font-size: 3em;
-	font-family: 'Nanum Gothic', sans-serif;
     background-color: #f7f5ef;
     margin: 0px;
+    font-family: 'Lora', serif;
+    font-weight: bold;
 }
 
 
