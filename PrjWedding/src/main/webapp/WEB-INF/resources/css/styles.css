@@ -546,6 +546,12 @@ div.wedding-hole h3 {
     background-color: #f7f5ef;
     margin: 0px;
   }
+  
+ /* 여백없애기 */
+.wedding-hole {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
 
 
 

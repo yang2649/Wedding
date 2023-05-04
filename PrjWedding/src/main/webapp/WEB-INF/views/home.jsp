@@ -223,7 +223,7 @@
 <!-- 웨딩홀 -->
 <div class="wedding-hole">
 	<h3>WEDDING HALL</h3>
-	 <div style="height: 50px; background-color: #f7f5ef; margin-bottom: 100px;"></div>
+	 <div style="height: 50px; background-color: #f7f5ef; margin-bottom: 0px;"></div>
 </div>
 
 <!-- 갤러리  -->
@@ -293,8 +293,6 @@
 </div>
 
 
-
-	
 <script>  
 	const menuButton = document.querySelector('.menu-toggle');
 	const slidingMenu = document.querySelector('.sliding-menu');
