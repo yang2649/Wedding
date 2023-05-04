@@ -582,6 +582,16 @@ div.wedding-hole h3 {
    padding: 5px;
 }
 
+.gallmain h2{
+	margin:auto;
+	width:1200px;
+	text-align: center;
+}
+
+.gallmain{
+	 background-color: #f7f5ef;
+}
+
 ._item {
   flex-basis: calc(25% - 5px);
   margin: 0px;
@@ -592,7 +602,7 @@ div.wedding-hole h3 {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  padding: 20px;
+  padding: 250px;
 }
 
 .text_wrap {
@@ -603,7 +613,6 @@ div.wedding-hole h3 {
   width: 100%;
   height: 100%;
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.5);
   color: #fff;
 }
 

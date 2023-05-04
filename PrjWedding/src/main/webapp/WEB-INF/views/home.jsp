@@ -222,19 +222,20 @@
 
 <!-- 웨딩홀 -->
 <div class="wedding-hole">
+	<div style="height: 50px; background-color: #f7f5ef; margin-bottom: 0px;"></div>
 	<h3>WEDDING HALL</h3>
 	 <div style="height: 50px; background-color: #f7f5ef; margin-bottom: 0px;"></div>
 </div>
 
 <!-- 갤러리  -->
+<div class = "gallmain">
+<h2>
 <div class="gallery">
   <div class="_item item_gallary" style="position: relative; padding: 2.5px;">
     <div id="caption_1" style="display:none">
       <h4></h4>
       <p></p>
     </div>
- 
-    
     
     <div class="item_container _item_container">
       <div class="img_wrap _img_wrap no_content" id="gal_item_" style="background-image: url('./img/hole/hole1.jpg'); min-height: 172px;" data-bg="url('./img/hole/hole1.jpg')" data-src="./img/hole/hole1.jpg" data-sub-html="#caption_1" data-no="0"></div>
@@ -244,7 +245,6 @@
       <div class="slide_overlay"></div>
     </div>
   </div>
-
 
   <div class="_item item_gallary" style="position: relative; padding: 2.5px;">
     <div id="caption_2" style="display:none">
@@ -291,6 +291,9 @@
   	</div>
  </div>
 </div>
+</h2>
+</div>
+<!-- 갤러리 끝 -->
 
 
 <script>  
