@@ -367,29 +367,37 @@
 </h2>
 </div>
 <!-- VIP 갤러리 끝 -->
+
+
+<!-- 자세히 보기 -->
 <div class="VIP-watching">
-<div style="height: 50px; background-color: #f7f5ef; margin-bottom: 0px;"></div>
- <h4><a href="#" style="text-decoration: none; color: black;">자세히 보기</a></h4>
- <div style="height: 50px; background-color: #f7f5ef; margin-bottom: 0px;"></div>
+  <div style="height: 50px; background-color: #f7f5ef; margin-bottom: 0px;"></div>
+  <h4>
+    <a href="#" style="text-decoration: none; color: black; font-family: 'Montserrat', sans-serif; font-weight: bold;">자세히 보기</a>
+  </h4>
+  <div style="height: 50px; background-color: #f7f5ef; margin-bottom: 0px;"></div>
 </div>
 
 
-<!-- test -->
-<!-- CATERRING 음식사진들 -->
+<!-- CATERRING 음식 -->
 <div class="CATERRING">
-	<div style="height: 50px; background-color: #F8E6E6; margin-bottom: 0px;"></div>
-	<div style="height: 50px; background-color: #F8E6E6; margin-bottom: 0px;"></div>
+	<div style="height: 50px; background-color: #F2E8DB;"></div>
+	<div style="height: 50px; background-color: #F2E8DB;"></div>
 	<h5>CATERRING</h5>
-	 <div style="height: 50px; background-color: #F8E6E6; margin-bottom: 0px;"></div>
-	 <div style="height: 50px; background-color: #F8E6E6; margin-bottom: 0px;"></div>
+	 <div style="height: 50px; background-color: #F2E8DB;"></div>
+	 <div style="height: 50px; background-color: #F2E8DB;"></div>
 </div>
 
 
 
+<!-- CATERRING 음식 갤러리 시작-->
 
 
 
 
+
+
+<!-- js 부분 -->
 <script>  
 	const menuButton = document.querySelector('.menu-toggle');
 	const slidingMenu = document.querySelector('.sliding-menu');
@@ -444,9 +452,12 @@
 	});
   
   // 첫 화면 이미지 밑 점 3개
+  // 화면이 4초마다 변경
   $(document).ready(function(){
 	  $('.owl-carousel').owlCarousel({
 	    loop: true,
+	    autoplay:true,
+		autoplayTimeout:4000,
 	    margin: 10,
 	    nav: false,
 	    dots: true,
