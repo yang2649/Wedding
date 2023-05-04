@@ -9,9 +9,11 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script
 	src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fslightbox/3.4.1/index.min.js"></script>
 <link rel="shortcut icon" href="/img/favicon.ico">
 <link rel="stylesheet" href="/css/common.css">
 <link rel="stylesheet" href="/css/styles.css">
+<link rel="stylesheet" href="/css/slide.css">
 <!-- 글 폰트 -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -35,6 +37,17 @@ p {
   margin: 10px;
   font-family: 'Noto Sans KR', sans-serif;
   font-size: 18px;
+}
+
+#root img {
+  display: block;
+  margin: 20px;
+  width: 600px;
+  height: 300px;
+} 
+
+#text-table h1 {
+  font-family: 'Noto Sans KR', sans-serif;
 }
 
 </style>
@@ -197,42 +210,71 @@ p {
 		<h1 style="text-align: center;">
 			<span style="color: rgb(191, 131, 101);" ">PYEBACK ROOM</span></h1>
 		<p><br></p>
-		<p>싱그러운 자연 속, 눈부신 햇살 보다 빛나는</p>
-		<p> 단 하나뿐인 나만의 웨딩!</p>
-		<p> 나무처럼 듬직한 신랑님과 꽃보다 더 화사한 신부님을</p>
-		<p>새롭게 리뉴얼 한 루체홀에서 찾아 뵙도록 하겠습니다.</p>
-		<p> 영화 속, 숲 속 야외 웨딩에 대한 로망을</p>
-		<p>이제 CA웨딩컨벤션 루체홀과 함께 하세요.</p>
-		<p><br></p>
-		<p>“꽃보다 아름다운 당신”</p>
+		<p>아름다운 웨딩이 끝난 뒤</p>
+		<p>듬직한 신랑님과 아름다운 신부님의</p>
+		<p>부모님에게 인사하는 자리</p>
+		<p>전통적인 한옥디자인의</p>
+		<p>폐백실에서 함께 하세요</p>
 	</div>
 	
-	<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-  		<ol class="carousel-indicators">
-		    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-		    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-		    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
- 		 </ol>
- 	 <div class="carousel-inner">
-    	<div class="carousel-item active">
-     		 <img class="d-block w-100" src="..." alt="First slide">
-   		</div>
-     <div class="carousel-item">
-     	 	 <img class="d-block w-100" src="..." alt="Second slide">
-     </div>
-     <div class="carousel-item">
-     		 <img class="d-block w-100" src="..." alt="Third slide">
-     </div>
-  	</div>
-	  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-	    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-	    <span class="sr-only">Previous</span>
-	  </a>
-	  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-	    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-	    <span class="sr-only">Next</span>
-	  </a>
-	</div>
+	<!-- 슬라이드 -->
+	 <div class="slideshow-container">
+
+      <!-- Full-width images with number and caption text -->
+      <div class="mySlides">
+        <div class="numbertext">1 / 2</div>
+        <img src="./img/pyeback/s1.PNG" style="width:100%">
+        <div class="text">GREEM WEDDING</div>
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">2 / 2</div>
+        <img src="./img/pyeback/s2.PNG" style="width:100%">
+        <div class="text">GREEM WEDDING</div>
+      </div>
+
+
+      <!-- Next and previous buttons -->
+      <a class="prev" onclick="moveSlides(-1)">&#10094;</a>
+      <a class="next" onclick="moveSlides(1)">&#10095;</a>
+    </div>
+    <br/>
+
+    <!-- The dots/circles -->
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(0)"></span>
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot" onclick="currentSlide(4)"></span>
+      <span class="dot" onclick="currentSlide(5)"></span>
+    </div>
+    
+	<div id="root">
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; padding: 1vw;">
+
+      <img
+           src="./img/pyeback/p1.PNG"
+           alt="swamp"
+           />
+      <img
+           src="./img/pyeback/p2.PNG"
+           alt="swamp"
+           />
+      <img
+           src="./img/pyeback/p3.PNG"
+           alt="swamp"
+           /><br>
+      <img
+           src="./img/pyeback/p4.PNG"
+           alt="swamp"
+           />
+    </div>
+  </div>
+	
+  
+
+    
 <script>
 const menuButton = document.querySelector('.menu-toggle');
 const slidingMenu = document.querySelector('.sliding-menu');
@@ -273,6 +315,75 @@ $(window).scroll(function() {
   }
 });
 
+ //슬라이드
+ var slideIndex = 0; //slide index
+
+// HTML 로드가 끝난 후 동작
+window.onload=function(){
+  showSlides(slideIndex);
+
+  // Auto Move Slide
+  var sec = 3000;
+  setInterval(function(){
+    slideIndex++;
+    showSlides(slideIndex);
+
+  }, sec);
+}
+
+
+// Next/previous controls
+function moveSlides(n) {
+  slideIndex = slideIndex + n
+  showSlides(slideIndex);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  slideIndex = n;
+  showSlides(slideIndex);
+}
+
+function showSlides(n) {
+
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  var size = slides.length;
+
+  if ((n+1) > size) {
+    slideIndex = 0; n = 0;
+  }else if (n < 0) {
+    slideIndex = (size-1);
+    n = (size-1);
+  }
+
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+
+  slides[n].style.display = "block";
+  dots[n].className += " active";
+}
+
+// 사진 클릭시 모달창
+ function wrap(el) {
+      const wrappingElement = document.createElement('a');
+      wrappingElement.href = el.src;
+      wrappingElement.setAttribute('data-fslightbox', 'gallery');
+      el.parentElement.insertBefore(wrappingElement, el);
+      wrappingElement.appendChild(el);
+    }
+
+    document.querySelectorAll('#root img').forEach(el => {
+      wrap(el);
+    });
+
+    
+refreshFsLightbox();
+    
 </script>
 </body>
 </html> 

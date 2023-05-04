@@ -9,6 +9,7 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script
 	src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fslightbox/3.4.1/index.min.js"></script>
 <link rel="shortcut icon" href="/img/favicon.ico">
 <link rel="stylesheet" href="/css/common.css">
 <link rel="stylesheet" href="/css/styles.css">
@@ -36,6 +37,17 @@ p {
   margin: 10px;
   font-family: 'Noto Sans KR', sans-serif;
   font-size: 18px;
+}
+
+#root img {
+  display: block;
+  margin: 5px;
+  width: 394px;
+  height: 250px;
+} 
+
+#text-table h1 {
+  font-family: 'Noto Sans KR', sans-serif;
 }
 
 </style>
@@ -214,19 +226,19 @@ p {
       <!-- Full-width images with number and caption text -->
       <div class="mySlides">
         <div class="numbertext">1 / 3</div>
-        <img src="./img/part1.jpg" style="width:100%">
+        <img src="./img/hall/dhall01.jpg" style="width:100%">
         <div class="text">GREEM WEDDING</div>
       </div>
 
       <div class="mySlides">
         <div class="numbertext">2 / 3</div>
-        <img src="./img/part2.jpg" style="width:100%">
+        <img src="./img/hall/dhall02.jpg" style="width:100%">
         <div class="text">GREEM WEDDING</div>
       </div>
 
       <div class="mySlides">
         <div class="numbertext">3 / 3</div>
-        <img src="./img/part3.jpg" style="width:100%">
+        <img src="./img/hall/dhall03.jpg" style="width:100%">
         <div class="text">GREEM WEDDING</div>
       </div>
 
@@ -246,6 +258,54 @@ p {
       <span class="dot" onclick="currentSlide(4)"></span>
       <span class="dot" onclick="currentSlide(5)"></span>
     </div>
+    <!-- 브리드룸 -->
+    <div id="text-table">
+		<h1 style="text-align: center;">
+			<span style="color: rgb(191, 131, 101);" ">BRIDE ROOM</span></h1>
+	</div>
+	<div id="root">
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; padding: 1vw;">
+
+      <img
+           src="./img/part1.jpg"
+           alt="swamp"
+           />
+      <img
+           src="./img/part2.jpg"
+           alt="swamp"
+           />
+      <img
+           src="./img/part3.jpg"
+           alt="swamp"
+           />
+    </div>
+  </div>
+  <br><br><br><br>
+  <!-- 포토존 -->
+    <div id="text-table">
+		<h1 style="text-align: center;">
+			<span style="color: rgb(191, 131, 101);" ">PHOTO ZONE</span></h1>
+	</div>
+	<div id="root">
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; padding: 1vw;">
+
+      <img
+           src="./img/part1.jpg"
+           alt="swamp"
+           />
+      <img
+           src="./img/part2.jpg"
+           alt="swamp"
+           />
+      <img
+           src="./img/part3.jpg"
+           alt="swamp"
+           />
+    </div>
+  </div>
+  
+
+    
 <script>
 const menuButton = document.querySelector('.menu-toggle');
 const slidingMenu = document.querySelector('.sliding-menu');
@@ -286,59 +346,75 @@ $(window).scroll(function() {
   }
 });
 
-//슬라이드
-var slideIndex = 0; //slide index
+ //슬라이드
+ var slideIndex = 0; //slide index
 
-//HTML 로드가 끝난 후 동작
+// HTML 로드가 끝난 후 동작
 window.onload=function(){
- showSlides(slideIndex);
+  showSlides(slideIndex);
 
- // Auto Move Slide
- var sec = 3000;
- setInterval(function(){
-   slideIndex++;
-   showSlides(slideIndex);
+  // Auto Move Slide
+  var sec = 3000;
+  setInterval(function(){
+    slideIndex++;
+    showSlides(slideIndex);
 
- }, sec);
+  }, sec);
 }
 
 
-//Next/previous controls
+// Next/previous controls
 function moveSlides(n) {
- slideIndex = slideIndex + n
- showSlides(slideIndex);
+  slideIndex = slideIndex + n
+  showSlides(slideIndex);
 }
 
-//Thumbnail image controls
+// Thumbnail image controls
 function currentSlide(n) {
- slideIndex = n;
- showSlides(slideIndex);
+  slideIndex = n;
+  showSlides(slideIndex);
 }
 
 function showSlides(n) {
 
- var slides = document.getElementsByClassName("mySlides");
- var dots = document.getElementsByClassName("dot");
- var size = slides.length;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  var size = slides.length;
 
- if ((n+1) > size) {
-   slideIndex = 0; n = 0;
- }else if (n < 0) {
-   slideIndex = (size-1);
-   n = (size-1);
- }
+  if ((n+1) > size) {
+    slideIndex = 0; n = 0;
+  }else if (n < 0) {
+    slideIndex = (size-1);
+    n = (size-1);
+  }
 
- for (i = 0; i < slides.length; i++) {
-     slides[i].style.display = "none";
- }
- for (i = 0; i < dots.length; i++) {
-     dots[i].className = dots[i].className.replace(" active", "");
- }
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
 
- slides[n].style.display = "block";
- dots[n].className += " active";
+  slides[n].style.display = "block";
+  dots[n].className += " active";
 }
 
+// 사진 클릭시 모달창
+ function wrap(el) {
+      const wrappingElement = document.createElement('a');
+      wrappingElement.href = el.src;
+      wrappingElement.setAttribute('data-fslightbox', 'gallery');
+      el.parentElement.insertBefore(wrappingElement, el);
+      wrappingElement.appendChild(el);
+    }
+
+    document.querySelectorAll('#root img').forEach(el => {
+      wrap(el);
+    });
+
+    
+refreshFsLightbox();
+    
 </script>
 </body>
 </html> 

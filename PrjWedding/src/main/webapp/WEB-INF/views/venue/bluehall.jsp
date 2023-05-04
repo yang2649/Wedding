@@ -9,6 +9,7 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script
 	src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fslightbox/3.4.1/index.min.js"></script>
 <link rel="shortcut icon" href="/img/favicon.ico">
 <link rel="stylesheet" href="/css/common.css">
 <link rel="stylesheet" href="/css/styles.css">
@@ -36,6 +37,17 @@ p {
   margin: 10px;
   font-family: 'Noto Sans KR', sans-serif;
   font-size: 18px;
+}
+
+#root img {
+  display: block;
+  margin: 5px;
+  width: 394px;
+  height: 250px;
+} 
+
+#text-table h1 {
+  font-family: 'Noto Sans KR', sans-serif;
 }
 
 </style>
@@ -213,19 +225,19 @@ p {
       <!-- Full-width images with number and caption text -->
       <div class="mySlides">
         <div class="numbertext">1 / 3</div>
-        <img src="./img/part1.jpg" style="width:100%">
+        <img src="./img/hall/chall01.jpg" style="width:100%">
         <div class="text">GREEM WEDDING</div>
       </div>
 
       <div class="mySlides">
         <div class="numbertext">2 / 3</div>
-        <img src="./img/part2.jpg" style="width:100%">
+        <img src="./img/hall/chall02.jpg" style="width:100%">
         <div class="text">GREEM WEDDING</div>
       </div>
 
       <div class="mySlides">
         <div class="numbertext">3 / 3</div>
-        <img src="./img/part3.jpg" style="width:100%">
+        <img src="./img/hall/chall03.jpg" style="width:100%">
         <div class="text">GREEM WEDDING</div>
       </div>
 
@@ -245,6 +257,53 @@ p {
       <span class="dot" onclick="currentSlide(4)"></span>
       <span class="dot" onclick="currentSlide(5)"></span>
     </div>
+
+    <!-- 브리드룸 -->
+    <div id="text-table">
+		<h1 style="text-align: center;">
+			<span style="color: rgb(191, 131, 101);" ">BRIDE ROOM</span></h1>
+	</div>
+	<div id="root">
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; padding: 1vw;">
+
+      <img
+           src="./img/part1.jpg"
+           alt="swamp"
+           />
+      <img
+           src="./img/part2.jpg"
+           alt="swamp"
+           />
+      <img
+           src="./img/part3.jpg"
+           alt="swamp"
+           />
+    </div>
+  </div>
+  <br><br><br><br>
+  <!-- 포토존 -->
+    <div id="text-table">
+		<h1 style="text-align: center;">
+			<span style="color: rgb(191, 131, 101);" ">PHOTO ZONE</span></h1>
+	</div>
+	<div id="root">
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; padding: 1vw;">
+
+      <img
+           src="./img/part1.jpg"
+           alt="swamp"
+           />
+      <img
+           src="./img/part2.jpg"
+           alt="swamp"
+           />
+      <img
+           src="./img/part3.jpg"
+           alt="swamp"
+           />
+    </div>
+  </div>
+  
 
     
 <script>
@@ -340,6 +399,22 @@ function showSlides(n) {
   dots[n].className += " active";
 }
 
+// 사진 클릭시 모달창
+ function wrap(el) {
+      const wrappingElement = document.createElement('a');
+      wrappingElement.href = el.src;
+      wrappingElement.setAttribute('data-fslightbox', 'gallery');
+      el.parentElement.insertBefore(wrappingElement, el);
+      wrappingElement.appendChild(el);
+    }
+
+    document.querySelectorAll('#root img').forEach(el => {
+      wrap(el);
+    });
+
+    
+refreshFsLightbox();
+    
 </script>
 </body>
 </html> 
