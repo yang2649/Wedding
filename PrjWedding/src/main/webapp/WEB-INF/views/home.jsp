@@ -28,6 +28,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&display=swap" rel="stylesheet">
 
 <!-- ajax 스타일 시트 -->
 <!-- owl css 사용 -->
@@ -51,7 +52,8 @@
       <nav class="navbar navbar-expand-lg navbar-light bg-light" style="margin-right: 90px; background-color: white !important;">
         
         <div class="container-fluid">
-   		<button class="navbar-toggler navbar-toggler-icon" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"></button>
+        <!-- 화면 축소시 햄버거 버튼 (현재는 삭제) -->
+   		<!-- <button class="navbar-toggler navbar-toggler-icon" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"></button> -->
    		<div class="collapse navbar-collapse" id="navbarNav">
          <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
@@ -195,9 +197,10 @@
   <div class="item"><img src="./img/part3.jpg" alt="Image 3"></div>
 </div>
 
-<div>
+<div class="wedding-hole">
 	<br>
 	<h3>WEDDING HOLE</h3>
+	<br>
 </div>
 
 <div class="_img_box">

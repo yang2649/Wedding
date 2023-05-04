@@ -185,10 +185,21 @@ header.sticky {
 }
 
 
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
   .menu-toggle a {
     display: block;
     margin: 5px 0;
+  }
+} */
+
+
+@media (min-width: 768px) { /* 768px 이상인 경우에만 햄버거 버튼을 표시함 */
+  .menu-toggle {
+    display: inline-block;
+    cursor: pointer;
+  }
+  .menu-toggle .bar {
+    /* 햄버거 아이콘의 스타일을 지정 */
   }
 }
 
@@ -408,6 +419,7 @@ li {
 }
 
 
+/* 드롭다운 부분 */ 
 .nav-link {
   padding-left: 10px; /* 원하는 값으로 변경 */
   font-size: 20px; /* 원하는 크기로 변경 */
@@ -417,7 +429,6 @@ li {
 .nav-link.dropdown-toggle::after {
     display: none;
 }
-
 
 
 
@@ -438,10 +449,10 @@ li {
   margin-bottom: 0;
 }
 
- .navbar-toggler {
+/*  .navbar-toggler {
   border-color: transparent;
 } 
-
+ */
 /* .navbar-toggler:not(.collapsed) {
   outline: none;
 } */
@@ -451,6 +462,26 @@ li {
   background-color: transparent !important;
   color: inherit !important;
 } */
+
+.owl-dots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  
+}
+
+/* h3 과 웨딩홀 메시지 편집 */
+h3 {
+	text-align: center;
+  	font-family: 'Cormorant Garamond', serif;
+  	/* font-size: 100px; 폰트 크기를 지정해주세요. */
+  	padding: 50px 0;
+}
+
+div.wedding-hole h3 {
+    font-size: 4em;
+  }
 
 
 ._img_box {
@@ -471,5 +502,4 @@ li {
   object-fit: cover;
 }
 
-/* 이미지 안쪽에 점넣기 */
 
