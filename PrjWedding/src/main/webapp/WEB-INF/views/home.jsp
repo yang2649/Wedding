@@ -10,23 +10,30 @@
 <meta name="msapplication-navbutton-color" content="#363636">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <title>Home</title>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script	src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
 <link rel="shortcut icon" href="/img/favicon.ico">
-<!-- css 부분 사용 -->
 
+<!-- css 부분 사용 -->
 <link rel="stylesheet" href="/css/styles.css">
 <!-- jquery 사용 -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 <!-- Bootstrap CSS -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
 <!-- 구글 폰트 -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500&display=swap" rel="stylesheet">
+
+<!-- ajax 스타일 시트 -->
+<!-- owl css 사용 -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
 </head>
 <body>
@@ -39,14 +46,13 @@
       <div style="margin: 0; padding: 15px; text-align: center;">
                 <div style="margin: 0;">Green</div>
                 <div style="margin: 0;">Wedding</div>
-            </div>
+    </div>
     </a>
       <nav class="navbar navbar-expand-lg navbar-light bg-light" style="margin-right: 90px; background-color: white !important;">
         
         <div class="container-fluid">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
+   		<button class="navbar-toggler navbar-toggler-icon" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"></button>
+   		<div class="collapse navbar-collapse" id="navbarNav">
          <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
           
@@ -167,7 +173,7 @@
 <div class="sliding-menu-overlay"></div>
  
 <!-- 메인 메뉴 -->
-<div id="vertical-slider">
+<!-- <div id="vertical-slider">
 	<div>
 		<img src="./img/part1.jpg" alt="Image 1">
 	</div>
@@ -177,7 +183,14 @@
 	<div>
 		<img src="./img/part3.jpg" alt="Image 3">
 	</div>
+</div> -->
+
+<div class="owl-carousel owl-theme">
+  <div class="item"><img src="./img/part1.jpg" alt="Image 1"></div>
+  <div class="item"><img src="./img/part2.jpg" alt="Image 2"></div>
+  <div class="item"><img src="./img/part3.jpg" alt="Image 3"></div>
 </div>
+
 
 <div class="_img_box">
   <div class="img_wrap">
@@ -194,7 +207,7 @@
   </div>
 </div>
 	
-	<script>  
+<script>  
 	const menuButton = document.querySelector('.menu-toggle');
 	const slidingMenu = document.querySelector('.sliding-menu');
 	const slidingMenuOverlay = document.querySelector('.sliding-menu-overlay');
@@ -211,22 +224,34 @@
   
   $(window).scroll(function() {
 	  if ($(this).scrollTop() > 0) {
-	    $('div.header').addClass('sticky');
+	    $('div.header').slideUp();
+	    $('.menu-toggle').addClass('scrolled'); // 스크롤 시 'scrolled' 클래스 추가
 	  } else {
-	    $('div.header').removeClass('sticky');
+	    $('div.header').slideDown();
+	    $('.menu-toggle').removeClass('scrolled'); // 스크롤이 없을 때 'scrolled' 클래스 제거
 	  }
 	});
+  
   $(document).ready(function(){
-    $('#main-slider').bxSlider({
-      auto: true,
-      autoControls: true,
-      stopAutoOnClick: true,
-      pager: true,   
-      speed: 500,
-      pause: 4000,
-      slideMargin: 0
-    });
-  });
+	  $('.owl-carousel').owlCarousel({
+	    loop: true,
+	    margin: 10,
+	    nav: false,
+	    dots: true,
+	    items: 1,
+	    responsive: {
+	      0: {
+	        items: 1
+	      },
+	      600: {
+	        items: 1
+	      },
+	      1000: {
+	        items: 1
+	      }
+	    }
+	  });
+	});
 </script>
 </body>
 </html> 
