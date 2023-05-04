@@ -150,13 +150,19 @@ header.sticky {
   cursor: pointer;
 }
 
+.menu-toggle.scrolled {
+  color: #fff;
+}
+
 .bar {
   display: block;
   width: 20px;
   height: 2px;
   margin: 4px 0;
-  background-color: #000;
+  transition: background-color 0.3s ease-in-out;
 }
+
+
 
 /* 햄버거 아이콘 활성화 상태 스타일 */
 .menu-toggle.active .bar:first-of-type {
@@ -511,6 +517,7 @@ li {
   text-align: left;
   box-sizing: border-box;
 }
+
 
 @media screen and (max-width: 991.98px) {
   /* 화면 크기가 768px 이하일 때 캡션과 서브 캡션 숨기기 */

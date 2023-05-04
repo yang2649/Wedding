@@ -310,11 +310,13 @@
 	  slidingMenuOverlay.classList.remove('open');
 	});
   
+  
   $(window).scroll(function() {
 	  // 스크롤 위치가 50px 이상인 경우
 	  if ($(this).scrollTop() > 50) {
 	    $('div.header').slideUp();
 	    $('.menu-toggle').addClass('scrolled');
+	    $('.bar').css('background-color', '#fff'); // 색깔 변경
 	    if ($('.sliding-menu').hasClass('open')) {
 	      $('.sliding-menu').removeClass('open'); // 슬라이딩 메뉴 숨기기
 	    }
@@ -326,12 +328,23 @@
 	  else {
 	    $('div.header').slideDown();
 	    $('.menu-toggle').removeClass('scrolled');
+	    $('.bar').css('background-color', '#000'); // 색깔 변경
 	    if ($('.sliding-menu').hasClass('open')) {
 	      $('.sliding-menu').removeClass('open'); // 슬라이딩 메뉴 숨기기
 	    }
 	    if ($('.sliding-menu-overlay').hasClass('open')) {
 	      $('.sliding-menu-overlay').removeClass('open'); // 슬라이딩 메뉴 오버레이 숨기기
 	    }
+	  }
+	});
+  
+  // 스크롤 위치에 따른 메뉴 버튼 색상 변경
+  window.addEventListener('scroll', function() {
+    const menuToggle = document.querySelector('.menu-toggle');
+	  if (window.scrollY > 50) {
+	    menuToggle.classList.add('scrolled');
+	  } else {
+	    menuToggle.classList.remove('scrolled');
 	  }
 	});
   
@@ -356,7 +369,6 @@
 	    }
 	  });
 	});
-  
 </script>
 </body>
 </html> 
