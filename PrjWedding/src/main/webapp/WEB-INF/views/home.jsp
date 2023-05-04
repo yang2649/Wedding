@@ -182,18 +182,6 @@
  
  
 <!-- 메인 메뉴 -->
-<!-- 안씀 -->
-<!-- <div id="vertical-slider">
-	<div>
-		<img src="./img/part1.jpg" alt="Image 1">
-	</div>
-	<div>
-	  	<img src="./img/part2.jpg" alt="Image 2">
-	</div>
-	<div>
-		<img src="./img/part3.jpg" alt="Image 3">
-	</div>
-</div> -->
 
 
 <!-- 이미지 사이즈 -->
@@ -222,8 +210,10 @@
 
 <!-- 웨딩홀 -->
 <div class="wedding-hole">
+    <div style="height: 50px; background-color: #f7f5ef; margin-bottom: 0px;"></div>
 	<div style="height: 50px; background-color: #f7f5ef; margin-bottom: 0px;"></div>
 	<h3>WEDDING HALL</h3>
+	 <div style="height: 50px; background-color: #f7f5ef; margin-bottom: 0px;"></div>
 	 <div style="height: 50px; background-color: #f7f5ef; margin-bottom: 0px;"></div>
 </div>
 
@@ -294,6 +284,109 @@
 </h2>
 </div>
 <!-- 갤러리 끝 -->
+
+
+<!-- VIP -->
+<div class="VIP">
+	<div style="height: 50px; background-color: #f7f5ef; margin-bottom: 0px;"></div>
+	<div style="height: 50px; background-color: #f7f5ef; margin-bottom: 0px;"></div>
+	<h4>VIP</h4>
+	 <div style="height: 50px; background-color: #f7f5ef; margin-bottom: 0px;"></div>
+	 <div style="height: 50px; background-color: #f7f5ef; margin-bottom: 0px;"></div>
+</div>
+
+
+
+<!-- VIP 갤러리 -->
+<!-- 사진은 모두 사이즈 변경이 필요함 -->
+<!-- 표준 - 정사각형으로 모두 편집 -->
+<div class = "gallmain">
+<h2>
+<div class="gallery">
+  <div class="_item item_gallary" style="position: relative; padding: 2.5px;">
+    <div id="caption_1" style="display:none">
+      <h4></h4>
+      <p></p>
+    </div>
+    
+    <div class="item_container _item_container">
+      <div class="img_wrap _img_wrap no_content" id="gal_item_" style="background-image: url('./img/VIP/VIP1.jpg'); min-height: 172px;" data-bg="url('./img/VIP/VIP1.jpg')" data-src="./img/VIP/VIP1.jpg" data-sub-html="#caption_1" data-no="0"></div>
+      <div class="text_wrap _text_wrap cursor_pointer" id="gal_item_1" data-src="./img/VIP/VIP1.jpg" data-sub-html="#caption_1" style="display: none; height: 172px;">
+        <p class="title"></p>
+      </div>
+      <div class="slide_overlay"></div>
+    </div>
+  </div>
+
+  <div class="_item item_gallary" style="position: relative; padding: 2.5px;">
+    <div id="caption_2" style="display:none">
+      <h4></h4>
+      <p></p>
+    </div>
+    <div class="item_container _item_container">
+      <div class="img_wrap _img_wrap no_content" id="gal_item_" style="background-image: url('./img/VIP/VIP2.jpg'); min-height: 172px;" data-bg="url('./img/VIP/VIP2.jpg')" data-src="./img/VIP/VIP2.jpg" data-sub-html="#caption_2" data-no="1"></div>
+      <div class="text_wrap _text_wrap cursor_pointer" id="gal_item_2" data-src="./img/VIP/VIP2.jpg" data-sub-html="#caption_2" style="display: none; height: 172px;">
+        <p class="title"></p>
+      </div>
+      <div class="slide_overlay"></div>
+    </div>
+  </div>
+
+
+
+  <div class="_item item_gallary" style="position: relative; padding: 2.5px;">
+    <div id="caption_3" style="display:none">
+      <h4></h4>
+      <p></p>
+    </div>
+    <div class="item_container _item_container">
+      <div class="img_wrap _img_wrap no_content" id="gal_item_" style="background-image: url('./img/VIP/VIP3.jpg'); min-height: 172px;" data-bg="url('./img/VIP/VIP3.jpg')" data-src="./img/VIP/VIP3.jpg" data-sub-html="#caption_3" data-no="2"></div>
+      <div class="text_wrap _text_wrap cursor_pointer" id="gal_item_3" data-src="./img/VIP/VIP3.jpg.jpg" data-sub-html="#caption_3" style="display: none; height: 172px;">
+        <p class="title"></p>
+      </div>
+      <div class="slide_overlay"></div>
+    </div>
+  </div>
+
+
+<div class="_item item_gallary" style="position: relative; padding: 2.5px;">
+  <div id="caption_4" style="display:none">
+    <h4></h4>
+    <p></p>
+  </div>
+  <div class="item_container _item_container">
+    <div class="img_wrap _img_wrap no_content" id="gal_item_" style="background-image: url('./img/VIP/VIP4.jpg'); min-height: 172px;" data-bg="url('./img/VIP/VIP4.jpg')" data-src="./img/VIP/VIP4.jpg" data-sub-html="#caption_4" data-no="3"></div>
+    <div class="text_wrap _text_wrap cursor_pointer" id="gal_item_4" data-src="./img/VIP/VIP4.jpg" data-sub-html="#caption_4" style="display: none; height: 172px;">
+      <p class="title"></p>
+    </div>
+    <div class="slide_overlay"></div>
+  	</div>
+ </div>
+</div>
+</h2>
+</div>
+<!-- VIP 갤러리 끝 -->
+<div class="VIP-watching">
+<div style="height: 50px; background-color: #f7f5ef; margin-bottom: 0px;"></div>
+ <h4><a href="#" style="text-decoration: none;">자세히 보기</a></h4>
+ <div style="height: 50px; background-color: #f7f5ef; margin-bottom: 0px;"></div>
+</div>
+
+
+
+<!-- CATERRING 음식사진들 -->
+<div class="CATERRING">
+	<div style="height: 50px; background-color: #F8E6E6; margin-bottom: 0px;"></div>
+	<div style="height: 50px; background-color: #F8E6E6; margin-bottom: 0px;"></div>
+	<h5>CATERRING</h5>
+	 <div style="height: 50px; background-color: #F8E6E6; margin-bottom: 0px;"></div>
+	 <div style="height: 50px; background-color: #F8E6E6; margin-bottom: 0px;"></div>
+</div>
+
+
+
+
+
 
 
 <script>  

@@ -28,8 +28,11 @@ ul.sliding-menu li:hover > ul {
   display: block;
 }
 
+ /* 위에 메뉴 부분 옮기기 */
 ul.navbar-nav {
 	background-color: #FFFFFF;
+	transform: translateX(-100px);
+	
 }
 
 
@@ -399,6 +402,7 @@ li {
   overflow-x: hidden;
   -ms-overflow-style: none;
   scrollbar-width: none;
+  
 }
 
  /* 스크롤바 숨기려고 설정을했는데 안숨겨짐 */
@@ -554,6 +558,36 @@ div.wedding-hole h3 {
 }
 
 
+/* VIP h4 */ 
+.VIP {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+div.VIP h4 {
+    font-size: 4em;
+    background-color: #f7f5ef;
+    margin: 0px;
+  }
+
+h4 {
+	text-align: center;
+  	font-family: 'Cormorant Garamond', serif;
+  	/* font-size: 100px; 폰트 크기를 지정해주세요. */
+  	background-color: #f7f5ef;
+  	padding: 50px 0;
+  	margin: 0px;
+}
+
+h5{
+	text-align: center;
+  	font-family: 'Cormorant Garamond', serif;
+	font-size: 4em;
+	background-color: #F8E6E6;
+	padding: 50px 0;
+  	margin: 0px;
+}
+
 
 /* ._img_box {
   display: flex;
@@ -630,6 +664,15 @@ div.wedding-hole h3 {
 .slide_overlay {
   background-color: transparent;
 }
+
+VIP-watching {
+	font-size: 3em;
+	font-family: 'Nanum Gothic', sans-serif;
+    background-color: #f7f5ef;
+    margin: 0px;
+}
+
+
  
  
 
