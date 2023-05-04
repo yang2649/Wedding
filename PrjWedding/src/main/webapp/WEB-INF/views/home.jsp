@@ -29,6 +29,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Nanum+Gothic:wght@700&display=swap" rel="stylesheet">
 
 <!-- ajax 스타일 시트 -->
 <!-- owl css 사용 -->
@@ -139,12 +140,14 @@
     </div>
   </div>
 
+<!-- 햄버거 모양 토글 -->
 <div class="menu-toggle">
   <span class="bar"></span>
   <span class="bar"></span>
   <span class="bar"></span>
 </div>
 
+<!-- 슬라이딩 메뉴 -->
 <div class="sliding-menu">
   <ul>
     <li>
@@ -175,10 +178,11 @@
   </ul>
 </div>
 
-
 <div class="sliding-menu-overlay"></div>
  
+ 
 <!-- 메인 메뉴 -->
+<!-- 안씀 -->
 <!-- <div id="vertical-slider">
 	<div>
 		<img src="./img/part1.jpg" alt="Image 1">
@@ -191,32 +195,105 @@
 	</div>
 </div> -->
 
+
+<!-- 이미지 사이즈 -->
+<!-- 이미지 전부 사이즈 조정해야함 (안그러면 화면이 달라짐) -->
+<!-- https://express.adobe.com/ko-KR/tools/image-resize# -->
+<!-- 표준 - 프레젠테이션 슬라이드 4:3 이미지 3개 고정 -->
 <div class="owl-carousel owl-theme">
-  <div class="item"><img src="./img/part1.jpg" alt="Image 1"></div>
-  <div class="item"><img src="./img/part2.jpg" alt="Image 2"></div>
-  <div class="item"><img src="./img/part3.jpg" alt="Image 3"></div>
+
+  <div class="item"><img src="./img/part_ex.jpg"  alt="Image 1">
+  <div class="caption">부산 웨딩의 대표 공간</div>
+  <div class="subcaption">최고가 아니면 명품 웨딩홀을 볼 수 없습니다. 사랑한다면, 신부의 품격을 높여주세요</div>
+  </div>
+  
+  <div class="item"><img src="./img/part_ex2.jpg" alt="Image 2">
+  <div class="caption">차별화된 웨딩스타일</div>
+  <div class="subcaption">테스트 서브캡션1</div>
+  </div>
+  
+  <div class="item"><img src="./img/part_ex3.jpg" alt="Image 3">
+  <div class="caption">BRILLRANT WEDDING</div>
+  <div class="subcaption">테스트 서브캡션2</div>
+  </div>
+  
 </div>
 
+
+<!-- 웨딩홀 -->
 <div class="wedding-hole">
-	<br>
-	<h3>WEDDING HOLE</h3>
-	<br>
+	<h3>WEDDING HALL</h3>
+	 <div style="height: 50px; background-color: #f7f5ef; margin-bottom: 100px;"></div>
 </div>
 
-<div class="_img_box">
-  <div class="img_wrap">
-    <img src="./img/hole/hole1.jpg" alt="Image 1">
+<!-- 갤러리  -->
+<div class="gallery">
+  <div class="_item item_gallary" style="position: relative; padding: 2.5px;">
+    <div id="caption_1" style="display:none">
+      <h4></h4>
+      <p></p>
+    </div>
+ 
+    
+    
+    <div class="item_container _item_container">
+      <div class="img_wrap _img_wrap no_content" id="gal_item_" style="background-image: url('./img/hole/hole1.jpg'); min-height: 172px;" data-bg="url('./img/hole/hole1.jpg')" data-src="./img/hole/hole1.jpg" data-sub-html="#caption_1" data-no="0"></div>
+      <div class="text_wrap _text_wrap cursor_pointer" id="gal_item_1" data-src="./img/hole/hole1.jpg" data-sub-html="#caption_1" style="display: none; height: 172px;">
+        <p class="title"></p>
+      </div>
+      <div class="slide_overlay"></div>
+    </div>
   </div>
-  <div class="img_wrap">
-    <img src="./img/hole/hole2.jpg" alt="Image 2">
+
+
+  <div class="_item item_gallary" style="position: relative; padding: 2.5px;">
+    <div id="caption_2" style="display:none">
+      <h4></h4>
+      <p></p>
+    </div>
+    <div class="item_container _item_container">
+      <div class="img_wrap _img_wrap no_content" id="gal_item_" style="background-image: url('./img/hole/hole2.jpg'); min-height: 172px;" data-bg="url('./img/hole/hole2.jpg')" data-src="./img/hole/hole2.jpg" data-sub-html="#caption_2" data-no="1"></div>
+      <div class="text_wrap _text_wrap cursor_pointer" id="gal_item_2" data-src="./img/hole/hole2.jpg" data-sub-html="#caption_2" style="display: none; height: 172px;">
+        <p class="title"></p>
+      </div>
+      <div class="slide_overlay"></div>
+    </div>
   </div>
-  <div class="img_wrap">
-    <img src="./img/hole/hole3.jpg" alt="Image 3">
+
+
+
+  <div class="_item item_gallary" style="position: relative; padding: 2.5px;">
+    <div id="caption_3" style="display:none">
+      <h4></h4>
+      <p></p>
+    </div>
+    <div class="item_container _item_container">
+      <div class="img_wrap _img_wrap no_content" id="gal_item_" style="background-image: url('./img/hole/hole3.jpg'); min-height: 172px;" data-bg="url('./img/hole/hole3.jpg')" data-src="./img/hole/hole3.jpg" data-sub-html="#caption_3" data-no="2"></div>
+      <div class="text_wrap _text_wrap cursor_pointer" id="gal_item_3" data-src="./img/hole/hole3.jpg" data-sub-html="#caption_3" style="display: none; height: 172px;">
+        <p class="title"></p>
+      </div>
+      <div class="slide_overlay"></div>
+    </div>
   </div>
-  <div class="img_wrap">
-    <img src="./img/hole/hole4.jpg" alt="Image 4">
+
+
+<div class="_item item_gallary" style="position: relative; padding: 2.5px;">
+  <div id="caption_4" style="display:none">
+    <h4></h4>
+    <p></p>
   </div>
+  <div class="item_container _item_container">
+    <div class="img_wrap _img_wrap no_content" id="gal_item_" style="background-image: url('./img/hole/hole4.jpg'); min-height: 172px;" data-bg="url('./img/hole/hole4.jpg')" data-src="./img/hole/hole4.jpg" data-sub-html="#caption_4" data-no="3"></div>
+    <div class="text_wrap _text_wrap cursor_pointer" id="gal_item_4" data-src="./img/hole/hole4.jpg" data-sub-html="#caption_4" style="display: none; height: 172px;">
+      <p class="title"></p>
+    </div>
+    <div class="slide_overlay"></div>
+  	</div>
+ </div>
 </div>
+
+
+
 	
 <script>  
 	const menuButton = document.querySelector('.menu-toggle');
@@ -234,15 +311,31 @@
 	});
   
   $(window).scroll(function() {
-	  if ($(this).scrollTop() > 0) {
+	  // 스크롤 위치가 50px 이상인 경우
+	  if ($(this).scrollTop() > 50) {
 	    $('div.header').slideUp();
-	    $('.menu-toggle').addClass('scrolled'); // 스크롤 시 'scrolled' 클래스 추가
-	  } else {
+	    $('.menu-toggle').addClass('scrolled');
+	    if ($('.sliding-menu').hasClass('open')) {
+	      $('.sliding-menu').removeClass('open'); // 슬라이딩 메뉴 숨기기
+	    }
+	    if ($('.sliding-menu-overlay').hasClass('open')) {
+	      $('.sliding-menu-overlay').removeClass('open'); // 슬라이딩 메뉴 오버레이 숨기기
+	    }
+	  } 
+	  // 스크롤 위치가 50px 미만인 경우
+	  else {
 	    $('div.header').slideDown();
-	    $('.menu-toggle').removeClass('scrolled'); // 스크롤이 없을 때 'scrolled' 클래스 제거
+	    $('.menu-toggle').removeClass('scrolled');
+	    if ($('.sliding-menu').hasClass('open')) {
+	      $('.sliding-menu').removeClass('open'); // 슬라이딩 메뉴 숨기기
+	    }
+	    if ($('.sliding-menu-overlay').hasClass('open')) {
+	      $('.sliding-menu-overlay').removeClass('open'); // 슬라이딩 메뉴 오버레이 숨기기
+	    }
 	  }
 	});
   
+  // 첫 화면 이미지 밑 점 3개
   $(document).ready(function(){
 	  $('.owl-carousel').owlCarousel({
 	    loop: true,
@@ -263,6 +356,7 @@
 	    }
 	  });
 	});
+  
 </script>
 </body>
 </html> 
