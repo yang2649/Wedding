@@ -144,8 +144,31 @@ header.sticky {
   height: 35px;
   cursor: pointer;
   z-index: 1001;
-  font-family: 'Alex Brush';
-  font-size: 20px;
+ /*  font-family: 'Alex Brush';
+  font-size: 20px; */
+  display: inline-block;
+  cursor: pointer;
+}
+
+.bar {
+  display: block;
+  width: 20px;
+  height: 2px;
+  margin: 4px 0;
+  background-color: #000;
+}
+
+/* 햄버거 아이콘 활성화 상태 스타일 */
+.menu-toggle.active .bar:first-of-type {
+  transform: rotate(45deg) translate(4px, 4px);
+}
+
+.menu-toggle.active .bar:nth-of-type(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active .bar:last-of-type {
+  transform: rotate(-45deg) translate(4px, -4px);
 }
 
 .menu-toggle a {
@@ -447,4 +470,6 @@ li {
   height: 100%;
   object-fit: cover;
 }
+
+/* 이미지 안쪽에 점넣기 */
 

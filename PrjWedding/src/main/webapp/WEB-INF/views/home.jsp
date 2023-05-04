@@ -137,7 +137,11 @@
     </div>
   </div>
 
-<div class="menu-toggle">MENU</div>
+<div class="menu-toggle">
+  <span class="bar"></span>
+  <span class="bar"></span>
+  <span class="bar"></span>
+</div>
 
 <div class="sliding-menu">
   <ul>
@@ -191,6 +195,10 @@
   <div class="item"><img src="./img/part3.jpg" alt="Image 3"></div>
 </div>
 
+<div>
+	<br>
+	<h3>WEDDING HOLE</h3>
+</div>
 
 <div class="_img_box">
   <div class="img_wrap">
