@@ -16,6 +16,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
 <style>
 /* 슬라이딩 메뉴 스타일 */
 ul.sliding-menu, ul.sliding-menu ul {
@@ -227,7 +228,7 @@ li {
   transition: transform 0.3s ease-in-out;
 }
 
-
+h1{ text-align: center;}
 
 .bx-wrapper {
 	position: relative;
@@ -280,12 +281,9 @@ nav  {
   font-size: 20px;
 }
 </style>
-
-
 </head>
 <body>
-
-  <div class="header">
+      <div class="header">
 <h2 style="margin: 0; padding: 15px; text-align: center;" class="logo">Green<br>Wedding</h2>
 	
   <span style="margin-right: auto;">
@@ -322,7 +320,7 @@ nav  {
   <a class="nav-item nav-link" href="/Community03" style="color: rgb(0, 0, 0)">후기글</a>
   <a class="nav-item nav-link" href="/Community04" style="color: rgb(0, 0, 0)">자료실</a>
   <a class="nav-item nav-link" href="/Community05" style="color: rgb(0, 0, 0)">FAQ</a>
-</nav>		
+</nav>	
 
 <br><br><br><br><br><br><br><br>
 <script>
@@ -374,55 +372,34 @@ nav  {
       });
     });
 </script>
-    
-     
-<div class="container "  style="margin: auto; padding:15px 15px 15px 120px;">
-  <div class="row">
-
-<div class="card" style="width: 18rem; margin:20px;">
-  <img class="card-img-top" src="./img/review/review1.jpg" alt="Card image cap">
-  <div class="card-body">
-    <p class="card-text">김민경 고객님: 식장도넓고 주차장도 넓어서 하객들이 정말 좋아했습니다. 인생의 단 한번뿐인 결혼식을 행복하게 마무리하게 되어서 기뻐요!!</p>
-  </div>
+ <!-- =============================여기서부터 내용==================================== -->
+  <h1> download</h1>
+   
+  <main>
+  <hr>
+    <div class=title>  
+    <hr>
+    </div> 
+  </main>
+  
+<div class="faq_group">
+    <div class="table">
+      <div class="block">
+        <span style=" margin:0px 50px 0px 50px;">1</span>&nbsp;&nbsp;&nbsp;<a href=""style="color: black">[웨딩] 예식비용은 어떻게 지불해야 하나요?</a> 
+       <button style="float: right; margin:0px 90px 0px 0px;">&nbsp;🔻&nbsp;</button>
+      </div>
+    </div>
+      <hr>
+    <div class="table">
+      <div class="block">
+        <span style=" margin:0px 50px 0px 50px;">2</span>&nbsp;&nbsp;&nbsp;<span>[웨딩]주차비는 어떻게 지불해야 하나요?</span> 
+       <button style="float: right; margin:0px 90px 0px 0px;">&nbsp;🔻&nbsp;</button>
+      </div>
+    </div>
+      <hr>
 </div>
+   <div class="container" style="margin: 300px;"></div>
 
-<div class="card"  style="width: 18rem;  margin:20px;">
-  <img class="card-img-top" src="./img/review/review1.jpg" alt="Card image cap">
-  <div class="card-body">
-    <p class="card-text">김민경 고객님: 식장도넓고 주차장도 넓어서 하객들이 정말 좋아했습니다. 인생의 단 한번뿐인 결혼식을 행복하게 마무리하게 되어서 기뻐요!!</p>
-  </div>
-</div>
-
-<div class="card"  style="width: 18rem; margin:20px; ">
-  <img class="card-img-top" src="./img/review/review1.jpg" alt="Card image cap">
-  <div class="card-body">
-    <p class="card-text">김민경 고객님: 식장도넓고 주차장도 넓어서 하객들이 정말 좋아했습니다. 인생의 단 한번뿐인 결혼식을 행복하게 마무리하게 되어서 기뻐요!!</p>
-  </div>
-</div>
-
-<div class="card"  style="width: 18rem; margin:20px;">
-  <img class="card-img-top" src="./img/review/review1.jpg" alt="Card image cap">
-  <div class="card-body">
-    <p class="card-text">김민경 고객님: 식장도넓고 주차장도 넓어서 하객들이 정말 좋아했습니다. 인생의 단 한번뿐인 결혼식을 행복하게 마무리하게 되어서 기뻐요!!</p>
-  </div>
-</div>
-
-<div class="card"  style="width: 18rem; margin:20px;">
-  <img class="card-img-top" src="./img/review/${dsfd}.jpg }" alt="Card image cap">
-  <div class="card-body">
-    <p class="card-text">김민경 고객님: 식장도넓고 주차장도 넓어서 하객들이 정말 좋아했습니다. 인생의 단 한번뿐인 결혼식을 행복하게 마무리하게 되어서 기뻐요!!</p>
-  </div>
-</div>
-
-<div class="card"  style="width: 18rem; margin:20px;">
-  <img class="card-img-top" src="./img/review/review1.jpg" alt="Card image cap">
-  <div class="card-body">
-    <p class="card-text">김민경 고객님: 식장도넓고 주차장도 넓어서 하객들이 정말 좋아했습니다. 인생의 단 한번뿐인 결혼식을 행복하게 마무리하게 되어서 기뻐요!!</p>
-  </div>
-</div>
-
-  </div>
-  </div>
 
 
 

@@ -319,9 +319,11 @@ nav  {
 <img src="./img/side_main.jpg" width="100%" height="100%" >
 <nav class="nav nav-pills nav-justified" >
   <a class="nav-item nav-link" href="/Community01" style="color: rgb(0, 0, 0)">공지사항</a>
-  <a class="nav-item nav-link" href="/Community02" style="color: rgb(0, 0, 0)" >후기글</a>
-  <a class="nav-item nav-link active" href="/Community03"  style="background-color: rgb(200, 200, 200)">ㅇㅇㅇㅇ</a>
-</nav>	
+  <a class="nav-item nav-link" href="/Community02" style="color: rgb(0, 0, 0)">이벤트</a>
+  <a class="nav-item nav-link" href="/Community03" style="color: rgb(0, 0, 0)">후기글</a>
+  <a class="nav-item nav-link" href="/Community04" style="color: rgb(0, 0, 0)">자료실</a>
+  <a class="nav-item nav-link" href="/Community05" style="color: rgb(0, 0, 0)">FAQ</a>
+</nav>		
 
 <br><br><br><br><br><br><br><br>
 <script>
@@ -373,11 +375,10 @@ nav  {
       });
     });
 </script>
-
+     <!-- =============================여기서부터 내용==================================== -->
       <h2 style= "text-align: center;">공지사항</h2>
     
      <div class="customer-notic">
-       <!-- <c:forEach var="" items=""></c:forEach> -->
        <hr>
        <div class="noticetitle">
          <ul class="shownotice">
@@ -388,15 +389,19 @@ nav  {
             <li class="cont" style="display:">조회수</li>
          </ul>
          <hr>
+       <!-- <c:forEach var="" items=""></c:forEach> -->
          <ul class="shownotice">
+            <li>01</li>
             <li class="tit">와라라라라라</li>
-            <li class="name" style="display:none">글쓴이</li>
+            <li class="name" style="display:none">관리자</li>
             <li class="date" style="display: ">오늘</li>
-            <li class="cont" style="display:">12</li>
-            <li>공지</li>
+            <li class="cont" style="display:">12</li>         
          </ul>
+         <hr>
        </div>
      </div>
+     <div class="container" style="margin: 300px;">
      
+     </div>
 </body>
 </html>

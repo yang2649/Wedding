@@ -9,7 +9,7 @@ public class CommunityController {
 
 	
 	@RequestMapping("/Community01")
-	public ModelAndView noticelist() {
+	public ModelAndView noticeList() {
 		
 		ModelAndView mv = new ModelAndView();
 		mv.setViewName("community/notice");
@@ -18,15 +18,41 @@ public class CommunityController {
 	}
 	
 	@RequestMapping("/Community02")
-	public ModelAndView reviewlist() {
+	public ModelAndView eventList() {
 		
 		ModelAndView mv = new ModelAndView();
 		mv.setViewName("community/review");
 		
 		return mv;
 	}
+	@RequestMapping("/Community03")
+	public ModelAndView reviewList() {
+		
+		ModelAndView mv = new ModelAndView();
+		mv.setViewName("community/review");
+		
+		return mv;
+	}
+	@RequestMapping("/Community04")
+	public ModelAndView downloadList() {
+		
+		ModelAndView mv = new ModelAndView();
+		mv.setViewName("community/download");
+		
+		return mv;
+	}
 	//@RequestMapping("/Community02")
 	
+	
+	@RequestMapping("/Community05")
+	public ModelAndView faqlist() {
+		
+		ModelAndView mv = new ModelAndView();
+		mv.setViewName("community/faq");
+		
+		return mv;
+	}
+	//@RequestMapping("/Community02")
 	
 	
 }
