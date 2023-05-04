@@ -17,7 +17,7 @@ public class CommunityController {
 		return mv;
 	}
 	
-	@RequestMapping("/Community02")
+	@RequestMapping("/Community03")
 	public ModelAndView reviewlist() {
 		
 		ModelAndView mv = new ModelAndView();
@@ -27,6 +27,16 @@ public class CommunityController {
 	}
 	//@RequestMapping("/Community02")
 	
+	
+	@RequestMapping("/Community05")
+	public ModelAndView faqlist() {
+		
+		ModelAndView mv = new ModelAndView();
+		mv.setViewName("community/faq");
+		
+		return mv;
+	}
+	//@RequestMapping("/Community02")
 	
 	
 }
