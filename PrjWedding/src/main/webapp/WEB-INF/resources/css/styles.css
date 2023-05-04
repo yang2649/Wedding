@@ -31,7 +31,7 @@ ul.sliding-menu li:hover > ul {
  /* 위에 메뉴 부분 옮기기 */
 ul.navbar-nav {
 	background-color: #FFFFFF;
-	transform: translateX(-100px);
+	transform: translateX(-150px);
 	
 }
 
