@@ -325,6 +325,21 @@ p {
   </div>
   
 
+<!-- footer 마지막 부분 -->
+<footer>
+  <div class="container-fluid" style="background-color: black; color: white; text-align: center;">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="copytext text-center">
+          <br>
+          <p>주소 : 부산 부산진구 중앙대로 749 THE GREEN(주) GREEN WEDDING 사업자등록번호 : 1234-56-7890 | 대표차 : 김그린</p>
+          <p>&copy; 2023 Your Company. All Rights Reserved.</p>
+          <br>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
     
 <script>
 const menuButton = document.querySelector('.menu-toggle');
