@@ -195,9 +195,9 @@
     <span class="popup-close">&times;</span>
     <h2 class="green-wedding">Green Wedding</h2><br>
     <form>
-      <label for="username">Username</label><br>
+      <label for="username">USERNAME</label><br>
       <input type="text" id="username" name="username"><br><br>
-      <label for="password">Password</label><br>
+      <label for="password">PASSWORD</label><br>
       <input type="password" id="password" name="password"><br><br>
       <input type="submit" value="로그인">
     </form>
