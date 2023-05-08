@@ -658,16 +658,16 @@ var marker = new kakao.maps.Marker({
 	});
   
   //팝업창 열기
-  const popupOpen = () => {
+  function popupOpen() {
     const popupContainer = document.querySelector('.popup-container');
     popupContainer.style.display = 'flex';
-  };
+  }
 
   // 팝업창 닫기
-  const popupClose = () => {
+  function popupClose() {
     const popupContainer = document.querySelector('.popup-container');
     popupContainer.style.display = 'none';
-  };
+  }
 
   // 로그인 버튼 클릭 시 팝업창 열기
   const loginButton = document.querySelector('.sliding-menu li ul li a');
