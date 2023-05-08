@@ -811,6 +811,17 @@ h5{
   padding: 0;
 }
 
+/* 화면 크기가 줄어들면 마진과 패딩은 auto로 설정 */
+@media only screen and (max-width: 1000px){
+	.CATERRING{
+	margin: auto;
+	padding: auto;
+	}
+	
+}
+
+
+
 
 /* ._img_box {
   display: flex;
@@ -912,6 +923,21 @@ h5{
 	 background-color: #F2E8DB;
 }
 
+@media only screen and (max-width: 1000px) {
+ .catemain {
+ 	margin: auto;
+ 	padding: auto;  
+ }	
+ .catemain h2{
+	margin:auto;
+	padding:auto;
+	text-align: center;
+	background-color: #F2E8DB;
+}
+}
+
+
+
 
 
 /* 이벤트 부분 */
@@ -933,14 +959,19 @@ h5{
   max-width: 100%;
   overflow: hidden;
   background-color: #FFFFFF;
+  margin-left: 250px;
+  margin-right: 250px;
+  padding: 20px;
 }
 
+/* 이미지 사이즈를 변경할꺼면 여기 */
 .-my-owl-carousel .item {
-  width: calc(100% / 3 - 20px);
+  width: calc(100% / 3 - 100px);
   margin: auto;
-  width:  350px;
-  height: 350px;
+  width:  400px;
+  height: 400px;
   background-color: #FFFFFF;
+  box-sizing: border-box; /* 추가 */
 
 }
 
@@ -955,6 +986,23 @@ h5{
   max-width: 100%;
   max-height: 100%;
   float: left;
+}
+
+
+/* 화면 크기가 작아지면 마진은 auto로 설정 */
+@media only screen and (max-width: 1000px) {
+  .-my-owl-carousel {
+    margin-left: auto;
+  	margin-right: auto;
+  }
+  .-my-owl-carousel .item {
+  	margin: : auto;
+  }
+  
+  .-my-owl-carousel .item img{
+  	margin: : auto;
+  }
+  
 }
 
 .-my-owl-carousel .owl-nav {
@@ -1037,6 +1085,12 @@ h5{
   margin: 0 auto;
   width: 800px;
   height: 500px;
+}
+
+@media only screen and (max-width: 1000px) {
+	#map {
+		margin: auto;
+	}
 }
 
 
