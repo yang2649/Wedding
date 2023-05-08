@@ -40,6 +40,9 @@ ul.navbar-nav {
     background-color: #FFFFFF; /* 원하는 배경색을 설정하세요. */
 }
 
+
+
+
 .header {
   background-color: #FFFFFF;
   display: flex;
@@ -114,6 +117,12 @@ header.sticky {
   text-decoration: none;
 }
 
+.navbar-nav {
+overflow-y: hidden;
+}
+
+
+
 .dropdown-item:hover {
   color: #1d643b;
   text-decoration: none;
@@ -134,6 +143,7 @@ header.sticky {
   background-color: #333;
   color: #fff;
 }
+
 
 /* 토글 모양  */
 .menu-toggle {
@@ -171,6 +181,8 @@ header.sticky {
 .menu-toggle.scrolled .bar {
   background-color: #fff; /* 스크롤 내릴 때 흰색으로 변경 */
 }
+
+
 
 /*
 .bar {
@@ -240,6 +252,8 @@ header.sticky {
   font-weight: bold;
   overflow-y: auto;
   padding-bottom: 50px;
+  font-size: 25px;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .sliding-menu.open {
@@ -286,8 +300,12 @@ header.sticky {
 
 .sliding-menu  a {
 	margin: 0 5px;
-	 text-decoration: none;
-     color: inherit;
+	text-decoration: none;
+    color: inherit;
+}
+
+.sliding-menu li ul li a {
+  cursor: pointer;
 }
 
 
@@ -306,6 +324,8 @@ li {
   align-items: center;
   margin-right: 40px;
 }
+
+
 
 .header .header-links a:last-child {
   margin-right: 0; /* 이전에 15px이었던 margin-right 값을 0으로 변경 */
@@ -334,6 +354,140 @@ li {
   object-fit: cover;
 }
 
+
+
+ /* 팝업창 만들기 */
+
+.popup-container {
+display: none;
+position: fixed;
+z-index: 999;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.8);
+}
+
+.popup-box {
+  width: 500px;
+  height: 550px;
+  background-color: #f8f8f8;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  text-align: center;
+}
+
+.popup-box h2 {
+margin-top: 0;
+font-size: 24px;
+font-weight: bold;
+color: #333;
+}
+
+.popup-close {
+position: absolute;
+top: 10px;
+right: 10px;
+width: 30px;
+height: 30px;
+background-color: #ccc;
+border-radius: 50%;
+color: #fff;
+font-size: 20px;
+line-height: 30px;
+text-align: center;
+cursor: pointer;
+}
+
+form label {
+  display: block;
+  margin-bottom: 10px;
+  color: #333;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center; /* label의 텍스트 정렬 */
+}
+
+form input[type=text],
+form input[type=password] {
+width: 100%;
+padding: 12px 20px;
+margin: 8px 0;
+box-sizing: border-box;
+border: none;
+border-bottom: 2px solid #ccc;
+transition: 0.5s;
+outline: none;
+}
+
+form input[type=text]:focus,
+form input[type=password]:focus {
+border-bottom: 2px solid #FFDAB9;
+}
+
+form input[type=submit] {
+background-color: #FFDAB9;
+color: #fff;
+padding: 14px 20px;
+margin: 8px 0;
+border: none;
+border-radius: 10px;
+cursor: pointer;
+transition: 0.5s;
+font-size: 20px;
+font-weight: bold;
+}
+
+form input[type=submit]:hover {
+background-color: #f8f8f8;
+color: #FFDAB9;
+border: 2px solid #FFDAB9;
+}
+
+/* 추가된 스타일 */
+form input[type=text],
+form input[type=password],
+form input[type=submit] {
+  display: block; /* input 요소들이 한 줄에 나오지 않고 블록 요소처럼 표시 */
+  width: 100%;
+  font-family: 'Noto Sans KR', sans-serif; /* 폰트 설정 */
+}
+
+label[for="username"], label[for="password"] {
+  text-transform: uppercase; /* label 텍스트 대문자로 변경 */
+  margin-bottom: 5px; /* label 간격 줄임 */
+}
+
+
+
+.green-wedding {
+  font-family: 'Castoro Titling', cursive;
+  font-size: 80px;
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.links {
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #FFDAB9 !important;
+  font-size: 15px;
+}
+
+.links a {
+  color: #FFDAB9;
+  text-decoration: none;
+  border-bottom: none;
+}
 
 /* 버티컬 슬라이더 */
 /* #vertical-slider {
@@ -418,6 +572,8 @@ li {
   scrollbar-width: none;
   
 }
+
+
 
  /* 스크롤바 숨기려고 설정을했는데 안숨겨짐 */
 .dropdown-menu::-webkit-scrollbar {
@@ -584,10 +740,45 @@ div.VIP h4 {
     margin: 0px;
   }
 
-.VIP-watching {
+
+/* .VIP-watching {
 	background-color: #f7f5ef;
     margin: 0px;
-}
+} */
+
+.VIP-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    margin: 0;
+    background-color: #f7f5ef;
+  }
+  
+.VIP-margin {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 500px;
+    margin: 0;
+    background-color: #f7f5ef;
+    
+  }
+  
+.VIP-event {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #f7f5ef;
+    color: #a06303;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    border: 2px solid #a06303;
+    border-radius: 10px;
+  }
+  
 
 h4 {
 	text-align: center;
@@ -698,4 +889,184 @@ h5{
 .slide_overlay {
   background-color: transparent;
 }
+
+
+/* 카테링 부분 */
+.caterring {
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   grid-gap: 0px;
+   background-color: #F2E8DB;
+   padding: 5px;
+}
+
+.catemain h2{
+	margin:auto;
+	width:1174px;
+	text-align: center;
+	background-color: #F2E8DB;
+	
+}
+
+.catemain{
+	 background-color: #F2E8DB;
+}
+
+
+
+/* 이벤트 부분 */
+
+
+.EVENT h6 {
+  text-align: center;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 4em;
+  background-color: #FFFFFF;
+  margin: 0;
+  padding: 0;
+}
+
+.-my-owl-carousel {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 100%;
+  overflow: hidden;
+  background-color: #FFFFFF;
+}
+
+.-my-owl-carousel .item {
+  width: calc(100% / 3 - 20px);
+  margin: auto;
+  width:  350px;
+  height: 350px;
+  background-color: #FFFFFF;
+
+}
+
+.-my-owl-carousel .item img {
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
+  padding: 10px;
+}
+
+.-my-owl-carousel .owl-item {
+  max-width: 100%;
+  max-height: 100%;
+  float: left;
+}
+
+.-my-owl-carousel .owl-nav {
+  display: none;
+}
+
+/* 밑의 점 기능을 키고 싶다면 display를 block 으로 변경 */
+.-my-owl-carousel .owl-dots {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.-my-owl-carousel .owl-dot {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  margin: 0 10px;
+  background-color: #ccc;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+
+.-my-owl-carousel .owl-dot.active {
+  background-color: #000;
+}
+
+.Event-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    margin: 0;
+    background-color: #FFFFFF;
+  }
+  
+  .Event-margin {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 500px;
+    margin: 0;
+  }
+  
+  .btn-event {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #a06303;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    border: 2px solid #a06303;
+    border-radius: 10px;
+  }
+  
+/* LOCATION 부분*/
+.LOCATION h7 {
+  text-align: center;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 4em;
+  background-color: #FFFFFF;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 카카오 웹 API 사용 */
+#map {
+  margin: 0 auto;
+  width: 800px;
+  height: 500px;
+}
+
+
+/* location 이미지를 사용하고 싶으면 이렇게 */
+/* .image-location {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-location img {
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  height: auto;
+} */
+
+.map-margin {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  margin: 0;
+}
+
+.map-margin p {
+  font-weight: bold;
+  text-align: center;
+  margin: 10px;
+}
+
 
