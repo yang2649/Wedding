@@ -45,6 +45,12 @@ p {
   width: 394px;
   height: 250px;
 } 
+#root2 img {
+  display: block;
+  margin: 5px;
+  width: 350px;
+  height: 414px;
+} 
 
 #text-table h1 {
   font-family: 'Noto Sans KR', sans-serif;
@@ -267,15 +273,15 @@ p {
     <div style="display: flex; flex-wrap: wrap; justify-content: center; padding: 1vw;">
 
       <img
-           src="./img/part1.jpg"
+           src="./img/bride/dbride01.jpg"
            alt="swamp"
            />
       <img
-           src="./img/part2.jpg"
+           src="./img/bride/dbride02.jpg"
            alt="swamp"
            />
       <img
-           src="./img/part3.jpg"
+           src="./img/bride/dbride03.jpg"
            alt="swamp"
            />
     </div>
@@ -285,20 +291,22 @@ p {
     <div id="text-table">
 		<h1 style="text-align: center;">
 			<span style="color: rgb(191, 131, 101);" ">PHOTO ZONE</span></h1>
+		<p><br></p>
+		<p style="font-family: 'Times New Roman'; font : bolder ; color: rgb(191, 131, 101);">최고의 순간을 담아내기에 가장 이상적인 공간</p>
 	</div>
-	<div id="root">
+	<div id="root2">
     <div style="display: flex; flex-wrap: wrap; justify-content: center; padding: 1vw;">
 
       <img
-           src="./img/part1.jpg"
+           src="./img/bride/aphoto01.jpg"
            alt="swamp"
            />
       <img
-           src="./img/part2.jpg"
+           src="./img/bride/aphoto02.jpg"
            alt="swamp"
            />
       <img
-           src="./img/part3.jpg"
+           src="./img/bride/aphoto03.jpg"
            alt="swamp"
            />
     </div>
@@ -409,6 +417,9 @@ function showSlides(n) {
     }
 
     document.querySelectorAll('#root img').forEach(el => {
+      wrap(el);
+    });
+    document.querySelectorAll('#root2 img').forEach(el => {
       wrap(el);
     });
 
