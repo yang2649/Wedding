@@ -797,10 +797,11 @@ var marker = new kakao.maps.Marker({
 	});
 
   
-   //유정 회원가입
-    function showJoin(){
-        window.open("User/WriteForm","팝업 테스트","width=450, height=400, top=350, left=650");
-      }  
+  //유정 회원가입
+  function showJoin(){
+      window.open("User/WriteForm","팝업 테스트","width=500, height=550, top=250, left=650");
+    }  
+   
    
 </script>
 </body>

@@ -1,5 +1,6 @@
 package com.green.user.service.impl;
 
+import java.util.HashMap;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -52,6 +53,12 @@ public class UserServiceImpl implements UserService {
 		
 		userDao.updateUser(  vo  );
 		
+	}
+
+	@Override
+	public UserVo getLogin(HashMap<String, Object> map) {
+		UserVo  userVo  =  userDao.getLogin( map );
+		return  userVo;
 	}
 	
 }

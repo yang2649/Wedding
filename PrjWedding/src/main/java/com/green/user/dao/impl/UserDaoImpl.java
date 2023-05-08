@@ -3,6 +3,7 @@ package com.green.user.dao.impl;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.util.HashMap;
 import java.util.List;
 
 import org.apache.commons.dbcp2.BasicDataSource;
@@ -55,6 +56,12 @@ public class UserDaoImpl implements UserDao {
 		
 		sqlSession.update("User.UserUpdate", vo);
 		
+	}
+
+	@Override
+	public UserVo getLogin(HashMap<String, Object> map) {
+		UserVo  userVo = sqlSession.selectOne("User.GetLogin", map);
+		return  userVo;
 	}
 	
 	

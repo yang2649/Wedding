@@ -7,19 +7,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>회원 등록</title>
 <link rel="shortcut icon" href="/img/favicon.ico">
-<link rel="stylesheet" href="/css/common.css" />
-
+<link rel="stylesheet" href="/css/loginstyle.css">
+</head>
 <style>
-   th      { width : 20%;  }  
-   td      { width : 80%;  }  
-   input[type=text] ,  input[type=password], input[type=email]    { width:100%; } 
-      
+
+  th      { width : 20%; text-transform: uppercase;  margin-bottom: 5px; }  
+  td      { display: block; width : 80%; font-family: 'Noto Sans KR', sans-serif;  }  
+  input[type=text] ,  input[type=password], input[type=email]  { width:100%; }
+   
 </style>
 
-</head>
 <body>
-  <div id="main">
-  <h2>회원 등록</h2>
+ <div class="join-container"> 
+  <div class="join" id="main">
+  <h2 class="jointitle">Sign up</h2>
   <form action="/User/Write" method="POST" >
   <table>
    <tr>
@@ -28,7 +29,7 @@
    </tr> 
    <tr>
      <th>비밀번호</th>
-     <td><input type="password" name="passwd" id="pwd1" /></td>
+     <td><input type="password" name="passwd" id="passwd" /></td>
    </tr> 
    <tr>
      <th>비밀번호 확인</th>
@@ -40,7 +41,11 @@
    </tr> 
    <tr>
      <th>이메일</th>
-     <td><input type="email" name="email" /></td>
+     <td><input type="text" name="email" /></td>
+   </tr> 
+   <tr>
+     <th>전화번호</th>
+     <td><input type="text" name="phone" /></td>
    </tr> 
    <tr>     
      <td colspan="2">
@@ -48,8 +53,9 @@
      </td>
    </tr> 
   </table>
-  </form>
-  </div>
+ </form>
+ </div>
+ </div>
 </body>
 </html>
 
