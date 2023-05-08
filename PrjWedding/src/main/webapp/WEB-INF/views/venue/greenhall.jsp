@@ -44,7 +44,7 @@ p {
   margin: 5px;
   width: 394px;
   height: 250px;
-} 
+}  
 #root2 img {
   display: block;
   margin: 5px;

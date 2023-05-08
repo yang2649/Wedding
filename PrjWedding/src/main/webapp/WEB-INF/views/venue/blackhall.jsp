@@ -50,7 +50,7 @@ p {
   margin: 5px;
   width: 350px;
   height: 414px;
-} 
+}  
 
 #text-table h1 {
   font-family: 'Noto Sans KR', sans-serif;

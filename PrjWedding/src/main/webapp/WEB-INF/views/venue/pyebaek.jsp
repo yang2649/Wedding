@@ -215,7 +215,7 @@ p {
 		<p>부모님에게 인사하는 자리</p>
 		<p>전통적인 한옥디자인의</p>
 		<p>폐백실에서 함께 하세요</p>
-	</div>
+ 	</div>
 	
 	<!-- 슬라이드 -->
 	 <div class="slideshow-container">
