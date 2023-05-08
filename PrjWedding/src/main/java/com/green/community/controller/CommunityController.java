@@ -184,6 +184,8 @@ public class CommunityController {
 			return mv;
 		}
 		
+		
+		// 이벤트 -------------------------------------------------
 		@RequestMapping("/Community05")
 		public ModelAndView reviewList() {
 			
@@ -193,6 +195,29 @@ public class CommunityController {
 			return mv;
 		}
 		
+		@RequestMapping("/Community05WriteForm")
+		public ModelAndView reviewWriteForm(
+				@RequestParam HashMap<String, Object> map) {
+			
+			// if 로그인 안하면 로그인 하라는 경고창 띄움..
+			// 
+			ModelAndView mv = new ModelAndView();
+			mv.setViewName("community/reviewWriteForm");
+			return mv;
+		}
+		
+		@RequestMapping("/Community05Write")
+		public ModelAndView reviewWrite(
+				@RequestParam HashMap<String, Object> map,
+				HttpServletRequest request) {
+			
+			communityService.downWrite(map, request);
+			
+			ModelAndView mv = new ModelAndView();
+			mv.addObject("map", map);
+			mv.setViewName("redirect:/Community03");
+			return mv;
+		}
 		
 		
 	}

@@ -375,51 +375,17 @@ nav  {
     });
 </script>
     
-     
+     <a href="">새글쓰기</a>
 <div class="container "  style="margin: auto; padding:15px 15px 15px 120px;">
   <div class="row">
-
+<c:forEach var="" items="${dfsdfsf}">
 <div class="card" style="width: 18rem; margin:20px;">
   <img class="card-img-top" src="./img/review/review1.jpg" alt="Card image cap">
   <div class="card-body">
     <p class="card-text">김민경 고객님: 식장도넓고 주차장도 넓어서 하객들이 정말 좋아했습니다. 인생의 단 한번뿐인 결혼식을 행복하게 마무리하게 되어서 기뻐요!!</p>
   </div>
 </div>
-
-<div class="card"  style="width: 18rem;  margin:20px;">
-  <img class="card-img-top" src="./img/review/review1.jpg" alt="Card image cap">
-  <div class="card-body">
-    <p class="card-text">김민경 고객님: 식장도넓고 주차장도 넓어서 하객들이 정말 좋아했습니다. 인생의 단 한번뿐인 결혼식을 행복하게 마무리하게 되어서 기뻐요!!</p>
-  </div>
-</div>
-
-<div class="card"  style="width: 18rem; margin:20px; ">
-  <img class="card-img-top" src="./img/review/review1.jpg" alt="Card image cap">
-  <div class="card-body">
-    <p class="card-text">김민경 고객님: 식장도넓고 주차장도 넓어서 하객들이 정말 좋아했습니다. 인생의 단 한번뿐인 결혼식을 행복하게 마무리하게 되어서 기뻐요!!</p>
-  </div>
-</div>
-
-<div class="card"  style="width: 18rem; margin:20px;">
-  <img class="card-img-top" src="./img/review/review1.jpg" alt="Card image cap">
-  <div class="card-body">
-    <p class="card-text">김민경 고객님: 식장도넓고 주차장도 넓어서 하객들이 정말 좋아했습니다. 인생의 단 한번뿐인 결혼식을 행복하게 마무리하게 되어서 기뻐요!!</p>
-  </div>
-</div>
-
-<div class="card"  style="width: 18rem; margin:20px;">
-  <img class="card-img-top" src="./img/review/${dsfd}.jpg }" alt="Card image cap">
-  <div class="card-body">
-    <p class="card-text">김민경 고객님: 식장도넓고 주차장도 넓어서 하객들이 정말 좋아했습니다. 인생의 단 한번뿐인 결혼식을 행복하게 마무리하게 되어서 기뻐요!!</p>
-  </div>
-</div>
-
-<div class="card"  style="width: 18rem; margin:20px;">
-  <img class="card-img-top" src="./img/review/review1.jpg" alt="Card image cap">
-  <div class="card-body">
-    <p class="card-text">김민경 고객님: 식장도넓고 주차장도 넓어서 하객들이 정말 좋아했습니다. 인생의 단 한번뿐인 결혼식을 행복하게 마무리하게 되어서 기뻐요!!</p>
-  </div>
-</div>
+</c:forEach>
 
   </div>
   </div>
