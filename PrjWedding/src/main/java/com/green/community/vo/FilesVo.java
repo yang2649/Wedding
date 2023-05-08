@@ -51,12 +51,14 @@ public class FilesVo {
 	public void setSfilename(String sfilename) {
 		this.sfilename = sfilename;
 	}
-
+	
 	// toString
 	@Override
 	public String toString() {
 		return "FilesVo [file_num=" + file_num + ", idx=" + idx + ", filename=" + filename + ", fileext=" + fileext
 				+ ", sfilename=" + sfilename + "]";
 	}
+
+	
 
 }

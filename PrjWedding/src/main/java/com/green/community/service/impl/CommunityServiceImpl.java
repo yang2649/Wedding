@@ -55,8 +55,9 @@ public class CommunityServiceImpl implements CommunityService {
 			HttpServletRequest request) {
 		
 		CommFile.save( map, request );
-		
 		communityDao.downWrite(map);
+		
+		
 		
 	}
 

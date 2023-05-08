@@ -47,13 +47,16 @@ public class CommunityDaoImpl implements CommunityDao {
 
 	@Override
 	public void downWrite(HashMap<String, Object> map) {
-		// Files  에 저장
+		
+		System.out.println(map);
+		// db 정보 저장
+		sqlSession.insert("Community.DowmInsert", map);
+
+				// Files  에 저장
 				List<FilesVo>  fileList =  (List<FilesVo>) map.get("fileList");
 				if( fileList.size() != 0  )
 					sqlSession.insert("Community.FileInsert", map);
-			
-				// db 정보 저장
-				sqlSession.insert("Community.DowmInsert", map);
+				
 	}
 	
 	@Override
@@ -84,7 +87,7 @@ public class CommunityDaoImpl implements CommunityDao {
 
 	@Override
 	public List<FilesVo> getFileList(HashMap<String, Object> map) {
-		List<FilesVo> fileList = sqlSession.selectList("Community.FilesList", map );
+		List<FilesVo> fileList = sqlSession.selectList("Community.PdfFilesList", map );
 
 		return fileList;
 	}

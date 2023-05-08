@@ -211,7 +211,7 @@
    
    </select>
    
-    <select   id         = "FileList" 
+    <select   id         = "PdfFilesList" 
              resultType = "com.green.community.vo.FilesVo">
    
        SELECT

@@ -152,7 +152,8 @@ public class CommunityController {
 		
 		List<FilesVo> fileList = communityService.getFileList( map );
 		
-		System.out.println(fileList);
+		System.out.println( "file:" + map);
+		System.out.println("filelist:" + fileList);
 		
 		
 		ModelAndView mv = new ModelAndView();
