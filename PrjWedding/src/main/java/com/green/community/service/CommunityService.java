@@ -22,5 +22,7 @@ public interface CommunityService {
 	List<CommunityVo> getdownList(String menu_id);
 
 	void downWrite(HashMap<String, Object> map, HttpServletRequest request);
+
+	List<CommunityVo> getfaqList(String menu_id);
 }
 

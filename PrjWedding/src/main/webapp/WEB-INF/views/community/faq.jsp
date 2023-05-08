@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+ 
 <!DOCTYPE html>
 <html>
 <head>
@@ -282,6 +284,37 @@ nav  {
 }
 
 h1{ text-align: center;}
+
+.customer-notice a {
+	text-decoration: none;
+	color: black;
+}
+.customer-notice li {
+	padding: 10px;
+}
+.show {
+	display: flex;
+	flex-direction: row;
+}
+.faqTitle ul {
+	margin: 0;
+	padding: 0;
+	justify-content: space-between;
+	border-bottom: 1px solid #ccc;
+	cursor: hand;
+}
+.faqTitle li {
+	display: flex;
+}
+.faqContent {
+	background-color: #eee;
+}
+.faqContent p {
+	display: none;
+	padding: 20px;
+	height: 100px;
+}
+
 </style>
 
 </head>
@@ -386,7 +419,7 @@ h1{ text-align: center;}
     </div> 
   </main>
   
-<div class="faq_group">
+<!-- <div class="faq_group">
     <div class="table">
       <div class="block">
         <span style=" margin:0px 50px 0px 50px;">1</span>&nbsp;&nbsp;&nbsp;<a href=""style="color: black">[웨딩] 예식비용은 어떻게 지불해야 하나요?</a> 
@@ -402,8 +435,45 @@ h1{ text-align: center;}
     </div>
       <hr>
 </div>
+   <div class="container" style="margin: 300px;"></div> -->
+   
+   <div class="faq_group">
+    <div class="table">
+      <div class="block">
+        <span style=" margin:0px 120px 0px 250px;">NO</span>&nbsp;
+        <span>목록</span> 
+      
+      </div>
+    </div>
+      <hr>
+      <div class="customer-notice">
+            <c:forEach var="vo" items="${faqList}">
+               <div class="faqTitle" id="show-${vo.idx}">
+                  <ul class="show">
+                     <li>${vo.title}</li>
+                     <li><span class="material-symbols-outlined">expand_more</span></li>
+                  </ul>
+               </div>
+               <div class="faqContent">
+                  <p id="hide-${vo.idx}">${vo.cont}</p>
+               </div>
+            </c:forEach>
+         </div>
+      </div>
+   </div>
+   <script>
+      $(document).ready(function() {
+         $('[id^="show-"]').each(function() {
+            let id = $(this).attr("id");
+            let num = id.split("-")[1];	
+            $(this).click(function() {
+               $("#hide-" + num).toggle();
+            });
+         });
+      });
+   </script>
+</div>
    <div class="container" style="margin: 300px;"></div>
-
 
 </body>
 </html>

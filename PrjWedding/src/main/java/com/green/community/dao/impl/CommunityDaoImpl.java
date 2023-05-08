@@ -62,6 +62,12 @@ public class CommunityDaoImpl implements CommunityDao {
 				sqlSession.insert("Community.DowmInsert", map);
 	}
 
+	@Override
+	public List<CommunityVo> getfaqList(String menu_id) {
+		 List<CommunityVo> faqList = sqlSession.selectList("Community.FaqList", menu_id);
+		return faqList;
+	}
+
 
 
 }

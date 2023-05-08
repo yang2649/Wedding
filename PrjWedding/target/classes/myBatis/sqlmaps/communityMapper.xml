@@ -113,6 +113,7 @@
           MENU_ID  =  'MENU03'
 
    </select>  
+   
       <insert id="DowmInsert">
      INSERT INTO  BOARD (
             IDX
@@ -162,6 +163,32 @@
            )
       </foreach>
       </insert>
+      
+      <!--    FAQ ============================================= -->
+      <select id         = "FaqList"
+           resultType = "com.green.community.vo.CommunityVo"  >
+   
+      SELECT     IDX, 
+                 MENU_ID,                 
+                 -- DECODE(LVL, 0, '', '[Re] ') || TITLE  AS TITLE ,
+                 TITLE,
+                 WRITER,
+                 CONT,
+                 READCOUNT,
+                 TO_CHAR(REGDATE, 'YYYY-MM-DD HH24:MI:SS')  REGDATE,
+                 BNUM,
+                 LVL,
+                 STEP,
+                 NREF,
+                 DELNUM
+                 
+       FROM      BOARD  
+    
+       
+       WHERE     
+          MENU_ID  =  'MENU04'
+
+   </select>  
    
 </mapper>
  

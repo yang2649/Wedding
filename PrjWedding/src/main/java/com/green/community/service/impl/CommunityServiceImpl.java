@@ -62,4 +62,11 @@ public class CommunityServiceImpl implements CommunityService {
 		
 	}
 
+
+	@Override
+	public List<CommunityVo> getfaqList(String menu_id) {
+		List<CommunityVo> faqList = communityDao.getfaqList(menu_id);
+		return faqList;
+	}
+
 }

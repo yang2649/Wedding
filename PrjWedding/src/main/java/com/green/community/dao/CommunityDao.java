@@ -16,4 +16,6 @@ public interface CommunityDao {
 	List<CommunityVo> getdownList(String menu_id);
 
 	void downWrite(HashMap<String, Object> map);
+
+	List<CommunityVo> getfaqList(String menu_id);
 }

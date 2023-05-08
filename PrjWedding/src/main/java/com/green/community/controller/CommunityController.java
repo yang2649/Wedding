@@ -137,6 +137,36 @@ public class CommunityController {
 	     mv.setViewName("redirect:/Community03");
 	     return mv;
 	}
-}
+	
+	//--- FAQ-------------------
+	
+	
+		@RequestMapping("/Community04")
+		public ModelAndView faqlist(@RequestParam HashMap<String, Object> map) {
+			
+			String  menu_id  = (String)map.get("menu_id");
+			
+			List<CommunityVo> faqList = communityService.getfaqList(menu_id);
+			
+			ModelAndView mv = new ModelAndView();
+			mv.setViewName("community/faq");
+			mv.addObject("faqList", faqList);
+			return mv;
+		}
+		
+		@RequestMapping("/Community05")
+		public ModelAndView reviewList() {
+			
+			ModelAndView mv = new ModelAndView();
+			mv.setViewName("community/review");
+			
+			return mv;
+		}
+		
+		
+		
+	}
+
+
 	
 	
