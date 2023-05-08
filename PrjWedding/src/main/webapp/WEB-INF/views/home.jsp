@@ -129,11 +129,11 @@
                 COMMUNITY
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="COMMUNITY01">공지사항</a></li>
-                  <li><a class="dropdown-item" href="COMMUNITY02">이벤트</a></li>
-                  <li><a class="dropdown-item" href="COMMUNITY03">후기</a></li>
-                  <li><a class="dropdown-item" href="COMMUNITY03">자료실</a></li>
-                  <li><a class="dropdown-item" href="COMMUNITY03">FAQ</a></li>
+                  <li><a class="dropdown-item" href="Community01">공지사항</a></li>
+                  <li><a class="dropdown-item" href="Community02">이벤트</a></li>
+                  <li><a class="dropdown-item" href="Community03">자료실</a></li>
+                  <li><a class="dropdown-item" href="Community04">FAQ</a></li>
+                  <li><a class="dropdown-item" href="Community05">후기</a></li>
                 </ul>
               </li>
               
