@@ -18,7 +18,7 @@
 <link rel="shortcut icon" href="/img/favicon.ico">
 
 <!-- css 부분 사용 -->
-<link rel="stylesheet" href="/css/styles.css">
+<link rel="stylesheet" href="./css/styles.css">
 <!-- jquery 사용 -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 

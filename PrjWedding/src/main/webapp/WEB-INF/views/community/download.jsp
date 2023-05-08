@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+     <%@taglib prefix="c"  uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -313,15 +314,15 @@ nav  {
 <div class="sliding-menu-overlay"></div>
 		<!-- 메인 메뉴 -->
 		
-<img src="./img/side_main.jpg" width="100%" height="100%" >
+		
+   <img src="./img/side_main.jpg" width="100%" height="100%" >
 <nav class="nav nav-pills nav-justified" >
   <a class="nav-item nav-link" href="/Community01" style="color: rgb(0, 0, 0)">공지사항</a>
   <a class="nav-item nav-link" href="/Community02" style="color: rgb(0, 0, 0)">이벤트</a>
-  <a class="nav-item nav-link" href="/Community03" style="color: rgb(0, 0, 0)">후기글</a>
-  <a class="nav-item nav-link" href="/Community04" style="color: rgb(0, 0, 0)">자료실</a>
-  <a class="nav-item nav-link" href="/Community05" style="color: rgb(0, 0, 0)">FAQ</a>
-</nav>	
-
+  <a class="nav-item nav-link" href="/Community03" style="color: rgb(0, 0, 0)">자료실</a>
+  <a class="nav-item nav-link" href="/Community04" style="color: rgb(0, 0, 0)">FAQ</a>
+  <a class="nav-item nav-link" href="/Community05" style="color: rgb(0, 0, 0)">후기글</a>
+</nav>		
 <br><br><br><br><br><br><br><br>
 <script>
   const menuButton = document.querySelector('.menu-toggle');
@@ -381,22 +382,32 @@ nav  {
     <hr>
     </div> 
   </main>
-  
+                                         <a href="Community03WriteForm">새 글쓰기</a>
 <div class="faq_group">
     <div class="table">
       <div class="block">
-        <span style=" margin:0px 50px 0px 50px;">1</span>&nbsp;&nbsp;&nbsp;<a href=""style="color: black">[웨딩] 예식비용은 어떻게 지불해야 하나요?</a> 
-       <button style="float: right; margin:0px 90px 0px 0px;">&nbsp;🔻&nbsp;</button>
+        <span style=" margin:0px 120px 0px 250px;">NO</span>&nbsp;
+        <span>목록</span> 
+      
       </div>
     </div>
       <hr>
+    <c:forEach var="vo" items="${downList}">
     <div class="table">
       <div class="block">
-        <span style=" margin:0px 50px 0px 50px;">2</span>&nbsp;&nbsp;&nbsp;<span>[웨딩]주차비는 어떻게 지불해야 하나요?</span> 
-       <button style="float: right; margin:0px 90px 0px 0px;">&nbsp;🔻&nbsp;</button>
+        <a href=""style="color: black">
+        <span style=" margin:0px 120px 0px 250px;">&nbsp;${vo.idx }</span>&nbsp;&nbsp;&nbsp;
+        <span>
+        ${vo.title }
+        </span>
+       <span>
+       &nbsp;🔻&nbsp;
+       </span>
+        </a>  
       </div>
     </div>
       <hr>
+    </c:forEach>
 </div>
    <div class="container" style="margin: 300px;"></div>
 

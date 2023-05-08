@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+     <%@taglib prefix="c"  uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -320,9 +322,9 @@ nav  {
 <nav class="nav nav-pills nav-justified" >
   <a class="nav-item nav-link" href="/Community01" style="color: rgb(0, 0, 0)">공지사항</a>
   <a class="nav-item nav-link" href="/Community02" style="color: rgb(0, 0, 0)">이벤트</a>
-  <a class="nav-item nav-link" href="/Community03" style="color: rgb(0, 0, 0)">후기글</a>
-  <a class="nav-item nav-link" href="/Community04" style="color: rgb(0, 0, 0)">자료실</a>
-  <a class="nav-item nav-link" href="/Community05" style="color: rgb(0, 0, 0)">FAQ</a>
+  <a class="nav-item nav-link" href="/Community03" style="color: rgb(0, 0, 0)">자료실</a>
+  <a class="nav-item nav-link" href="/Community04" style="color: rgb(0, 0, 0)">FAQ</a>
+  <a class="nav-item nav-link" href="/Community05" style="color: rgb(0, 0, 0)">후기글</a>
 </nav>		
 
 <br><br><br><br><br><br><br><br>
@@ -376,12 +378,14 @@ nav  {
     });
 </script>
      <!-- =============================여기서부터 내용==================================== -->
-      <h2 style= "text-align: center;">공지사항</h2>
-    
-     <div class="customer-notic">
+      <h2 style= "text-align: center;">공지사항</h2>    
+      <br>
+      <br>
+      <a href="Community01WriteForm">공지사항 글쓰기</a>
+     <div>
        <hr>
-       <div class="noticetitle">
-         <ul class="shownotice">
+       <div>
+         <ul>
             <li>No</li>
             <li class="tit">제목</li>
             <li class="name" style="display:none">글쓴이</li>
@@ -389,15 +393,17 @@ nav  {
             <li class="cont" style="display:">조회수</li>
          </ul>
          <hr>
-       <!-- <c:forEach var="" items=""></c:forEach> -->
-         <ul class="shownotice">
-            <li>01</li>
-            <li class="tit">와라라라라라</li>
-            <li class="name" style="display:none">관리자</li>
-            <li class="date" style="display: ">오늘</li>
-            <li class="cont" style="display:">12</li>         
-         </ul>
+
+      <c:forEach var="CommunityVo" items="${notList}">
+       <ul> 
+            <li>${CommunityVo.idx }</li>
+            <li class="tit"><a href="Community01View?idx=${CommunityVo.idx}">${ CommunityVo.title }</a></li>
+            <li class="name" style="display:none">${ CommunityVo.writer }</li>
+            <li class="date" style="display: ">${fn:substring( CommunityVo.regdate, 0, 10) }</li>
+            <li class="cont" style="display:">${ CommunityVo.readcount }</li>         
+     </ul>
          <hr>
+       </c:forEach>  
        </div>
      </div>
      <div class="container" style="margin: 300px;">
