@@ -19,6 +19,8 @@
 
 <!-- css 부분 사용 -->
 <link rel="stylesheet" href="./css/styles.css">
+<link rel="stylesheet" href="./css/loginstyle.css">
+
 <!-- jquery 사용 -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
@@ -153,6 +155,30 @@
       </nav>
     </div>
   </div>
+  
+<!--유정 로그인-->
+<div class="container">
+  <div id="modal-open">LOGIN</div>  
+       <div class="popup-wrap" id="popup" style="display: none;">
+       <div class="popup-box">
+       <span class="popup-close" id="popup-close">&times;</span>
+       <h2 class="green-wedding">Green Wedding</h2><br>
+       <form action="/loginprocess" method="POST">
+       <label for="userid">ID</label><br>
+       <input type="text" id="userid" name="userid"><br><br>
+       <label for="password">Password</label><br>
+       <input type="password" id="password" name="password"><br><br>
+       <input type="submit" value="로그인" />
+       </form>
+      <br>
+      <div class="links">
+      <a href="#">아이디 찾기</a>
+      <a href="#">비밀번호 찾기</a>
+      <a href="#" id="join"  onclick="showJoin();">회원가입</a>
+    </div>
+   </div>
+  </div>
+</div>
 
 <!-- 햄버거 모양 토글 -->
 <div class="menu-toggle">
@@ -171,7 +197,10 @@
       <br>
       <br>
       <br>
-      	<li><a href="#">로그인</a></li>
+      	<!--유정 로그인-->
+      	<li><hr></li>
+      	<li> ${ sessionScope.login.username } 님 환영합니다<br></li>
+        <li><a href="/logout">로그아웃</a></li>
         <li><hr></li>
         <li><a href="/User/List">사용자 목록</a></li>
         <li><a href="/User/WriteForm">사용자 등록</a></li>
@@ -194,29 +223,6 @@
 
 <div class="sliding-menu-overlay"></div>
 
-
-<!-- 팝업창 HTML 코드 -->
-
-<div class="popup-container">
-  <div class="popup-box">
-    <span class="popup-close">&times;</span>
-    <h2 class="green-wedding">Green Wedding</h2><br>
-    <form>
-      <label for="username">USERNAME</label><br>
-      <input type="text" id="username" name="username"><br><br>
-      <label for="password">PASSWORD</label><br>
-      <input type="password" id="password" name="password"><br><br>
-      <input type="submit" value="로그인">
-    </form>
-    <br>
-    <div class="links">
-      <a href="#">아이디 찾기</a>
-      <a href="#">비밀번호 찾기</a>
-      <a href="#">회원가입</a>
-    </div>
-  </div>
-</div>
- 
  
  
 <!-- 메인 메뉴 -->
@@ -770,6 +776,32 @@ var marker = new kakao.maps.Marker({
 	    }
 	  });
 	});
+  
+  // 유정 로그인  
+  $(function(){
+	  $("#popup-close").click(function(){
+         modalClose(); //모달 닫기 함수 호출	      
+	      
+	  });
+	  $("#modal-open").click(function(){        
+	      $("#popup").css('display','flex').hide().fadeIn();
+	      //팝업을 flex속성으로 바꿔준 후 hide()로 숨기고 다시 fadeIn()으로 효과
+	  });
+	
+	  $("#join").click(function(){
+	      modalClose(); //회원가입 눌렀을 때도 모달 닫기 함수 호출
+	  });
+	  function modalClose(){
+	      $("#popup").fadeOut(); //페이드아웃 효과
+	  }
+	});
+
+  
+   //유정 회원가입
+    function showJoin(){
+        window.open("User/WriteForm","팝업 테스트","width=450, height=400, top=350, left=650");
+      }  
+   
 </script>
 </body>
 </html> 

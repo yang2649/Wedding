@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+.card {
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 25px;
+  margin:10px;
+  width: 18rem;
+}
+
+.card-img {
+  width: 250px;
+  height: auto;
+  border-radius: 25px;
+} 
