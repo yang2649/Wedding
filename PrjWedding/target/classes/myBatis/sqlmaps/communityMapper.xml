@@ -188,7 +188,39 @@
        WHERE     
           MENU_ID  =  'MENU04'
 
-   </select>  
+   </select> 
+   
+   
+   <select id="GetDownload"
+   resultType= "com.green.community.vo.CommunityVo"  >
+         SELECT  IDX,
+               MENU_ID,
+               TITLE,
+               CONT,
+               WRITER,
+               READCOUNT,
+               TO_CHAR(REGDATE, 'YYYY-MM-DD HH24:MI:SS') REGDATE,
+               BNUM,
+               LVL,
+               STEP,
+               NREF,
+               DELNUM,
+               PARENT
+        FROM   BOARD
+        WHERE  IDX = #{idx}
+   
+   </select>
+   
+    <select   id         = "FileList" 
+             resultType = "com.green.community.vo.FilesVo">
+   
+       SELECT
+		   FILE_NUM, IDX, FILENAME, FILEEXT, SFILENAME
+		FROM       FILES
+		WHERE      IDX   =  #{ idx  } 
+		ORDER BY   FILE_NUM  ASC 
+   
+   </select>
    
 </mapper>
  

@@ -382,7 +382,7 @@ nav  {
     <hr>
     </div> 
   </main>
-                                         <a href="Community03WriteForm">새 글쓰기</a>
+          <a href="Community03WriteForm">새 글쓰기</a>
 <div class="faq_group">
     <div class="table">
       <div class="block">
@@ -395,7 +395,7 @@ nav  {
     <c:forEach var="vo" items="${downList}">
     <div class="table">
       <div class="block">
-        <a href=""style="color: black">
+        <a href="Community03View?idx=${vo.idx}"style="color: black">
         <span style=" margin:0px 120px 0px 250px;">&nbsp;${vo.idx }</span>&nbsp;&nbsp;&nbsp;
         <span>
         ${vo.title }

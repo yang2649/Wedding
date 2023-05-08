@@ -13,6 +13,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.green.community.service.CommunityService;
 import com.green.community.vo.CommunityVo;
+import com.green.pds.vo.FilesVo;
 import com.green.pds.vo.PdsVo;
 
 
@@ -100,10 +101,9 @@ public class CommunityController {
 	@RequestMapping("/Community03")
 	public ModelAndView downloadList(
 			@RequestParam HashMap<String, Object> map) {
+
 		
-		String  menu_id  = (String)map.get("menu_id");
-		
-		List<CommunityVo> downList = communityService.getdownList(menu_id);
+		List<CommunityVo> downList = communityService.getdownList(map);
 		
 		System.out.println("Contr List MAP:" + downList);
 		
@@ -114,6 +114,7 @@ public class CommunityController {
 		
 		return mv;
 	}
+	
 	
 	@RequestMapping("/Community03WriteForm")
 	public ModelAndView downWriteForm(
@@ -138,15 +139,43 @@ public class CommunityController {
 	     return mv;
 	}
 	
+	@RequestMapping("/Community03View")
+	public ModelAndView downloadView(
+			@RequestParam HashMap<String, Object> map) {
+		
+		CommunityVo  communityVo  =  communityService.getdownload(map);  
+		
+		String         cont      =  communityVo.getCont();
+		if( cont == null )     cont = "";
+		cont                     =   cont.replace("\n", "<br>");
+		communityVo.setCont(cont);
+		
+		List<FilesVo> fileList = communityService.getFileList( map );
+		
+		System.out.println(fileList);
+		
+		
+		ModelAndView mv = new ModelAndView();
+		mv.setViewName("community/downloadView");
+		mv.addObject("vo", communityVo);
+		mv.addObject("map", map);
+		mv.addObject("fileList", fileList);
+		return mv;
+	}
+	
 	//--- FAQ-------------------
 	
 	
 		@RequestMapping("/Community04")
-		public ModelAndView faqlist(@RequestParam HashMap<String, Object> map) {
+		public ModelAndView faqlist(
+				@RequestParam HashMap<String, Object> map) {
 			
 			String  menu_id  = (String)map.get("menu_id");
+			System.out.println(menu_id);
 			
 			List<CommunityVo> faqList = communityService.getfaqList(menu_id);
+			
+			System.out.println(faqList);
 			
 			ModelAndView mv = new ModelAndView();
 			mv.setViewName("community/faq");

@@ -12,6 +12,7 @@ import com.green.community.dao.CommunityDao;
 import com.green.community.service.CommunityService;
 import com.green.community.vo.CommunityVo;
 import com.green.pds.service.impl.PdsFile;
+import com.green.pds.vo.FilesVo;
 
 
 @Service("communityService")
@@ -45,11 +46,7 @@ public class CommunityServiceImpl implements CommunityService {
 	}
 
 
-	@Override
-	public List<CommunityVo> getdownList(String menu_id) {
-		List<CommunityVo>   downList = communityDao.getdownList(menu_id);
-		return downList;
-	}
+
 
 
 	@Override
@@ -58,6 +55,7 @@ public class CommunityServiceImpl implements CommunityService {
 			HttpServletRequest request) {
 		
 		CommFile.save( map, request );
+		
 		communityDao.downWrite(map);
 		
 	}
@@ -67,6 +65,28 @@ public class CommunityServiceImpl implements CommunityService {
 	public List<CommunityVo> getfaqList(String menu_id) {
 		List<CommunityVo> faqList = communityDao.getfaqList(menu_id);
 		return faqList;
+	}
+
+
+	@Override
+	public List<CommunityVo> getdownList(HashMap<String, Object> map) {
+		List<CommunityVo>   downList = communityDao.getdownList(map);
+		return downList;
+	}
+
+
+	@Override
+	public CommunityVo getdownload(HashMap<String, Object> map) {
+		CommunityVo  communityVo  =  communityDao.getdownload(map); 
+		return communityVo;
+	}
+
+
+	//자료실상세보기에서 파일 보기.
+	@Override
+	public List<FilesVo> getFileList(HashMap<String, Object> map) {
+		List<FilesVo> fileList = communityDao.getFileList( map );
+		return fileList;
 	}
 
 }

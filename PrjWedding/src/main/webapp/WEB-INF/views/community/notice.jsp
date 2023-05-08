@@ -386,21 +386,19 @@ nav  {
        <hr>
        <div>
          <ul>
-            <li>No</li>
-            <li class="tit">제목</li>
-            <li class="name" style="display:none">글쓴이</li>
-            <li class="date" style="display: ">날짜</li>
-            <li class="cont" style="display:">조회수</li>
+            <li class="notice-date" style="display: ">날짜</li>
+            <li class="notice-tit">제목</li>
+            <li class="notice-name" style="display:none">글쓴이</li>
+            <li class="notice-cont" style="display:">조회수</li>
          </ul>
          <hr>
 
       <c:forEach var="CommunityVo" items="${notList}">
-       <ul> 
-            <li>${CommunityVo.idx }</li>
-            <li class="tit"><a href="Community01View?idx=${CommunityVo.idx}">${ CommunityVo.title }</a></li>
-            <li class="name" style="display:none">${ CommunityVo.writer }</li>
-            <li class="date" style="display: ">${fn:substring( CommunityVo.regdate, 0, 10) }</li>
-            <li class="cont" style="display:">${ CommunityVo.readcount }</li>         
+       <ul>             
+            <li class="notice-date" style="display: ">${fn:substring( CommunityVo.regdate, 0, 10) }</li>
+            <li class="notice-tit"><a href="Community01View?idx=${CommunityVo.idx}">${ CommunityVo.title }</a></li>
+            <li class="notice-name" style="display:none">${ CommunityVo.writer }</li>
+            <li class="notice-cont" style="display:">${ CommunityVo.readcount }</li>         
      </ul>
          <hr>
        </c:forEach>  

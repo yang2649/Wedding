@@ -46,12 +46,6 @@ public class CommunityDaoImpl implements CommunityDao {
 	}
 
 	@Override
-	public List<CommunityVo> getdownList(String menu_id) {
-		List<CommunityVo> downList = sqlSession.selectList("Community.DownList", menu_id);
-		return downList;
-	}
-
-	@Override
 	public void downWrite(HashMap<String, Object> map) {
 		// Files  에 저장
 				List<FilesVo>  fileList =  (List<FilesVo>) map.get("fileList");
@@ -61,11 +55,38 @@ public class CommunityDaoImpl implements CommunityDao {
 				// db 정보 저장
 				sqlSession.insert("Community.DowmInsert", map);
 	}
-
+	
+	@Override
+	public List<CommunityVo> getdownList(HashMap<String, Object> map) {
+		List<CommunityVo> downList = sqlSession.selectList("Community.DownList", map);
+		return downList;
+	}
+	
+	
+//-----faq---------------------
 	@Override
 	public List<CommunityVo> getfaqList(String menu_id) {
 		 List<CommunityVo> faqList = sqlSession.selectList("Community.FaqList", menu_id);
 		return faqList;
+	}
+
+	@Override
+	public CommunityVo getdownload(HashMap<String, Object> map) {
+		
+		sqlSession.update("Board.UpdateReadCount", map);
+		
+		System.out.println("글보기" + map);
+		CommunityVo communityVo = sqlSession.selectOne("Community.GetDownload", map);
+		System.out.println( communityVo);
+		
+		return communityVo;
+	}
+
+	@Override
+	public List<FilesVo> getFileList(HashMap<String, Object> map) {
+		List<FilesVo> fileList = sqlSession.selectList("Community.FilesList", map );
+
+		return fileList;
 	}
 
 
