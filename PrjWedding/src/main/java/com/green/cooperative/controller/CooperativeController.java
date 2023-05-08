@@ -7,13 +7,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class CooperativeController {
 	
 	
-	@RequestMapping("/Cooperative") 
-	public  String  Cooperative() {
+	@RequestMapping("/Cooperative01") 
+	public  String  Cooperative01() {
 		return "cooperative/cooperative";   
-	}
-	@RequestMapping("/Studio") 
-	public  String  Studio1() {
-		return "cooperative/feelmoment";   
 	}
 	@RequestMapping("/Ateso") 
 	public  String  Studio2() {
@@ -23,20 +19,20 @@ public class CooperativeController {
 	public  String  Studio3() {
 		return "cooperative/spring";   
 	}
-	@RequestMapping("/Dress") 
-	public  String  Dress() {
+	@RequestMapping("/Cooperative02") 
+	public  String  Cooperative02() {
 		return "cooperative/dress";   
 	}
-	@RequestMapping("/Invitation") 
-	public  String  Invitation() {
+	@RequestMapping("/Cooperative05") 
+	public  String  Cooperative03() {
 		return "cooperative/invitation";   
 	}
-	@RequestMapping("/Hanbog") 
-	public  String  Hanbog() {
-		return "cooperative/hanbog";   
+	@RequestMapping("/Cooperative04") 
+	public  String  Cooperative04() {
+		return "cooperative/hanbok";   
 	}
-	@RequestMapping("/Makeup") 
-	public  String  Makeup() {
+	@RequestMapping("/Cooperative03") 
+	public  String  Cooperative05() {
 		return "cooperative/makeup";   
 	}
 }

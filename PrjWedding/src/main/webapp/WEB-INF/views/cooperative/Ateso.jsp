@@ -14,6 +14,7 @@
 <link rel="stylesheet" href="/css/common.css">
 <link rel="stylesheet" href="/css/styles.css">
 <link rel="stylesheet" href="/css/slide.css">
+<link rel="stylesheet" href="/css/btn.css">
 <!-- 글 폰트 -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -44,18 +45,20 @@ p {
   margin: 5px;
   width: 394px;
   height: 250px;
-}  
+} 
 #root2 img {
   display: block;
   margin: 5px;
   width: 350px;
   height: 414px;
-} 
+}  
 
 #text-table h1 {
   font-family: 'Noto Sans KR', sans-serif;
 }
-
+.ddd h2{
+text-align: center;
+}
 </style>
 
 </head>
@@ -199,73 +202,83 @@ p {
 <div class="sliding-menu-overlay"></div>
 
 		<!-- 메인 메뉴 -->
-	 <img src="./img/side_main.jpg" width="100%" height="100%" >
-
- 
-<nav class="nav nav-pills nav-justified">
-  <a class="nav-item nav-link active"  href="/Studio"  style="background-color: rgb(200, 200, 200)" >스튜디오</a>
-  <a class="nav-item nav-link " href="/Dress" style="color: rgb(0, 0, 0)">드레스</a>
-  <a class="nav-item nav-link " href="/Makeup" style="color: rgb(0, 0, 0)">메이크업</a>
-  <a class="nav-item nav-link" href="/Hanbog" style="color: rgb(0, 0, 0)" >한복</a>
-  <a class="nav-item nav-link " href="/Invitation" style="color: rgb(0, 0, 0)">청첩장</a>
+		
+<img src="./img/side_main.jpg" width="100%" height="100%" >
+<nav class="nav nav-pills nav-justified" >
+  <a class="nav-item nav-link active" href="/Cooperative01"  style="background-color: rgb(200, 200, 200)" >Studio</a>
+  <a class="nav-item nav-link" href="/Cooperative02" style="color: rgb(0, 0, 0)">Dress</a>
+  <a class="nav-item nav-link" href="/Cooperative03" style="color: rgb(0, 0, 0)">Makeup</a>
+  <a class="nav-item nav-link" href="/Cooperative04" style="color: rgb(0, 0, 0)">Hanbok</a>
+  <a class="nav-item nav-link" href="/Cooperative05" style="color: rgb(0, 0, 0)">Invitation</a>
 </nav>	
 
 
-
-<div id="studioconceptList" >
-<nav class="nav nav-pills nav-justified">
-  <a class="nav-item nav-link " href="/Studio" style="color: rgb(0, 0, 0)">Feelmoment</a>
-  <a class="nav-item nav-link active"  href="/Ateso"  style="background-color: rgb(200, 200, 200)" >Ateso</a>
-  <a class="nav-item nav-link " href="/Spring" style="color: rgb(0, 0, 0)">너를 봄</a>
-</nav>	
-<hr>
-</div>
-
+<!-- dribbble -->
+<a class="dribbble" href="https://dribbble.com/shots/7441241-Button-Hover-Effects" target="_blank"><img src="https://cdn.dribbble.com/assets/dribbble-ball-mark-2bd45f09c2fb58dbbfb44766d5d1d07c5a12972d602ef8b32204d28fa3dda554.svg" alt=""></a>
 <br><br><br><br>
-	 <div id="text-table"	>
-      <h1 style="text-align: center;">
-         <span style="color: rgb(191, 131, 101);" >Ateso
-         </span></h1>
-      <p><br></p>
-      <p>Atelier+Sole</p>
-      <p>합성어로 "아테소" </p>
-      <p>  단,하나뿐인 사진을 위한 </p>
-      <p>"그녀가 사랑하는 순간"</p>
-      
-      <p><br></p>
-   </div><br><br>
+	<div id="text-table"><br>
+		<h1 style="text-align: center; font-size: 15px;">
+	<a href="/Cooperative01"><button type="button" class="button">Fillmoment</button></a>
+	<a href="/Ateso"><button type="button" class="button">Ateso</button></a>
+	<a href="/Spring"><button type="button" class="button" >너를 봄</button></a>
+	<br><br><br><br><br>
+	<h1 style="text-align: center;">
+			<span style="color: rgb(191, 131, 101);" ">Atelier + Sole</span></h1>
+		<p>합성어로 "Ateso"</p>
+		<p><br></p>
+		<p>단 하나뿐인 사진을 위한 사진작가의 작업실</p>
+		<p>"그녀가 사랑하는 순간"</p>
+		<p><br></p>
+	</div>
 	
 	<!-- 슬라이드 -->
 	 <div class="slideshow-container">
-
-<div class="mySlides">
-        <div class="numbertext">1 / 5</div>
-        <img src="./img/아테소/1.JPG" style="width:100%">
-        <div class="text">GREEM WEDDING</div>
-      </div>
+<div class="ddd">
+<h2>
+      <!-- Full-width images with number and caption text -->
       <div class="mySlides">
-        <div class="numbertext">2 / 5</div>
-        <img src="./img/아테소/2.JPG" style="width:100%">
+        <div class="numbertext">1 / 6</div>
+        <img src="./img/studio/a01.jpg" style="width:600px;" >
         <div class="text">GREEM WEDDING</div>
       </div>
 
       <div class="mySlides">
-        <div class="numbertext">3 / 5</div>
-        <img src="./img/아테소/3.JPG" style="width:100%">
+        <div class="numbertext">2 / 6</div>
+        <img src="./img/studio/a04.jpg" style="width:600px">
         <div class="text">GREEM WEDDING</div>
       </div>
 
       <div class="mySlides">
-        <div class="numbertext">4 / 5</div>
-        <img src="./img/아테소/4.JPG" style="width:100%">
+        <div class="numbertext">3 / 6</div>
+        <img src=./img/studio/a08.jpg style="width:600px">
         <div class="text">GREEM WEDDING</div>
       </div>
+
       <div class="mySlides">
-        <div class="numbertext">5 / 5</div>
-        <img src="./img/아테소/5.JPG" style="width:100%">
+        <div class="numbertext">4 / 6</div>
+        <img src="./img/studio/a06.jpg" style="width:600px">
         <div class="text">GREEM WEDDING</div>
       </div>
+
+      <div class="mySlides">
+        <div class="numbertext">5 / 6</div>
+        <img src="./img/studio/a07.jpg" style="width:600px">
+        <div class="text">GREEM WEDDING</div>
       </div>
+
+      <div class="mySlides">
+        <div class="numbertext">6 / 6</div>
+        <img src="./img/studio/a11.jpg" style="width:600px">
+        <div class="text">GREEM WEDDING</div>
+      </div>
+</h2>
+</div>
+
+
+      <!-- Next and previous buttons -->
+      <a class="prev" onclick="moveSlides(-1)">&#10094;</a>
+      <a class="next" onclick="moveSlides(1)">&#10095;</a>
+    </div>
     <br/>
 
     <!-- The dots/circles -->
@@ -277,55 +290,45 @@ p {
       <span class="dot" onclick="currentSlide(4)"></span>
       <span class="dot" onclick="currentSlide(5)"></span>
     </div>
-    <br><br><br><br>
-    <!-- 실내 -->
+
+    <!-- 브리드룸 -->
     <div id="text-table">
 		<h1 style="text-align: center;">
-			<span style="color: rgb(191, 131, 101);" ">실내촬영</span></h1>
+			<span style="color: rgb(191, 131, 101);" ">Another</span></h1>
 	</div>
 	<div id="root">
     <div style="display: flex; flex-wrap: wrap; justify-content: center; padding: 1vw;">
 
       <img
-           src="./img/아테소/6.JPG"
+           src="./img/studio/a03.jpg"
            alt="swamp"
            />
       <img
-           src="./img/아테소/7.JPG"
+           src="./img/studio/a12.jpg"
            alt="swamp"
            />
       <img
-           src="./img/아테소/8.JPG"
-           alt="swamp"
-           />
-    </div>
-  </div>
-  <br><br><br><br>
-  <!-- 야외 -->
-    <div id="text-table">
-		<h1 style="text-align: center;">
-			<span style="color: rgb(191, 131, 101);" ">야외촬영</span></h1>
-		<p><br></p>
-		<p style="font-family: 'Times New Roman'; font : bolder ; color: rgb(191, 131, 101);">최고의 순간을 담아내기에 가장 이상적인 공간</p>
-	</div>
-	<div id="root2">
-    <div style="display: flex; flex-wrap: wrap; justify-content: center; padding: 1vw;">
-
-      <img
-           src="./img/bride/aphoto01.jpg"
-           alt="swamp"
-           />
-      <img
-           src="./img/bride/aphoto02.jpg"
-           alt="swamp"
-           />
-      <img
-           src="./img/bride/aphoto03.jpg"
+           src="./img/studio/a15.jpg""
            alt="swamp"
            />
     </div>
   </div>
   
+  <!-- footer 마지막 부분 -->
+<footer>
+  <div class="container-fluid" style="background-color: black; color: white; text-align: center;">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="copytext text-center">
+          <br>
+          <p>주소 : 부산 부산진구 중앙대로 749 THE GREEN(주) GREEN WEDDING 사업자등록번호 : 1234-56-7890 | 대표차 : 김그린</p>
+          <p>&copy; 2023 Your Company. All Rights Reserved.</p>
+          <br>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
 
     
 <script>
@@ -433,13 +436,12 @@ function showSlides(n) {
     document.querySelectorAll('#root img').forEach(el => {
       wrap(el);
     });
-    document.querySelectorAll('#root2 img').forEach(el => {
-      wrap(el);
-    });
 
     
 refreshFsLightbox();
     
+document.querySelectorAll('.button').forEach(button => button.innerHTML = '<div><span>' + button.textContent.trim().split('').join('</span><span>') + '</span></div>');
 </script>
 </body>
 </html> 
+
