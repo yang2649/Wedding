@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.List;
 
 import com.green.community.vo.CommunityVo;
+import com.green.pds.vo.FilesVo;
 
 public interface CommunityDao {
 
@@ -13,9 +14,13 @@ public interface CommunityDao {
 
 	CommunityVo getNotice(HashMap<String, Object> map);
 
-	List<CommunityVo> getdownList(String menu_id);
+	List<CommunityVo> getdownList(HashMap<String, Object> map);
 
 	void downWrite(HashMap<String, Object> map);
 
 	List<CommunityVo> getfaqList(String menu_id);
+
+	CommunityVo getdownload(HashMap<String, Object> map);
+
+	List<FilesVo> getFileList(HashMap<String, Object> map);
 }
