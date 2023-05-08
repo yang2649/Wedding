@@ -195,9 +195,9 @@
     <span class="popup-close">&times;</span>
     <h2 class="green-wedding">Green Wedding</h2><br>
     <form>
-      <label for="username">Username</label><br>
+      <label for="username">USERNAME</label><br>
       <input type="text" id="username" name="username"><br><br>
-      <label for="password">Password</label><br>
+      <label for="password">PASSWORD</label><br>
       <input type="password" id="password" name="password"><br><br>
       <input type="submit" value="로그인">
     </form>
@@ -658,16 +658,16 @@ var marker = new kakao.maps.Marker({
 	});
   
   //팝업창 열기
-  const popupOpen = () => {
+  function popupOpen() {
     const popupContainer = document.querySelector('.popup-container');
     popupContainer.style.display = 'flex';
-  };
+  }
 
   // 팝업창 닫기
-  const popupClose = () => {
+  function popupClose() {
     const popupContainer = document.querySelector('.popup-container');
     popupContainer.style.display = 'none';
-  };
+  }
 
   // 로그인 버튼 클릭 시 팝업창 열기
   const loginButton = document.querySelector('.sliding-menu li ul li a');
