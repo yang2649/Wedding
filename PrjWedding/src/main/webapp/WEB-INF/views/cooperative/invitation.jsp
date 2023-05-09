@@ -5,21 +5,24 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>invitation</title>
-
+<title>cooperative</title>
 <!-- jquery 사용 -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script
 	src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
-<!-- ajax 스타일 시트 -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fslightbox/3.4.1/index.min.js"></script>
 
 <!-- css 부분 사용 -->
 <link rel="shortcut icon" href="/img/favicon.ico">
-<link rel="stylesheet" href="./css/common.css">
-<link rel="stylesheet" href="./css/styles.css">
-<link rel="stylesheet" href="./css/slide.css">
-<link rel="stylesheet" href="./css/loginstyle.css">
+<link rel="stylesheet" href="/css/common.css">
+<link rel="stylesheet" href="/css/styles.css">
+<link rel="stylesheet" href="/css/slide.css">
+<link rel="stylesheet" href="/css/btn.css">
+
+<!-- 글 폰트 -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100&display=swap" rel="stylesheet">
 
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
@@ -29,11 +32,6 @@
 <!-- Bootstrap CSS -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-
-<!-- 글 폰트 -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100&display=swap" rel="stylesheet">
 
 <link rel="stylesheet"
 	href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
@@ -51,7 +49,6 @@
 <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Castoro+Titling&display=swap" rel="stylesheet">
-
 
 <style>
 /* body 메뉴 폰트 및 사이즈 */
@@ -83,7 +80,9 @@ p {
 #text-table h1 {
   font-family: 'Noto Sans KR', sans-serif;
 }
-
+.ddd h2{
+text-align: center;
+}
 </style>
 
 </head>
@@ -230,45 +229,78 @@ p {
   <a class="nav-item nav-link" href="/Cooperative02" style="color: rgb(0, 0, 0)">Dress</a>
   <a class="nav-item nav-link" href="/Cooperative03" style="color: rgb(0, 0, 0)">Hair & Make Up</a>
   <a class="nav-item nav-link" href="/Cooperative04" style="color: rgb(0, 0, 0)">Hanbok</a>
-  <a class="nav-item nav-link active" href="/Cooperative05" style="background-color: rgb(200, 200, 200)">Invitation</a>
+  <a class="nav-item nav-link active" href="/Cooperative05" style="background-color: rgb(200, 200, 200)" >Invitation</a>
 </nav>	
 
+
+<!-- dribbble -->
+<a class="dribbble" href="https://dribbble.com/shots/7441241-Button-Hover-Effects" target="_blank"><img src="https://cdn.dribbble.com/assets/dribbble-ball-mark-2bd45f09c2fb58dbbfb44766d5d1d07c5a12972d602ef8b32204d28fa3dda554.svg" alt=""></a>
 <br><br><br><br>
-	<div id="text-table">
-		<h1 style="text-align: center;">
-			<span style="color: rgb(191, 131, 101);" ">BLUE Hall</span></h1>
+	<div id="text-table"><br>
+		<h1 style="text-align: center; font-size: 15px;">
+	<a href="/Cooperative05"><button type="button" class="button">BNIEL466</button></a>
+	<a href="/Spring"><button type="button" class="button" >BNIEL355</button></a>
+	<a href="/Spring"><button type="button" class="button" >BNIEL497</button></a>
+	<a href="/Spring"><button type="button" class="button" >BNIEL594</button></a>
+	<a href="/Ateso"><button type="button" class="button">GRENDY634</button></a>
+	<a href="/Spring"><button type="button" class="button" >GRENDY533</button></a>
+	<a href="/Spring"><button type="button" class="button" >GRENDY512</button></a>
+	<a href="/Spring"><button type="button" class="button" >GRENDY546</button></a>
+	<br><br><br><br><br>
+	<h1 style="text-align: center;">
+			<span style="color: rgb(191, 131, 101);" ">Fill + MOMENT (순간을 채우다)</span></h1>
 		<p><br></p>
-		<p>싱그러운 자연 속, 눈부신 햇살 보다 빛나는</p>
-		<p> 단 하나뿐인 나만의 웨딩!</p>
-		<p> 나무처럼 듬직한 신랑님과 꽃보다 더 화사한 신부님을</p>
-		<p>새롭게 리뉴얼 한 루체홀에서 찾아 뵙도록 하겠습니다.</p>
-		<p> 영화 속, 숲 속 야외 웨딩에 대한 로망을</p>
-		<p>이제 CA웨딩컨벤션 루체홀과 함께 하세요.</p>
+		<p>"당신을 위해 자리한 모두가 즐거울 수 있도록, 모든 순간을 채워드립니다."</p>
+		<p>- 필모먼트 (순.간.을 채.우.다) -</p>
 		<p><br></p>
-		<p>“꽃보다 아름다운 당신”</p>
+		<p>그 날의 주인공이 행복하기 위해서는 모두가 행복한 분위기로 만드는 것이 중요하다 생각하여</p>
+		<p>기술적인 상담을 포함하여,</p>
+		<p>고객들이 만들고 싶어하는 그 날의 분위기를 함께 고민하겠습니다.</p>
+		<p><br></p>
 	</div>
 	
 	<!-- 슬라이드 -->
 	 <div class="slideshow-container">
-
+<div class="ddd">
+<h2>
       <!-- Full-width images with number and caption text -->
       <div class="mySlides">
-        <div class="numbertext">1 / 3</div>
-        <img src="./img/hall/chall01.jpg" style="width:100%">
+        <div class="numbertext">1 / 6</div>
+        <img src="./img/studio/c04.jpg" style="width:500px;" >
         <div class="text">GREEM WEDDING</div>
       </div>
 
       <div class="mySlides">
-        <div class="numbertext">2 / 3</div>
-        <img src="./img/hall/chall02.jpg" style="width:100%">
+        <div class="numbertext">2 / 6</div>
+        <img src="./img/studio/c05.jpg" style="width:500px">
         <div class="text">GREEM WEDDING</div>
       </div>
 
       <div class="mySlides">
-        <div class="numbertext">3 / 3</div>
-        <img src="./img/hall/chall03.jpg" style="width:100%">
+        <div class="numbertext">3 / 6</div>
+        <img src=./img/studio/c07.jpg style="width:500px">
         <div class="text">GREEM WEDDING</div>
       </div>
+
+      <div class="mySlides">
+        <div class="numbertext">4 / 6</div>
+        <img src="./img/studio/c03.jpg" style="width:500px">
+        <div class="text">GREEM WEDDING</div>
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">5 / 6</div>
+        <img src="./img/studio/c02.jpg" style="width:500px">
+        <div class="text">GREEM WEDDING</div>
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">6 / 6</div>
+        <img src="./img/studio/c08.jpg" style="width:500px">
+        <div class="text">GREEM WEDDING</div>
+      </div>
+</h2>
+</div>
 
 
       <!-- Next and previous buttons -->
@@ -290,47 +322,21 @@ p {
     <!-- 브리드룸 -->
     <div id="text-table">
 		<h1 style="text-align: center;">
-			<span style="color: rgb(191, 131, 101);" ">BRIDE ROOM</span></h1>
+			<span style="color: rgb(191, 131, 101);" ">Another</span></h1>
 	</div>
 	<div id="root">
     <div style="display: flex; flex-wrap: wrap; justify-content: center; padding: 1vw;">
 
       <img
-           src="./img/bride/cbride01.jpg"
+           src="./img/studio/c01.jpg"
            alt="swamp"
            />
       <img
-           src="./img/bride/cbride02.jpg"
+           src="./img/studio/c06.jpg"
            alt="swamp"
            />
       <img
-           src="./img/bride/cbride03.jpg"
-           alt="swamp"
-           />
-    </div>
-  </div>
-  <br><br><br><br>
-  <!-- 포토존 -->
-  <!-- 포토존 -->
-    <div id="text-table">
-		<h1 style="text-align: center;">
-			<span style="color: rgb(191, 131, 101);" ">PHOTO ZONE</span></h1>
-		<p><br></p>
-		<p style="font-family: 'Times New Roman'; font : bolder ; color: rgb(191, 131, 101);">최고의 순간을 담아내기에 가장 이상적인 공간</p>
-	</div>
-	<div id="root2">
-    <div style="display: flex; flex-wrap: wrap; justify-content: center; padding: 1vw;">
-
-      <img
-           src="./img/bride/aphoto01.jpg"
-           alt="swamp"
-           />
-      <img
-           src="./img/bride/aphoto02.jpg"
-           alt="swamp"
-           />
-      <img
-           src="./img/bride/aphoto03.jpg"
+           src="./img/studio/c10.jpg"
            alt="swamp"
            />
     </div>
@@ -458,13 +464,11 @@ function showSlides(n) {
     document.querySelectorAll('#root img').forEach(el => {
       wrap(el);
     });
-    document.querySelectorAll('#root2 img').forEach(el => {
-      wrap(el);
-    });
 
     
 refreshFsLightbox();
     
+document.querySelectorAll('.button').forEach(button => button.innerHTML = '<div><span>' + button.textContent.trim().split('').join('</span><span>') + '</span></div>');
 </script>
 </body>
 </html> 
