@@ -5,15 +5,30 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Home</title>
+<title>hanbok</title>
+
+<!-- jquery 사용 -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script
 	src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fslightbox/3.4.1/index.min.js"></script>
+
+<!-- css 부분 사용 -->
+<link rel="stylesheet" href="./css/loginstyle.css">
 <link rel="shortcut icon" href="/img/favicon.ico">
 <link rel="stylesheet" href="/css/common.css">
 <link rel="stylesheet" href="/css/styles.css">
 <link rel="stylesheet" href="/css/slide.css">
+
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+<link rel="shortcut icon" href="/img/favicon.ico">
+
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
 <!-- 글 폰트 -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,6 +40,18 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<!-- 구글 폰트 -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Nanum+Gothic:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Castoro+Titling&display=swap" rel="stylesheet">
+
+
 <style>
 /* body 메뉴 폰트 및 사이즈 */
 nav  {
@@ -175,22 +202,18 @@ p {
       <br>
       <br>
       <br>
-      	<li><a href="#">로그인</a></li>
+      	<!--유정 로그인-->
+      	<li><hr></li>
+      	<li> ${ sessionScope.login.username } 님 환영합니다<br></li>
+        <li><a href="/logout">로그아웃</a></li>
         <li><hr></li>
-        <li><a href="/User/List">사용자 목록</a></li>
-        <li><a href="/User/WriteForm">사용자 등록</a></li>
-        <li><hr></li>
-        <li><a href="/Menus/List">메뉴 목록</a></li>
-        <li><a href="/Menus/WriteForm2">메뉴 등록</a></li>
-        <li><hr></li>
-        <li><a href="/Board/List?menu_id=MENU01">게시물 목록</a></li>
-        <li><a href="/Board/WriteForm?menu_id=MENU01&bnum=0&lvl=0&step=0&nref=0">게시물 등록</a></li>
-        <li><hr></li>
-        <li><a href="/Pds/List?menu_id=MENU01&nowpage=1">자료실 목록</a></li>
-        <li><a href="/Pds/WriteForm?menu_id=MENU01&bnum=0&lvl=0&step=0&nref=0">자료실 등록</a></li>
-        <li><hr></li>
-        <li><a href="/Pds/List?menu_id=MENU01&nowpage=1">페이징 자료실 목록</a></li>
-        <li><a href="/Pds/WriteForm?menu_id=MENU01&bnum=0&lvl=0&step=0&nref=0&nowpage=1">페이징 자료실 등록</a></li>
+        <li><a href="#">Information</a></li>
+        <br>
+        <li><a href="#">Estimate</a></li> <!-- 견적서라는 뜻입니다 -->
+        <br>
+        <li><a href="#">Inquiry Details</a></li> <!-- 문의 내역이라는 뜻입니다 -->
+        <br>
+        <li><a href="#">Steamed List</a></li> <!-- 찜 목록 이라는뜻 입니다 -->
       </ul>
     </li>
   </ul>

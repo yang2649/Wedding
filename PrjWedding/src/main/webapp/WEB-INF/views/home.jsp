@@ -564,23 +564,12 @@
 	 <div style="height: 50px; background-color: #FFFFFF;"></div>
 </div>
  
- <!-- 이미지 사용 -->
-<!-- <div class="image-location">
-  <img src="./img/location/location.png" alt="location.png">
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-</div>
- -->
- 
- 
+
  <!-- 카카오 웹 api 사용 -->
 <div class = "map"  id="map" ></div>
 <div id="clickLatlng"></div>
 
+<!-- api 키는 home.jsp 제작자 소유 -->
 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=af4768f3d5d87505fcfd4296a54fc669"></script>
 <script>
 var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
