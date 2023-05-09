@@ -298,7 +298,7 @@ p {
            src="./img/bride/cbride01.jpg"
            alt="swamp"
            />
-      <img
+      <img 
            src="./img/bride/cbride02.jpg"
            alt="swamp"
            />

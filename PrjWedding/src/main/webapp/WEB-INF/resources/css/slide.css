@@ -11,7 +11,7 @@
   max-width: 1200px;
   max-height: 750px;
   position: relative;
-  margin: auto;
+  margin: auto; 
 }
 .slideshow-container .mySlides img {
   height: 750px;
