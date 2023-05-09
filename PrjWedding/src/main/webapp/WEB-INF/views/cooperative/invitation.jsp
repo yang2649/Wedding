@@ -257,7 +257,7 @@ text-align: center;
 		<p>기술적인 상담을 포함하여,</p>
 		<p>고객들이 만들고 싶어하는 그 날의 분위기를 함께 고민하겠습니다.</p>
 		<p><br></p>
-	</div>
+	</div> 
 	
 	<!-- 슬라이드 -->
 	 <div class="slideshow-container">
