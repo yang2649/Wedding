@@ -74,7 +74,7 @@
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 VENUE
                 </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown" >
                   <li><a class="dropdown-item" href="VENUE01">소형홀</a></li>
                   <li><a class="dropdown-item" href="VENUE02">중형홀1</a></li>
                   <li><a class="dropdown-item" href="VENUE03">중형홀2</a></li>
@@ -199,8 +199,9 @@
       <br>
       	<!--유정 로그인-->
       	<li><hr></li>
-      	<li> ${ sessionScope.login.username } 님 환영합니다<br></li>
-        <li><a href="/logout">로그아웃</a></li>
+      	<li style="font-size: 1.1rem;" > ${ sessionScope.login.username } 님 환영합니다<br></li>
+      	<br>
+        <li style="font-size: 1.2rem;" ><a href="/logout">로그아웃</a></li>
         <li><hr></li>
         <li><a href="#">Information</a></li>
          <br>
@@ -226,19 +227,20 @@
 <!-- 표준 - 프레젠테이션 슬라이드 4:3 이미지 3개 고정 -->
 <div class="owl-carousel owl-theme">
 
-  <div class="item"><img src="./img/part_ex.jpg"  alt="Image 1">
+  <div class="item"><img src="./img/hall/ahall01.jpg"  alt="Image 1">
   <div class="caption">부산 웨딩의 대표 공간</div>
   <div class="subcaption">최고가 아니면 명품 웨딩홀을 볼 수 없습니다. 사랑한다면, 신부의 품격을 높여주세요</div>
   </div>
   
-  <div class="item"><img src="./img/part_ex2.jpg" alt="Image 2">
-  <div class="caption">차별화된 웨딩스타일</div>
-  <div class="subcaption">테스트 서브캡션1</div>
+  <div class="item"><img src="./img/hall/ahall02.jpg" alt="Image 2">
+  <div class="caption">BRILLRANT WEDDING</div>
+  <div class="subcaption">최고가 아니면 명품 웨딩홀을 볼 수 없습니다. 사랑한다면, 신부의 품격을 높여주세요</div>
   </div>
   
-  <div class="item"><img src="./img/part_ex3.jpg" alt="Image 3">
-  <div class="caption">BRILLRANT WEDDING</div>
-  <div class="subcaption">테스트 서브캡션2</div>
+  <div class="item"><img src="./img/hall/bhall04.jpg" alt="Image 3">
+  <div class="caption">차별화된 웨딩스타일</div>
+  <div class="subcaption">당신의 행복이 GREEN WEDDING 의 행복입니다.</div>
+  <div class="subcaption02">웨딩 전문가의 스타일링 상담을 만나보세요!</div>
   </div>
   
 </div>
@@ -784,8 +786,8 @@ var marker = new kakao.maps.Marker({
   function showJoin(){
       window.open("User/WriteForm","팝업 테스트","width=500, height=550, top=250, left=650");
     }  
-   
-   
+  
+	
 </script>
 </body>
 </html> 
