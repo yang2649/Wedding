@@ -82,7 +82,7 @@
         if (currentScrollTop > lastScrollTop) {
           header.addClass('hide-header');
         } else {
-          header.removeClass('hide-header');
+          header.removeClass('hide-header'); 
         }
 
         if (currentScrollTop > 0) {
