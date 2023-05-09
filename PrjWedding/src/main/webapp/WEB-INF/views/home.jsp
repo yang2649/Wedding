@@ -75,12 +75,12 @@
                 VENUE
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown" >
-                  <li><a class="dropdown-item" href="VENUE01">소형홀</a></li>
-                  <li><a class="dropdown-item" href="VENUE02">중형홀1</a></li>
-                  <li><a class="dropdown-item" href="VENUE03">중형홀2</a></li>
-                  <li><a class="dropdown-item" href="VENUE04">대형홀</a></li>
-                  <li><a class="dropdown-item" href="VENUE05">VIP홀</a></li>
-                  <li><a class="dropdown-item" href="VENUE06">폐백실</a></li>
+                  <li><a class="dropdown-item" href="Venue01">소형홀</a></li>
+                  <li><a class="dropdown-item" href="Venue02">중형홀1</a></li>
+                  <li><a class="dropdown-item" href="Venue03">중형홀2</a></li>
+                  <li><a class="dropdown-item" href="Venue04">대형홀</a></li>
+                  <li><a class="dropdown-item" href="Venue05">VIP홀</a></li>
+                  <li><a class="dropdown-item" href="Venue06">폐백실</a></li>
                 </ul>
               </li>
             
@@ -90,8 +90,8 @@
                 CATERRING
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="CATERRING01">일반</a></li>
-                  <li><a class="dropdown-item" href="CATERRING02">프리미엄</a></li>
+                  <li><a class="dropdown-item" href="Caterring01">일반</a></li>
+                  <li><a class="dropdown-item" href="Caterring02">프리미엄</a></li>
                 </ul>
               </li>
               
@@ -101,11 +101,11 @@
                 COOPERATIVE
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="COOPERATIVE01">스튜디오</a></li>
-                  <li><a class="dropdown-item" href="COOPERATIVE02">드레스</a></li>
-                  <li><a class="dropdown-item" href="COOPERATIVE03">헤어 메이크업</a></li>
-                  <li><a class="dropdown-item" href="COOPERATIVE04">한복</a></li>
-                  <li><a class="dropdown-item" href="COOPERATIVE05">청첩장</a></li>
+                  <li><a class="dropdown-item" href="Cooperative01">스튜디오</a></li>
+                  <li><a class="dropdown-item" href="Cooperative02">드레스</a></li>
+                  <li><a class="dropdown-item" href="Cooperative03">헤어 메이크업</a></li>
+                  <li><a class="dropdown-item" href="Cooperative04">한복</a></li>
+                  <li><a class="dropdown-item" href="Cooperative05">청첩장</a></li>
                 </ul>
               </li>
               
@@ -116,9 +116,9 @@
                 RESERVATION
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="RESERVATION01">셀프견적</a></li>
-                  <li><a class="dropdown-item" href="RESERVATION02">패키지</a></li>
-                  <li><a class="dropdown-item" href="RESERVATION03">비용안내</a></li>
+                  <li><a class="dropdown-item" href="Reservation01">셀프견적</a></li>
+                  <li><a class="dropdown-item" href="Reservation02">패키지</a></li>
+                  <li><a class="dropdown-item" href="Reservation03">비용안내</a></li>
                 </ul>
               </li>
               
@@ -144,9 +144,9 @@
                   LOCATION
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="LOCATION01">찾아오시는 길</a></li>
-                  <li><a class="dropdown-item" href="LOCATION02">약도</a></li>
-                  <li><a class="dropdown-item" href="LOCATION03">주차안내</a></li>
+                  <li><a class="dropdown-item" href="Location01">찾아오시는 길</a></li>
+                  <li><a class="dropdown-item" href="Location02">약도</a></li>
+                  <li><a class="dropdown-item" href="Location03">주차안내</a></li>
                 </ul>
               </li>
             </ul>
