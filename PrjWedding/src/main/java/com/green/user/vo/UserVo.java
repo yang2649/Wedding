@@ -2,40 +2,46 @@ package com.green.user.vo;
 
 public class UserVo {
 	// Fields
-	private String userid;
-	private String passwd;
-	private String username;
+	private String memid;
+	private String mempw;
+	private String memname;
+	private String memph;
 	private String email;
-	private String indate;
+	private String joindate;
 	
-	// Constructor
-	public UserVo() {}
-	public UserVo(String userid, String passwd, String username, String email, String indate) {
-		this.userid = userid;
-		this.passwd = passwd;
-		this.username = username;
+	public UserVo() {};
+	public UserVo(String memid, String mempw, String memname, String memph, String email, String joindate) {
+		this.memid = memid;
+		this.mempw = mempw;
+		this.memname = memname;
+		this.memph = memph;
 		this.email = email;
-		this.indate = indate;
+		this.joindate = joindate;
 	}
 	
-	// Getter / Setter
-	public String getUserid() {
-		return userid;
+	public String getMemid() {
+		return memid;
 	}
-	public void setUserid(String userid) {
-		this.userid = userid;
+	public void setMemid(String memid) {
+		this.memid = memid;
 	}
-	public String getPasswd() {
-		return passwd;
+	public String getMempw() {
+		return mempw;
 	}
-	public void setPasswd(String passwd) {
-		this.passwd = passwd;
+	public void setMempw(String mempw) {
+		this.mempw = mempw;
 	}
-	public String getUsername() {
-		return username;
+	public String getMemname() {
+		return memname;
 	}
-	public void setUsername(String username) {
-		this.username = username;
+	public void setMemname(String memname) {
+		this.memname = memname;
+	}
+	public String getMemph() {
+		return memph;
+	}
+	public void setMemph(String memph) {
+		this.memph = memph;
 	}
 	public String getEmail() {
 		return email;
@@ -43,19 +49,18 @@ public class UserVo {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public String getIndate() {
-		return indate;
+	public String getjoindate() {
+		return joindate;
 	}
-	public void setIndate(String indate) {
-		this.indate = indate;
+	public void setjoindate(String joindate) {
+		this.joindate = joindate;
 	}
-	
-	// toString
 	@Override
 	public String toString() {
-		return "UserVo [userid=" + userid + ", passwd=" + passwd + ", username=" + username + ", email=" + email
-				+ ", indate=" + indate + "]";
+		return "UserVo [memid=" + memid + ", mempw=" + mempw + ", memname=" + memname + ", memph=" + memph + ", email="
+				+ email + ", joindate=" + joindate + "]";
 	}
 	
+
 	
 }
