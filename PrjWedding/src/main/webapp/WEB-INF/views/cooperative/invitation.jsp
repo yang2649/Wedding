@@ -67,21 +67,40 @@ p {
 #root img {
   display: block;
   margin: 5px;
-  width: 394px;
-  height: 250px;
+  width: 500px;
+  height: 500px;
 } 
-#root2 img {
-  display: block;
-  margin: 5px;
-  width: 350px;
-  height: 414px;
-}  
-
 #text-table h1 {
   font-family: 'Noto Sans KR', sans-serif;
 }
 .ddd h2{
 text-align: center;
+}
+
+#text-table h1 {
+  font-family: 'Noto Sans KR', sans-serif;
+}
+#buffet-text h2{
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size  :  50px;
+  font-weight : bold;
+  text-align: center; 
+  line-height: 2;
+}
+#buffet-text p{
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size  :  15px;
+  font-weight : bold;
+  text-align: center; 
+  line-height: 1;
+}
+#buffet-text {
+  margin: auto;
+  width: 70%;
+  border: 10px solid #DCDCDC; 
+}
+#buffet-text img{
+  width:45%;
 }
 </style>
 
@@ -238,109 +257,67 @@ text-align: center;
 <br><br><br><br>
 	<div id="text-table"><br>
 		<h1 style="text-align: center; font-size: 15px;">
-	<a href="/Cooperative05"><button type="button" class="button">BNIEL466</button></a>
-	<a href="/Spring"><button type="button" class="button" >BNIEL355</button></a>
-	<a href="/Spring"><button type="button" class="button" >BNIEL497</button></a>
-	<a href="/Spring"><button type="button" class="button" >BNIEL594</button></a>
-	<a href="/Ateso"><button type="button" class="button">GRENDY634</button></a>
-	<a href="/Spring"><button type="button" class="button" >GRENDY533</button></a>
-	<a href="/Spring"><button type="button" class="button" >GRENDY512</button></a>
-	<a href="/Spring"><button type="button" class="button" >GRENDY546</button></a>
+	<a href="/466"><button type="button" class="button">BNIEL466</button></a>
+	<a href="/355"><button type="button" class="button" >BNIEL355</button></a>
+	<a href="/497"><button type="button" class="button" >BNIEL497</button></a>
+	<a href="/594"><button type="button" class="button" >BNIEL594</button></a>
+	<a href="/634"><button type="button" class="button">GRENDY634</button></a>
+	<a href="/533"><button type="button" class="button" >GRENDY533</button></a>
+	<a href="/512"><button type="button" class="button" >GRENDY512</button></a>
+	<a href="/546"><button type="button" class="button" >GRENDY546</button></a>
 	<br><br><br><br><br>
 	<h1 style="text-align: center;">
-			<span style="color: rgb(191, 131, 101);" ">Fill + MOMENT (순간을 채우다)</span></h1>
-		<p><br></p>
-		<p>"당신을 위해 자리한 모두가 즐거울 수 있도록, 모든 순간을 채워드립니다."</p>
-		<p>- 필모먼트 (순.간.을 채.우.다) -</p>
-		<p><br></p>
-		<p>그 날의 주인공이 행복하기 위해서는 모두가 행복한 분위기로 만드는 것이 중요하다 생각하여</p>
-		<p>기술적인 상담을 포함하여,</p>
-		<p>고객들이 만들고 싶어하는 그 날의 분위기를 함께 고민하겠습니다.</p>
-		<p><br></p>
-	</div> 
-	
-	<!-- 슬라이드 -->
-	 <div class="slideshow-container">
-<div class="ddd">
-<h2>
-      <!-- Full-width images with number and caption text -->
-      <div class="mySlides">
-        <div class="numbertext">1 / 6</div>
-        <img src="./img/studio/c04.jpg" style="width:500px;" >
-        <div class="text">GREEM WEDDING</div>
-      </div>
+			<span style="color: rgb(191, 131, 101);" ">BNIEL466</span></h1>
+	</div> <br><br>
+	<div style="text-align: center;"">
+	<img src="./img/invitation/b466.jpg" />
+	</div><br><br>
+	<div id="buffet-text"><br><br>
+		<div id="ddd">
+		<h2>
+	  	<video muted autoplay loop style="width: 80%; text-align: center;">
+	      <source src="./img/invitation/b466.mp4" type="video/mp4">
+	    </video>
+	    </h2>
+	    </div>
 
-      <div class="mySlides">
-        <div class="numbertext">2 / 6</div>
-        <img src="./img/studio/c05.jpg" style="width:500px">
-        <div class="text">GREEM WEDDING</div>
-      </div>
+		<p>최고의 가공기술로 만든 아름다운 웨딩카드, 브니엘</p>
+		<br><br>
+	</div><br><br>
 
-      <div class="mySlides">
-        <div class="numbertext">3 / 6</div>
-        <img src=./img/studio/c07.jpg style="width:500px">
-        <div class="text">GREEM WEDDING</div>
-      </div>
-
-      <div class="mySlides">
-        <div class="numbertext">4 / 6</div>
-        <img src="./img/studio/c03.jpg" style="width:500px">
-        <div class="text">GREEM WEDDING</div>
-      </div>
-
-      <div class="mySlides">
-        <div class="numbertext">5 / 6</div>
-        <img src="./img/studio/c02.jpg" style="width:500px">
-        <div class="text">GREEM WEDDING</div>
-      </div>
-
-      <div class="mySlides">
-        <div class="numbertext">6 / 6</div>
-        <img src="./img/studio/c08.jpg" style="width:500px">
-        <div class="text">GREEM WEDDING</div>
-      </div>
-</h2>
-</div>
-
-
-      <!-- Next and previous buttons -->
-      <a class="prev" onclick="moveSlides(-1)">&#10094;</a>
-      <a class="next" onclick="moveSlides(1)">&#10095;</a>
-    </div>
-    <br/>
-
-    <!-- The dots/circles -->
-    <div style="text-align:center">
-      <span class="dot" onclick="currentSlide(0)"></span>
-      <span class="dot" onclick="currentSlide(1)"></span>
-      <span class="dot" onclick="currentSlide(2)"></span>
-      <span class="dot" onclick="currentSlide(3)"></span>
-      <span class="dot" onclick="currentSlide(4)"></span>
-      <span class="dot" onclick="currentSlide(5)"></span>
-    </div>
-
-    <!-- 브리드룸 -->
+    <!-- 포토 -->
     <div id="text-table">
 		<h1 style="text-align: center;">
-			<span style="color: rgb(191, 131, 101);" ">Another</span></h1>
-	</div>
+			<span style="color: rgb(191, 131, 101);" ">Imege</span></h1>
+	</div><br><br>
 	<div id="root">
-    <div style="display: flex; flex-wrap: wrap; justify-content: center; padding: 1vw;">
+    <div style="display: flex; flex-wrap: wrap; justify-content: center;">
 
       <img
-           src="./img/studio/c01.jpg"
+           src="./img/invitation/b466_01.jpg"
            alt="swamp"
            />
       <img
-           src="./img/studio/c06.jpg"
+           src="./img/invitation/b466_02.jpg"
            alt="swamp"
            />
-      <img
-           src="./img/studio/c10.jpg"
-           alt="swamp"
-           />
+      
     </div>
-  </div>
+	<div id="root">
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; ">
+
+      <img
+           src="./img/invitation/b466_03.jpg"
+           alt="swamp"
+           />
+      <img
+           src="./img/invitation/b466_04.jpg"
+           alt="swamp"
+           />
+      
+    </div>
+  </div><br><br>
+  
   
   <!-- footer 마지막 부분 -->
 <footer>

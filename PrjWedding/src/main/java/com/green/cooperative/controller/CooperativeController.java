@@ -35,4 +35,36 @@ public class CooperativeController {
 	public  String  Cooperative05() {
 		return "cooperative/makeup";   
 	}
+	@RequestMapping("/466") 
+	public  String  invitation01() {
+		return "cooperative/invitation1";   
+	}
+	@RequestMapping("/355") 
+	public  String  invitation02() {
+		return "cooperative/invitation2";   
+	}
+	@RequestMapping("/497") 
+	public  String  invitation03() {
+		return "cooperative/invitation3";   
+	}
+	@RequestMapping("/594") 
+	public  String  invitation04() {
+		return "cooperative/invitation4";   
+	}
+	@RequestMapping("/634") 
+	public  String  invitation05() {
+		return "cooperative/invitation5";   
+	}
+	@RequestMapping("/533") 
+	public  String  invitation06() {
+		return "cooperative/invitation6";   
+	}
+	@RequestMapping("/512") 
+	public  String  invitation07() {
+		return "cooperative/invitation7";   
+	}
+	@RequestMapping("/546") 
+	public  String  invitation08() {
+		return "cooperative/invitation8";   
+	}
 }
