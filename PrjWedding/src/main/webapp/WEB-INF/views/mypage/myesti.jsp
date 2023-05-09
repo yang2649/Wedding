@@ -9,24 +9,27 @@
 <meta name="theme-color" content="#363636">
 <meta name="msapplication-navbutton-color" content="#363636">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<title>Home</title>
+<title>myesti</title>
+
+<!-- jquery 사용 -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script	src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
 
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
-<link rel="shortcut icon" href="/img/favicon.ico">
 
-<!-- css 부분 사용 -->
-<link rel="stylesheet" href="/css/loginstyles.css">
-<link rel="stylesheet" href="/css/styles.css">
-<link rel="stylesheet" href="/css/mypage.css">
-
-<!-- jquery 사용 -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 <!-- Bootstrap CSS -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+<!-- css 부분 사용 -->
+<link rel="shortcut icon" href="./img/favicon.ico">
+<link rel="stylesheet" href="./css/styles.css">
+<link rel="stylesheet" href="./css/loginstyle.css">
+<link rel="stylesheet" href="./css/mypage.css">
+
 <!-- 구글 폰트 -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -35,11 +38,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Nanum+Gothic:wght@700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500&display=swap" rel="stylesheet">
 
-<!-- ajax 스타일 시트 -->
-<!-- owl css 사용 -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
 </head>
 <body>
