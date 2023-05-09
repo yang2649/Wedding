@@ -205,7 +205,7 @@ p {
       <br>
       	<!--유정 로그인-->
       	<li><hr></li>
-      	<li> ${ sessionScope.login.username } 님 환영합니다<br></li>
+      	<li> ${ sessionScope.login.memname } 님 환영합니다<br></li>
         <li><a href="/logout">로그아웃</a></li>
         <li><hr></li>
         <li><a href="#">Information</a></li>

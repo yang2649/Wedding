@@ -63,13 +63,6 @@ p {
   font-family: 'Noto Sans KR', sans-serif;
   font-size: 18px;
 }
-
-#root img {
-  display: block;
-  margin: 5px;
-  width: 500px;
-  height: 500px;
-} 
 #text-table h1 {
   font-family: 'Noto Sans KR', sans-serif;
 }
@@ -223,7 +216,7 @@ text-align: center;
       <br>
       	<!--유정 로그인-->
       	<li><hr></li>
-      	<li> ${ sessionScope.login.username } 님 환영합니다<br></li>
+      	<li> ${ sessionScope.login.memname } 님 환영합니다<br></li>
         <li><a href="/logout">로그아웃</a></li>
         <li><hr></li>
         <li><a href="#">Information</a></li>
@@ -267,56 +260,29 @@ text-align: center;
 	<a href="/546"><button type="button" class="button" >GRENDY546</button></a>
 	<br><br><br><br><br>
 	<h1 style="text-align: center;">
-			<span style="color: rgb(191, 131, 101);" ">BNIEL466</span></h1>
+			<span style="color: rgb(191, 131, 101);" ">Invitation</span></h1>
 	</div> <br><br>
-	<div style="text-align: center;"">
-	<img src="./img/invitation/b466.jpg" />
+	<div style="text-align: center;">
 	</div><br><br>
 	<div id="buffet-text"><br><br>
 		<div id="ddd">
+		<h2>"여기서 결혼식 저기서 청접장"</h1>
+		<p>여러가지 사항이 불편하신가요</p>
+		<p>그런 당신에게</p>
+		<p>Green Invitation을 추천합니다</p><br>
+		<h1 style="text-align: center;">
+			<span style="color: rgb(191, 131, 101);" ">구성품</span></h1>
 		<h2>
-	  	<video muted autoplay loop style="width: 80%; text-align: center;">
-	      <source src="./img/invitation/b466.mp4" type="video/mp4">
-	    </video>
+		<img src="./img/invitation/a01.jpg" style="width: 1000px; height: 650px;" />
+	    </h2>
+		<h2>
+		<img src="./img/invitation/a02.jpg" style="width: 1000px; height: 650px;" />
 	    </h2>
 	    </div>
 
-		<p>최고의 가공기술로 만든 아름다운 웨딩카드, 브니엘</p>
 		<br><br>
 	</div><br><br>
-
-    <!-- 포토 -->
-    <div id="text-table">
-		<h1 style="text-align: center;">
-			<span style="color: rgb(191, 131, 101);" ">Imege</span></h1>
-	</div><br><br>
-	<div id="root">
-    <div style="display: flex; flex-wrap: wrap; justify-content: center;">
-
-      <img
-           src="./img/invitation/b466_01.jpg"
-           alt="swamp"
-           />
-      <img
-           src="./img/invitation/b466_02.jpg"
-           alt="swamp"
-           />
-      
-    </div>
-	<div id="root">
-    <div style="display: flex; flex-wrap: wrap; justify-content: center; ">
-
-      <img
-           src="./img/invitation/b466_03.jpg"
-           alt="swamp"
-           />
-      <img
-           src="./img/invitation/b466_04.jpg"
-           alt="swamp"
-           />
-      
-    </div>
-  </div><br><br>
+<br><br>
   
   
   <!-- footer 마지막 부분 -->
@@ -429,21 +395,7 @@ function showSlides(n) {
   dots[n].className += " active";
 }
 
-// 사진 클릭시 모달창
- function wrap(el) {
-      const wrappingElement = document.createElement('a');
-      wrappingElement.href = el.src;
-      wrappingElement.setAttribute('data-fslightbox', 'gallery');
-      el.parentElement.insertBefore(wrappingElement, el);
-      wrappingElement.appendChild(el);
-    }
 
-    document.querySelectorAll('#root img').forEach(el => {
-      wrap(el);
-    });
-
-    
-refreshFsLightbox();
     
 document.querySelectorAll('.button').forEach(button => button.innerHTML = '<div><span>' + button.textContent.trim().split('').join('</span><span>') + '</span></div>');
 </script>
