@@ -163,17 +163,17 @@
   
 <!--유정 로그인-->
 <div class="container">
-  <div id="modal-open">LOGIN</div>  
+  <div id="modal-open" class="modal-open">LOGIN</div>  
        <div class="popup-wrap" id="popup" style="display: none;">
        <div class="popup-box">
        <span class="popup-close" id="popup-close">&times;</span>
        <h2 class="green-wedding">Green Wedding</h2><br>
        <form action="/loginprocess" method="POST">
-       <label for="userid">ID</label><br>
-       <input type="text" id="userid" name="memid" value="admin"><br><br>
-       <label for="password">Password</label><br>
-       <input type="password" id="password" name="mempw" value="1234"><br><br>
-       <input type="submit" value="로그인" />
+         <label for="userid">ID</label><br>
+         <input type="text" id="userid" name="memid" value="admin"><br><br>
+         <label for="password">Password</label><br>
+         <input type="password" id="password" name="mempw" value="1234"><br><br>
+         <input type="submit" value="로그인" />
        </form>
       <br>
       <div class="links">
