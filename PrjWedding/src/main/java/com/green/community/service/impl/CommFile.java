@@ -21,7 +21,7 @@ public class CommFile {
 			HttpServletRequest request) {
 		
 		// 자료실에 파일이 저장될 경로(디렉토리) 지정 없으면 생성
-		String  filePath   =  "d:\\upload\\";
+		String  filePath   =  "d:\\weddingPrj\\";
 		File    dir        =  new File(filePath);
 		if( !dir.exists() ) {
 			dir.mkdir();    // make directory   
@@ -81,7 +81,7 @@ public class CommFile {
 
 	public static void delete(List<FilesVo> fileList) {
 		
-		String path = "d:\\upload\\";
+		String path = "d:\\weddingPrj\\";
 		
 		fileList.forEach( ( f ) -> {
 			String sfile = f.getSfilename();

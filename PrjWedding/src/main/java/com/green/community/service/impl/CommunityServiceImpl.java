@@ -97,4 +97,12 @@ public class CommunityServiceImpl implements CommunityService {
 		communityDao.reviewWrite(map);		
 	}
 
+
+	@Override
+	public List<CommunityVo> reviewList(HashMap<String, Object> map) {
+		 List<CommunityVo> vo = communityDao.reviewList(map);
+		 System.out.println("impl:" + vo);
+		return vo;
+	}
+
 }

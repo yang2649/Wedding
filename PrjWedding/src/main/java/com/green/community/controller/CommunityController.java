@@ -189,16 +189,18 @@ public class CommunityController {
 		@RequestMapping("/Community05")
 		public ModelAndView reviewList(
 				@RequestParam HashMap<String, Object> map) {
-			/*
-			 * String menu_id = (String)map.get("menu_id"); System.out.println(menu_id);
-			 * 
-			 * List<CommunityVo> vo = communityService.getfaqList(menu_id);
-			 * 
-			 * List<FilesVo> fileList = communityService.getFileList( map );
-			 */
+			
+		
+			
+			List<CommunityVo> vo = communityService.reviewList(map);
+			System.out.println(vo);
+			
+		
+
 			
 			ModelAndView mv = new ModelAndView();
 			mv.setViewName("community/review");
+			mv.addObject("vo", vo);
 			
 			return mv;
 		}

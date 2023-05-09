@@ -183,8 +183,7 @@
                  DELNUM
                  
        FROM      BOARD  
-    
-       
+         
        WHERE     
           MENU_ID  =  'MENU04'
 
@@ -213,15 +212,45 @@
    
     <select   id         = "PdfFilesList" 
              resultType = "com.green.community.vo.FilesVo">
-   
        SELECT
 		   FILE_NUM, IDX, FILENAME, FILEEXT, SFILENAME
 		FROM       FILES
 		WHERE      IDX   =  #{ idx  } 
 		ORDER BY   FILE_NUM  ASC 
-   
    </select>
    
+   <select   id         = "getFile" 
+             resultType = "com.green.community.vo.FilesVo">
+       SELECT
+		   FILE_NUM, IDX, FILENAME, FILEEXT, SFILENAME
+		FROM       FILES
+		WHERE      IDX   =  #{ idx  } 
+		ORDER BY   FILE_NUM  ASC 
+   </select>
+   
+    <select id         = "ReviewList"
+           resultType = "com.green.community.vo.BoardFilesVo"  >
+             
+       SELECT    B.IDX, 
+                 MENU_ID,                 
+                 -- DECODE(LVL, 0, '', '[Re] ') || TITLE  AS TITLE ,
+                TITLE,
+                CONT,
+                WRITER,
+                 READCOUNT,
+                 TO_CHAR(REGDATE, 'YYYY-MM-DD HH24:MI:SS')  REGDATE,
+                BNUM,
+                 LVL,
+                 STEP,
+                NREF,
+                 DELNUM,
+                    FILE_NUM ,  FILENAME , FILEEXT , SFILENAME 
+                 
+                 
+       FROM      BOARD B LEFT JOIN FILES F ON F.IDX=B.IDX
+       WHERE     
+          MENU_ID  =  'MENU05'
+   </select>  
 
      <insert id="ReviewWrite">
      INSERT INTO  BOARD (

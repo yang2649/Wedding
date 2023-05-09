@@ -34,5 +34,9 @@ public interface CommunityService {
 	List<FilesVo> getFileList(HashMap<String, Object> map);
 
 	void reviewWrite(HashMap<String, Object> map, HttpServletRequest request);
+
+	List<CommunityVo> reviewList(HashMap<String, Object> map);
+
+
 }
 

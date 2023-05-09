@@ -104,6 +104,18 @@ public class CommunityDaoImpl implements CommunityDao {
 		
 	}
 
+	@Override
+	public List<CommunityVo> reviewList(HashMap<String, Object> map) {
+		List<CommunityVo> vo = sqlSession.selectList("Community.ReviewList", map);
+		System.out.println("dao" + vo);
+		
+		return vo;
+	}
+
+
+
+
+
 
 
 }
