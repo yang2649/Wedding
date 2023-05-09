@@ -64,6 +64,7 @@
     <a href="#" style="margin: 0 5px;">LOCATION</a>
   </span>
 </div>
+
 	<div class="menu-toggle">MENU</div>
 	
 <div class="sliding-menu">
@@ -80,10 +81,8 @@
     </li>
   </ul>
 </div>
+
 <div class="sliding-menu-overlay"></div> 
-
-
-
 
 		<!-- 메인 메뉴 -->
 		
@@ -151,9 +150,9 @@
       <br>
       <br>
       <a href="Community01WriteForm">공지사항 글쓰기</a>
-     <div>
+     <div id="not">
        <hr>
-       <div>
+       <div id="not-pan">
          <ul>
             <li class="notice-date" style="display: ">날짜</li>
             <li class="notice-tit">제목</li>
@@ -173,8 +172,10 @@
        </c:forEach>  
        </div>
      </div>
-     <div class="container" style="margin: 300px;">
-     
      </div>
+     <div class="container" id="footnot" style="margin: 300px;">
+   
+
+     
 </body>
 </html>
