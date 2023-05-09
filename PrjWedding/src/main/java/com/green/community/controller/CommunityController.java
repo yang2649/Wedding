@@ -92,7 +92,7 @@ public class CommunityController {
 	public ModelAndView eventList() {
 		
 		ModelAndView mv = new ModelAndView();
-		mv.setViewName("community/review");
+		mv.setViewName("community/event");
 		
 		return mv;
 	}

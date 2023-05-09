@@ -48,7 +48,14 @@
 <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Castoro+Titling&display=swap" rel="stylesheet">
 
+<style>
 
+ .community-container {
+  max-width: 1200px;
+  position: relative;
+  margin: auto; 
+}
+</style>
 </head>
 <body>
 
@@ -146,13 +153,18 @@
     });
 </script>
      <!-- =============================여기서부터 내용==================================== -->
-      <h2 style= "text-align: center;">공지사항</h2>    
-      <br>
-      <br>
-      <a href="Community01WriteForm">공지사항 글쓰기</a>
+      	<div id="text-table">
+	  	<h1 style="text-align: center;">
+			<span style="color: rgb(191, 131, 101);" ">공지사항</span></h1>
+	  	</div>
+	  	<br><br>
+	   <div class="community-container">
+	   <hr>
+      
      <div id="not">
        <hr>
        <div id="not-pan">
+      <a href="Community01WriteForm" ><div style="text-align:right;">공지사항 글쓰기</div></a>
          <ul>
             <li class="notice-date" style="display: ">날짜</li>
             <li class="notice-tit">제목</li>
@@ -173,7 +185,8 @@
        </div>
      </div>
      </div>
-     <div class="container" id="footnot" style="margin: 300px;">
+	   </div>
+     <div class="foot-container"  style="margin: 300px;">
    
 
      

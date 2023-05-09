@@ -376,13 +376,22 @@ nav  {
       });
     });
 </script>
-    
+
+<!-- ===================================================== -->
+    	<div id="text-table" style="  max-width: 1200px;
+  position: relative;
+  margin: auto; ">
+	  	<h1 style="text-align: center;">
+			<span style="color: rgb(191, 131, 101);" ">고객 후기</span></h1>
+			<br><br>
      <a href="/Community05WriteForm">새글쓰기</a>
+			<hr>
+	  	</div>
 <div class="container "  style="margin: auto; padding:15px 15px 15px 120px;">
   <div class="row">
 <c:forEach var="vo" items="${vo}">
 <div class="card" style="width: 18rem; margin:20px;">
-  <img class="card-img-top" src="/Pds/download/external/${ vo.sfilename }" alt="Card image cap">
+  <img class="card-img-top" src="/Pds/download/external/${ vo.sfilename }" alt="Card image cap" >
   <div class="card-body">
     <p class="card-text">${vo.cont}</p>
   </div>

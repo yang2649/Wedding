@@ -308,7 +308,7 @@ public class PdsController {
 			) throws IOException {
 		
 		String     INTERNAL_FILE         =  sfile;
-		String     EXTERNAL_FILE_PATH    =  "d:\\upload\\" + sfile;
+		String     EXTERNAL_FILE_PATH    =  "d:\\weddingPrj\\" + sfile;
 				
 		File       file  =  null;
 		if ( type.equalsIgnoreCase("internal")  ) {

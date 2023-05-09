@@ -314,20 +314,13 @@ h1{ text-align: center;}
 	padding: 20px;
 	height: 100px;
 }
+	   .community-container {
+  max-width: 1200px;
+  position: relative;
+  margin: auto; 
+}
 
 
-<!-- 글 폰트 -->
-<!-- 구글 폰트 -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Nanum+Gothic:wght@700&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Lora:wght@500&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Castoro+Titling&display=swap" rel="stylesheet">
 
 <style>
 
@@ -477,39 +470,17 @@ h1{ text-align: center;}
     });
 </script>
      <!-- =============================여기서부터 내용==================================== -->
-  <h1> FAQ</h1>
-   
-  <main>
-  <hr>
-    <div class=title>  
-    <hr>
-    </div> 
-  </main>
-  
-<!-- <div class="faq_group">
+  	<div id="text-table">
+	  	<h1 style="text-align: center;">
+			<span style="color: rgb(191, 131, 101);" ">FAQ</span></h1>
+	  	</div>
+	 <br><br>
+	   <div class="community-container">
+	   <hr>
+	 <div class="faq_group">
     <div class="table">
       <div class="block">
-        <span style=" margin:0px 50px 0px 50px;">1</span>&nbsp;&nbsp;&nbsp;<a href=""style="color: black">[웨딩] 예식비용은 어떻게 지불해야 하나요?</a> 
-       <button style="float: right; margin:0px 90px 0px 0px;">&nbsp;🔻&nbsp;</button>
-      </div>
-    </div>
-      <hr>
-    <div class="table">
-      <div class="block">
-        <span style=" margin:0px 50px 0px 50px;">2</span>&nbsp;&nbsp;&nbsp;<span>[웨딩]주차비는 어떻게 지불해야 하나요?</span> 
-       <button style="float: right; margin:0px 90px 0px 0px;">&nbsp;🔻&nbsp;</button>
-      </div>
-    </div>
-      <hr>
-</div>
-   <div class="container" style="margin: 300px;"></div> -->
-   
-   <div class="faq_group">
-    <div class="table">
-      <div class="block">
-        <span style=" margin:0px 120px 0px 250px;">NO</span>&nbsp;
-        <span>목록</span> 
-      
+         <li style="margin:auto;">자주하는 질문들</li>
       </div>
     </div>
       <hr>
@@ -526,8 +497,12 @@ h1{ text-align: center;}
                </div>
             </c:forEach>
          </div>
+	   </div>
       </div>
    </div>
+</div>
+   <div class="container" style="margin: 300px;"></div>
+   
    <script>
       $(document).ready(function() {
          $('[id^="show-"]').each(function() {
@@ -538,9 +513,7 @@ h1{ text-align: center;}
             });
          });
       });
-   </script>
-</div>
-   <div class="container" style="margin: 300px;"></div>
+  </script>
 
 </body>
 </html>

@@ -281,6 +281,12 @@ nav  {
   font-family: 'Times New Roman';
   font-size: 20px;
 }
+
+	   .community-container {
+  max-width: 1200px;
+  position: relative;
+  margin: auto; 
+}
 </style>
 </head>
 <body>
@@ -374,20 +380,18 @@ nav  {
     });
 </script>
  <!-- =============================여기서부터 내용==================================== -->
-  <h1> download</h1>
-   
-  <main>
-  <hr>
-    <div class=title>  
-    <hr>
-    </div> 
-  </main>
-          <a href="Community03WriteForm">새 글쓰기</a>
+ 	<div id="text-table">
+	  	<h1 style="text-align: center;">
+			<span style="color: rgb(191, 131, 101);" ">Download</span></h1>
+	  	</div>
+	 <br><br>
+	   <div class="community-container">
+        <a href="Community03WriteForm">새 글쓰기</a>
+        <hr>
 <div class="faq_group">
     <div class="table">
       <div class="block">
-        <span style=" margin:0px 120px 0px 250px;">NO</span>&nbsp;
-        <span>목록</span> 
+        <li style="margin:auto;">자료실 다운로드 목록</li>
       
       </div>
     </div>
@@ -396,8 +400,8 @@ nav  {
     <div class="table">
       <div class="block">
         <a href="Community03View?idx=${vo.idx}"style="color: black">
-        <span style=" margin:0px 120px 0px 250px;">&nbsp;${vo.idx }</span>&nbsp;&nbsp;&nbsp;
-        <span>
+        
+        <span style=" margin:0px 150px 0px 300px;">
         ${vo.title }
         </span>
        <span>
@@ -408,6 +412,7 @@ nav  {
     </div>
       <hr>
     </c:forEach>
+</div>
 </div>
    <div class="container" style="margin: 300px;"></div>
 

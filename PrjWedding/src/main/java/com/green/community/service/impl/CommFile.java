@@ -27,7 +27,7 @@ public class CommFile {
 			dir.mkdir();    // make directory   
 		}
 		
-		// 넘어온 파일 저장( d:\\upload\\ ) 처리 -  중복파일 처리
+		// 넘어온 파일 저장 -  중복파일 처리
 		CheckFileName   checkFile = new CheckFileName();
 		
 		// 파일 저장
