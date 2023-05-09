@@ -37,6 +37,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Castoro+Titling&display=swap" rel="stylesheet">
 
 <!-- ajax 스타일 시트 -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+
 <!-- owl css 사용 -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
@@ -155,6 +158,8 @@
       </nav>
     </div>
   </div>
+  
+  
   
 <!--유정 로그인-->
 <div class="container">
@@ -418,7 +423,7 @@
 <div class="VIP-container">
   <div class="VIP-watching">
     <!-- 이곳 하이퍼 링크에 VIP 부분 작성 없으면 지우시면 됩니다 -->
-    <a class="VIP-event" href="/#">자세히보기</a>
+    <a class="VIP-event" href="/Venue05">자세히보기</a>
     <div style="height: 0px; margin-bottom: 0px;"></div>
     <div style="height: 0px; margin-bottom: 0px;"></div>
   </div>
@@ -546,7 +551,7 @@
 <div class="Event-container">
   <div class="Event-margin">
     <!-- 이곳 하이퍼 링크에 이벤트 부분 작성 없으면 지우시면 됩니다 -->
-    <a class="btn-event" href="/#">이벤트 자세히보기</a>
+    <a class="btn-event" href="/Community02">이벤트 자세히보기</a>
     <div style="height: 0px; margin-bottom: 0px;"></div>
     <div style="height: 0px; margin-bottom: 0px;"></div>
   </div>
@@ -787,7 +792,31 @@ var marker = new kakao.maps.Marker({
       window.open("User/WriteForm","팝업 테스트","width=500, height=550, top=250, left=650");
     }  
   
-	
+  
+  // 화면을 축소할때 이미지 사이즈 조절
+  function resizeImages() {
+	  var images = document.getElementsByClassName('img_wrap');
+	  for (var i = 0; i < images.length; i++) {
+	    var image = images[i];
+	    var imgWidth = image.getAttribute('data-width');
+	    var imgHeight = image.getAttribute('data-height');
+	    var containerWidth = image.parentNode.clientWidth;
+	    var containerHeight = image.parentNode.clientHeight;
+	    if (imgWidth / imgHeight > containerWidth / containerHeight) {
+	      image.style.width = '100%';
+	      image.style.height = 'auto';
+	      image.style.marginTop = (containerHeight - image.clientHeight) / 2 + 'px';
+	    } else {
+	      image.style.width = 'auto';
+	      image.style.height = '100%';
+	      image.style.marginLeft = (containerWidth - image.clientWidth) / 2 + 'px';
+	    }
+	  }
+	}
+	resizeImages();
+	window.addEventListener('resize', resizeImages);
+  
+  
 </script>
 </body>
 </html> 

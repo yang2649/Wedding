@@ -618,6 +618,14 @@ li {
 }
 
 
+.img_wrap {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+
 /* owl-carousel 부분 */
 /* 첫 화면 이미지가 깨지지 않게 조절*/
 /* 근데 어짜피 이미지가 너무 커서 깨지긴 함*/
