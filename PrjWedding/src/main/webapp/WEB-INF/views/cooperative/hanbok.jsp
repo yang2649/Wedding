@@ -5,30 +5,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>hanbok</title>
-
-<!-- jquery 사용 -->
+<title>Home</title>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script
 	src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fslightbox/3.4.1/index.min.js"></script>
-
-<!-- css 부분 사용 -->
-<link rel="stylesheet" href="./css/loginstyle.css">
 <link rel="shortcut icon" href="/img/favicon.ico">
 <link rel="stylesheet" href="/css/common.css">
 <link rel="stylesheet" href="/css/styles.css">
 <link rel="stylesheet" href="/css/slide.css">
-
-
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
-<link rel="shortcut icon" href="/img/favicon.ico">
-
-<!-- Bootstrap CSS -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
 <!-- 글 폰트 -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -40,18 +25,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-<!-- 구글 폰트 -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Nanum+Gothic:wght@700&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Lora:wght@500&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Castoro+Titling&display=swap" rel="stylesheet">
-
-
 <style>
 /* body 메뉴 폰트 및 사이즈 */
 nav  {
@@ -69,19 +42,24 @@ p {
 #root img {
   display: block;
   margin: 5px;
-  width: 394px;
-  height: 250px;
-} 
+  width: 350px;
+  height: 500px;
+}
+ 
 #root2 img {
   display: block;
   margin: 5px;
-  width: 350px;
-  height: 414px;
-}  
+  width: 500px;
+  height: 300px;
+} 
+
 
 #text-table h1 {
   font-family: 'Noto Sans KR', sans-serif;
 }
+
+
+
 
 </style>
 
@@ -202,18 +180,22 @@ p {
       <br>
       <br>
       <br>
-      	<!--유정 로그인-->
-      	<li><hr></li>
-      	<li> ${ sessionScope.login.username } 님 환영합니다<br></li>
-        <li><a href="/logout">로그아웃</a></li>
+      	<li><a href="#">로그인</a></li>
         <li><hr></li>
-        <li><a href="#">Information</a></li>
-        <br>
-        <li><a href="#">Estimate</a></li> <!-- 견적서라는 뜻입니다 -->
-        <br>
-        <li><a href="#">Inquiry Details</a></li> <!-- 문의 내역이라는 뜻입니다 -->
-        <br>
-        <li><a href="#">Steamed List</a></li> <!-- 찜 목록 이라는뜻 입니다 -->
+        <li><a href="/User/List">사용자 목록</a></li>
+        <li><a href="/User/WriteForm">사용자 등록</a></li>
+        <li><hr></li>
+        <li><a href="/Menus/List">메뉴 목록</a></li>
+        <li><a href="/Menus/WriteForm2">메뉴 등록</a></li>
+        <li><hr></li>
+        <li><a href="/Board/List?menu_id=MENU01">게시물 목록</a></li>
+        <li><a href="/Board/WriteForm?menu_id=MENU01&bnum=0&lvl=0&step=0&nref=0">게시물 등록</a></li>
+        <li><hr></li>
+        <li><a href="/Pds/List?menu_id=MENU01&nowpage=1">자료실 목록</a></li>
+        <li><a href="/Pds/WriteForm?menu_id=MENU01&bnum=0&lvl=0&step=0&nref=0">자료실 등록</a></li>
+        <li><hr></li>
+        <li><a href="/Pds/List?menu_id=MENU01&nowpage=1">페이징 자료실 목록</a></li>
+        <li><a href="/Pds/WriteForm?menu_id=MENU01&bnum=0&lvl=0&step=0&nref=0&nowpage=1">페이징 자료실 등록</a></li>
       </ul>
     </li>
   </ul>
@@ -235,105 +217,133 @@ p {
 <br><br><br><br>
 	<div id="text-table">
 		<h1 style="text-align: center;">
-			<span style="color: rgb(191, 131, 101);" ">BLUE Hall</span></h1>
+			<span style="color: rgb(191, 131, 101);" ">신씨비단</span></h1>
 		<p><br></p>
-		<p>싱그러운 자연 속, 눈부신 햇살 보다 빛나는</p>
-		<p> 단 하나뿐인 나만의 웨딩!</p>
-		<p> 나무처럼 듬직한 신랑님과 꽃보다 더 화사한 신부님을</p>
-		<p>새롭게 리뉴얼 한 루체홀에서 찾아 뵙도록 하겠습니다.</p>
-		<p> 영화 속, 숲 속 야외 웨딩에 대한 로망을</p>
-		<p>이제 CA웨딩컨벤션 루체홀과 함께 하세요.</p>
+		<p>한복은 한국의 전통 의상으로 아름다운 디자인과 우아한 느낌으로 유명합니다. </p>
+		<p>고품질의 한복을 저렴한 가격으로 대여해주며, 고객님을 만족시켜 드리겠습니다.</p>
+		<p>아름다운 신부님께는 신비스러운 느낌을</p>
+		<p>어머님에게는 곱고 차분한 스타일을</p>
+		<p>웨딩에 어울리는 다양한 종류의 한복을</p>
+		<p>신씨비단과 함께 하세요.</p>
 		<p><br></p>
-		<p>“꽃보다 아름다운 당신”</p>
-	</div>
+		<p>- 신씨비단 -</p>
+	</div><br><br><br><br><br><br><br><br><br><br><br><br><br>
 	
 	<!-- 슬라이드 -->
-	 <div class="slideshow-container">
-
-      <!-- Full-width images with number and caption text -->
-      <div class="mySlides">
-        <div class="numbertext">1 / 3</div>
-        <img src="./img/hall/chall01.jpg" style="width:100%">
-        <div class="text">GREEM WEDDING</div>
-      </div>
-
-      <div class="mySlides">
-        <div class="numbertext">2 / 3</div>
-        <img src="./img/hall/chall02.jpg" style="width:100%">
-        <div class="text">GREEM WEDDING</div>
-      </div>
-
-      <div class="mySlides">
-        <div class="numbertext">3 / 3</div>
-        <img src="./img/hall/chall03.jpg" style="width:100%">
-        <div class="text">GREEM WEDDING</div>
-      </div>
-
-
-      <!-- Next and previous buttons -->
-      <a class="prev" onclick="moveSlides(-1)">&#10094;</a>
-      <a class="next" onclick="moveSlides(1)">&#10095;</a>
+    <div id="index_03">
+        <div id="header3"></div>
+        <div id="slide3">
+            <ul>
+                <li><img src="./img/hanbok/s01.jpg" alt="슬라이드1" style="width: 600px; height: 800px;"></li>
+                <li><img src="./img/hanbok/s02.jpg" alt="슬라이드2" style="width: 600px; height: 800px;"></li>
+                <li><img src="./img/hanbok/s03.jpg" alt="슬라이드3" style="width: 600px; height: 800px;"></li>
+                <li><img src="./img/hanbok/s04.jpg" alt="슬라이드4" style="width: 600px; height: 800px;"></li>
+                <li><img src="./img/hanbok/s05.jpg" alt="슬라이드5" style="width: 600px; height: 800px;"></li>
+                <li><img src="./img/hanbok/s06.jpg" alt="슬라이드6" style="width: 600px; height: 800px;"></li>
+            </ul>
+        </div>
     </div>
-    <br/>
-
-    <!-- The dots/circles -->
-    <div style="text-align:center">
-      <span class="dot" onclick="currentSlide(0)"></span>
-      <span class="dot" onclick="currentSlide(1)"></span>
-      <span class="dot" onclick="currentSlide(2)"></span>
-      <span class="dot" onclick="currentSlide(3)"></span>
-      <span class="dot" onclick="currentSlide(4)"></span>
-      <span class="dot" onclick="currentSlide(5)"></span>
-    </div>
-
-    <!-- 브리드룸 -->
-    <div id="text-table">
+    <br>
+	<div id="text-table">
 		<h1 style="text-align: center;">
-			<span style="color: rgb(191, 131, 101);" ">BRIDE ROOM</span></h1>
+			<span style="color: rgb(191, 131, 101);" ">Illustration</span></h1>
 	</div>
 	<div id="root">
     <div style="display: flex; flex-wrap: wrap; justify-content: center; padding: 1vw;">
 
       <img
-           src="./img/bride/cbride01.jpg"
-           alt="swamp"
-           />
-      <img 
-           src="./img/bride/cbride02.jpg"
+           src="./img/hanbok/a01.jpg"
            alt="swamp"
            />
       <img
-           src="./img/bride/cbride03.jpg"
+           src="./img/hanbok/a02.jpg"
+           alt="swamp"
+           />
+      <img
+           src="./img/hanbok/a03.jpg"
+           alt="swamp"
+           />
+            <img
+           src="./img/hanbok/a12.jpg"
            alt="swamp"
            />
     </div>
-  </div>
-  <br><br><br><br>
-  <!-- 포토존 -->
-  <!-- 포토존 -->
-    <div id="text-table">
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; padding: 1vw;">
+
+      <img
+           src="./img/hanbok/a04.jpg"
+           alt="swamp"
+           />
+      <img
+           src="./img/hanbok/a05.jpg"
+           alt="swamp"
+           />
+      <img
+           src="./img/hanbok/a06.jpg"
+           alt="swamp"
+           />
+           <img
+           src="./img/hanbok/a11.jpg"
+           alt="swamp"
+           />
+    </div>
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; padding: 1vw;">
+
+      <img
+           src="./img/hanbok/a07.jpg"
+           alt="swamp"
+           />
+      <img
+           src="./img/hanbok/a08.jpg"
+           alt="swamp"
+           />
+      <img
+           src="./img/hanbok/a09.jpg"
+           alt="swamp"
+           />
+           <img
+           src="./img/hanbok/a10.jpg"
+           alt="swamp"
+           />
+    </div>
+    
+    
+    <div id="text-table"><br><br>
 		<h1 style="text-align: center;">
-			<span style="color: rgb(191, 131, 101);" ">PHOTO ZONE</span></h1>
-		<p><br></p>
-		<p style="font-family: 'Times New Roman'; font : bolder ; color: rgb(191, 131, 101);">최고의 순간을 담아내기에 가장 이상적인 공간</p>
-	</div>
+			<span style="color: rgb(191, 131, 101);" ">Internal</span></h1>
+	</div><br>
 	<div id="root2">
     <div style="display: flex; flex-wrap: wrap; justify-content: center; padding: 1vw;">
 
       <img
-           src="./img/bride/aphoto01.jpg"
+           src="./img/hanbok/b01.jpg"
            alt="swamp"
            />
       <img
-           src="./img/bride/aphoto02.jpg"
+           src="./img/hanbok/b02.jpg"
            alt="swamp"
            />
       <img
-           src="./img/bride/aphoto03.jpg"
+           src="./img/hanbok/b03.jpg"
            alt="swamp"
            />
     </div>
-  </div>
+	<div id="root2">
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; padding: 1vw;">
+
+      <img
+           src="./img/hanbok/b04.jpg"
+           alt="swamp"
+           />
+      <img
+           src="./img/hanbok/b05.jpg"
+           alt="swamp"
+           />
+      <img
+           src="./img/hanbok/b06.jpg"
+           alt="swamp"
+           />
+    </div><br><br><br>
   
   <!-- footer 마지막 부분 -->
 <footer>
@@ -463,6 +473,18 @@ function showSlides(n) {
 
     
 refreshFsLightbox();
+
+
+//페이드인 페이드아웃
+
+$('#slide3>ul>li').hide();
+$('#slide3>ul>li:first-child').show();
+
+setInterval(function(){
+  $('#slide3>ul>li:first-child').fadeOut()
+  .next().fadeIn().end(1000)
+  .appendTo('#slide3>ul');
+},3000);
     
 </script>
 </body>

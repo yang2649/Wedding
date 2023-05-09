@@ -78,3 +78,28 @@
   background-color: #bbb;
   border-radius: 50%;
   dis
+  }
+  
+ /*--------페이드인아웃---------*/
+#index_03{
+    width: 1200px;
+    height: 600px;
+    margin: 0 auto;
+
+}
+
+#header3{
+    height: 100px;
+    box-sizing: border-box;
+    text-align: center;
+    line-height: 100px;
+}
+
+#slide3{
+    height: 300px;
+}
+
+#slide3>ul>li{
+    position: absolute;
+    font-size: 0;
+}
