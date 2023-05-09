@@ -301,6 +301,7 @@ nav  {
   </span>
 </div>
 	<div class="menu-toggle">MENU</div>
+	
 <div class="sliding-menu">
   <ul>
     <li>
@@ -315,7 +316,11 @@ nav  {
     </li>
   </ul>
 </div>
-<div class="sliding-menu-overlay"></div>
+<div class="sliding-menu-overlay"></div> 
+
+
+
+
 		<!-- 메인 메뉴 -->
 		
 <img src="./img/side_main.jpg" width="100%" height="100%" >

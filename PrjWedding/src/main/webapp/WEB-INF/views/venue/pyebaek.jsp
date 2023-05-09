@@ -169,22 +169,18 @@ p {
       <br>
       <br>
       <br>
-      	<li><a href="#">로그인</a></li>
+      	<!--유정 로그인-->
+      	<li><hr></li>
+      	<li> ${ sessionScope.login.username } 님 환영합니다<br></li>
+        <li><a href="/logout">로그아웃</a></li>
         <li><hr></li>
-        <li><a href="/User/List">사용자 목록</a></li>
-        <li><a href="/User/WriteForm">사용자 등록</a></li>
-        <li><hr></li>
-        <li><a href="/Menus/List">메뉴 목록</a></li>
-        <li><a href="/Menus/WriteForm2">메뉴 등록</a></li>
-        <li><hr></li>
-        <li><a href="/Board/List?menu_id=MENU01">게시물 목록</a></li>
-        <li><a href="/Board/WriteForm?menu_id=MENU01&bnum=0&lvl=0&step=0&nref=0">게시물 등록</a></li>
-        <li><hr></li>
-        <li><a href="/Pds/List?menu_id=MENU01&nowpage=1">자료실 목록</a></li>
-        <li><a href="/Pds/WriteForm?menu_id=MENU01&bnum=0&lvl=0&step=0&nref=0">자료실 등록</a></li>
-        <li><hr></li>
-        <li><a href="/Pds/List?menu_id=MENU01&nowpage=1">페이징 자료실 목록</a></li>
-        <li><a href="/Pds/WriteForm?menu_id=MENU01&bnum=0&lvl=0&step=0&nref=0&nowpage=1">페이징 자료실 등록</a></li>
+        <li><a href="#">Information</a></li>
+         <br>
+        <li><a href="#">Estimate</a></li> <!-- 견적서라는 뜻입니다 -->
+        <br>
+        <li><a href="#">Inquiry Details</a></li> <!-- 문의 내역이라는 뜻입니다 -->
+        <br>
+        <li><a href="#">Steamed List</a></li> <!-- 찜 목록 이라는뜻 입니다 -->
       </ul>
     </li>
   </ul>
