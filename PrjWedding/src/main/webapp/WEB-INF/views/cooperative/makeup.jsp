@@ -42,20 +42,17 @@ p {
 #root img {
   display: block;
   margin: 5px;
-  width: 394px;
-  height: 250px;
+  width: 250px;
+  height: 350px;
 } 
-#root2 img {
-  display: block;
-  margin: 5px;
-  width: 350px;
-  height: 414px;
-}  
 
 #text-table h1 {
   font-family: 'Noto Sans KR', sans-serif;
 }
 
+.ddd h2{
+  text-align: center;
+}
 </style>
 
 </head>
@@ -204,131 +201,91 @@ p {
 <nav class="nav nav-pills nav-justified" >
   <a class="nav-item nav-link" href="/Cooperative01" style="color: rgb(0, 0, 0)">Studio</a>
   <a class="nav-item nav-link" href="/Cooperative02" style="color: rgb(0, 0, 0)">Dress</a>
-  <a class="nav-item nav-link active" href="/Cooperative03" style="background-color: rgb(200, 200, 200)">Makeup</a>
+  <a class="nav-item nav-link active" href="/Cooperative03" style="background-color: rgb(200, 200, 200)">Hair & Make Up</a>
   <a class="nav-item nav-link" href="/Cooperative04" style="color: rgb(0, 0, 0)">Hanbok</a>
   <a class="nav-item nav-link" href="/Cooperative05" style="color: rgb(0, 0, 0)">Invitation</a>
-</nav>	
-
-<br><br><br><br>
+</nav>	<br><br><br><br>
 	<div id="text-table">
 		<h1 style="text-align: center;">
-			<span style="color: rgb(191, 131, 101);" ">BLUE Hall</span></h1>
+			<span style="color: rgb(191, 131, 101);" ">Hair & Make Up</span></h1>
 		<p><br></p>
-		<p>싱그러운 자연 속, 눈부신 햇살 보다 빛나는</p>
-		<p> 단 하나뿐인 나만의 웨딩!</p>
-		<p> 나무처럼 듬직한 신랑님과 꽃보다 더 화사한 신부님을</p>
-		<p>새롭게 리뉴얼 한 루체홀에서 찾아 뵙도록 하겠습니다.</p>
-		<p> 영화 속, 숲 속 야외 웨딩에 대한 로망을</p>
-		<p>이제 CA웨딩컨벤션 루체홀과 함께 하세요.</p>
+		<p>"단 하루뿐인 결혼식"</p>
+		<p>아름다운 신부님 듬직한 신랑님을 위한</p>
 		<p><br></p>
-		<p>“꽃보다 아름다운 당신”</p>
-	</div>
-	
-	<!-- 슬라이드 -->
-	 <div class="slideshow-container">
-
-      <!-- Full-width images with number and caption text -->
-      <div class="mySlides">
-        <div class="numbertext">1 / 3</div>
-        <img src="./img/hall/chall01.jpg" style="width:100%">
-        <div class="text">GREEM WEDDING</div>
-      </div>
-
-      <div class="mySlides">
-        <div class="numbertext">2 / 3</div>
-        <img src="./img/hall/chall02.jpg" style="width:100%">
-        <div class="text">GREEM WEDDING</div>
-      </div>
-
-      <div class="mySlides">
-        <div class="numbertext">3 / 3</div>
-        <img src="./img/hall/chall03.jpg" style="width:100%">
-        <div class="text">GREEM WEDDING</div>
-      </div>
-
-
-      <!-- Next and previous buttons -->
-      <a class="prev" onclick="moveSlides(-1)">&#10094;</a>
-      <a class="next" onclick="moveSlides(1)">&#10095;</a>
+		<p>그 날의 주인공으로 만들어주는</p>
+		<p><br></p>
+		<p>Green Make Up</p>
+		<p><br></p>
+		<p>고객들 만족하는 하루로 만들어 드립니다.</p>
+		<p><br></p>
+	</div><br><br><br><br>
+	<div id="ddd">
+	<h2>
+  	<video muted autoplay loop style="width: 80%; text-align: center;">
+      <source src="./img/makeup/vd.mp4" type="video/mp4">
+      <source src="./img/makeup/vd.ogg" type="video/ogg">
+      <strong>Your browser does not support the video tag.</strong>
+    </video>
+    </h2>
     </div>
-    <br/>
-
-    <!-- The dots/circles -->
-    <div style="text-align:center">
-      <span class="dot" onclick="currentSlide(0)"></span>
-      <span class="dot" onclick="currentSlide(1)"></span>
-      <span class="dot" onclick="currentSlide(2)"></span>
-      <span class="dot" onclick="currentSlide(3)"></span>
-      <span class="dot" onclick="currentSlide(4)"></span>
-      <span class="dot" onclick="currentSlide(5)"></span>
-    </div>
-
-    <!-- 브리드룸 -->
+    <br><br>
     <div id="text-table">
 		<h1 style="text-align: center;">
-			<span style="color: rgb(191, 131, 101);" ">BRIDE ROOM</span></h1>
+			<span style="color: rgb(191, 131, 101);" ">Illustration</span></h1>
 	</div>
 	<div id="root">
     <div style="display: flex; flex-wrap: wrap; justify-content: center; padding: 1vw;">
 
       <img
-           src="./img/bride/cbride01.jpg"
+           src="./img/makeup/1.JPG"
            alt="swamp"
            />
       <img
-           src="./img/bride/cbride02.jpg"
+           src="./img/makeup/2.JPG"
            alt="swamp"
            />
       <img
-           src="./img/bride/cbride03.jpg"
+           src="./img/makeup/3.JPG"
            alt="swamp"
            />
     </div>
-  </div>
-  <br><br><br><br>
-  <!-- 포토존 -->
-  <!-- 포토존 -->
-    <div id="text-table">
-		<h1 style="text-align: center;">
-			<span style="color: rgb(191, 131, 101);" ">PHOTO ZONE</span></h1>
-		<p><br></p>
-		<p style="font-family: 'Times New Roman'; font : bolder ; color: rgb(191, 131, 101);">최고의 순간을 담아내기에 가장 이상적인 공간</p>
-	</div>
-	<div id="root2">
+	<div id="root">
     <div style="display: flex; flex-wrap: wrap; justify-content: center; padding: 1vw;">
 
       <img
-           src="./img/bride/aphoto01.jpg"
+           src="./img/makeup/4.JPG"
            alt="swamp"
            />
       <img
-           src="./img/bride/aphoto02.jpg"
+           src="./img/makeup/5.JPG"
            alt="swamp"
            />
       <img
-           src="./img/bride/aphoto03.jpg"
+           src="./img/makeup/6.JPG"
            alt="swamp"
            />
     </div>
-  </div>
-  
-  <!-- footer 마지막 부분 -->
-<footer>
-  <div class="container-fluid" style="background-color: black; color: white; text-align: center;">
-    <div class="row">
-      <div class="col-md-12">
-        <div class="copytext text-center">
-          <br>
-          <p>주소 : 부산 부산진구 중앙대로 749 THE GREEN(주) GREEN WEDDING 사업자등록번호 : 1234-56-7890 | 대표차 : 김그린</p>
-          <p>&copy; 2023 Your Company. All Rights Reserved.</p>
-          <br>
-        </div>
-      </div>
-    </div>
-  </div>
-</footer>
+	<div id="root">
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; padding: 1vw;">
 
-    
+      <img
+           src="./img/makeup/7.JPG"
+           alt="swamp"
+           />
+      <img
+           src="./img/makeup/8.JPG"
+           alt="swamp"
+           />
+      <img
+           src="./img/makeup/9.JPG"
+           alt="swamp"
+           />
+    </div>
+  </div>
+
+
+  	
+
 <script>
 const menuButton = document.querySelector('.menu-toggle');
 const slidingMenu = document.querySelector('.sliding-menu');
