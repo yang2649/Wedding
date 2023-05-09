@@ -200,7 +200,7 @@ p {
 <nav class="nav nav-pills nav-justified" >
   <a class="nav-item nav-link" href="/Cooperative01" style="color: rgb(0, 0, 0)">Studio</a>
   <a class="nav-item nav-link" href="/Cooperative02" style="color: rgb(0, 0, 0)">Dress</a>
-  <a class="nav-item nav-link" href="/Cooperative03" style="color: rgb(0, 0, 0)">Makeup</a>
+  <a class="nav-item nav-link" href="/Cooperative03" style="color: rgb(0, 0, 0)">Hair & Make Up</a>
   <a class="nav-item nav-link" href="/Cooperative04" style="color: rgb(0, 0, 0)">Hanbok</a>
   <a class="nav-item nav-link active" href="/Cooperative05" style="background-color: rgb(200, 200, 200)">Invitation</a>
 </nav>	
