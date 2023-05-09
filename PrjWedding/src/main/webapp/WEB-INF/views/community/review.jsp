@@ -386,13 +386,6 @@ nav  {
   </div>
 </div>
 </c:forEach>
-<c:forEach var ="nm" items="${Name}" varStatus="statusNm">
-	<div>${nm.a}</div>
-    <c:forEach var ="data" items="${Data[statusNm.index]}" varStatus="status">
-    	<div>${data.a}</div>
-    </c:forEach>
-</c:forEach>
-
 
 
 

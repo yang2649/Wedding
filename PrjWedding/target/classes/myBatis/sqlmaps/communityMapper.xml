@@ -222,7 +222,8 @@
    
    </select>
    
-    <insert id="FileInsert">
+
+     <insert id="ReviewWrite">
      INSERT INTO  BOARD (
             IDX
 		  ,	MENU_ID
@@ -242,9 +243,9 @@
       (
           (SELECT  NVL( MAX(IDX), 0 ) + 1 FROM BOARD)
 		  ,	'MENU05'
-	      ,	#{ title   }
+		  ,	'후기'
 	      , #{ cont    }
-		  ,	#{ writer  }
+	      ,	#{ writer   }
 		  , SYSDATE
 	      , 0
 		  ,	(SELECT  NVL( MAX(IDX), 0 ) + 1 FROM BOARD)
@@ -254,8 +255,8 @@
 		  ,	0
 		  ,	0
       )
-      </insert>
    
+   </insert>
    
    
    
