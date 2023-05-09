@@ -170,9 +170,9 @@
        <h2 class="green-wedding">Green Wedding</h2><br>
        <form action="/loginprocess" method="POST">
        <label for="userid">ID</label><br>
-       <input type="text" id="userid" name="userid"><br><br>
+       <input type="text" id="userid" name="memid" value="admin"><br><br>
        <label for="password">Password</label><br>
-       <input type="password" id="password" name="password"><br><br>
+       <input type="password" id="password" name="mempw" value="1234"><br><br>
        <input type="submit" value="로그인" />
        </form>
       <br>
@@ -204,7 +204,7 @@
       <br>
       	<!--유정 로그인-->
       	<li><hr></li>
-      	<li style="font-size: 1.1rem;" > ${ sessionScope.login.username } 님 환영합니다<br></li>
+      	<li style="font-size: 1.1rem;" > ${ sessionScope.login.memname } 님 환영합니다<br></li>
       	<br>
         <li style="font-size: 1.2rem;" ><a href="/logout">로그아웃</a></li>
         <li><hr></li>

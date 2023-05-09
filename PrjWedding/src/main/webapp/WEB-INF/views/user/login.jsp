@@ -14,9 +14,9 @@
 </head>
 <body>
    <div class=confirm id="main">
-   <p>회원가입이 완료되었습니다</p>
+   <p>로그인이 완료되었습니다</p>
    <ul>
-     <li>아이디 :  ${ sessionScope.login.memname } </li>
+     <li>아이디 : ${ sessionScope.login.memid } </li>
      <button type="button" class="joinbutton" >확인</button>
    </ul>  
    </div>

@@ -13,3 +13,21 @@
   height: auto;
   border-radius: 25px;
 } 
+
+.infocard{
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 25px;
+  margin:10px;
+  width: 50rem;
+  height: auto;
+}
+
+.infotitle h2{  
+  font-family: 'Castoro Titling', cursive;
+  font-size: 80px;
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 20px;
+
+}

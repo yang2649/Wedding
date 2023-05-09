@@ -26,11 +26,11 @@
   <table>
    <tr>
      <th>아이디</th>
-     <td><input type="text" name="userid" value="${ user.userid }" readonly /></td>
+     <td><input type="text" name="memid" value="${ user.memid }" readonly /></td>
    </tr> 
    <tr>
      <th>비밀번호</th>
-     <td><input type="password" name="passwd" id="pwd1"  /></td>
+     <td><input type="password" name="mempw" id="pwd1"  /></td>
    </tr> 
    <tr>
      <th>비밀번호 확인</th>
@@ -38,22 +38,23 @@
    </tr> 
    <tr>
      <th>이름</th>
-     <td><input type="text" name="username" value="${ user.username }" /></td>
+     <td><input type="text" name="memname" value="${ user.memname }" /></td>
+   </tr> 
+   <tr>
+     <th>전화번호</th>
+     <td><input type="text" name="memph"  value="${ user.memph }" /></td>
    </tr> 
    <tr>
      <th>이메일</th>
-     <td><input type="email" name="email"  value="${ user.email }" /></td>
+     <td><input type="text" name="email"  value="${ user.email }" /></td>
    </tr> 
    <tr>
      <th>가입일</th>
-     <td><input type="indate"  value="${ user.indate }" readonly /></td>
+     <td><input type="indate"  name="joindate" value="${ sessionScope.login.joindate }" readonly /></td>
    </tr> 
    <tr>     
      <td colspan="2">
      <input class="btn btn-primary btn-sm" type="submit" value="수정" />
-     <a id="abtn" class="btn btn-primary btn-sm" href="http://www.naver.com">수정</a>
-     <div id="divbtn" class="btn btn-primary btn-sm" >수정</div>
-     <hth id="hthbtn" class="btn btn-primary btn-sm" >수정</hth>
      </td>
    </tr> 
   </table>

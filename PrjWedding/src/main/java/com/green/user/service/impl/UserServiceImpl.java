@@ -3,9 +3,12 @@ package com.green.user.service.impl;
 import java.util.HashMap;
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.green.community.vo.CommunityVo;
 import com.green.user.dao.UserDao;
 import com.green.user.service.UserService;
 import com.green.user.vo.UserVo;
@@ -25,13 +28,51 @@ public class UserServiceImpl implements UserService {
 		
 	}
 
-
 	@Override
 	public UserVo getLogin(HashMap<String, Object> map) {
+		
 		UserVo  userVo  =  userDao.getLogin( map );
+		
 		return  userVo;
 	}
+
+
+
+	@Override
+	public List getUserList() {
+		
+		List    userList = userDao.getUserList();
+		
+		return userList;
+	}
+
+
+	@Override
+	public UserVo getUser(HashMap<String, Object> map) {
+		UserVo  user  =  userDao.getUser( map );
+		
+		return user;
+	}
+
+	@Override
+	public void updateUser(HashMap<String, Object> map) {
+		
+		userDao.updateUser(map);
+		
+	}
+
+
 	
+
+
+
+	
+
+
+
+	
+
+
 }
 
 

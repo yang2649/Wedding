@@ -11,4 +11,14 @@ public interface UserDao {
 
 	UserVo getLogin(HashMap<String, Object> map);
 
+	List getUserList();
+
+	void updateUser(HashMap<String, Object> map);
+
+	UserVo getUser(HashMap<String, Object> map);
+
+	
+
+
+
 }

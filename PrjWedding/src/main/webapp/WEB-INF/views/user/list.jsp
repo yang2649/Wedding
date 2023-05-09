@@ -17,9 +17,9 @@
    <h2>사용자 목록</h2>
    <c:forEach var="user" items="${ uList }">
    <ul>
-     <li>아이디 : ${ user.userid }</li>
-     <li>이름   : <a href="/User/View?userid=${ user.userid }">${ user.username }</a></li>
-     <li>가입일 : ${ user.indate }</li>
+     <li>아이디 : ${ user.memid }</li>
+     <li>이름   : <a href="/User/View?memid=${ user.memid }">${ user.memname }</a></li>
+     <li>가입일 : ${ user.joindate }</li>
    </ul>  
    </c:forEach>
    </div>
