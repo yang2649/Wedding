@@ -90,4 +90,11 @@ public class CommunityServiceImpl implements CommunityService {
 		return fileList;
 	}
 
+
+	@Override
+	public void reviewWrite(HashMap<String, Object> map, HttpServletRequest request) {
+		CommFile.save( map, request );
+		communityDao.reviewWrite(map);		
+	}
+
 }

@@ -25,11 +25,11 @@
   <table>
    <tr>
      <th>아이디</th>
-     <td><input type="text" name="userid" /></td>
+     <td><input type="text" name="memid" /></td>
    </tr> 
    <tr>
      <th>비밀번호</th>
-     <td><input type="password" name="passwd" id="passwd" /></td>
+     <td><input type="password" name="mempw" id="passwd" /></td>
    </tr> 
    <tr>
      <th>비밀번호 확인</th>
@@ -37,15 +37,15 @@
    </tr> 
    <tr>
      <th>이름</th>
-     <td><input type="text" name="username" /></td>
+     <td><input type="text" name="memname" /></td>
+   </tr> 
+   <tr>
+     <th>전화번호</th>
+     <td><input type="text" name="memph" /></td>
    </tr> 
    <tr>
      <th>이메일</th>
      <td><input type="text" name="email" /></td>
-   </tr> 
-   <tr>
-     <th>전화번호</th>
-     <td><input type="text" name="phone" /></td>
    </tr> 
    <tr>     
      <td colspan="2">

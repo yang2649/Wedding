@@ -92,6 +92,18 @@ public class CommunityDaoImpl implements CommunityDao {
 		return fileList;
 	}
 
+	@Override
+	public void reviewWrite(HashMap<String, Object> map) {
+		
+		sqlSession.insert("Community.ReviewWrite", map);
+		
+		List<FilesVo>  fileList =  (List<FilesVo>) map.get("fileList");
+		if( fileList.size() != 0  )
+			sqlSession.insert("Community.FileInsert", map);
+		
+		
+	}
+
 
 
 }

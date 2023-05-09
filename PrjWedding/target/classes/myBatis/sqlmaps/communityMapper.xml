@@ -222,6 +222,44 @@
    
    </select>
    
+
+     <insert id="ReviewWrite">
+     INSERT INTO  BOARD (
+            IDX
+		  ,	MENU_ID
+	      ,	TITLE
+	      , CONT
+		  ,	WRITER
+		  , REGDATE
+	      , READCOUNT
+		  ,	BNUM
+		  ,	LVL
+		  ,	STEP
+		  ,	NREF
+		  ,	DELNUM
+		  ,	PARENT
+      )
+      VALUES
+      (
+          (SELECT  NVL( MAX(IDX), 0 ) + 1 FROM BOARD)
+		  ,	'MENU05'
+		  ,	'후기'
+	      , #{ cont    }
+	      ,	#{ writer   }
+		  , SYSDATE
+	      , 0
+		  ,	(SELECT  NVL( MAX(IDX), 0 ) + 1 FROM BOARD)
+		  ,	0
+		  ,	0
+		  ,	(SELECT  NVL( MAX(IDX), 0 ) + 1 FROM BOARD)
+		  ,	0
+		  ,	0
+      )
+   
+   </insert>
+   
+   
+   
 </mapper>
  
 

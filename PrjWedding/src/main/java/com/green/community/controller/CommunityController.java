@@ -187,7 +187,15 @@ public class CommunityController {
 		
 		// 이벤트 -------------------------------------------------
 		@RequestMapping("/Community05")
-		public ModelAndView reviewList() {
+		public ModelAndView reviewList(
+				@RequestParam HashMap<String, Object> map) {
+			/*
+			 * String menu_id = (String)map.get("menu_id"); System.out.println(menu_id);
+			 * 
+			 * List<CommunityVo> vo = communityService.getfaqList(menu_id);
+			 * 
+			 * List<FilesVo> fileList = communityService.getFileList( map );
+			 */
 			
 			ModelAndView mv = new ModelAndView();
 			mv.setViewName("community/review");
@@ -211,11 +219,11 @@ public class CommunityController {
 				@RequestParam HashMap<String, Object> map,
 				HttpServletRequest request) {
 			
-			communityService.downWrite(map, request);
+			communityService.reviewWrite(map, request);
 			
 			ModelAndView mv = new ModelAndView();
 			mv.addObject("map", map);
-			mv.setViewName("redirect:/Community03");
+			mv.setViewName("redirect:/Community05");
 			return mv;
 		}
 		

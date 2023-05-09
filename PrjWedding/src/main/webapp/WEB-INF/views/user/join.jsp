@@ -16,7 +16,7 @@
    <div class=confirm id="main">
    <p>회원가입이 완료되었습니다</p>
    <ul>
-     <li>아이디 : </li>
+     <li>아이디 : ${ user.memid } </li>
      <button type="button" class="joinbutton" >확인</button>
    </ul>  
    </div>

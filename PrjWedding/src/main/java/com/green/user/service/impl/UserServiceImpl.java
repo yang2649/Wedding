@@ -25,35 +25,6 @@ public class UserServiceImpl implements UserService {
 		
 	}
 
-	@Override
-	public List getUserList() {
-		
-		List    userList = userDao.getUserList();
-		
-		return  userList;
-	}
-
-	@Override
-	public UserVo getUser(String userid) {
-		
-		UserVo  vo  =  userDao.getUser( userid );
-		
-		return  vo;
-	}
-
-	@Override
-	public void deleteUser(String userid) {
-		
-		userDao.deleteUser( userid  );
-		
-	}
-
-	@Override
-	public void updateUser(UserVo vo) {
-		
-		userDao.updateUser(  vo  );
-		
-	}
 
 	@Override
 	public UserVo getLogin(HashMap<String, Object> map) {

@@ -139,7 +139,7 @@
     });
 </script>
     
-     <a href="">새글쓰기</a>
+     <a href="/Community05WriteForm">새글쓰기</a>
 <div class="container "  style="margin: auto; padding:15px 15px 15px 120px;">
   <div class="row">
 <c:forEach var="" items="${dfsdfsf}">
@@ -150,6 +150,9 @@
   </div>
 </div>
 </c:forEach>
+
+
+
 
   </div>
   </div>
