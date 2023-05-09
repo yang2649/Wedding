@@ -375,7 +375,7 @@ nav  {
     });
 </script>
     
-     <a href="">새글쓰기</a>
+     <a href="/Community05WriteForm">새글쓰기</a>
 <div class="container "  style="margin: auto; padding:15px 15px 15px 120px;">
   <div class="row">
 <c:forEach var="" items="${dfsdfsf}">
@@ -386,6 +386,16 @@ nav  {
   </div>
 </div>
 </c:forEach>
+<c:forEach var ="nm" items="${Name}" varStatus="statusNm">
+	<div>${nm.a}</div>
+    <c:forEach var ="data" items="${Data[statusNm.index]}" varStatus="status">
+    	<div>${data.a}</div>
+    </c:forEach>
+</c:forEach>
+
+
+
+
 
   </div>
   </div>

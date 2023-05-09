@@ -23,4 +23,6 @@ public interface CommunityDao {
 	CommunityVo getdownload(HashMap<String, Object> map);
 
 	List<FilesVo> getFileList(HashMap<String, Object> map);
+
+	void reviewWrite(HashMap<String, Object> map);
 }

@@ -32,5 +32,7 @@ public interface CommunityService {
 	List<CommunityVo> getfaqList(String menu_id);
 
 	List<FilesVo> getFileList(HashMap<String, Object> map);
+
+	void reviewWrite(HashMap<String, Object> map, HttpServletRequest request);
 }
 
