@@ -90,7 +90,7 @@
 					<input type="submit" value="로그인" />
 				</form>
 				<br>
-				<div class="links">
+				<div class="links" >
 					<a href="#">아이디 찾기</a><a href="#">비밀번호 찾기</a><a href="#"
 						id="join" onclick="showJoin();">회원가입</a>
 				</div>

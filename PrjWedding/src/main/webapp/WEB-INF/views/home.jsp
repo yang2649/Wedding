@@ -14,22 +14,12 @@
 <meta name="msapplication-navbutton-color" content="#363636">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <title>Home</title>
-<script	src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
 
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
-<link rel="shortcut icon" href="/img/favicon.ico">
-
-<!-- css 부분 사용 -->
-<link rel="stylesheet" href="./css/styles.css">
-<link rel="stylesheet" href="./css/loginstyle.css">
-
-<!-- jquery 사용 -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="path/to/jquery.bxslider.min.js"></script>
 
-<!-- Bootstrap CSS -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="shortcut icon" href="./img/favicon.ico">
+
 <!-- 구글 폰트 -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -41,19 +31,22 @@
 <link href="https://fonts.googleapis.com/css2?family=Castoro+Titling&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 
-<!-- ajax 스타일 시트 -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
-
-<!-- owl css 사용 -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
 <!-- 카카오 api 사용 앱 키 -->
 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=af4768f3d5d87505fcfd4296a54fc669"></script>
 
 </head>
+
+<style>
+
+#root img {
+  display: block;
+  margin: 5px;
+  width: 394px;
+  height: 250px;
+} 
+
+</style>
 
 
 <body>
@@ -175,6 +168,13 @@
 </div>
 </h2>
 </div>
+
+ <!-- 모달창 삽입 전부됨 -->
+<div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImg">
+</div>
+
 <!-- 갤러리 끝 -->
 
 
@@ -257,6 +257,7 @@
 </div>
 </h2>
 </div>
+
 <!-- VIP 갤러리 끝 -->
 
 
@@ -371,7 +372,6 @@
 
  <!-- 이벤트 부분 시작 -->
  
- 
  <div class="EVENT">
 	<div style="height: 50px; background-color: #FFFFFF;"></div>
 	<div style="height: 50px; background-color: #FFFFFF;"></div>
@@ -481,6 +481,31 @@ var marker = new kakao.maps.Marker({
 
 <!-- js 부분 -->
 <!-- 전부 분리 이전시킴 -->
+
+<script>
+// 모달창
+var modal = document.getElementById("myModal");
+var modalImg = document.getElementById("modalImg");
+var images = document.querySelectorAll('.img_wrap');
+var span = document.getElementsByClassName("close")[0];
+
+images.forEach(img => {
+    img.onclick = function() {
+        modal.style.display = "block";
+        modalImg.src = this.getAttribute('data-src');
+    }
+});
+
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
 
 </body>
 </html> 
