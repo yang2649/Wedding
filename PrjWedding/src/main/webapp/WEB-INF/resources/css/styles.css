@@ -145,6 +145,17 @@ header.sticky {
 }
 
 
+/* 유정 - Login 부분 스크롤바 흰색 */
+#modal-open {
+  color: black;
+  transition: color 0.3s ease-out;
+}
+
+.white-text {
+  color: white !important;
+}
+
+
 /* 토글 모양  */
 .menu-toggle {
   display: flex;
@@ -321,7 +332,8 @@ li {
 
 /* 헤더부분 메뉴 폰트 변경 */
 .navbar .navbar-nav .dropdown .dropdown-toggle {
-  font-family: "Montserrat", sans-serif;
+  margin-top:1px;
+  font-family: 'PLAYFAIR DISPLAY', serif;
 }
 
 .navbar .navbar-nav .dropdown .dropdown-menu li a {
@@ -355,140 +367,149 @@ li {
 
 
 
- /* 팝업창 만들기 */
+ /* 팝업창 만들기 시작 */
 
-.popup-container {
-display: none;
-position: fixed;
-z-index: 999;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-background-color: rgba(0, 0, 0, 0.8);
+.container {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  top: 100px; /* 상단에서 50px 아래로 이동 */
+  margin: 0;
+  padding: 0;
+}
+
+.popup-wrap {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
 }
 
 .popup-box {
+  background-color: #fff;
+  border: 1px solid #888;
   width: 500px;
-  height: 550px;
-  background-color: #f8f8f8;
-  border-radius: 10px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  max-width: 80%;
   position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 20px;
-  text-align: center;
+  margin: 0;
+  padding: 0;
 }
 
+/* 여기 부분을 건드려야 GREEN WEDDING 위치 조정*/
 .popup-box h2 {
-margin-top: 0;
-font-size: 24px;
-font-weight: bold;
-color: #333;
+  text-align: center;
+  font-size: 3.0rem; /* 변경된 font-size 값 */
+  color: #69b36f;
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .popup-close {
-position: absolute;
-top: 10px;
-right: 10px;
-width: 30px;
-height: 30px;
-background-color: #ccc;
-border-radius: 50%;
-color: #fff;
-font-size: 20px;
-line-height: 30px;
-text-align: center;
-cursor: pointer;
-}
-
-form label {
-  display: block;
-  margin-bottom: 10px;
-  color: #333;
-  font-size: 18px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 30px;
   font-weight: bold;
-  text-align: center; /* label의 텍스트 정렬 */
+  color: #888;
+  cursor: pointer;
 }
 
-form input[type=text],
-form input[type=password] {
-width: 100%;
-padding: 12px 20px;
-margin: 8px 0;
-box-sizing: border-box;
-border: none;
-border-bottom: 2px solid #ccc;
-transition: 0.5s;
-outline: none;
+.popup-close:hover,
+.popup-close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
 }
 
-form input[type=text]:focus,
-form input[type=password]:focus {
-border-bottom: 2px solid #FFDAB9;
-}
-
-form input[type=submit] {
-background-color: #FFDAB9;
-color: #fff;
-padding: 14px 20px;
-margin: 8px 0;
-border: none;
-border-radius: 10px;
-cursor: pointer;
-transition: 0.5s;
-font-size: 20px;
-font-weight: bold;
-}
-
-form input[type=submit]:hover {
-background-color: #f8f8f8;
-color: #FFDAB9;
-border: 2px solid #FFDAB9;
-}
-
-/* 추가된 스타일 */
-form input[type=text],
-form input[type=password],
-form input[type=submit] {
-  display: block; /* input 요소들이 한 줄에 나오지 않고 블록 요소처럼 표시 */
-  width: 100%;
-  font-family: 'Noto Sans KR', sans-serif; /* 폰트 설정 */
-}
-
-label[for="username"], label[for="password"] {
-  text-transform: uppercase; /* label 텍스트 대문자로 변경 */
-  margin-bottom: 5px; /* label 간격 줄임 */
-}
-
-
-
-.green-wedding {
-  font-family: 'Castoro Titling', cursive;
-  font-size: 80px;
-  color: #2c3e50;
+h2.green-wedding {
   text-align: center;
-  margin-bottom: 20px;
+  font-size: 2.5rem;
+  color: #69b36f;
+  margin-top: 50px;
 }
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 150px; /* 110px만큼 내리기 */
+  padding-top: 0; /* 상단 패딩값 0으로 변경 */
+}
+
+label {
+  font-size: 1.2rem;
+  color: #333;
+  margin-top: 20px;
+}
+
+input[type="text"],
+input[type="password"] {
+  padding: 10px;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #ddd;
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+input[type="submit"] {
+  background-color: #69b36f;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+input[type="submit"]:hover {
+  background-color: #5aa565;
+}
+
 
 .links {
-  position: absolute;
-  bottom: 25px;
-  left: 50%;
-  transform: translateX(-50%);
-  color: #FFDAB9 !important;
-  font-size: 15px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
 }
 
 .links a {
-  color: #FFDAB9;
+  display: inline-block; /* 링크를 인라인 박스로 배치 */
+  color: #F5F5DC;
+  font-weight: bold;
+  font-size: 15px;
   text-decoration: none;
-  border-bottom: none;
+  letter-spacing: 5px; /* 글자 간격 설정 */
+  white-space: nowrap; /* 글자가 한 줄에만 나타나도록 설정 */
+  
+  margin-left: 15px; /* 왼쪽 여백 설정 */
+  margin-right: 15px; /* 오른쪽 여백 설정 */
 }
 
+.links a:hover {
+  color: #556b2f; /* 마우스 올리면 링크 색상 */
+  text-decoration: none; /* 텍스트 밑줄 삭제 */
+}
 
+/* 여기 위 까지가 팝업창 끝 */
+
+
+
+/* 위의 헤더 부분 로고 설정 */
 body {
 	padding-top: 80px; /* 헤더 높이만큼 패딩 추가 */
 }
@@ -499,7 +520,7 @@ li {
 }
 
 .logo {
-	font-family: 'EB Garamond', serif;
+	font-family: 'EB GARAMOND', serif;
 }
 
 .logo-container {
