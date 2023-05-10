@@ -93,51 +93,55 @@ public class UserController {
 				
 		// 내 정보 보기
 		@RequestMapping("/User/View")    
-		public ModelAndView getUser(
-				HttpSession session,
-				@RequestParam HashMap<String, Object>  map) {
-			
-		    UserVo user = (UserVo) session.getAttribute("login");
-		    System.out.println( "view:" + user );
-		    
-		    ModelAndView mv = new ModelAndView();
-		    mv.addObject("user", user);
-		    mv.addObject("map", map);
-		    mv.setViewName("user/view");	
-		    System.out.println( "view map:" + user );
+		public ModelAndView getUser(HttpSession session) {
 
-		    return mv;
+			UserVo user = (UserVo) session.getAttribute("login");
+			HashMap<String, Object> map = (HashMap<String, Object>) session.getAttribute("map");
+
+			System.out.println( "view user :" + user );
+			System.out.println( "view map:" + map );
+
+			ModelAndView mv = new ModelAndView();
+			mv.addObject("user", user);
+			mv.addObject("map", map);
+			mv.setViewName("user/view");	
+
+
+			return mv;
 		}
-		
+
 		// 내 정보 수정
 		@RequestMapping("/User/UpdateForm")    
 		public ModelAndView updateForm(HttpSession session) {
-			
+
 			UserVo user = (UserVo) session.getAttribute("login");
-			    
+
 			ModelAndView mv = new ModelAndView();
 			mv.addObject("user", user);
 			mv.setViewName("user/update");	
-			
+
 			return mv;
 		}
-		
+
 		@RequestMapping("/User/Update")
 		public ModelAndView updateUser(
 				HttpSession   session,	
 				@RequestParam HashMap<String, Object>  map) {
-			
+
 			UserVo user = (UserVo) session.getAttribute("login");
 			userService.updateUser( map );
-			System.out.println( "update1:" + user );
-						
-			ModelAndView mv = new ModelAndView();
-			mv.addObject("map", map);
-		
+
+			ModelAndView mv = new ModelAndView();	
+			session.setAttribute("login", userService.getUser( map ));
+			System.out.println( "update 후 user:" + user );
+			System.out.println( "update 후 map:" + map );
+
 			mv.setViewName("redirect:/User/View");
-			
+
 			return mv;
 		}
+
+				
 
 		
 }

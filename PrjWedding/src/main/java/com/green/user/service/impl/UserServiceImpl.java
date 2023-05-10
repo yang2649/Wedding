@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -46,13 +47,15 @@ public class UserServiceImpl implements UserService {
 		return userList;
 	}
 
-
+	
 	@Override
-	public UserVo getUser(HashMap<String, Object> map) {
+	public UserVo getUser( HashMap<String, Object> map) {
+		
 		UserVo  user  =  userDao.getUser( map );
 		
 		return user;
 	}
+
 
 	@Override
 	public void updateUser(HashMap<String, Object> map) {
@@ -60,6 +63,7 @@ public class UserServiceImpl implements UserService {
 		userDao.updateUser(map);
 		
 	}
+
 
 
 	
