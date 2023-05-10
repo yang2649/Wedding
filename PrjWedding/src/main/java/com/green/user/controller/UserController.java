@@ -82,29 +82,30 @@ public class UserController {
 		}
 
 		
-		// 로그아웃
-		@RequestMapping("/logout") 
-		public  String   logout ( HttpSession session ) {
-			
-			session.invalidate();
-			
-			return "redirect:/logout";
-      	}
+	  // 로그아웃
+	  @RequestMapping("/logout")
+	  public String logout(HttpSession session) {
+		  
+	  	session.removeAttribute("login");
+	  	
+		return "redirect:/";
+	  }
 				
 		// 내 정보 보기
 		@RequestMapping("/User/View")    
-		public ModelAndView getUser(
-				HttpSession session,
-				@RequestParam HashMap<String, Object>  map) {
+		public ModelAndView getUser(HttpSession session) {
 			
 		    UserVo user = (UserVo) session.getAttribute("login");
-		    System.out.println( "view:" + user );
+		    HashMap<String, Object> map = (HashMap<String, Object>) session.getAttribute("map");
 		    
-		    ModelAndView mv = new ModelAndView();
+			System.out.println( "view user :" + user );
+			System.out.println( "view map:" + map );
+		    
+			ModelAndView mv = new ModelAndView();
 		    mv.addObject("user", user);
 		    mv.addObject("map", map);
 		    mv.setViewName("user/view");	
-		    System.out.println( "view map:" + user );
+
 
 		    return mv;
 		}
@@ -126,19 +127,20 @@ public class UserController {
 		public ModelAndView updateUser(
 				HttpSession   session,	
 				@RequestParam HashMap<String, Object>  map) {
-			
+						
 			UserVo user = (UserVo) session.getAttribute("login");
 			userService.updateUser( map );
-			System.out.println( "update1:" + user );
 						
-			ModelAndView mv = new ModelAndView();
-			mv.addObject("map", map);
-		
+			ModelAndView mv = new ModelAndView();	
+			session.setAttribute("login", userService.getUser( map ));
+			System.out.println( "update 후 user:" + user );
+			System.out.println( "update 후 map:" + map );
+			
 			mv.setViewName("redirect:/User/View");
 			
 			return mv;
 		}
-
+		
 		
 }
 

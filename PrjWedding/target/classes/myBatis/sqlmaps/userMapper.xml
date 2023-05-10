@@ -34,6 +34,7 @@
               , MEMPH
               , EMAIL
               , JOINDATE
+       
        FROM    MEMBERLIST
        WHERE   MEMID  = #{ memid }
         AND    MEMPW  = #{ mempw }
@@ -66,7 +67,7 @@
    	         , EMAIL
    	         , TO_CHAR(JOINDATE, 'YYYY-MM-DD')  JOINDATE
    	    FROM   MEMBERLIST
-   	    WHERE  MEMID =  #{ sessionScope.login.memid }
+   	    WHERE  MEMID =  #{ memid }
    
    </select>
    

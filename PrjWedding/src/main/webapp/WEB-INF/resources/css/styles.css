@@ -595,7 +595,7 @@ li {
 } /* 추가된 부분 */
 
 
-@media (max-width: 991.98px) {
+@media only screen and (max-width: 1000px) {
     .navbar-collapse {
       position: absolute;
       top: 100%;
@@ -603,8 +603,39 @@ li {
       background-color: white;
       padding: 15px;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      margin: auto;
+      paddin: auto;
     }
 }
+
+/* 화면 크기가 줄어들면 마진과 패딩은 auto로 설정 */
+@media only screen and (max-width: 1000px) {
+	.CATERRING , .CATERRING h5{
+	margin: auto;
+	padding: auto;
+	}
+	
+}
+
+@media only screen and (max-width: 1000px) {
+	
+	.gallmain , .gallery{
+	margin: auto;
+	padding: auto;
+	}
+	
+}
+
+@media only screen and (max-width: 768px) {
+	
+	.item_container ._item_container{
+	margin: auto;
+	padding: auto;
+	}
+	
+}
+
+
 
 
 /* 드롭다운 부분 */ 
@@ -727,9 +758,10 @@ li {
 
 
 
-@media screen and (max-width: 991.98px) {
+@media only screen and (max-width: 1000px) {
   /* 화면 크기가 768px 이하일 때 캡션과 서브 캡션 숨기기 */
   .caption, .subcaption, .subcaption02{
+    margin:auto;
     visibility: hidden;
   }
 }
@@ -824,14 +856,6 @@ h4 {
   padding: 0;
 }
 
-/* 화면 크기가 줄어들면 마진과 패딩은 auto로 설정 */
-@media only screen and (max-width: 1000px){
-	.CATERRING{
-	margin: auto;
-	padding: auto;
-	}
-	
-}
 
 
 .gallery {

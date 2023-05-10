@@ -17,6 +17,6 @@ public interface UserService {
 
 	void updateUser(HashMap<String, Object> map);
 
-	UserVo getUser(HashMap<String, Object> map);
+	UserVo getUser( HashMap<String, Object> map);
 
 }

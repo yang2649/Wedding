@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="Mypage">  
+   
+   <!-- 내 견적서   -->
+   <select id         = "EstiList"
+           resultType = "com.green.mypage.vo.MypageVo"  >
+   
+   SELECT ES.ESTIID, 
+          ES.ESTINAME,
+          ES.MEMID,
+          ES.RESDATE,
+          ES.RESTIME,
+          ES.GUESTNUM, 
+          HA.HALLNAME,
+          CA.CATERINGTYPE,
+          STU.STUDIONAME,
+          DR.DRESSNAME,
+          OP.OPTIONNAME,
+          AD.QUANTITY,
+          ES.TOTALCOST
+  FROM    ESTIMATES ES join HALL HA on ES.hallid = HA.hallid
+          join CATERING CA on ES.cateringid = CA.cateringid
+          join STUDIO STU on ES.studioid = STU.studioid
+          join DRESS DR on ES.DRESSID = DR.DRESSID
+          join ADDITIONAL AD on ES.ESTIID = AD.ESTIID
+          left join OPTIONS OP on AD.OPTIONID = OP.OPTIONID
+  WHERE   ES.MEMID = #{ memid }
+
+   
+   </select> 
+ 
+   
+    
+</mapper>
+
+
+
+
+
+   
