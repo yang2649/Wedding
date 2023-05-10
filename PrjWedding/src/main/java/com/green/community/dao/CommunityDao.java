@@ -3,6 +3,7 @@ package com.green.community.dao;
 import java.util.HashMap;
 import java.util.List;
 
+import com.green.community.vo.BoardFilesVo;
 import com.green.community.vo.CommunityVo;
 import com.green.pds.vo.FilesVo;
 
@@ -27,5 +28,11 @@ public interface CommunityDao {
 	void reviewWrite(HashMap<String, Object> map);
 
 	List<CommunityVo> reviewList(HashMap<String, Object> map);
+
+	List<BoardFilesVo> getEventList(HashMap<String, Object> map);
+
+	void eventWrite(HashMap<String, Object> map);
+
+	
 
 }

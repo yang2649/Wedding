@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 
 import com.green.community.dao.CommunityDao;
 import com.green.community.service.CommunityService;
+import com.green.community.vo.BoardFilesVo;
 import com.green.community.vo.CommunityVo;
 import com.green.pds.service.impl.PdsFile;
 import com.green.pds.vo.FilesVo;
@@ -37,17 +38,11 @@ public class CommunityServiceImpl implements CommunityService {
 		communityDao.noticeWrite(map);
 		
 	}
-
-
 	@Override
 	public CommunityVo getNotice(HashMap<String, Object> map) {
 		CommunityVo  communityVo  =  communityDao.getNotice(map); 
 		return communityVo;
 	}
-
-
-
-
 
 	@Override
 	public void downWrite(
@@ -57,17 +52,13 @@ public class CommunityServiceImpl implements CommunityService {
 		CommFile.save( map, request );
 		communityDao.downWrite(map);
 		
-		
-		
 	}
-
 
 	@Override
 	public List<CommunityVo> getfaqList(String menu_id) {
 		List<CommunityVo> faqList = communityDao.getfaqList(menu_id);
 		return faqList;
 	}
-
 
 	@Override
 	public List<CommunityVo> getdownList(HashMap<String, Object> map) {
@@ -104,5 +95,22 @@ public class CommunityServiceImpl implements CommunityService {
 		 System.out.println("impl:" + vo);
 		return vo;
 	}
+
+
+	@Override
+	public List<BoardFilesVo> getEventList(HashMap<String, Object> map) {
+		List<BoardFilesVo> eventList = communityDao.getEventList(map);
+		return eventList;
+	}
+
+
+	@Override
+	public void eventWrite(HashMap<String, Object> map, HttpServletRequest request) {
+		CommFile.save( map, request );
+		communityDao.eventWrite(map);	
+	}
+
+
+	
 
 }

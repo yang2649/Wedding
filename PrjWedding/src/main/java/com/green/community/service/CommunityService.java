@@ -7,6 +7,7 @@ import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.stereotype.Service;
 
+import com.green.community.vo.BoardFilesVo;
 import com.green.community.vo.CommunityVo;
 import com.green.pds.vo.FilesVo;
 
@@ -36,6 +37,10 @@ public interface CommunityService {
 	void reviewWrite(HashMap<String, Object> map, HttpServletRequest request);
 
 	List<CommunityVo> reviewList(HashMap<String, Object> map);
+
+	List<BoardFilesVo> getEventList(HashMap<String, Object> map);
+
+	void eventWrite(HashMap<String, Object> map, HttpServletRequest request);
 
 
 }

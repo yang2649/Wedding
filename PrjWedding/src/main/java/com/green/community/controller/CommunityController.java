@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.green.community.service.CommunityService;
+import com.green.community.vo.BoardFilesVo;
 import com.green.community.vo.CommunityVo;
 import com.green.pds.vo.FilesVo;
 import com.green.pds.vo.PdsVo;
@@ -89,12 +90,42 @@ public class CommunityController {
 	
 	//----------이벤트---------------------------------------------------------------------
 	@RequestMapping("/Community02")
-	public ModelAndView eventList() {
+	public ModelAndView eventList(
+			@RequestParam HashMap<String, Object> map) {
+		
+		List<BoardFilesVo> eventList = communityService.getEventList(map);
+		
 		
 		ModelAndView mv = new ModelAndView();
 		mv.setViewName("community/event");
+		mv.addObject("vo", eventList);
 		
 		return mv;
+	}
+	@RequestMapping("/Community02WriteForm")
+	public ModelAndView eventWriteFrom(
+			@RequestParam HashMap<String, Object> map) {
+		
+		ModelAndView mv = new ModelAndView();
+		mv.setViewName("community/eventwrite");
+		
+		return mv;
+		
+	}
+
+	@RequestMapping("/Community02Write")
+	public ModelAndView eventWrite(
+			@RequestParam HashMap<String, Object> map,
+			HttpServletRequest request  ) {
+		
+	    communityService.eventWrite(map, request);
+		
+		ModelAndView mv = new ModelAndView();
+		mv.setViewName("redirect:/Community02");
+		
+		
+		return mv;
+		
 	}
 	
 	//---자료실------------------
@@ -185,18 +216,13 @@ public class CommunityController {
 		}
 		
 		
-		// 이벤트 -------------------------------------------------
+		// 리뷰 -------------------------------------------------
 		@RequestMapping("/Community05")
 		public ModelAndView reviewList(
 				@RequestParam HashMap<String, Object> map) {
 			
-		
-			
 			List<CommunityVo> vo = communityService.reviewList(map);
-			System.out.println(vo);
-			
-		
-
+			System.out.println("Boardfile:" + vo);
 			
 			ModelAndView mv = new ModelAndView();
 			mv.setViewName("community/review");

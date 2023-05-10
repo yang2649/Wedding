@@ -89,6 +89,71 @@
    </select>
 <!--    이벤트============================================= -->
    
+    <select id         = "EventList"
+           resultType = "com.green.community.vo.BoardFilesVo"  >
+    SELECT   B.IDX, 
+                MENU_ID,                 
+                -- DECODE(LVL, 0, '', '[Re] ') || TITLE  AS TITLE ,
+                TITLE,
+                CONT,
+                WRITER,
+                READCOUNT,
+                TO_CHAR(REGDATE, 'YYYY-MM-DD HH24:MI:SS')  REGDATE,
+                BNUM,
+                LVL,
+                STEP,
+                NREF,
+                DELNUM,
+                FILE_NUM ,  
+                FILENAME , 
+                FILEEXT , 
+                SFILENAME 
+                 
+                 
+       FROM      BOARD B LEFT JOIN FILES F ON F.IDX=B.IDX
+       WHERE     
+          MENU_ID  =  'MENU02'
+  </select>  
+   
+     <insert id="EventWrite">
+     INSERT INTO  BOARD (
+            IDX
+		  ,	MENU_ID
+	      ,	TITLE
+	      , CONT
+		  ,	WRITER
+		  , REGDATE
+	      , READCOUNT
+		  ,	BNUM
+		  ,	LVL
+		  ,	STEP
+		  ,	NREF
+		  ,	DELNUM
+		  ,	PARENT
+      )
+      VALUES
+      (
+          (SELECT  NVL( MAX(IDX), 0 ) + 1 FROM BOARD)
+		  ,	'MENU02'
+		  ,	#{title  }
+	      , #{ cont    }
+	      ,	'관리자'
+		  , SYSDATE
+	      , 0
+		  ,	(SELECT  NVL( MAX(IDX), 0 ) + 1 FROM BOARD)
+		  ,	0
+		  ,	0
+		  ,	(SELECT  NVL( MAX(IDX), 0 ) + 1 FROM BOARD)
+		  ,	0
+		  ,	0
+      )
+   
+   </insert>
+   
+   
+   
+   
+   
 <!--    자료실============================================= -->
       <select id         = "DownList"
            resultType = "com.green.community.vo.CommunityVo"  >
@@ -231,20 +296,23 @@
     <select id         = "ReviewList"
            resultType = "com.green.community.vo.BoardFilesVo"  >
              
-       SELECT    B.IDX, 
-                 MENU_ID,                 
-                 -- DECODE(LVL, 0, '', '[Re] ') || TITLE  AS TITLE ,
+       SELECT   B.IDX, 
+                MENU_ID,                 
+                -- DECODE(LVL, 0, '', '[Re] ') || TITLE  AS TITLE ,
                 TITLE,
                 CONT,
                 WRITER,
-                 READCOUNT,
-                 TO_CHAR(REGDATE, 'YYYY-MM-DD HH24:MI:SS')  REGDATE,
+                READCOUNT,
+                TO_CHAR(REGDATE, 'YYYY-MM-DD HH24:MI:SS')  REGDATE,
                 BNUM,
-                 LVL,
-                 STEP,
+                LVL,
+                STEP,
                 NREF,
-                 DELNUM,
-                    FILE_NUM ,  FILENAME , FILEEXT , SFILENAME 
+                DELNUM,
+                FILE_NUM ,  
+                FILENAME , 
+                FILEEXT , 
+                SFILENAME 
                  
                  
        FROM      BOARD B LEFT JOIN FILES F ON F.IDX=B.IDX

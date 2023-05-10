@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@taglib prefix="c"  uri="http://java.sun.com/jsp/jstl/core" %>    
 <!DOCTYPE html>
 <html>
 <head>
@@ -285,6 +286,15 @@ nav  {
   font-family: 'Times New Roman';
   font-size: 20px;
 }
+.event-parent {
+    display: flex;
+}
+.event-image {
+    flex: 1;
+}
+.event-text {
+    flex: 2;
+}
 </style>
 </head>
 <body>
@@ -384,11 +394,25 @@ nav  {
 			<span style="color: rgb(191, 131, 101);" ">Event</span></h1>
 	  	</div>
 	  	<br><br>
-	   <div class="community-container">
+ <div class="community-container">
 	   <hr>
-	   
-	   
+  <a href="Community02WriteForm">새글쓰기</a>
+   <div class="event-parent">
+	 <c:forEach var="vo" items="${vo}">
+	   <div class="event-image"><img src="Pds/download/external/${ vo.sfilename }" width="300px" high="300px"></div>
+	   <div class="event-text">
+	   <hr>
+	   <h3>${vo.title}</h3>
+	   <hr>
+	   <p>${vo.cont}</p>
+       <br>
+       <p>reservation</p>
+       <p>자세한 문의는 예약실로 상담예약 부탁드립니다. Tel. 041-520-9999</p>  
 	   </div>
+	 </c:forEach>
+	   
+   </div>
+ </div>
 	  
 	  <div class="container" style="margin:300px;" ></div>
 	  

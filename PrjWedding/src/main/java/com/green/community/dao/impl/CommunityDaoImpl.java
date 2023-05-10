@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import com.green.community.dao.CommunityDao;
+import com.green.community.vo.BoardFilesVo;
 import com.green.community.vo.CommunityVo;
 import com.green.pds.vo.FilesVo;
 
@@ -107,9 +108,27 @@ public class CommunityDaoImpl implements CommunityDao {
 	@Override
 	public List<CommunityVo> reviewList(HashMap<String, Object> map) {
 		List<CommunityVo> vo = sqlSession.selectList("Community.ReviewList", map);
-		System.out.println("dao" + vo);
+		System.out.println("ddddddddddddddddddddao" + vo);
 		
 		return vo;
+	}
+	
+
+	@Override
+	public List<BoardFilesVo> getEventList(HashMap<String, Object> map) {
+		List<BoardFilesVo> eventList = sqlSession.selectList("Community.EventList",map);
+		System.out.println("eventList:" + eventList);
+		return eventList;
+	}
+
+	@Override
+	public void eventWrite(HashMap<String, Object> map) {
+		sqlSession.insert("Community.EventWrite", map);
+		
+		List<FilesVo>  fileList =  (List<FilesVo>) map.get("fileList");
+		if( fileList.size() != 0  )
+			sqlSession.insert("Community.FileInsert", map);
+		
 	}
 
 
