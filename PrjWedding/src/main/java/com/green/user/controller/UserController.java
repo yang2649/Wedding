@@ -82,14 +82,14 @@ public class UserController {
 		}
 
 		
-		// 로그아웃
-		@RequestMapping("/logout") 
-		public  String   logout ( HttpSession session ) {
-			
-			session.invalidate();
-			
-			return "redirect:/logout";
-      	}
+	  // 로그아웃
+	  @RequestMapping("/logout")
+	  public String logout(HttpSession session) {
+		  
+	  	session.removeAttribute("login");
+	  	
+		return "redirect:/";
+	  }
 				
 		// 내 정보 보기
 		@RequestMapping("/User/View")    
