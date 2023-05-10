@@ -103,15 +103,16 @@
 						<li style="font-size: 1.2rem;"><a href="/logout">로그아웃</a></li>
 					</c:if>
 					<li><hr></li>
-					<li><a href="#">Information</a></li>
+					<li><a href="#">Information(내 정보창)</a></li>
+					<!-- 내 정보 창입니다 -->
 					<br>
-					<li><a href="#">Estimate</a></li>
+					<li><a href="#">Estimate (견적서)</a></li>
 					<!-- 견적서라는 뜻입니다 -->
 					<br>
-					<li><a href="#">Inquiry Details</a></li>
+					<li><a href="#">Inquiry Details (문의내역)</a></li>
 					<!-- 문의 내역이라는 뜻입니다 -->
 					<br>
-					<li><a href="#">Steamed List</a></li>
+					<li><a href="#">Steamed List(찜 목록)</a></li>
 					<!-- 찜 목록 이라는뜻 입니다 -->
 				</ul>
 			</li>
