@@ -52,7 +52,7 @@ public class CommunityController {
 		
 		CommunityVo  communityVo  =  communityService.getNotice(map);  
 	
-		String         cont      =  communityVo.getCont();
+		String         cont       =  communityVo.getCont();
 		if( cont == null )     cont = "";
 		cont                     =   cont.replace("\n", "<br>");
 		communityVo.setCont(cont);
@@ -87,6 +87,46 @@ public class CommunityController {
 	     mv.setViewName("redirect:/Community01");
 	     return mv;
 	}
+	
+	@RequestMapping("/Community01UpdateForm") 
+	public ModelAndView noticeupdateform(
+			@RequestParam HashMap<String, Object> map) {
+		
+		CommunityVo  communityVo  =  communityService.getNotice(map);  
+		
+		String         cont      =  communityVo.getCont();
+		if( cont == null )     cont = "";
+		cont                     =   cont.replace("\n", "<br>");
+		communityVo.setCont(cont);
+		
+		
+		ModelAndView mv = new ModelAndView();
+		mv.addObject("vo", communityVo );
+		mv.addObject("map",map);
+		mv.setViewName("community/noticeupdate");
+		
+		return mv; 
+	}
+	
+	 @RequestMapping("/Community01Update") 
+	 public ModelAndView noticeupdate(
+			 @RequestParam HashMap<String, Object> map) {
+	 
+		 communityService.noticeupdate(map); 
+		 
+		 
+		 int     idx     = Integer.parseInt( (String) map.get("idx"));
+	     
+		 String  fmt = "redirect:/Community01View?idx=%s";
+			String  loc = String.format(fmt, idx);
+		 
+		 ModelAndView mv = new ModelAndView();
+		 mv.setViewName(loc);
+		 mv.addObject("map",map);
+		 
+		  return mv; 
+	 }
+	
 	
 	//----------이벤트---------------------------------------------------------------------
 	@RequestMapping("/Community02")
@@ -194,6 +234,30 @@ public class CommunityController {
 		mv.addObject("fileList", fileList);
 		return mv;
 	}
+	
+	@RequestMapping("/Community03UpdateForm")
+	public ModelAndView downloadUpdateForm(
+			@RequestParam HashMap<String, Object> map) {
+		
+		CommunityVo  vo  =  communityService.getdownload(map);  
+		
+		
+		
+		ModelAndView mv = new ModelAndView();
+		mv.setViewName("community/downloadupdate");
+		mv.addObject("vo", vo);
+		return mv;
+	}
+	
+	@RequestMapping("/Community03Update")
+	public ModelAndView downloadUpdate(
+			@RequestParam HashMap<String, Object> map) {
+		
+		
+		ModelAndView mv = new ModelAndView();
+		return mv;
+	}
+	
 	
 	//--- FAQ-------------------
 	

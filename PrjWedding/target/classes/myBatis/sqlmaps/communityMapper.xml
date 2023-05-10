@@ -27,9 +27,7 @@
        
        WHERE     
           MENU_ID  =  'MENU01'
-
-       
-   
+ 
    </select>  
 
    <insert id="NoticeInsert">
@@ -87,6 +85,22 @@
         WHERE  IDX = #{idx}
    
    </select>
+    <update   id = "NoticeUpdate">
+       
+       UPDATE    BOARD
+        SET      TITLE  = #{ title }
+               , CONT   = #{ cont  }
+        WHERE    IDX    = #{ idx   } AND MENU_ID = 'MENU01'   
+         
+         
+       
+    </update>
+
+
+
+
+
+
 <!--    이벤트============================================= -->
    
     <select id         = "EventList"

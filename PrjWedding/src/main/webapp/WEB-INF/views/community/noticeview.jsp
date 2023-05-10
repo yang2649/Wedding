@@ -33,33 +33,18 @@
      <td class="center">내용</td>
      <td colspan="3" style="text-align:left">${ vo.cont }</td>
    </tr>
-      
    <tr>
-     <td class="center">첨부파일</td>
-     <td colspan="3" style="text-align:left;padding:30px 10px; ">
-   	    <c:forEach var="file"  items="${ fileList }" >
-   	       <div>
-   	         <%-- <a href="<c:out value="/Pds/download/external/${ file.sfilename }" />"> --%>
-   	         <a href="/Pds/download/external/${ file.sfilename }">
-   	           ${ file.filename }
-   	         </a>   	       
-   	       </div>
-   	    </c:forEach>  
-     </td>
-   
-   </tr>   
+  
    <tr>     
-     <td colspan="4">
+   <br>
+   <br>
+     <td colspan="4" style="high:30px;">
      <a class="btn btn-primary btn-sm"
-        href="/Pds/WriteForm?menu_id=${vo.menu_id}&bnum=0&lvl=0&step=0&nref=0&nowpage=1">새글쓰기</a><span></span>
+        href="Community01UpdateForm?idx=${vo.idx}">수정</a><span></span>
      <a class="btn btn-primary btn-sm"
-        href="/Pds/WriteForm?menu_id=${vo.menu_id}&idx=${vo.idx}&bnum=${vo.bnum}&lvl=${vo.lvl}&step=${vo.step}&nref=${vo.nref}&nowpage=${map.nowpage}">답글쓰기</a><span></span>
+        href="/Community01Delete">삭제</a><span></span>
      <a class="btn btn-primary btn-sm"
-        href="/Pds/UpdateForm?menu_id=${vo.menu_id}&idx=${vo.idx}&nowpage=${map.nowpage}">수정</a><span></span>
-     <a class="btn btn-primary btn-sm"
-        href="/Pds/Delete?menu_id=${vo.menu_id}&idx=${ vo.idx }&nowpage=${map.nowpage}">삭제</a><span></span>
-     <a class="btn btn-primary btn-sm"
-        href="/Pds/List?menu_id=${vo.menu_id}&nowpage=${map.nowpage}">목록으로</a><span></span>
+        href="/Community01">목록으로</a><span></span>
      <a class="btn btn-primary btn-sm"
         href="javascript:history.back()">이전으로</a><span></span>
      <a class="btn btn-primary btn-sm"

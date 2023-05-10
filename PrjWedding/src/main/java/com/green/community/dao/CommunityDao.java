@@ -33,6 +33,10 @@ public interface CommunityDao {
 
 	void eventWrite(HashMap<String, Object> map);
 
+	void noticeUpdate(HashMap<String, Object> map);
+
+
+
 	
 
 }

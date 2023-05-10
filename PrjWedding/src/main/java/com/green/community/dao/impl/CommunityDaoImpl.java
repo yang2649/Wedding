@@ -131,6 +131,14 @@ public class CommunityDaoImpl implements CommunityDao {
 		
 	}
 
+	@Override
+	public void noticeUpdate(HashMap<String, Object> map) {
+		sqlSession.update("Community.NoticeUpdate", map);
+		
+	}
+
+	
+
 
 
 

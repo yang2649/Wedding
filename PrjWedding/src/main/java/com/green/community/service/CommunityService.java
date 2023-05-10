@@ -42,6 +42,12 @@ public interface CommunityService {
 
 	void eventWrite(HashMap<String, Object> map, HttpServletRequest request);
 
+	void noticeupdate(HashMap<String, Object> map);
+
+	
+
+
+
 
 }
 

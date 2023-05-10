@@ -56,7 +56,7 @@
      <a class="btn btn-primary btn-sm"
         href="/Pds/WriteForm?menu_id=${vo.menu_id}&idx=${vo.idx}&bnum=${vo.bnum}&lvl=${vo.lvl}&step=${vo.step}&nref=${vo.nref}&nowpage=${map.nowpage}">답글쓰기</a><span></span>
      <a class="btn btn-primary btn-sm"
-        href="/Pds/UpdateForm?menu_id=${vo.menu_id}&idx=${vo.idx}&nowpage=${map.nowpage}">수정</a><span></span>
+        href="/Community03UpdateForm?idx=${vo.idx }">수정</a><span></span>
      <a class="btn btn-primary btn-sm"
         href="/Pds/Delete?menu_id=${vo.menu_id}&idx=${ vo.idx }&nowpage=${map.nowpage}">삭제</a><span></span>
      <a class="btn btn-primary btn-sm"

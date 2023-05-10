@@ -387,6 +387,8 @@ nav  {
      <a href="/Community05WriteForm">새글쓰기</a>
 			<hr>
 	  	</div>
+	  	
+	  	
 <div class="container "  style="margin: auto; padding:15px 15px 15px 120px;">
   <div class="row">
 <c:forEach var="vo" items="${vo}">

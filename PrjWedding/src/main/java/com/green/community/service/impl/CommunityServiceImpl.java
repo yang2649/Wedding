@@ -111,6 +111,19 @@ public class CommunityServiceImpl implements CommunityService {
 	}
 
 
+	@Override
+	public void noticeupdate(HashMap<String, Object> map) {
+		communityDao.noticeUpdate(map);
+		
+	}
+
+
+
+
+
+
+
+
 	
 
 }
