@@ -14,12 +14,14 @@
 			, MEMNAME
 			, MEMPH
 			, EMAIL
+			, LVL
 		) VALUES (
 		    #{ memid     },
 		    #{ mempw     },
 		    #{ memname   },
 		    #{ memph     },
-		    #{ email     }	    
+		    #{ email     },
+		    '1'	    
 		)       
    
    </insert>

@@ -18,9 +18,18 @@ public class MypageDaoImpl implements MypageDao {
 
 	@Override
 	public List<MypageVo> getEstiList(String memid) {
-	List<MypageVo> estiList = sqlSession.selectList("Mypage.EstiList", memid);
+	
+		List<MypageVo> estiList = sqlSession.selectList("Mypage.EstiList", memid);
 		
 		return estiList;
+	}
+
+	@Override
+	public List<MypageVo> getFavList(String memid) {
+		
+		List<MypageVo> favList = sqlSession.selectList("Mypage.FavList", memid);
+		
+		return favList;
 	}
 
 }

@@ -8,4 +8,6 @@ public interface MypageDao {
 
 	List<MypageVo> getEstiList(String memid);
 
+	List<MypageVo> getFavList(String memid);
+
 }
