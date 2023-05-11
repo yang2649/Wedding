@@ -395,10 +395,10 @@ nav  {
 	  	</div>
 	  	<br><br>
  <div class="community-container">
-	   <hr>
   <a href="Community02WriteForm">새글쓰기</a>
-   <div class="event-parent">
+	   <hr>
 	 <c:forEach var="vo" items="${vo}">
+   <div class="event-parent">
 	   <div class="event-image"><img src="Pds/download/external/${ vo.sfilename }" width="300px" high="300px"></div>
 	   <div class="event-text">
 	   <hr>
@@ -408,10 +408,14 @@ nav  {
        <br>
        <p>reservation</p>
        <p>자세한 문의는 예약실로 상담예약 부탁드립니다. Tel. 041-520-9999</p>  
-	   </div>
-	 </c:forEach>
-	   
+	   </div>	   
    </div>
+   <p class="event-atag" style="text-align: right;">
+   <a href="">수정하기</a>  <a href="">삭제하기</a>
+   </p>
+   
+   <hr>
+	 </c:forEach>
  </div>
 	  
 	  <div class="container" style="margin:300px;" ></div>
