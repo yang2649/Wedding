@@ -10,11 +10,12 @@
 
 	<!--유정 로그인-->
 	<div class="container">
-		<div id="modal-open" class="modal-open" style="font-family: 'PLAYFAIR DISPLAY', serif;">LOGIN</div>
+     <c:if test="${sessionScope.login == null}">
+	  <div id="modal-open" class="modal-open" style="font-family: 'PLAYFAIR DISPLAY', serif; overflow:visible;">LOGIN</div>
 		<div class="popup-wrap" id="popup" style="display: none;">
 			<div class="popup-box">
 				<span class="popup-close" id="popup-close">&times;</span>
-				<h2 class="green-wedding" style="font-size: 35px;">Green Wedding</h2>
+				<h2 class="">Green Wedding</h2>
 				<form action="/loginprocess" method="POST">
 					<label for="userid">ID</label> <input type="text" id="userid"
 						name="memid" value="admin"> <label for="password">Password</label>
@@ -28,6 +29,7 @@
 				</div>
 			</div>
 		</div>
+	  </c:if>
 	</div>
 
 
@@ -74,3 +76,5 @@
 					"width=500, height=550, top=250, left=650");
 		}
 	</script>
+
+
