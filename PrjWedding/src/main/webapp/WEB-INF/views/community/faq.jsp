@@ -493,7 +493,19 @@ h1{ text-align: center;}
                   </ul>
                </div>
                <div class="faqContent">
-                  <p id="hide-${vo.idx}">${vo.cont}</p>
+                  <p id="hide-${vo.idx}"><span>${vo.cont}</span>
+                 <br><br> 
+			<span style=" position: absolute;
+    left: 89%;
+    transform: translateX(-11%);">
+			    <a href="">수정하기</a><a href="">삭제하기</a>    
+			</span>
+               
+                  </p>
+               
+              <p class="event-atag" style="text-align: right;">
+			  </p>
+           
                </div>
             </c:forEach>
          </div>
