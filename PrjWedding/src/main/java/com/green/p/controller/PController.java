@@ -24,7 +24,7 @@ public class PController {
 	
 	// 회원목록조회 -> 회원목록을 조회해서 회원목록패이지(user/list.jsp)로 이동
 	// http://localhost:9090/User/List
-	@RequestMapping("/P/List")
+	@RequestMapping("/List")
 	public  ModelAndView list( @RequestParam HashMap<String ,Object>map) {
 		
 		// db 조회
@@ -53,7 +53,7 @@ public class PController {
 		pService.insertGGim( map );
 		
 		ModelAndView  mv  = new ModelAndView();
-		mv.setViewName("redirect:/P/List ");
+		mv.setViewName("redirect:/Cooperative02 ");
 		mv.addObject("map",map);
 		return  mv;
 		
