@@ -51,14 +51,11 @@
    </tr>   
    <tr>     
      <td colspan="4">
-     <a class="btn btn-primary btn-sm"
-        href="/Pds/WriteForm?menu_id=${vo.menu_id}&bnum=0&lvl=0&step=0&nref=0&nowpage=1">새글쓰기</a><span></span>
-     <a class="btn btn-primary btn-sm"
-        href="/Pds/WriteForm?menu_id=${vo.menu_id}&idx=${vo.idx}&bnum=${vo.bnum}&lvl=${vo.lvl}&step=${vo.step}&nref=${vo.nref}&nowpage=${map.nowpage}">답글쓰기</a><span></span>
+    
      <a class="btn btn-primary btn-sm"
         href="/Community03UpdateForm?idx=${vo.idx }">수정</a><span></span>
      <a class="btn btn-primary btn-sm"
-        href="/Pds/Delete?menu_id=${vo.menu_id}&idx=${ vo.idx }&nowpage=${map.nowpage}">삭제</a><span></span>
+        href="/Community03Delete?idx=${vo.idx }">삭제</a><span></span>
      <a class="btn btn-primary btn-sm"
         href="/Pds/List?menu_id=${vo.menu_id}&nowpage=${map.nowpage}">목록으로</a><span></span>
      <a class="btn btn-primary btn-sm"

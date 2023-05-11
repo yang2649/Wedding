@@ -474,6 +474,7 @@ h1{ text-align: center;}
 	  	<h1 style="text-align: center;">
 			<span style="color: rgb(191, 131, 101);" ">FAQ</span></h1>
 	  	</div>
+	  	<a href="/Community04WriteForm">글쓰기</a>
 	 <br><br>
 	   <div class="community-container">
 	   <hr>
@@ -488,7 +489,7 @@ h1{ text-align: center;}
             <c:forEach var="vo" items="${faqList}">
                <div class="faqTitle" id="show-${vo.idx}">
                   <ul class="show">
-                     <li>${vo.title}</li>
+                     <li >${vo.title}</li>
                      <li><span class="material-symbols-outlined">expand_more</span></li>
                   </ul>
                </div>
@@ -498,7 +499,7 @@ h1{ text-align: center;}
 			<span style=" position: absolute;
     left: 89%;
     transform: translateX(-11%);">
-			    <a href="">수정하기</a><a href="">삭제하기</a>    
+			    <a href="Community04UpdateForm?idx=${vo.idx}">수정하기</a><a href="/Community04Delete?idx=${vo.idx} ">삭제하기</a>    
 			</span>
                
                   </p>

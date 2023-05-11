@@ -1,6 +1,6 @@
 package com.green.community.vo;
 
-public class FilesVo {
+public class ComuFilesVo {
 	// Fields
 	// Files  table
 	private  int      file_num;
@@ -10,9 +10,9 @@ public class FilesVo {
 	private  String   sfilename;
 	
 	// Constructor
-	public FilesVo() {
+	public ComuFilesVo() {
 	}
-	public FilesVo(int file_num, int idx, String filename, String fileext, String sfilename) {
+	public ComuFilesVo(int file_num, int idx, String filename, String fileext, String sfilename) {
 		this.file_num = file_num;
 		this.idx = idx;
 		this.filename = filename;
@@ -55,7 +55,7 @@ public class FilesVo {
 	// toString
 	@Override
 	public String toString() {
-		return "FilesVo [file_num=" + file_num + ", idx=" + idx + ", filename=" + filename + ", fileext=" + fileext
+		return "ComuFilesVo [file_num=" + file_num + ", idx=" + idx + ", filename=" + filename + ", fileext=" + fileext
 				+ ", sfilename=" + sfilename + "]";
 	}
 

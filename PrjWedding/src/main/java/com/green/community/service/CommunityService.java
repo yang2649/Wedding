@@ -9,7 +9,8 @@ import org.springframework.stereotype.Service;
 
 import com.green.community.vo.BoardFilesVo;
 import com.green.community.vo.CommunityVo;
-import com.green.pds.vo.FilesVo;
+import com.green.community.vo.ComuFilesVo;
+
 
 
 public interface CommunityService {
@@ -32,7 +33,7 @@ public interface CommunityService {
 
 	List<CommunityVo> getfaqList(String menu_id);
 
-	List<FilesVo> getFileList(HashMap<String, Object> map);
+	List<ComuFilesVo> getFileList(HashMap<String, Object> map);
 
 	void reviewWrite(HashMap<String, Object> map, HttpServletRequest request);
 
@@ -43,6 +44,28 @@ public interface CommunityService {
 	void eventWrite(HashMap<String, Object> map, HttpServletRequest request);
 
 	void noticeupdate(HashMap<String, Object> map);
+
+	BoardFilesVo getEvent(HashMap<String, Object> map);
+
+	void updateEvent(HashMap<String, Object> map);
+
+	void reviewDelete(HashMap<String, Object> map);
+
+	void noticeDelete(HashMap<String, Object> map);
+
+	void deleteEvent(HashMap<String, Object> map);
+
+	void downloadUpdate(HashMap<String, Object> map);
+
+	void downloadDelete(HashMap<String, Object> map);
+
+	void faqWrite(HashMap<String, Object> map);
+
+	CommunityVo getFaq(HashMap<String, Object> map);
+
+	void faqUpdate(HashMap<String, Object> map);
+
+	void faqDelete(HashMap<String, Object> map);
 
 	
 

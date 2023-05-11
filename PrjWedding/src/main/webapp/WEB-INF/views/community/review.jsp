@@ -395,7 +395,10 @@ nav  {
 <div class="card" style="width: 18rem; margin:20px;">
   <img class="card-img-top" src="/Pds/download/external/${ vo.sfilename }" alt="Card image cap" >
   <div class="card-body">
-    <p class="card-text">${vo.cont}</p>
+    <p class="card-text">${vo.cont}</p><br>
+     <p class="event-atag" style="text-align: right;">
+     <a href="/Community05Delete?idx=${vo.idx}">삭제하기</a>    
+   </p>
   </div>
 </div>
 </c:forEach>

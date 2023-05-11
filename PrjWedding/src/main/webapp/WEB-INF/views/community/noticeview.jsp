@@ -40,9 +40,9 @@
    <br>
      <td colspan="4" style="high:30px;">
      <a class="btn btn-primary btn-sm"
-        href="Community01UpdateForm?idx=${vo.idx}">수정</a><span></span>
+        href="/Community01UpdateForm?idx=${vo.idx}">수정</a><span></span>
      <a class="btn btn-primary btn-sm"
-        href="/Community01Delete">삭제</a><span></span>
+        href="/Community01Delete?idx=${vo.idx}">삭제</a><span></span>
      <a class="btn btn-primary btn-sm"
         href="/Community01">목록으로</a><span></span>
      <a class="btn btn-primary btn-sm"

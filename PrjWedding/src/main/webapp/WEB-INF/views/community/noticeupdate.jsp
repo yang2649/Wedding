@@ -26,7 +26,7 @@
 <body>
   <form action="/Community01Update" method="POST" 
         enctype="multipart/form-data"   >   
-          <input type="hidden"  name="idx"     value="${ map.idx     }" />
+          <input type="hidden"  name="idx"     value="${ vo.idx     }" />
   <input type="hidden"  name="menu_id" value="${ map.menu_id }" />
  
   <table id="table">   

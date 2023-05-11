@@ -12,7 +12,8 @@ import javax.servlet.http.HttpServletRequest;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 
-import com.green.pds.vo.FilesVo;
+import com.green.community.vo.ComuFilesVo;
+
 
 public class CommFile {
 
@@ -39,7 +40,7 @@ public class CommFile {
 				
 		MultipartFile  multipartFile = null;
 		
-		List<FilesVo>  fileList      = new ArrayList<>();
+		List<ComuFilesVo>  fileList      = new ArrayList<>();
 		
 		String         fileName      = null;
 		String         orgFileName   = null;
@@ -60,7 +61,7 @@ public class CommFile {
 				sFileName    =  checkFile.getCheckFileName(
 					filePath, orgFileName, fileExt	);   
 				
-				FilesVo  vo   = new FilesVo(0, 0, fileName, fileExt, sFileName);
+				ComuFilesVo  vo   = new ComuFilesVo(0, 0, fileName, fileExt, sFileName);
 				fileList.add( vo );
 				
 				//  파일 저장
@@ -79,7 +80,7 @@ public class CommFile {
 		
 	}
 
-	public static void delete(List<FilesVo> fileList) {
+	public static void delete(List<ComuFilesVo> fileList) {
 		
 		String path = "d:\\weddingPrj\\";
 		

@@ -14,8 +14,8 @@ import org.springframework.web.servlet.ModelAndView;
 import com.green.community.service.CommunityService;
 import com.green.community.vo.BoardFilesVo;
 import com.green.community.vo.CommunityVo;
-import com.green.pds.vo.FilesVo;
-import com.green.pds.vo.PdsVo;
+import com.green.community.vo.ComuFilesVo;
+
 
 
 @Controller
@@ -46,6 +46,7 @@ public class CommunityController {
 		return mv;
 	}
 
+	//공지사항 보기
 	@RequestMapping("/Community01View")
 	public ModelAndView noticeView(
 			@RequestParam HashMap<String, Object> map) {
@@ -64,7 +65,7 @@ public class CommunityController {
 		return mv;
 	}
 	
-	
+	//공지사항 글쓰기폼
 	@RequestMapping("/Community01WriteForm")
 	public ModelAndView noticeWriteForm(
 			@RequestParam HashMap<String, Object> map) {
@@ -75,6 +76,7 @@ public class CommunityController {
 		return mv;
 	}
 	
+	//공지사항입력
 	@RequestMapping("/Community01Write")
 	public ModelAndView noticeWrite(
 			@RequestParam HashMap<String, Object> map,
@@ -88,6 +90,7 @@ public class CommunityController {
 	     return mv;
 	}
 	
+	//공지사항 업데이트
 	@RequestMapping("/Community01UpdateForm") 
 	public ModelAndView noticeupdateform(
 			@RequestParam HashMap<String, Object> map) {
@@ -108,6 +111,7 @@ public class CommunityController {
 		return mv; 
 	}
 	
+	//업데이트
 	 @RequestMapping("/Community01Update") 
 	 public ModelAndView noticeupdate(
 			 @RequestParam HashMap<String, Object> map) {
@@ -126,8 +130,20 @@ public class CommunityController {
 		 
 		  return mv; 
 	 }
-	
-	
+	//공지사항삭제
+	@RequestMapping("/Community01Delete")
+	public ModelAndView noticeDelete(
+			@RequestParam HashMap<String, Object> map) {
+		
+		communityService.noticeDelete(map);
+		
+		ModelAndView mv = new ModelAndView();
+		
+		mv.setViewName("redirect:/Community01");
+		return mv;
+	}
+	 
+	 
 	//----------이벤트---------------------------------------------------------------------
 	@RequestMapping("/Community02")
 	public ModelAndView eventList(
@@ -142,6 +158,7 @@ public class CommunityController {
 		
 		return mv;
 	}
+	//이벤트글쓰기폼
 	@RequestMapping("/Community02WriteForm")
 	public ModelAndView eventWriteFrom(
 			@RequestParam HashMap<String, Object> map) {
@@ -152,7 +169,7 @@ public class CommunityController {
 		return mv;
 		
 	}
-
+    //쓰기
 	@RequestMapping("/Community02Write")
 	public ModelAndView eventWrite(
 			@RequestParam HashMap<String, Object> map,
@@ -167,6 +184,53 @@ public class CommunityController {
 		return mv;
 		
 	}
+	//이벤트글 수정
+	@RequestMapping("/Community02UpdateForm")
+	public ModelAndView eventupdateForm(
+			@RequestParam HashMap<String, Object> map) {
+		System.out.println("map컨트롤러"+ map);
+		BoardFilesVo vo = communityService.getEvent(map);
+		
+		ModelAndView mv = new ModelAndView();
+		mv.setViewName("community/eventupdate");
+		mv.addObject("vo", vo);
+		mv.addObject("map",map);
+		
+		return mv;
+		
+	}
+	//수정
+	@RequestMapping("/Community02Update")
+	public ModelAndView eventupdate(
+			@RequestParam HashMap<String, Object> map) {
+	 	
+		communityService.updateEvent(map);
+		
+		System.out.println("이벤트 업데이트 컨트롤러"  + map);
+		
+		ModelAndView mv = new ModelAndView();
+		
+		mv.setViewName("redirect:/Community02");
+		mv.addObject("map",map);
+		
+		
+		return mv;
+		
+	}
+	//이벤트 글 삭제
+	@RequestMapping("/Community02Delete")
+	public ModelAndView eventDelete(
+			@RequestParam HashMap<String, Object> map) {
+		
+		communityService.deleteEvent(map);
+		
+		ModelAndView mv = new ModelAndView();
+		mv.setViewName("redirect:/Community02");
+		
+		return mv;
+		
+	}
+
 	
 	//---자료실------------------
 	@RequestMapping("/Community03")
@@ -221,7 +285,7 @@ public class CommunityController {
 		cont                     =   cont.replace("\n", "<br>");
 		communityVo.setCont(cont);
 		
-		List<FilesVo> fileList = communityService.getFileList( map );
+		List<ComuFilesVo> fileList = communityService.getFileList( map );
 		
 		System.out.println( "file:" + map);
 		System.out.println("filelist:" + fileList);
@@ -253,12 +317,35 @@ public class CommunityController {
 	public ModelAndView downloadUpdate(
 			@RequestParam HashMap<String, Object> map) {
 		
+		System.out.println(map+"mapampamp");
+		 communityService.downloadUpdate(map); 
+		 System.out.println("업데이트 후 맵" +map+"mapampamp");
+		 
+		 
+		 int     idx     = Integer.parseInt (String.valueOf(map.get("idx")));
+	     
+		    String  fmt = "redirect:/Community03View?idx=%s";
+			String  loc = String.format(fmt, idx);
+		 
 		
 		ModelAndView mv = new ModelAndView();
+		 mv.setViewName(loc);
+		 mv.addObject("map",map);
 		return mv;
 	}
 	
-	
+		//공지사항삭제
+		@RequestMapping("/Community03Delete")
+		public ModelAndView downloadDelete(
+				@RequestParam HashMap<String, Object> map) {
+			
+			communityService.downloadDelete(map);
+			
+			ModelAndView mv = new ModelAndView();
+			
+			mv.setViewName("redirect:/Community03");
+			return mv;
+		}
 	//--- FAQ-------------------
 	
 	
@@ -276,6 +363,77 @@ public class CommunityController {
 			ModelAndView mv = new ModelAndView();
 			mv.setViewName("community/faq");
 			mv.addObject("faqList", faqList);
+			return mv;
+		}
+		
+		//FAQ 글쓰기폼
+		@RequestMapping("/Community04WriteForm")
+		public ModelAndView faqWriteForm(
+				@RequestParam HashMap<String, Object> map) {
+			
+			// if 관리자면 뭐 보이게함.
+			ModelAndView mv = new ModelAndView();
+			mv.setViewName("community/faqwriteform");
+			return mv;
+		}
+		
+		//FAQ입력
+		@RequestMapping("/Community04Write")
+		public ModelAndView faqWrite(
+				@RequestParam HashMap<String, Object> map) {
+			
+			communityService.faqWrite(map);
+			
+		     ModelAndView mv = new ModelAndView();
+		     mv.addObject("map", map);
+		     mv.setViewName("redirect:/Community04");
+		     return mv;
+		}
+		
+		//FAQ 업데이트
+		@RequestMapping("/Community04UpdateForm") 
+		public ModelAndView faqupdateform(
+				@RequestParam HashMap<String, Object> map) {
+			
+			CommunityVo  communityVo  =  communityService.getFaq(map);  
+			
+			String         cont      =  communityVo.getCont();
+			if( cont == null )     cont = "";
+			cont                     =   cont.replace("\n", "<br>");
+			communityVo.setCont(cont);
+			
+			
+			ModelAndView mv = new ModelAndView();
+			mv.addObject("vo", communityVo );
+			mv.addObject("map",map);
+			mv.setViewName("community/faqupdate");
+			
+			return mv; 
+		}
+		
+		//업데이트
+		 @RequestMapping("/Community04Update") 
+		 public ModelAndView faqUpdate(
+				 @RequestParam HashMap<String, Object> map) {
+		 
+			 communityService.faqUpdate(map); 
+		
+			 ModelAndView mv = new ModelAndView();
+			 mv.setViewName("redirect:/Community04");
+			 mv.addObject("map",map);
+			 
+			  return mv; 
+		 }
+		//FAQ삭제
+		@RequestMapping("/Community04Delete")
+		public ModelAndView faqDelete(
+				@RequestParam HashMap<String, Object> map) {
+			
+			communityService.faqDelete(map);
+			
+			ModelAndView mv = new ModelAndView();
+			
+			mv.setViewName("redirect:/Community04");
 			return mv;
 		}
 		
@@ -318,6 +476,22 @@ public class CommunityController {
 			mv.setViewName("redirect:/Community05");
 			return mv;
 		}
+		
+		@RequestMapping("/Community05Delete")
+		public ModelAndView reviewDelete(
+				@RequestParam HashMap<String, Object> map){
+		
+			System.out.println( "딜리트 맵" + map);
+			communityService.reviewDelete(map); // idx만 넘기면되는데
+			
+			ModelAndView mv = new ModelAndView();
+			mv.setViewName("redirect:/Community05");
+			
+			return mv;	
+		}
+		
+		
+		
 		
 		
 	}

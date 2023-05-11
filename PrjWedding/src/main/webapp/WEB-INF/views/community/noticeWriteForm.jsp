@@ -11,11 +11,11 @@
  <table id="table">   
    <tr>
      <th>제목</th>
-     <td><input type="text" name="title" value="관리자"/></td>
+     <td><input type="text" name="title" value="${ writer }"/></td>
    </tr> 
    <tr>
      <th>글쓴이</th>
-     <td><input type="text" name="writer" value="${ writer }" /></td>
+     <td><input type="text" name="writer" value="관리자" /></td>
    </tr> 
    <tr>
      <th>내용</th>
