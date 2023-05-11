@@ -1,0 +1,86 @@
+@charset "UTF-8";
+
+/* 견적서 페이지 스타일 */
+.estimate-container-lee {
+  max-width: 1000px; /* 전체 크기 지정 */
+  margin: 0 auto;
+  padding: 20px;
+  display: flex; /* Flexbox 레이아웃 적용 */
+  justify-content: space-between; /* 컨텐츠 간 간격을 최대한 벌리기 */
+}
+
+.estimate-form-lee {
+  width: 45%; /* 견적서 작성 부분 너비 지정 */
+}
+
+.estimate-result-lee {
+  width: 50%; /* 결과 부분 너비 지정 */
+  padding-left: 20px; /* 좌측 여백 지정 */
+}
+
+.estimate-form-lee h1 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.estimate-form-lee label {
+  display: inline-block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.estimate-form-lee input[type="text"],
+.estimate-form-lee input[type="number"],
+.estimate-form-lee textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.estimate-form-lee input[type="submit"] {
+  background-color: #0069d9;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.estimate-form-lee input[type="submit"]:hover {
+  background-color: #0051a8;
+}
+
+.estimate-form-lee h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.estimate-form-lee table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 10px;
+}
+
+.estimate-form-lee th,
+.estimate-form-lee td {
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+.estimate-form-lee a {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #0069d9;
+}
+
+.estimate-form-lee a:hover {
+  text-decoration: underline;
+}

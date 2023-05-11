@@ -156,6 +156,7 @@ header.sticky {
 }
 
 
+
 /* 토글 모양  */
 .menu-toggle {
   display: flex;
@@ -346,9 +347,9 @@ li {
   display: none;
 }
 
-#modal-open {
+/* #modal-open {
   font-family: "Montserrat", sans-serif;
-}
+} */
 
 #main-slider {
   position: relative;
@@ -368,17 +369,18 @@ li {
 
 
  /* 팝업창 만들기 시작 */
+ /* 유정님하고 충돌나는거 같아서 지움 */
 
-.container {
+/* .container {
   display: none;
   position: fixed;
   z-index: 999;
   width: 100%;
   height: 100%;
-  top: 100px; /* 상단에서 50px 아래로 이동 */
+  top: 100px; 상단에서 50px 아래로 이동
   margin: 0;
   padding: 0;
-}
+} 
 
 .popup-wrap {
   position: fixed;
@@ -406,10 +408,10 @@ li {
   padding: 0;
 }
 
-/* 여기 부분을 건드려야 GREEN WEDDING 위치 조정*/
+여기 부분을 건드려야 GREEN WEDDING 위치 조정
 .popup-box h2 {
   text-align: center;
-  font-size: 3.0rem; /* 변경된 font-size 값 */
+  font-size: 3.0rem; 변경된 font-size 값
   color: #69b36f;
   position: absolute;
   top: 15%;
@@ -445,8 +447,8 @@ form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 150px; /* 110px만큼 내리기 */
-  padding-top: 0; /* 상단 패딩값 0으로 변경 */
+  margin-top: 150px; 110px만큼 내리기
+  padding-top: 0; 상단 패딩값 0으로 변경
 }
 
 label {
@@ -488,22 +490,22 @@ input[type="submit"]:hover {
 }
 
 .links a {
-  display: inline-block; /* 링크를 인라인 박스로 배치 */
+  display: inline-block; 링크를 인라인 박스로 배치
   color: #F5F5DC;
   font-weight: bold;
   font-size: 18px;
   text-decoration: none;
-  letter-spacing: 5px; /* 글자 간격 설정 */
-  white-space: nowrap; /* 글자가 한 줄에만 나타나도록 설정 */
-  margin-left: 15px; /* 왼쪽 여백 설정 */
-  margin-right: 15px; /* 오른쪽 여백 설정 */
+  letter-spacing: 5px; 글자 간격 설정
+  white-space: nowrap; 글자가 한 줄에만 나타나도록 설정
+  margin-left: 15px; 왼쪽 여백 설정
+  margin-right: 15px; 오른쪽 여백 설정
 }
 
 .links a:hover {
-  color: #556b2f; /* 마우스 올리면 링크 색상 */
-  text-decoration: none; /* 텍스트 밑줄 삭제 */
+  color: #556b2f; 마우스 올리면 링크 색상
+  text-decoration: none; 텍스트 밑줄 삭제
 }
-
+ */
 /* 여기 위 까지가 팝업창 끝 */
 
 
@@ -893,37 +895,35 @@ h4 {
 } 
 
 /* 갤러리 모달 창 */
+/* .custom-modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+}
 
-.modal {
-            display: none;
-            position: fixed;
-            z-index: 1;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgba(0, 0, 0, 0.9);
-        }
+.modal-content {
+    margin: 15% auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
 
-        .modal-content {
-            margin: 15% auto;
-            display: block;
-            width: 80%;
-            max-width: 700px;
-        }
-
-        .close {
-            position: absolute;
-            top: 15px;
-            right: 35px;
-            color: #fff;
-            font-size: 40px;
-            font-weight: bold;
-            cursor: pointer;
-        }
-
-/* 윗부분으로 모달 창 끝 */
+.close-modal {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+} */
+/* 윗부분으로  이승현 모달 창 끝 */
 
 .text_wrap {
   display: none;
@@ -1011,6 +1011,7 @@ h4 {
   margin-right: 250px;
   padding: 20px;
 }
+
 
 /* 이미지 사이즈를 변경할꺼면 여기 */
 .-my-owl-carousel .item {
@@ -1141,21 +1142,6 @@ h4 {
 	}
 }
 
-
-/* location 이미지를 사용하고 싶으면 이렇게 */
-/* .image-location {
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-}
-
-.image-location img {
-  justify-content: center;
-  align-items: center;
-  max-width: 100%;
-  height: auto;
-} */
-
 .map-margin {
   display: flex;
   flex-direction: column;
@@ -1170,5 +1156,8 @@ h4 {
   text-align: center;
   margin: 10px;
 }
+
+
+
 
 

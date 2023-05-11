@@ -6,63 +6,30 @@
 	
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="theme-color" content="#363636">
-<meta name="msapplication-navbutton-color" content="#363636">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<title>Home</title>
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="path/to/jquery.bxslider.min.js"></script>
-
-<link rel="shortcut icon" href="./img/favicon.ico">
-
-<!-- 구글 폰트 -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Nanum+Gothic:wght@700&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Lora:wght@500&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Castoro+Titling&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-
-
-<!-- 카카오 api 사용 앱 키 -->
-<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=af4768f3d5d87505fcfd4296a54fc669"></script>
+<!-- head 부분 분리 -->
+<jsp:include page="/WEB-INF/views/part_menu/head_resources.jsp" />
 
 </head>
 
-<style>
 
-#root img {
-  display: block;
-  margin: 5px;
-  width: 394px;
-  height: 250px;
-} 
-
-</style>
 
 
 <body>
 
 
 <!-- 헤더 부분 분리 -->
-<jsp:include page="header.jsp" />
+<jsp:include page="/WEB-INF/views/part_menu/header.jsp" />
 
   
-  
-<!--유정 로그인 분리-->
-<jsp:include page="login.jsp" />
+<!--유정 로그인 분리--> <!-- 여기만 현재 문제이상 -->
+<jsp:include page="/WEB-INF/views/part_menu/login.jsp" />
 
 
 <!-- 슬라이드 메뉴 분리 -->
-<jsp:include page="slidemenu.jsp" />
+<jsp:include page="/WEB-INF/views/part_menu/slidemenu.jsp" />
 
  
 
@@ -96,7 +63,7 @@
 <div class="wedding-hole">
     <div style="height: 50px; background-color: #f7f5ef; margin-bottom: 0px;"></div>
 	<div style="height: 50px; background-color: #f7f5ef; margin-bottom: 0px;"></div>
-	<h3>WEDDING HALL</h3>
+	<h3 style="font-family: 'Cormorant Garamond', serif;">WEDDING HALL</h3>
 	 <div style="height: 50px; background-color: #f7f5ef; margin-bottom: 0px;"></div>
 	 <div style="height: 50px; background-color: #f7f5ef; margin-bottom: 0px;"></div>
 </div>
@@ -169,11 +136,10 @@
 </h2>
 </div>
 
- <!-- 모달창 삽입 전부됨 -->
-<div id="myModal" class="modal">
-        <span class="close">&times;</span>
-        <img class="modal-content" id="modalImg">
-</div>
+<!-- <div class="custom-modal">
+    <span class="close-modal">&times;</span>
+    <img class="modal-content" id="modalImg">
+</div> -->
 
 <!-- 갤러리 끝 -->
 
@@ -182,7 +148,7 @@
 <div class="VIP">
 	<div style="height: 50px; background-color: #f7f5ef; margin-bottom: 0px;"></div>
 	<div style="height: 50px; background-color: #f7f5ef; margin-bottom: 0px;"></div>
-	<h4>VIP</h4>
+	<h4 style="font-family: 'Cormorant Garamond', serif;">VIP</h4>
 	 <div style="height: 50px; background-color: #f7f5ef; margin-bottom: 0px;"></div>
 	 <div style="height: 50px; background-color: #f7f5ef; margin-bottom: 0px;"></div>
 </div>
@@ -475,7 +441,7 @@ var marker = new kakao.maps.Marker({
 
 
 <!-- 푸터 분리 -->
-<jsp:include page="footer.jsp" />
+<jsp:include page="/WEB-INF/views/part_menu/footer.jsp" />
 
 
 
@@ -483,12 +449,13 @@ var marker = new kakao.maps.Marker({
 <!-- 전부 분리 이전시킴 -->
 
 <script>
-// 모달창
-var modal = document.getElementById("myModal");
-var modalImg = document.getElementById("modalImg");
-var images = document.querySelectorAll('.img_wrap');
-var span = document.getElementsByClassName("close")[0];
+//모달창
+//var modal = document.querySelector(".custom-modal");
+//var modalImg = modal.querySelector(".modal-content");
+//var images = document.querySelectorAll('.img_wrap');
+//var closeBtn = modal.querySelector(".close-modal");
 
+/*
 images.forEach(img => {
     img.onclick = function() {
         modal.style.display = "block";
@@ -496,7 +463,7 @@ images.forEach(img => {
     }
 });
 
-span.onclick = function() {
+closeBtn.onclick = function() {
     modal.style.display = "none";
 }
 
@@ -505,6 +472,60 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
+ */
+//첫 화면 이미지 밑 점 3개
+// 화면이 4초마다 변경
+$(document).ready(function() {
+	$('.owl-carousel').owlCarousel({
+		loop : true,
+		autoplay : true,
+		autoplayTimeout : 4000,
+		margin : 10,
+		nav : false,
+		dots : true,
+		items : 1,
+		responsive : {
+			0 : {
+				items : 1
+			},
+			600 : {
+				items : 1
+			},
+			1000 : {
+				items : 1
+			}
+		}
+	});
+});
+
+/* dots: true, 설정을 해주어야 이미지 밑 점이 나타남 */
+$(document).ready(
+		function() {
+			$('.-my-owl-carousel').owlCarousel(
+					{
+						loop : true,
+						margin : 10,
+						nav : true,
+						navText : [ '<i class="fa fa-angle-left"></i>',
+								'<i class="fa fa-angle-right"></i>' ],
+						dots : true,
+						autoplay : true,
+						autoplayTimeout : 5000,
+						autoplayHoverPause : true,
+						responsive : {
+							0 : {
+								items : 1
+							},
+							600 : {
+								items : 2
+							},
+							1000 : {
+								items : 3
+							}
+						}
+					});
+		});
+		
 </script>
 
 </body>
