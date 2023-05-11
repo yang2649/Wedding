@@ -411,7 +411,7 @@ nav  {
 	   </div>	   
    </div>
    <p class="event-atag" style="text-align: right;">
-   <a href="">수정하기</a>  <a href="">삭제하기</a>   
+   <a href="">수정하기</a>  <a href="">삭제하기</a>    
    </p>
    
    <hr>
