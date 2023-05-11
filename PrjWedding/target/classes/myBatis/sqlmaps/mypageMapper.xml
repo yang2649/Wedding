@@ -9,7 +9,7 @@
    <select id         = "EstiList"
            resultType = "com.green.mypage.vo.MypageVo"  >
    
-   SELECT ES.ESTIID, 
+  SELECT  ES.ESTIID, 
           ES.ESTINAME,
           ES.MEMID,
           ES.RESDATE,
@@ -19,21 +19,30 @@
           CA.CATERINGTYPE,
           STU.STUDIONAME,
           DR.DRESSNAME,
-          OP.OPTIONNAME,
-          AD.QUANTITY,
           ES.TOTALCOST
   FROM    ESTIMATES ES join HALL HA on ES.hallid = HA.hallid
           join CATERING CA on ES.cateringid = CA.cateringid
           join STUDIO STU on ES.studioid = STU.studioid
           join DRESS DR on ES.DRESSID = DR.DRESSID
-          join ADDITIONAL AD on ES.ESTIID = AD.ESTIID
-          left join OPTIONS OP on AD.OPTIONID = OP.OPTIONID
-  WHERE   ES.MEMID = #{ memid }
+  WHERE   ES.MEMID = #{memid}
 
    
    </select> 
- 
    
+   <!-- 찜 목록   -->
+   <select id         = "FavList"
+           resultType = "com.green.mypage.vo.MypageVo"  >
+   
+   SELECT  DRESSNAME,
+           DRESSPRICE,
+           DRESSIMAGE
+  FROM     FAVORITES FA join DRESS DR on FA.DRESSID = DR.DRESSID
+  WHERE    FA.MEMID = #{memid}
+   
+   </select> 
+   
+ 
+ 
     
 </mapper>
 

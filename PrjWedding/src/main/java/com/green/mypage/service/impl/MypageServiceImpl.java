@@ -24,4 +24,13 @@ public class MypageServiceImpl implements MypageService {
 		return estiList;
 	}
 
+	@Override
+	public List<MypageVo> getFavList(String memid) {
+
+		System.out.println("fav memid:" + memid);
+		List<MypageVo> favList = mypageDao.getFavList( memid );
+		
+		return favList;
+	}
+
 }

@@ -8,4 +8,6 @@ public interface MypageService {
 
 	List<MypageVo> getEstiList(String memid);
 
+	List<MypageVo> getFavList(String memid);
+
 }
