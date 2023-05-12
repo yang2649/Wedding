@@ -237,41 +237,49 @@ p {
 
 	<div id="buffet-text">
 		<h2>POINT ONE</h2>
-		<p>오랜 노하우를 갖춘 전문 쉐프가 조리한 스페셜한 음식 을 선사합니다. 뜻 깊은 날,</p>
-		<p>찾아주신 분들을 위해서 정성 가득한 요리 를 대접하겠습니다. 최고의 맛과 서비스를 CA에서 만나보세요!</p><br>
+		<h2>
+		<img src="./img/buffet/buffet31.jpg" style="width: 950px; height: 350px;" >
+		</h2>
+		<p style="font-size: 25px;">"수많은 셰프들의 정성으로 만든 요리"</p><br>
+		<p>숙련된 기술을 갖춘 특급호텔 출신 셰프가 엘타워 뷔페 디오디아의 </p>
+		<p>노하우가 담긴 누벨퀴진 메뉴를 그린웨딩 뷔페에 제공해 드립니다.</p><br>
 	</div><br><br>
 	<div id="buffet-text">
 		<h2>POINT TWO</h2><br>
 		<h2>
-		<img src="./img/buffet/buffet01.jpg" >
-		<img src="./img/buffet/buffet02.jpg" >
+		<img src="./img/buffet/buffet32.jpg" >
+		<img src="./img/buffet/buffet33.jpg" >
 		</h2>
-		<p style="font-size: 25px;">동시 좌석 1600석의 대형 연회장</p><br>
-		<p>예식 팀별 단독룸 사용으로 인하여 더욱 편안하고 여유 있는 식사가 가능합니다.</p>
+		<p style="font-size: 25px;">두개의 홀로 운영되고 있는 편안한 연회장</p><br>
+		<p>홀의 위치가 반대로 되어 있어 더욱 편안하고 여유 있는 식사가 가능합니다.</p>
 		<p>최신 음향·영상시설을 갖춰 식사와 연회, 세미나가 가능한 공간을 준비하였습니다.</p><br>
 	</div><br><br>
 	<div id="buffet-text">
 		<h2>POINT THREE</h2><br>
 		<h2>
-		<img src="./img/buffet/buffet03.jpg" >
-		<img src="./img/buffet/buffet04.jpg" >
+		<img src="./img/buffet/buffet15.jpg" >
+		<img src="./img/buffet/buffet17.jpg" >
 		</h2>
 		<h2>
-		<img src="./img/buffet/buffet05.jpg" >
-		<img src="./img/buffet/buffet06.jpg" >
+		<img src="./img/buffet/buffet19.jpg" >
+		<img src="./img/buffet/buffet22.jpg" >
+		</h2>
+		<h2>
+		<img src="./img/buffet/buffet25.jpg" >
+		<img src="./img/buffet/buffet27.jpg" >
 		</h2><br><br>
-		<p style="font-size: 25px;">200여 종의 산해진미 & 쉐프의 스페셜메뉴</p><br>
-		<p>특급호텔 출신의 쉐프가 이끄는 조리팀이 정성껏 조리한 요리를 합리적인 가격으로 호텔급 서 비스와 함께 즐기실 수 있습니다.</p>
+		<p style="font-size: 25px;">한·중·일 및 다양한 음식이 특별한 셰프들로 인해 준비</p><br>
+		<p>특급호텔 출신의 쉐프가 이끄는 조리팀이 정성껏 조리한 요리를 합리적인 가격으로 호텔급 서비스와 함께 즐기실 수 있습니다.</p>
 		<p>엄선되고 신선한 식재료로 정성껏 준비한 음식을 아늑하고 품격 있는 공간에서 즐기실 수 있습니다.</p>
-		<p>즉석요리 코너를 포함해 200여 가지의 다양한 메뉴를 준비하였습니다.</p>
-		<p>어머니의 손맛으로 직접 담근 김치를 제공하여 맛과 멋을 한층 돋우었습니다.</p><br>
+		<p>호텔 뷔폐에서 단련된 셰프들의 특선요리까지 다양한 요리를 맛보시길 바랍니다.</p>
+		<br>
 	</div><br><br>
 	<div id="buffet-text">
 		<h2>POINT FOUR</h2><br>
 		<h2>
-		<img src="./img/buffet/buffet07.jpg" style="width: 30%;">
-		<img src="./img/buffet/buffet08.jpg" style="width: 30%;">
-		<img src="./img/buffet/buffet09.jpg" style="width: 30%;">
+		<img src="./img/buffet/buffet10.jpg" style="width: 30%;">
+		<img src="./img/buffet/buffet18.jpg" style="width: 30%;">
+		<img src="./img/buffet/buffet22.jpg" style="width: 30%;">
 		</h2><br><br>
 		<p style="font-size: 25px;">단독 행사를 위한 별도룸 제공, 단독룸 최대 700석</p><br>
 		<p>인원 규모에 맞춰 품격 있는 행사를 진행할 수 있는 단독룸 사용이 가능합니다.</p>

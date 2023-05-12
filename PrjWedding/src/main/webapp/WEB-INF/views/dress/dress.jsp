@@ -74,12 +74,6 @@ p {
   width: 394px;
   height: 250px;
 } 
-#root2 img {
-  display: block;
-  margin: 5px;
-  width: 350px;
-  height: 414px;
-}  
 
 #text-table h1 {
   font-family: 'Noto Sans KR', sans-serif;
@@ -90,6 +84,7 @@ display: flex;
     flex-wrap: wrap;
      width:1600px;
      margin: auto;
+     
 }
 
 #dress img{
@@ -100,6 +95,30 @@ display: flex;
 #dress [type=submit] {
    color:red;
 }
+
+#dressimg{
+
+	position: relative;
+    width: 430px; // 자를 사이즈를 명시해준다.
+    height: 100px;
+    overflow: hidden;
+	display: inline-block;
+	margin : 10px;
+	margin-left : 4%;
+	text-align: center;
+	
+}
+
+.dressbtn{
+  background-color: #FA8072 ;
+  color: white;
+  border: none;
+  margin-top: 5%;
+  padding: 12px 30px;
+  border-radius: 20px;
+}
+
+
 
 
 </style>
@@ -138,10 +157,10 @@ display: flex;
    <input type="hidden"  name="memid"   value="${ map.memid }" />
    <input type="hidden"  name="dressid" />
    <c:forEach var="dress" items="${ dressList }" >
-      <div>
+      <div id="dressimg">
         <img src="${dress.dressimage}"  />
-        <div style="text-align:right">
-        <input type="button" value="찜하기" data-dressid="${dress.dressid }">
+        <div style="text-align:center;">
+        <input class="dressbtn" type="button" value="찜하기" data-dressid="${dress.dressid }">
         </div>
       </div>    
    </c:forEach>
@@ -176,9 +195,7 @@ display: flex;
     document.querySelectorAll('#root img').forEach(el => {
       wrap(el);
     });
-    document.querySelectorAll('#root2 img').forEach(el => {
-      wrap(el);
-    });
+
 
     /*
     const form     = document.querySelector('form');

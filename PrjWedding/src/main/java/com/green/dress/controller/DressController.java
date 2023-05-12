@@ -33,6 +33,7 @@ public class DressController {
 		 String  dressid  =  (String)map.get("dressid");
 		 String  memid    = user.getMemid();
 		 
+		 
 		  PVo PVo = (PVo) map.get("PVo");
 		 
 		 map.put("memid", memid );
