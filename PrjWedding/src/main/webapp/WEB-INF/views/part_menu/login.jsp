@@ -9,28 +9,31 @@
 
 
 	<!--유정 로그인-->
-	<div class="container">
-     <c:if test="${sessionScope.login == null}">
-	  <div id="modal-open" class="modal-open" style="font-family: 'PLAYFAIR DISPLAY', serif; overflow:visible;">LOGIN</div>
-		<div class="popup-wrap" id="popup" style="display: none;">
-			<div class="popup-box">
-				<span class="popup-close" id="popup-close">&times;</span>
-				<h2 class="">Green Wedding</h2>
-				<form action="/loginprocess" method="POST">
-					<label for="userid">ID</label> <input type="text" id="userid"
-						name="memid" value="admin"> <label for="password">Password</label>
-					<input type="password" id="password" name="mempw" value="1234"></br>
-					<input type="submit" value="로그인" />
-				</form>
-				<br>
-				<div class="links" >
-					<a href="#">아이디 찾기</a><a href="#">비밀번호 찾기</a><a href="#"
-						id="join" onclick="showJoin();">회원가입</a>
-				</div>
-			</div>
-		</div>
-	  </c:if>
-	</div>
+<div class="container">
+  <c:if test="${sessionScope.login == null}">
+    <div id="modal-open" class="modal-open">LOGIN</div>
+    <div class="popup-wrap" id="popup" style="display: none;">
+      <div class="popup-box">
+        <span class="popup-close" id="popup-close">&times;</span>
+        <h2 class="Green-Wedding">Green Wedding</h2> 
+        <form action="/loginprocess" method="POST">
+          <label for="userid">ID</label>
+          <input type="text" id="userid" name="memid" value="">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="mempw" value="">
+          <br>
+          <input type="submit" value="로그인">
+        </form>
+        <br>
+        <div class="links">
+          <a href="#">아이디 찾기</a>
+          <a href="#">비밀번호 찾기</a>
+          <a href="#" id="join" onclick="showJoin();">회원가입</a>
+        </div>
+      </div>
+    </div>
+  </c:if>
+</div>
 
 
 	

@@ -15,34 +15,40 @@ div.container {
   font-size: 20px;
 }
 
-.popup-wrap{
-  background-color:rgba(0,0,0,.3); 
-  justify-content:center; 
-  align-items:center;     
-  position:fixed;         
-  top:0;
-  left:0;
-  right:0;
-  bottom:0;               
-  display:none;
-  padding:15px; 
-   
+/* 아이콘 컨테이너 스타일 */
+
+.popup-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 15px;
+  display: none;
 }
 
+/* 팝업창 컨테이너 스타일 */
+
 .popup-close {
-position: absolute;
-top: 10px;
-right: 10px;
-width: 30px;
-height: 30px;
-background-color: #ccc;
-border-radius: 50%;
-color: #fff;
-font-size: 20px;
-line-height: 30px;
-text-align: center;
-cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  background-color: #ccc;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: center;
+  cursor: pointer;
 }
+
+/* 팝업창 닫기 버튼 스타일 */
 
 .popup-box {
   width: 500px;
@@ -59,14 +65,30 @@ cursor: pointer;
   z-index: 1002;
 }
 
+/* 팝업창 박스 스타일 */
+
+.Green-Wedding h2 {
+  
+  position: absolute;
+  top: 50px; /* 원하는 만큼의 아래쪽 위치 설정 */
+  font-family: 'Castoro Titling', cursive;
+  font-size: 80px;
+  color: #2c3e50;
+  text-align: center;
+}
+
+/* 잠시 수정 */ 
+/*
 .popup-box h2 {
 margin-top: 0;
 font-size: 24px;
 font-weight: bold;
 color: #333;
 }
+*/
 
 form label {
+  margin-top: 75px;	
   display: block;
   margin-bottom: 10px;
   color: #333;
@@ -179,6 +201,20 @@ div.join {
   text-align: center;
   margin-bottom: 20px;
 }
+
+
+/* 팝업창 스타일 부분은 여기임 */
+#modal-open {
+  color: black;
+  transition: color 0.3s ease-out;
+  font-family: 'PLAYFAIR DISPLAY', serif; /* 스타일 속성 위치 수정 */
+  overflow: visible; /* 스타일 속성 위치 수정 */
+}
+
+.white-text {
+  color: white !important;
+}
+
 
 
 

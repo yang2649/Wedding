@@ -71,6 +71,8 @@
 			slidingMenuOverlay.classList.remove('open');
 		});
 
+		 /* 로그인 되었을때 - 헤더 부분이 안내려가는 부분 이부분 */
+/*
 		//팝업창 열기
 		function popupOpen() {
 			const popupContainer = document.querySelector('.popup-container');
@@ -90,7 +92,8 @@
 		// 팝업창 닫기 버튼 클릭 시 팝업창 닫기
 		const closeButton = document.querySelector('.popup-close');
 		closeButton.addEventListener('click', popupClose);
-
+*/
+		
 		$(window).scroll(function() {
 			// 스크롤 위치가 50px 이상인 경우
 			if ($(this).scrollTop() > 50) {

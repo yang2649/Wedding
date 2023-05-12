@@ -146,14 +146,14 @@ header.sticky {
 
 
 /* 유정 - Login 부분 스크롤바 흰색 */
-#modal-open {
+/* #modal-open {
   color: black;
   transition: color 0.3s ease-out;
 }
 
 .white-text {
   color: white !important;
-}
+} */
 
 
 
@@ -370,142 +370,8 @@ li {
 
  /* 팝업창 만들기 시작 */
  /* 유정님하고 충돌나는거 같아서 지움 */
+ /* 수정 부분 - 충돌 페이지 없앰*/
 
-/* .container {
-  display: none;
-  position: fixed;
-  z-index: 999;
-  width: 100%;
-  height: 100%;
-  top: 100px; 상단에서 50px 아래로 이동
-  margin: 0;
-  padding: 0;
-} 
-
-.popup-wrap {
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0;
-  padding: 0;
-}
-
-.popup-box {
-  background-color: #fff;
-  border: 1px solid #888;
-  width: 500px;
-  max-width: 80%;
-  position: relative;
-  margin: 0;
-  padding: 0;
-}
-
-여기 부분을 건드려야 GREEN WEDDING 위치 조정
-.popup-box h2 {
-  text-align: center;
-  font-size: 3.0rem; 변경된 font-size 값
-  color: #69b36f;
-  position: absolute;
-  top: 15%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.popup-close {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 30px;
-  font-weight: bold;
-  color: #888;
-  cursor: pointer;
-}
-
-.popup-close:hover,
-.popup-close:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-h2.green-wedding {
-  text-align: center;
-  font-size: 2.5rem;
-  color: #69b36f;
-  margin-top: 50px;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 150px; 110px만큼 내리기
-  padding-top: 0; 상단 패딩값 0으로 변경
-}
-
-label {
-  font-size: 1.2rem;
-  color: #333;
-  margin-top: 20px;
-}
-
-input[type="text"],
-input[type="password"] {
-  padding: 10px;
-  width: 100%;
-  border: none;
-  border-bottom: 2px solid #ddd;
-  font-size: 1.2rem;
-  margin-top: 10px;
-}
-
-input[type="submit"] {
-  background-color: #69b36f;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  font-size: 1.2rem;
-  margin-top: 20px;
-  cursor: pointer;
-  transition: background-color 0.3s ease-in-out;
-}
-
-input[type="submit"]:hover {
-  background-color: #5aa565;
-}
-
-
-.links {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 20px;
-}
-
-.links a {
-  display: inline-block; 링크를 인라인 박스로 배치
-  color: #F5F5DC;
-  font-weight: bold;
-  font-size: 18px;
-  text-decoration: none;
-  letter-spacing: 5px; 글자 간격 설정
-  white-space: nowrap; 글자가 한 줄에만 나타나도록 설정
-  margin-left: 15px; 왼쪽 여백 설정
-  margin-right: 15px; 오른쪽 여백 설정
-}
-
-.links a:hover {
-  color: #556b2f; 마우스 올리면 링크 색상
-  text-decoration: none; 텍스트 밑줄 삭제
-}
- */
 /* 여기 위 까지가 팝업창 끝 */
 
 
