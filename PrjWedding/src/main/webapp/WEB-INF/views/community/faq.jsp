@@ -285,6 +285,11 @@ nav  {
 
 h1{ text-align: center;}
 
+
+
+
+/*=================================================*/
+
 .customer-notice a {
 	text-decoration: none;
 	color: black;
@@ -322,7 +327,7 @@ h1{ text-align: center;}
 
 
 
-<style>
+
 
 body {
 	padding-top: 80px; /* 헤더 높이만큼 패딩 추가 */
@@ -473,9 +478,11 @@ h1{ text-align: center;}
   	<div id="text-table">
 	  	<h1 style="text-align: center;">
 			<span style="color: rgb(191, 131, 101);" ">FAQ</span></h1>
-	  	</div>
-	  	<a href="/Community04WriteForm">글쓰기</a>
 	 <br><br>
+	  	</div>
+	  	<div style="text-align:right; margin:0px 250px 0px 0px;" >
+	  	<a href="/Community04WriteForm">새 글쓰기</a>
+	  	</div>
 	   <div class="community-container">
 	   <hr>
 	 <div class="faq_group">
