@@ -93,7 +93,7 @@
 		const closeButton = document.querySelector('.popup-close');
 		closeButton.addEventListener('click', popupClose);
 */
-		
+		/* 일단 여기가 문제였음 */
 		$(window).scroll(function() {
 			// 스크롤 위치가 50px 이상인 경우
 			if ($(this).scrollTop() > 50) {
