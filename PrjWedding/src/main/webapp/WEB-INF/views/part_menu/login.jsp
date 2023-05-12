@@ -39,6 +39,7 @@
 	
 	<!-- js 코드  -->
 	<script>
+		// test
 		//유정 - Login 부분 스크롤 내렸을때 흰색 변경
 		window.addEventListener('scroll', function() {
 			var modalOpen = document.querySelector('#modal-open');
