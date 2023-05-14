@@ -5,6 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <!-- css 부분 사용 -->
 <link rel="shortcut icon" href="/img/favicon.ico">
 <link rel="stylesheet" href="./css/loginstyle.css">
@@ -61,70 +62,41 @@
 function data_display(data) {
    
    let html = '';
-   html += '<table id="myTable">';
-   html += '<tr>';
-   html += '<th>입고일자</th>';
-   html += '<th>거래처명</th>';
-   html += '<th>상품코드</th>';
-   html += '<th>상품명</th>';
-   html += '<th>입고가격</th>';
-   html += '<th>현재재고</th>';
-   html += '<th>입고수량</th>';
-   html += '<th>총입고금액</th>';
-   html += '<th>사원번호</th>';
-   html += '</tr>';
+
    
    data.forEach(function(data, index) {    
-   html += '<tr>';
-   html += '<td>'+data.in_date+'</td>';
-   html += '<td>'+data.d_name+'</td>';
-   html += '<td>'+data.p_id+'</td>';
-   html += '<td>'+data.p_name+'</td>';
-   html += '<td>'+data.p_iprice+'</td>';
-   html += '<td>'+data.st_num+'</td>';
-   html += '<td>'+data.in_num+'</td>';
-   html += '<td>'+data.in_num*data.p_iprice+'</td>';
-   html += '<td>'+data.e_id+'</td>';
-   html += '<td></td>';
-   html += '</tr>';
+	   html += '<div class="event-parent">';
+	   html += '<div class="event-image"><img src="Pds/download/external/${ vo.sfilename }" width="300px" high="300px"></div>';
+	   html += '<div class="event-text">';
+	   html += '<hr>';
+	   html += '<h3>${vo.package_title}</h3>'
+		   html += '<hr>';
+			   html += '<p>${vo.package_cont}</p>';
+			   html += '<br>';
+			   html += '<p>reservation</p>';
+			   html += '<p>자세한 문의는 예약실로 상담예약 부탁드립니다. Tel. 041-520-9999</p>';  
+			   html += '</div>';	   
+			   html += '</div>';
+			   html += '<p class="event-atag" style="text-align: right;">';
+			   html += '<p> 가격 : ${vo.package_cost}원</p>';   
+			   html += ' <hr>';
    })
    
-   html += '</table>';
+
    return html;
    
 }
 
 
 
-//주문 거래처 배열
-function saveOrderD_name(columnIndex) {
-    var table = document.getElementById("myTable");
-    var rows = table.getElementsByTagName("tr");
-    var columnValues = [];
-
-    for (var i = 0; i < rows.length; i++) {
-        var cells = rows[i].getElementsByTagName("td");
-
-        if (cells.length > columnIndex) {
-            var cellValue = cells[columnIndex].innerText;
-            columnValues.push(cellValue);
-        }
-    }
-
-    return columnValues;
-}
 
 
 
 
-//엔터키로 거래처 검색
+//엔터키로 범위검색
 $(document).ready(function() {
-     $('#search').keypress(function(e) {
-       if (e.keyCode == 13) { // 13 is the Enter key code
-         e.preventDefault(); // prevent default form submission behavior
+     
          $('#deptsearch').click(); // trigger button click event
-       }
-     });
    });
 
 
@@ -134,7 +106,7 @@ window.onload = function() {
    
    let startdateEl = document.getElementById("startdate")
    let enddateEl   = document.getElementById("enddate")
-   let excelEl     = document.getElementById("excelsave")
+
    
 
 
@@ -145,14 +117,13 @@ window.onload = function() {
       let startdateEl = document.getElementById("startdate")
       let enddateEl = document.getElementById("enddate")
       
-      let startdate = new Date(startdateEl.value);
+      let startdate = new(startdateEl.value);
       let enddate   = new Date(enddateEl.value);
       
-      startdate = startdate.toISOString().slice(0, 10);
-      enddate   = enddate.toISOString().slice(0, 10);
+
       
       $.ajax({
-         url: "/JWork/SearchInputList",
+         url: "/Reservation02",
          data : { search: $('#search').val(),
                startdate: startdate,
                enddate: enddate},
@@ -160,19 +131,13 @@ window.onload = function() {
                
          success : function(data){
             console.log(data);
-            //alert(data);
+            alert(data);
             let tableEl = document.getElementById('table');
-            const allsalesEl = document.getElementById('total');
-                var totalsPrice = 0;
                
                 
-            data.forEach(function (item) {
-               
-               totalsPrice += parseFloat(item.p_iprice*item.in_num);
-                 
-            });
+          
             let html = data_display(data);
-            allsalesEl.textContent = totalsPrice + '원';
+        
             $('#table').html(html); 
             },
          error :function(xhr){
@@ -252,7 +217,7 @@ marging:auto;
    <div id="moneyselect">
   <p> 최소금액 :</p> <input type="text" id="startdate"><br>
    <p>최대금액 : </p><input type="text" id="enddate"><br>
-  <input type="button" id="deptsearch" value="검색"/>
+  <input type="button" id="deptsearch" value="보기"/>
 
    </div>
   
