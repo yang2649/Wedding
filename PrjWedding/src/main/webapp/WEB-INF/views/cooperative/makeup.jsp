@@ -9,7 +9,7 @@
 <!-- 잡다한 헤드 부분 분리 -->
 <jsp:include page="/WEB-INF/views/part_menu/head_resources.jsp" />
 
-<!-- css 부분 사용 -->
+<!-- css 부분 사용 --> 
 <link rel="shortcut icon" href="/img/favicon.ico">
 <link rel="stylesheet" href="/css/common.css">
 <link rel="stylesheet" href="/css/slide.css">
