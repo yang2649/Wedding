@@ -18,6 +18,7 @@ public class ReservationServiceImpl implements ReservationService {
 	
 	@Override
 	public List<ReservationVo> PackageList(HashMap<String, Object> map) {
+		System.out.println("서비스임플리먼트" + map);
 		List<ReservationVo> vo = reservationDao.PacakgeList(map);
 		return vo;
 	} 

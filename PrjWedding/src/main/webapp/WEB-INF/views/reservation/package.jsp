@@ -59,33 +59,34 @@
 
 
 //테이블 생성
-function data_display(data) {
+function data_display(vo) {
    
    let html = '';
 
    
-   data.forEach(function(vo, index) {    
-	      html += '<div class="event-parent">';
+   vo.forEach(function(data, index) {    
+	      html += '<div class="data-item">';
 	      html += '<div class="event-image"><img src="Pds/download/external/" width="300px" high="300px"></div>';
 	      html += '<div class="event-text">';
 	      html += '<hr>';
-	      html += '<h3>' + vo.package_title + '</h3>';
+	      html += '<h3>' + data.package_title + '</h3>';
 	      html += '<hr>';
-	      html += '<p>' + vo.package_cont + '</p>';
+	      html += '<p>' + data.package_cont + '</p>';
 	      html += '<br>';
 	      html += '<p>reservation</p>';
 	      html += '<p>자세한 문의는 예약실로 상담예약 부탁드립니다. Tel. 041-520-9999</p>';  
-	      html += '</div>';	   
-	      html += '</div>';
 	      html += '<p class="event-atag" style="text-align: right;">';
-	      html += '<p> 가격 : ' + vo.package_cost + '원</p>';   
+	      html += '<p> 가격 : ' + data.package_cost + '원</p>';   
+	      html += '</div>';	   
 	      html += ' <hr>';
+	      html += '</div>';
 	   });
    
 
    return html;
    
-}
+} 
+
 
 
 
@@ -122,11 +123,11 @@ function data_display(data) {
          success : function(data){
             console.log(data);
             alert(data);
-            let tableEl = document.getElementById('table');
+            let tableEl = document.getElementById('data-container');
            
             let html = data_display(data);
         
-            $('#table').html(html); 
+            $('#data-container').html(html); 
             },
          error :function(xhr){
             console.log(xhr);
@@ -204,15 +205,15 @@ marging:auto;
 <div class="customer-notice">  	
   <hr>
    <div id="moneyselect">
-   <p>최소금액 :</p> <input type="number"  id="start"><br>
-   <p>최대금액 : </p><input type="number"  id="end"><br>
+   <p>최소금액 :</p> <input type="number"  id="start" value="3000000"><br>
+   <p>최대금액 : </p><input type="number"  id="end" value="8000000"><br>
   <input type="button" id="deptsearch" value="보기"/>
 
    </div>
   
  
    </table>
-   <div id="table">
+   <div id="data-container">
    
    
    

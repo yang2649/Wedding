@@ -32,17 +32,13 @@ public class ReservationController {
 
 	@RequestMapping("/Reservation02/List")
 	@ResponseBody
-	public ModelAndView PackageList(@RequestParam HashMap<String, Object> map) {
+	public List<ReservationVo> PackageList(@RequestParam HashMap<String, Object> map) {
 	
 		System.out.println( "map" + map);
 		List<ReservationVo> vo = reservationService.PackageList(map);
 
 
-		ModelAndView mv = new ModelAndView();
-		
-		System.out.println("vo"+ vo);
-		mv.addObject("vo",vo);
 	
-		return mv;
+		return vo;
 	}
 }

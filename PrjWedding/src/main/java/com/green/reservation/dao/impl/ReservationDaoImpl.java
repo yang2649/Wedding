@@ -18,8 +18,13 @@ public class ReservationDaoImpl implements ReservationDao {
 	
 	@Override
 	public List<ReservationVo> PacakgeList(HashMap<String, Object> map) {
+		
+		System.out.println("daoimpl" + map);
 		List<ReservationVo> vo = sqlSession.selectList("Reservation.GetPackageList", map);
-		return null;
+		
+		System.out.println("daoImpl" + vo);
+		
+		return vo;
 	}
 
 }
