@@ -18,5 +18,19 @@ public interface UserService {
 	void updateUser(HashMap<String, Object> map);
 
 	UserVo getUser( HashMap<String, Object> map);
+	
+	UserVo getAdminUserInfo( HashMap<String, Object> map);
 
+	List getAdminUserList();
+
+	List getAdminEstiList();
+
+	List getAdminFavList();
+
+	UserVo getUserById(String userId);
+
+	void adminUpdate(HashMap<String, Object> map);
+
+	void deleteUser(String memid);
+	
 }

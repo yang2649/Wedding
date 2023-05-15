@@ -4,6 +4,7 @@ package com.green.user.controller;
 import java.util.HashMap;
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,6 +12,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.context.request.RequestContextHolder;
+import org.springframework.web.context.request.ServletRequestAttributes;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.green.user.service.UserService;
@@ -69,16 +72,24 @@ public class UserController {
 			}
 			
 			// 로그인 성공하면
-			UserVo   userVo = userService.getLogin( map );
-			if ( userVo != null  ) {
-				session.setAttribute("login", userVo);
-				System.out.println("로그인:" + userVo );
-				returnURL = "redirect:/";
+			UserVo userVo = userService.getLogin(map);
+			HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes())
+					.getRequest();
+			String memid = request.getParameter("memid");
+			if (userVo != null) {
+				if (memid.equals("admin")) {
+					session.setAttribute("login", userVo);
+					System.out.println("로그인: " + userVo);
+					returnURL = "redirect:/adminhome";
+				} else {
+					session.setAttribute("login", userVo);
+					System.out.println("로그인: " + userVo);
+					returnURL = "redirect:/home";
+				}
 			} else {
 				returnURL = "redirect:/login";
 			}
-			
-			return   returnURL;			
+			return returnURL;
 		}
 
 		
@@ -140,6 +151,97 @@ public class UserController {
 			
 			return mv;
 		}
+		
+		// 관리자 회원 목록 조회
+		@RequestMapping("/Adminpage/Meminfomanager")
+		public String memlist(Model model) {
+
+			List memList = userService.getAdminUserList();
+
+			System.out.println("조회된 사용자 목록:" + memList);
+
+			model.addAttribute("mList", memList);
+
+			return "adminpage/meminfomanager";
+		}
+
+		// 관리자 견적서 목록 조회
+		@RequestMapping("/Adminpage/Estilistmanager")
+		public String estilist(Model model) {
+
+			List estiList = userService.getUserList();
+
+			System.out.println("조회된 견적서 목록:" + estiList);
+
+			model.addAttribute("eList", estiList);
+
+			return "adminpage/estilistmanager";
+		}
+
+		// 관리자 찜하기 목록 조회
+		@RequestMapping("/Adminpage/Favlistmanager")
+		public String favlist(Model model) {
+
+			List favList = userService.getUserList();
+
+			System.out.println("조회된 찜하기 목록:" + favList);
+
+			model.addAttribute("fList", favList);
+
+			return "adminpage/estilistmanager";
+		}
+
+		// 관리자 회원 정보 보기
+		@RequestMapping("/Adminpage/Adminview")
+		public ModelAndView getAdminUserInfo(HttpSession session, @RequestParam("memid") String memid) {
+			UserVo user = (UserVo) session.getAttribute("login");
+			HashMap<String, Object> map = (HashMap<String, Object>) session.getAttribute("map");
+
+			// 클릭한 회원의 정보 조회
+			UserVo clickedUser = userService.getUserById(memid);
+
+			ModelAndView mv = new ModelAndView();
+			mv.addObject("adminuserinfo", user);
+			mv.addObject("map", map);
+			mv.addObject("clickedUser", clickedUser); // 클릭한 회원의 정보 추가
+			mv.setViewName("adminpage/adminview");
+
+			return mv;
+		}
+
+		// 관리자 회원 정보 수정
+		@RequestMapping("/Adminpage/AdminUpdateForm")
+		public ModelAndView adminUpdateForm(HttpSession session, @RequestParam("memid") String memid) {
+			UserVo clickedUser = userService.getUserById(memid);
+
+			ModelAndView mv = new ModelAndView();
+			mv.addObject("user", clickedUser);
+			mv.setViewName("adminpage/adminupdate");
+
+			return mv;
+		}
+
+		@RequestMapping("/Adminpage/AdminUpdate")
+		public ModelAndView adminUpdate(HttpSession session, @RequestParam HashMap<String, Object> map) {
+			System.out.println("update: " + map);
+
+			String clickedUserId = String.valueOf(map.get("memid"));
+			String fmt = "redirect:/Adminpage/Adminview?memid=%s";
+			String loc = String.format(fmt, clickedUserId);
+			UserVo clickedUser = userService.getUserById(clickedUserId);
+
+			userService.adminUpdate(map);
+
+			ModelAndView mv = new ModelAndView();
+			session.setAttribute("login", userService.getUserById(clickedUserId));
+			System.out.println("update 후 clickedUser: " + clickedUser);
+			System.out.println("update 후 map: " + map);
+
+			mv.setViewName(loc);
+
+			return mv;
+		}
+
 		
 		
 }

@@ -8,17 +8,22 @@ public class UserVo {
 	private String memph;
 	private String email;
 	private String joindate;
+	private String lvl;
 	
-	public UserVo() {};
-	public UserVo(String memid, String mempw, String memname, String memph, String email, String joindate) {
+	//Constructor
+	public UserVo() {}
+	public UserVo(String memid, String mempw, String memname, String memph, String email, String joindate, String lvl) {
+		super();
 		this.memid = memid;
 		this.mempw = mempw;
 		this.memname = memname;
 		this.memph = memph;
 		this.email = email;
 		this.joindate = joindate;
+		this.lvl = lvl;
 	}
 	
+	//Get/Setter
 	public String getMemid() {
 		return memid;
 	}
@@ -49,18 +54,24 @@ public class UserVo {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public String getjoindate() {
+	public String getJoindate() {
 		return joindate;
 	}
-	public void setjoindate(String joindate) {
+	public void setJoindate(String joindate) {
 		this.joindate = joindate;
 	}
+	public String getLvl() {
+		return lvl;
+	}
+	public void setLvl(String lvl) {
+		this.lvl = lvl;
+	}
+	
+	//toString
 	@Override
 	public String toString() {
 		return "UserVo [memid=" + memid + ", mempw=" + mempw + ", memname=" + memname + ", memph=" + memph + ", email="
-				+ email + ", joindate=" + joindate + "]";
+				+ email + ", joindate=" + joindate + ", lvl=" + lvl + "]";
 	}
-	
-
 	
 }
