@@ -103,14 +103,13 @@
 						<li style="font-size: 1.2rem;"><a href="/logout">로그아웃</a></li>
 					</c:if>
 					<li><hr></li>
-					<li><a href="/Adminpage/Meminfomanager">Member Info Management</a></li>
-					<!-- 회원 정보 창입니다 -->
+					<li><a href="/Adminpage/Meminfomanager">회원 관리</a></li>
 					<br>
-					<li><a href="/Adminpage/Estilistmanager">Estimate List Management</a></li>
-					<!-- 견적서라는 뜻입니다 -->
+					<li><a href="/Adminpage/Favlistmanager">찜 목록 관리</a></li>
 					<br>
-					<li><a href="/Adminpage/Favlistmanager">Favorite List Management</a></li>
-					<!-- 찜 목록 이라는뜻 입니다 -->
+					<li><a href="/Adminpage/Estilistmanager">견적서 관리</a></li>
+					<br>
+					<li><a href="/Adminpage/Communitymanager">게시판 관리</a></li>
 				</ul>
 			</li>
 		</ul>
