@@ -13,9 +13,9 @@
    	            ,  package_cont
    	            ,  package_cost
    	   FROM        package
-   	      <if test="startdate != null and enddate != null">
-   	  WHERE package_cost BETWEEN #{startdate} AND #{enddate};
-   	</if>   
+   	     
+   	  WHERE package_cost BETWEEN #{start} AND #{end}
+   	
 		
 
 

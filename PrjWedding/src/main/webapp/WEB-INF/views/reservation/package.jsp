@@ -64,23 +64,23 @@ function data_display(data) {
    let html = '';
 
    
-   data.forEach(function(data, index) {    
-	   html += '<div class="event-parent">';
-	   html += '<div class="event-image"><img src="Pds/download/external/${ vo.sfilename }" width="300px" high="300px"></div>';
-	   html += '<div class="event-text">';
-	   html += '<hr>';
-	   html += '<h3>${vo.package_title}</h3>'
-		   html += '<hr>';
-			   html += '<p>${vo.package_cont}</p>';
-			   html += '<br>';
-			   html += '<p>reservation</p>';
-			   html += '<p>자세한 문의는 예약실로 상담예약 부탁드립니다. Tel. 041-520-9999</p>';  
-			   html += '</div>';	   
-			   html += '</div>';
-			   html += '<p class="event-atag" style="text-align: right;">';
-			   html += '<p> 가격 : ${vo.package_cost}원</p>';   
-			   html += ' <hr>';
-   })
+   data.forEach(function(vo, index) {    
+	      html += '<div class="event-parent">';
+	      html += '<div class="event-image"><img src="Pds/download/external/" width="300px" high="300px"></div>';
+	      html += '<div class="event-text">';
+	      html += '<hr>';
+	      html += '<h3>' + vo.package_title + '</h3>';
+	      html += '<hr>';
+	      html += '<p>' + vo.package_cont + '</p>';
+	      html += '<br>';
+	      html += '<p>reservation</p>';
+	      html += '<p>자세한 문의는 예약실로 상담예약 부탁드립니다. Tel. 041-520-9999</p>';  
+	      html += '</div>';	   
+	      html += '</div>';
+	      html += '<p class="event-atag" style="text-align: right;">';
+	      html += '<p> 가격 : ' + vo.package_cost + '원</p>';   
+	      html += ' <hr>';
+	   });
    
 
    return html;
@@ -93,49 +93,37 @@ function data_display(data) {
 
 
 
-//엔터키로 범위검색
-$(document).ready(function() {
-     
-         $('#deptsearch').click(); // trigger button click event
-   });
-
 
 
 //body 생성되고
-window.onload = function() {
+ window.onload = function() {
    
-   let startdateEl = document.getElementById("startdate")
-   let enddateEl   = document.getElementById("enddate")
-
-   
-
-
-   
-   //거래처 검색 후 테이블 생성
+   let startdateEl = document.getElementById("start")
+   let enddateEl   = document.getElementById("end")
+  
+   // 검색 후 테이블 생성
    let deptsearchEl = document.getElementById('deptsearch')
    deptsearchEl.onclick = function(e) {
-      let startdateEl = document.getElementById("startdate")
-      let enddateEl = document.getElementById("enddate")
+      let startEl = document.getElementById("start")
+      let endEl = document.getElementById("end")
       
-      let startdate = new(startdateEl.value);
-      let enddate   = new Date(enddateEl.value);
-      
-
+      let start = startEl.value;
+      let end = endEl.value;
+         
       
       $.ajax({
-         url: "/Reservation02",
+         url: "/Reservation02/List",
          data : { search: $('#search').val(),
-               startdate: startdate,
-               enddate: enddate},
+        	   start: start,
+               end: end
+        	 },
          type: "POST", 
                
          success : function(data){
             console.log(data);
             alert(data);
             let tableEl = document.getElementById('table');
-               
-                
-          
+           
             let html = data_display(data);
         
             $('#table').html(html); 
@@ -146,8 +134,9 @@ window.onload = function() {
             }
          
       }); 
+   
+     }
    }
-}
 
 
 
@@ -215,8 +204,8 @@ marging:auto;
 <div class="customer-notice">  	
   <hr>
    <div id="moneyselect">
-  <p> 최소금액 :</p> <input type="text" id="startdate"><br>
-   <p>최대금액 : </p><input type="text" id="enddate"><br>
+   <p>최소금액 :</p> <input type="number"  id="start"><br>
+   <p>최대금액 : </p><input type="number"  id="end"><br>
   <input type="button" id="deptsearch" value="보기"/>
 
    </div>
