@@ -26,6 +26,14 @@ public interface EstimateDao {
 
 	List getStudioList();
 
+	EstimateVo getHallPrice(String hallname);
+
+	EstimateVo getCateringPrice(String cateringtype);
+
+	EstimateVo getDressPrice(String dressname);
+
+	EstimateVo getStudioPrice(String studioname);
+
 
 	 
 	

@@ -98,6 +98,43 @@ public class EstimateDaoImpl implements EstimateDao {
 		
 		return studioList;
 	}
+
+
+	@Override
+	public EstimateVo getHallPrice(String hallname) {
+		
+        EstimateVo estivo = sqlSession.selectOne("Estimate.GetHallprice", hallname);
+		
+		return estivo;
+		
+	}
+
+
+	@Override
+	public EstimateVo getCateringPrice(String cateringtype) {
+		
+	  EstimateVo estivo = sqlSession.selectOne("Estimate.GetCateringprice", cateringtype);
+			
+	  return estivo;
+	}
+
+
+	@Override
+	public EstimateVo getDressPrice(String dressname) {
+		
+		 EstimateVo estivo = sqlSession.selectOne("Estimate.GetDressprice", dressname);
+			
+		 return estivo;
+	}
+
+
+	@Override
+	public EstimateVo getStudioPrice(String studioname) {
+		
+		EstimateVo estivo = sqlSession.selectOne("Estimate.GetStudioprice", studioname);
+		
+		return estivo;
+	}
 }
 
 

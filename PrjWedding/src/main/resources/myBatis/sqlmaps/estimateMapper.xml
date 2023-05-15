@@ -6,7 +6,7 @@
 
 <mapper namespace="Estimate">
 
-<!-- halllist 조회하기 -->
+<!-- halllist 조회 -->
    <select id         = "HallList"
            resultType = "com.green.estimate.vo.EstimateVo"  >
    
@@ -71,9 +71,33 @@
       WHERE  HALLNAME = #{ hallname }
    
    </select> 
+   
+ <!-- hallprice 조회   -->
+   <select id         = "GetHallprice"
+           resultType = "com.green.estimate.vo.EstimateVo"  >
+   
+     SELECT    HALLID
+   	         , HALLNAME
+   	         , HALLOSPRICE
+   	         , HALLPSPRICE
+       FROM  HALL    
+      WHERE  HALLNAME = #{ hallname }
+   
+   </select> 
 
  <!-- cateringid 조회   -->
    <select id         = "GetCateringid"
+           resultType = "com.green.estimate.vo.EstimateVo"  >
+   
+     SELECT    CATERINGID
+   	         , CATERINGPRICE
+       FROM  CATERING    
+      WHERE  CATERINGTYPE = #{ cateringtype }
+   
+   </select>
+   
+ <!-- cateringprice 조회   -->
+   <select id         = "GetCateringprice"
            resultType = "com.green.estimate.vo.EstimateVo"  >
    
      SELECT    CATERINGID
@@ -93,6 +117,17 @@
 		WHERE DRESSNAME = #{ dressname }
 
    </select>
+
+<!-- dressid 조회 -->
+   <select id="GetDressprice"
+		resultType="com.green.estimate.vo.EstimateVo">
+
+		SELECT    DRESSID
+	            , DRESSPRICE
+		FROM  DRESS
+		WHERE DRESSNAME = #{ dressname }
+
+   </select>
    
 <!-- studioid 조회 -->
    <select id="GetStudioid"
@@ -104,6 +139,17 @@
 		WHERE  STUDIONAME = #{ studioname }
    
   </select>   
+
+<!-- studioid 조회 -->
+   <select id="GetStudioprice"
+		resultType="com.green.estimate.vo.EstimateVo">
+
+		SELECT    STUDIOID
+	            , STUDIOPRICE
+		FROM   STUDIO
+		WHERE  STUDIONAME = #{ studioname }
+   
+  </select>
 
 
  <!-- 견적서 저장하기   -->

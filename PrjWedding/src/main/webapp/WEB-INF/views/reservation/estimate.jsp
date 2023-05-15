@@ -3,10 +3,12 @@
    
 <%@taglib prefix="c"  uri="http://java.sun.com/jsp/jstl/core" %> 
 
+
+
 <!DOCTYPE html>
 <head>
 <meta charset="UTF-8">
-<title>견적서</title>
+<title>Insert title here</title>
 <!-- css 부분 사용 -->
 <link rel="shortcut icon" href="/img/favicon.ico">
 <link rel="stylesheet" href="./css/loginstyle.css">
@@ -203,21 +205,19 @@ input[type="number"] {
          <img class="card-img" src="./img/mypage/esti.jpg" alt="esti image">
         </div>
         <div class="card-footer" style="display: flex; align-items: center;">
-          <input type="button" id="InputHallname"  name="hallname" value="greenhall" style="font-size:24px" 
-          onclick="copyInfo(this.value, '', '', '')" required>        
-          <li>hall hallosprice :</li>
-          <li><a href="/Reservation/Allestimate?hallname=${ estivo.hallname }">${ estivo.hallosprice }</a></li>
+          <input type="button" id="InputHallname"  name="hallname" value="greenhall" style="font-size:24px" required>        
+          <li>greenhall hallosprice :</li>
+          <li><a href="/Reservation/Hallprice?hallname=${ estivo.hallname }">${ estivo.hallosprice }</a></li>
          </div>
        </div>
-   
+       
        <div class="hallcard">
          <div class="hallcard-body">
           <img class="card-img" src="./img/mypage/esti.jpg" alt="esti image">
          </div>
          <div class="card-footer" style="display: flex; align-items: center;">
-          <input type="button" id="InputHallname"   name="hallname" value="redhall" style="font-size:24px"
-           onclick="copyInfo(this.value, '', '', '')" required>
-          <p>blue price</p>
+          <input type="button" id="InputHallname"   name="hallname" value="redhall" style="font-size:24px" required>
+          <p>redhall price : </p>
          </div>
        </div> 
   
@@ -226,8 +226,7 @@ input[type="number"] {
           <img class="card-img" src="./img/mypage/esti.jpg" alt="esti image">
          </div>
          <div class="card-footer" style="display: flex; align-items: center;">
-          <input type="button" id="InputHallname"   name="hallname" value="bluehall" style="font-size:24px"
-           onclick="copyInfo(this.value, '', '', '')" required>
+          <input type="button" id="InputHallname"   name="hallname" value="bluehall" style="font-size:24px" required>
           <p>red price</p>
          </div>
        </div> 
@@ -237,8 +236,7 @@ input[type="number"] {
           <img class="card-img" src="./img/mypage/esti.jpg" alt="esti image">
          </div>
          <div class="card-footer" style="display: flex; align-items: center;">
-         <input type="button" id="InputHallname"  name="hallname" value="blackhall" style="font-size:24px"
-          onclick="copyInfo(this.value, '', '', '')" required>
+         <input type="button" id="InputHallname"  name="hallname" value="blackhall" style="font-size:24px" required>
          <p>black price</p>
         </div>
        </div>
@@ -248,9 +246,8 @@ input[type="number"] {
           <img class="card-img" src="./img/mypage/esti.jpg" alt="esti image">
         </div>
         <div class="card-footer" style="display: flex; align-items: center;">
-         <input type="button" id="InputHallname" name="hallname" value="viphall" style="font-size:24px"
-          onclick="copyInfo(this.value, '', '', '')" required>    
-	     <p>purple price</p> 
+         <input type="button" id="InputHallname" name="hallname" value="viphall" style="font-size:24px" required>    
+	     <p>viphall price</p> 
 	    </div> 
 	   </div> 
    </div>
@@ -263,8 +260,8 @@ input[type="number"] {
  <form onsubmit="copyInfo(); return false;">
   <div class="catering-contanier">
     <div class="input-form">
-    <input type="button" id="InputCateringtype"  name="cateringtype" value="일반뷔페" style="font-size:24px" onclick="copyInfo('', this.value, '', '')" required>
-    <input type="button" id="InputCateringtype"  name="cateringtype" value="프리미엄" style="font-size:24px" onclick="copyInfo('', this.value, '', '')" required>
+    <input type="button" id="InputCateringtype"  name="cateringtype" value="일반뷔페" style="font-size:24px" required>
+    <input type="button" id="InputCateringtype"  name="cateringtype" value="프리미엄" style="font-size:24px" required>
 	</div>
    </div>
   </form>
@@ -273,11 +270,11 @@ input[type="number"] {
 <h2 class="estititle">본식 드레스 목록 <span class="triangle-icon" onclick="toggledressContainer()">▼</span></h2>
   <form onsubmit="copyInfo(); return false;">
    <div class="dress-contanier">
-    <input type="button" id="InputDressname"  name="dressname" value="블루벨 드레스" style="font-size:24px" onclick="copyInfo('', '' , this.value, '')" required>
-    <input type="button" id="InputDressname"  name="dressname" value="드레스2" style="font-size:24px" onclick="copyInfo('', '' , this.value, '')" required>
-    <input type="button" id="InputDressname"  name="dressname" value="드레스3" style="font-size:24px" onclick="copyInfo('', '' , this.value, '')" required>
-    <input type="button" id="InputDressname"  name="dressname" value="드레스4" style="font-size:24px" onclick="copyInfo('', '' , this.value, '')" required>
-    <input type="button" id="InputDressname"  name="dressname" value="드레스5" style="font-size:24px" onclick="copyInfo('', '' , this.value, '')" required> 
+    <input type="button" id="InputDressname"  name="dressname" value="블루밍 드레스" style="font-size:24px" required>
+    <input type="button" id="InputDressname"  name="dressname" value="드레스2" style="font-size:24px"  required>
+    <input type="button" id="InputDressname"  name="dressname" value="드레스3" style="font-size:24px"  required>
+    <input type="button" id="InputDressname"  name="dressname" value="드레스4" style="font-size:24px"  required>
+    <input type="button" id="InputDressname"  name="dressname" value="드레스5" style="font-size:24px"  required> 
    </div>
   </form>
 
@@ -285,9 +282,9 @@ input[type="number"] {
 <h2 class="estititle">스튜디오 목록 <span class="triangle-icon" onclick="toggledressContainer()">▼</span></h2>
   <form onsubmit="copyInfo(); return false;">
    <div class="studio-contanier"> 
-    <input type="button" id="InputStudioname"  name="studioname" value="Fillmoment" style="font-size:24px" onclick="copyInfo('', '', '', this.value)" required>
-    <input type="button" id="InputStudioname"  name="studioname" value="Steso" style="font-size:24px" onclick="copyInfo('', '', '', this.value)" required>
-    <input type="button" id="InputStudioname"  name="studioname" value="너를 봄" style="font-size:24px" onclick="copyInfo('', '', '', this.value)" required>
+    <input type="button" id="InputStudioname"  name="studioname" value="Fillmoment" style="font-size:24px" required>
+    <input type="button" id="InputStudioname"  name="studioname" value="Steso" style="font-size:24px"  required>
+    <input type="button" id="InputStudioname"  name="studioname" value="너를 봄" style="font-size:24px"  required>
    </div>
 </form>
 
@@ -315,14 +312,14 @@ input[type="number"] {
                          <input type="hidden" id="hallname" name="hallname"></p>
    <div class="input-group">
    <label for="hallosprice">Hall Price:</label>
-   <input type="number" id="hallprice" name="hallosprice" value="<c:out value="${estivo.hallosprice}" />" />
+   <input type="number" id="hallosprice" name="hallosprice" value="<c:out value="${estivo.hallosprice}" />" />
   </div>
   
   <p>뷔페 타입 :   <span id="outputCateringtype" ></span>
                    <input type="hidden" id="cateringtype" name="cateringtype"></p>
   <div class="input-group">
-        <label for="cateringprice">Catering Price:</label>
-        <input type="number" id="cateringprice" name="cateringprice" value="50000">
+   <label for="cateringprice">Catering Price:</label>
+   <input type="number" id="cateringprice" name="cateringprice" value="<c:out value="${estivo.cateringprice}" />">
   </div>
 
   
@@ -330,8 +327,8 @@ input[type="number"] {
   <p>드레스 이름 :   <span id="outputDressName"></span>
                 <input type="hidden" id="dressname" name="dressname"></p>
   <div class="input-group">
-        <label for="dressprice">Dress Price:</label>
-        <input type="number" id="dressprice" value="15000">
+    <label for="dressprice">Dress Price:</label>
+    <input type="number" id="dressprice" name="dressprice" value="<c:out value="${estivo.dressprice}" />">
   </div>
  
   
@@ -340,7 +337,7 @@ input[type="number"] {
                 <input type="hidden" id="studioname" name="studioname"></p>
   <div class="input-group">
         <label for="studioprice">Studio Price:</label>
-        <input type="number" id="studioprice" value="20000">
+        <input type="number" id="studioprice" name="studioprice" value="<c:out value="${estivo.studioprice}" />">
   </div>
   
  </div>
@@ -382,6 +379,9 @@ function toggleHallContainer() {
 */
 </script>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="script.js"></script>
+
 
 <script>
 
@@ -394,6 +394,7 @@ const hallnameOutput     = document.querySelector('#hallname-output');
 const cateringtypeOutput = document.querySelector('#cateringtype-output');
 const dressnameOutput    = document.querySelector('#dressname-output');
 const studionameOutput   = document.querySelector('#studioname-output');
+
 
 function copyInfo(hallname, cateringtype, dressname, studioname) {  
   var date  = document.getElementById("inputDate").value;
@@ -436,19 +437,56 @@ return false;
 </script>
 
 <script>
-//가격 불러오기
-$('#hallname').change(function() {
+// 홀가격 가져오기
+$('#InputHallname').on('click', function() {
+    alert('ㅋㅋㅋ');
+	copyInfo(this.value, '', '', '')
+	
+	
     // 선택된 홀 이름 가져오기
     var hallname = $(this).val();
     
     // AJAX 요청을 사용하여 해당 홀에 대한 정보 가져오기
     $.ajax({
-        url: '/Reservation/Hallprice',
-        type: 'GET',
+        url: 'Reservation/Hallprice',
+        type: 'POST',
         data: { hallname: hallname },
         success: function(data) {
             // 가져온 정보를 사용하여 hallprice 입력란의 값을 설정
             $('#hallosprice').val(data.hallosprice);
+
+            // hallprice 값을 파싱하여 변수에 저장
+            let hallosprice = parseInt(data.hallosprice);
+            console.log(hallosprice);
+        },
+        error: function() {
+            alert('Failed to get hall info.');
+        }
+    });
+    
+    
+});
+
+// 뷔페가격 가져오기
+$('#InputCateringtype').on('click', function() {
+    alert('ㅋㅋㅋ');
+	copyInfo('', this.value, '', '')
+	
+    // 선택된 홀 이름 가져오기
+    var cateringtype = $(this).val();
+    
+    // AJAX 요청을 사용하여 해당 홀에 대한 정보 가져오기
+    $.ajax({
+        url: 'Reservation/Cateringprice',
+        type: 'POST',
+        data: { cateringtype: cateringtype },
+        success: function(data) {
+            // 가져온 정보를 사용하여 hallprice 입력란의 값을 설정
+            $('#cateringprice').val(data.cateringprice);
+
+            // cateringprice 값을 파싱하여 변수에 저장
+            let cateringprice = parseInt(data.cateringprice);
+            console.log(cateringprice);
         },
         error: function() {
             alert('Failed to get hall info.');
@@ -456,25 +494,75 @@ $('#hallname').change(function() {
     });
 });
 
-let hallpriceInput = document.getElementById("hallprice");
-let hallprice = parseInt(hallpriceInput.value);
+//드레스 가격 가져오기
+$('#InputDressname').on('click', function() {
+    alert('ㅋㅋㅋ');
+	copyInfo('',  '', this.value, '')
+	
+    // 선택된 홀 이름 가져오기
+    var dressname = $(this).val();
+    
+    // AJAX 요청을 사용하여 해당 홀에 대한 정보 가져오기
+    $.ajax({
+        url: 'Reservation/Dressprice',
+        type: 'POST',
+        data: { dressname: dressname },
+        success: function(data) {
+            // 가져온 정보를 사용하여 dressprice 입력란의 값을 설정
+            $('#dressprice').val(data.dressprice);
 
+            // dressprice 값을 파싱하여 변수에 저장
+            let dressprice = parseInt(data.dressprice);
+            console.log(dressprice);
+        },
+        error: function() {
+            alert('Failed to get hall info.');
+        }
+    });
+});
+
+//스튜디오 가격 가져오기
+$('#InputStudioname').on('click', function() {
+    alert('ㅋㅋㅋ');
+	copyInfo('',  '', '', this.value)
+	
+    // 선택된 홀 이름 가져오기
+    var studioname = $(this).val();
+    
+    // AJAX 요청을 사용하여 해당 홀에 대한 정보 가져오기
+    $.ajax({
+        url: 'Reservation/Studioprice',
+        type: 'POST',
+        data: { studioname: studioname },
+        success: function(data) {
+            // 가져온 정보를 사용하여 studioprice 입력란의 값을 설정
+            $('#studioprice').val(data.studioprice);
+
+            // studioprice 값을 파싱하여 변수에 저장
+            let studioprice = parseInt(data.studioprice);
+            console.log(studioprice);
+        },
+        error: function() {
+            alert('Failed to get hall info.');
+        }
+    });
+});
 </script>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="script.js"></script>
+
+
 
 <script>
 // 가격 계산
 // 이벤트 리스너 추가
-document.querySelector('#hallprice').addEventListener('input', calculateTotal);
+document.querySelector('#hallosprice').addEventListener('input', calculateTotal);
 document.querySelector('#cateringprice').addEventListener('input', calculateTotal);
 document.querySelector('#dressprice').addEventListener('input', calculateTotal);
 document.querySelector('#studioprice').addEventListener('input', calculateTotal);
 
 // total input 필드의 값을 계산하여 업데이트하는 함수
 function calculateTotal() {
- const hallPrice     = parseInt(document.querySelector('#hallprice').value) || 0;
+ const hallPrice     = parseInt(document.querySelector('#hallosprice').value) || 0;
  const cateringPrice = parseInt(document.querySelector('#cateringprice').value) || 0;
  const dressPrice    = parseInt(document.querySelector('#dressprice').value) || 0;
  const studioPrice   = parseInt(document.querySelector('#studioprice').value) || 0;

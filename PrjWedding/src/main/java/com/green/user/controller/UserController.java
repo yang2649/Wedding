@@ -105,7 +105,7 @@ public class UserController {
 				} else {
 					session.setAttribute("login", userVo);
 					System.out.println("로그인: " + userVo);
-					returnURL = "redirect:/home";
+					returnURL = "redirect:/";
 				}
 			} else {
 				returnURL = "redirect:/login";

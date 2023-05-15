@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 import com.green.estimate.dao.EstimateDao;
 import com.green.estimate.service.EstimateService;
 import com.green.estimate.vo.EstimateVo;
+import com.green.user.vo.UserVo;
 
 
 @Service("estimateService")
@@ -105,6 +106,46 @@ public class EstimateServiceImpl implements EstimateService{
 		List  studioList = estimateDao.getStudioList();
 		
 		return studioList;
+	}
+	
+
+	@Override
+	public EstimateVo getHallPrice(String hallname) {
+	
+		EstimateVo estivo = estimateDao.getHallPrice( hallname );
+		
+		return estivo;
+			
+	}
+
+
+
+	@Override
+	public EstimateVo getCateringPrice(String cateringtype) {
+		
+		EstimateVo estivo = estimateDao.getCateringPrice( cateringtype );
+		
+		return estivo;
+	}
+
+
+
+	@Override
+	public EstimateVo getDressPrice(String dressname) {
+		
+		EstimateVo estivo = estimateDao.getDressPrice( dressname );
+		
+		return estivo;
+	}
+
+
+
+	@Override
+	public EstimateVo getStudioPrice(String studioname) {
+		
+		EstimateVo estivo = estimateDao.getStudioPrice( studioname );
+		
+		return estivo;
 	}
 
 	
