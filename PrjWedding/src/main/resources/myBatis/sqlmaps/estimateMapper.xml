@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="Estimate">
+
+<!-- halllist 조회 -->
+   <select id         = "HallList"
+           resultType = "com.green.estimate.vo.EstimateVo"  >
+   
+     SELECT    HALLID
+   	         , HALLNAME
+   	         , HALLOSPRICE
+   	         , HALLPSPRICE
+       FROM    HALL    
+   
+   
+   </select> 
+
+<!-- cateringlist 조회 -->
+   <select id         = "CateringList"
+           resultType = "com.green.estimate.vo.EstimateVo"  >
+   
+     SELECT    CATERINGID
+   	         , CATERINGTYPE
+   	         , CATERINGPRICE
+       FROM    CATERING
+   
+   
+   </select> 
+   
+<!-- dresslist 조회 -->
+   <select id         = "DressList"
+           resultType = "com.green.estimate.vo.EstimateVo"  >
+   
+     SELECT    DRESSID
+   	         , DRESSNAME
+   	         , DRESSPRICE
+       FROM    DRESS
+      WHERE    DRESSFOR = 'DW'
+   
+   
+   </select> 
+   
+<!-- studiolist 조회 -->
+   <select id         = "StudioList"
+           resultType = "com.green.estimate.vo.EstimateVo"  >
+   
+     SELECT    STUDIOID
+   	         , STUDIONAME
+   	         , STUDIOPRICE
+       FROM    STUDIO   
+   
+   
+   </select> 
+   
+   
+
+
+ <!-- hallid 조회   -->
+   <select id         = "GetHallid"
+           resultType = "com.green.estimate.vo.EstimateVo"  >
+   
+     SELECT    HALLID
+   	         , HALLNAME
+   	         , HALLOSPRICE
+   	         , HALLPSPRICE
+       FROM  HALL    
+      WHERE  HALLNAME = #{ hallname }
+   
+   </select> 
+
+ <!-- cateringid 조회   -->
+   <select id         = "GetCateringid"
+           resultType = "com.green.estimate.vo.EstimateVo"  >
+   
+     SELECT    CATERINGID
+   	         , CATERINGPRICE
+       FROM  CATERING    
+      WHERE  CATERINGTYPE = #{ cateringtype }
+   
+   </select>
+
+<!-- dressid 조회 -->
+   <select id="GetDressid"
+		resultType="com.green.estimate.vo.EstimateVo">
+
+		SELECT    DRESSID
+	            , DRESSPRICE
+		FROM  DRESS
+		WHERE DRESSNAME = #{ dressname }
+
+   </select>
+   
+<!-- dressid 조회 -->
+   <select id="GetStudioid"
+		resultType="com.green.estimate.vo.EstimateVo">
+
+		SELECT    STUDIOID
+	            , STUDIOPRICE
+		FROM   STUDIO
+		WHERE  STUDIONAME = #{ studioname }
+   
+  </select>   
+
+
+ <!-- 견적서 저장하기   -->
+	<insert id="InsertEstimate"
+	        parameterType="com.green.estimate.vo.EstimateVo">
+
+		INSERT INTO ESTIMATES(
+		ESTIID,
+		ESTINAME,
+		MEMID,
+		RESDATE,
+		RESTIME,
+		GUESTNUM,
+		HALLID,
+		CATERINGID,
+		STUDIOID,
+		DRESSID,
+		TOTALCOST
+		) VALUES ( 
+	    'ES1000',
+		#{ estiname },
+		#{ memid    },
+		TO_DATE(#{ resdate  }, 'YYYY-MM-DD'),
+		TO_DATE(#{ restime  }, 'HH24:MI'),
+		#{ guestnum   },	 
+		#{ hallid     },
+		#{ cateringid },
+		#{ studioid   },
+		#{ dressid    },
+		 SYSDATE
+
+		)
+	</insert>
+
+
+</mapper>
