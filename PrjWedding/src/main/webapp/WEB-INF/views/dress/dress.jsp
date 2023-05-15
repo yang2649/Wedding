@@ -21,6 +21,7 @@
 <link rel="stylesheet" href="/css/common.css">
 <link rel="stylesheet" href="/css/styles.css">
 <link rel="stylesheet" href="/css/slide.css">
+<link rel="stylesheet" href="/css/btn.css">
 
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
@@ -146,10 +147,17 @@ display: flex;
   <a class="nav-item nav-link" href="/Cooperative05" style="color: rgb(0, 0, 0)">Invitation</a>
 </nav>	
 
+
+<a class="dribbble" href="https://dribbble.com/shots/7441241-Button-Hover-Effects" target="_blank"><img src="https://cdn.dribbble.com/assets/dribbble-ball-mark-2bd45f09c2fb58dbbfb44766d5d1d07c5a12972d602ef8b32204d28fa3dda554.svg" alt=""></a>
 <br><br><br><br>
+	<div id="text-table"><br>
+		<h1 style="text-align: center; font-size: 15px;">
+	<a href="/Cooperative02"><button type="button" class="button">WEDDING</button></a>
+	<a href="/Cooperative09"><button type="button" class="button" >STUDIO</button></a><br><br>
 	<div id="text-table">
 		<h1 style="text-align: center;">
-			<span style="color: rgb(191, 131, 101);" ">Dress</span></h1>
+			<span style="color: rgb(191, 131, 101);" ">Studio Dress</span></h1>
+	</div> <br><br>
 </div>
  <div id="dress">
  <form action="/GGim" method="Post">
@@ -159,6 +167,8 @@ display: flex;
    <c:forEach var="dress" items="${ dressList }" >
       <div id="dressimg">
         <img src="${dress.dressimage}"  />
+        <p style="font-family: 'Noto Sans KR', sans-serif; font-size: 25px; ">${dress.dressname}</p> 
+        <p style="font-family: 'Noto Sans KR', sans-serif; font-size: 15px; ">${dress.dressprice} ₩</p> 
         <div style="text-align:center;">
         <input class="dressbtn" type="button" value="찜하기" data-dressid="${dress.dressid }">
         </div>
@@ -215,8 +225,6 @@ display: flex;
     const  dressid = document.querySelector('[name=dressid]');
     btns.forEach(function(btn, index) {
     	btn.addEventListener('click', function(e) {    		
-    		console.log(this);
-    		alert(this.dataset.dressid);
     		
     		dressid.value = this.dataset.dressid; 
     		form.action = '/GGim';
