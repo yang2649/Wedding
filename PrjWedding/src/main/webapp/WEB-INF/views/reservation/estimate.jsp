@@ -1,10 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
    pageEncoding="UTF-8"%>
+   
+<%@taglib prefix="c"  uri="http://java.sun.com/jsp/jstl/core" %> 
 
 <!DOCTYPE html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>견적서</title>
 <!-- css 부분 사용 -->
 <link rel="shortcut icon" href="/img/favicon.ico">
 <link rel="stylesheet" href="./css/loginstyle.css">
@@ -202,8 +204,9 @@ input[type="number"] {
         </div>
         <div class="card-footer" style="display: flex; align-items: center;">
           <input type="button" id="InputHallname"  name="hallname" value="greenhall" style="font-size:24px" 
-          onclick="copyInfo(this.value, '', '', '')" required>
-          <p> greenhall price : </p>  
+          onclick="copyInfo(this.value, '', '', '')" required>        
+          <li>hall hallosprice :</li>
+          <li><a href="/Reservation/Allestimate?hallname=${ estivo.hallname }">${ estivo.hallosprice }</a></li>
          </div>
        </div>
    
@@ -308,18 +311,18 @@ input[type="number"] {
    <p>예상 하객수 :      <span id="outputGuest"></span><input type="hidden" id="guestnum" name="guestnum"></p>
  
 
-   <p>홀   이름 :        <span id="outputHallName">${ estivo.hallname }</span>
+   <p>홀   이름 :        <span id="outputHallName"></span>
                          <input type="hidden" id="hallname" name="hallname"></p>
    <div class="input-group">
-     <label for="hallprice">Hall Price : </label>
-     <input type="number" id="hallprice" name="hallosprice" value="${ estivo.hallosprice }">
+   <label for="hallosprice">Hall Price:</label>
+   <input type="number" id="hallprice" name="hallosprice" value="<c:out value="${estivo.hallosprice}" />" />
   </div>
   
   <p>뷔페 타입 :   <span id="outputCateringtype" ></span>
-              <input type="hidden" id="cateringtype" name="cateringtype"></p>
+                   <input type="hidden" id="cateringtype" name="cateringtype"></p>
   <div class="input-group">
         <label for="cateringprice">Catering Price:</label>
-        <input type="number" id="cateringprice" value="50000">
+        <input type="number" id="cateringprice" name="cateringprice" value="50000">
   </div>
 
   
@@ -415,7 +418,7 @@ function copyInfo(hallname, cateringtype, dressname, studioname) {
   document.getElementById("restime").value = time;
   document.getElementById("guestnum").value = guest;
   
-  outputHallName.textContent = hallname ? hallname : outputHallName.textContent;
+  outputHallName.textContent = hallname ? hallname : outputHallName.textContent;  
   outputCateringtype.textContent = cateringtype ? cateringtype : outputCateringtype.textContent;
   outputDressName.textContent = dressname ? dressname : outputDressName.textContent;    
   outputStudioName.textContent = studioname ? studioname : outputStudioName.textContent;    
@@ -485,10 +488,12 @@ calculateTotal();
 </script>
 
 <script>
+/*
 function showesticomp() {
-	window.open("Reservaiton/Estimatecomp", "팝업 테스트",
+	window.open("/Reservation/Estimatecomp", "팝업 테스트",
 			"width=500, height=550, top=250, left=650");
 }
+*/
 </script>
 </body>
 </html>
