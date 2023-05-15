@@ -23,7 +23,7 @@ public class DressController {
 	
 	// 회원목록조회 -> 회원목록을 조회해서 회원목록패이지(user/list.jsp)로 이동
 	// http://localhost:9090/User/List
-	@RequestMapping("/Cooperative02")
+	@RequestMapping("/Cooperative09")
 	public  ModelAndView list( HttpSession session,
 			@RequestParam HashMap<String, Object> map) {
 		
@@ -31,11 +31,15 @@ public class DressController {
 		// db 조회
 		 List<PVo> dressList = dressService.getDressList(map); 
 		 String  dressid  =  (String)map.get("dressid");
+		 String  dressname  =  (String)map.get("dressname");
+		 String  dressprice  =  (String)map.get("dressprice");
 		 String  memid    = user.getMemid();
 		 
 		 
 		  PVo PVo = (PVo) map.get("PVo");
 		 
+		  map.put("dressname", dressname );
+		  map.put("dressprice", dressprice );
 		 map.put("memid", memid );
 		 map.put("dressid",dressid);
 		 ModelAndView mv = new ModelAndView();
@@ -49,4 +53,6 @@ public class DressController {
 		
 		return mv;    // /WEB-INF/views/  user/list   .jsp
 	}
+	
+	
 }
