@@ -36,7 +36,7 @@ public class EstimateController {
 
 	/*
 	// 견적서에 리스트 출력
-	@RequestMapping("/Reservation01")
+	@RequestMapping("/Reservation/Estimatelist")
 	public  String alllist( Model model ) {
 		
 		List hallList = estimateService.getHallList();
@@ -54,10 +54,11 @@ public class EstimateController {
 		System.out.println(cateringList);
 		System.out.println(studioList);
 		
-		return "reservation/estimate";
+		return "reservation/estimatelist";
 		
 	}
 	*/
+	
 	
 	// 견적서 저장하기
 	@RequestMapping("/Reservation/EstimateForm")
@@ -68,6 +69,8 @@ public class EstimateController {
 		
 		return mv; 
 	}
+	
+	
 	
 	@RequestMapping("/Reservation/Estimate")
 	public ModelAndView insertEstimate(  
@@ -133,8 +136,53 @@ public class EstimateController {
 		System.out.println("map :" + map);
 		
 		return mv;
-	}	
-	
-	
-	
+	}
+		
+	/*
+	@RequestMapping("/Reservation/Allestimate")
+	public ModelAndView EstimateList (@RequestParam HashMap<String, Object> map ) { 
+		
+		EstimateVo estivo = new EstimateVo();
+		estivo.setHallname((String) map.get("hallname"));
+		estivo.setCateringtype((String) map.get("cateringtype"));
+		estivo.setStudioname((String) map.get("studioname"));
+		estivo.setDressname((String) map.get("dressname"));
+			
+	  EstimateVo hallVo = estimateService.getHallid(estivo.getHallname());
+		if (hallVo != null) {
+			estivo.setHallid(hallVo.getHallid());
+			estivo.setHallosprice(hallVo.getHallosprice());
+			estivo.setHallpsprice(hallVo.getHallpsprice());
+		}		
+		System.out.println("hallVo:" + hallVo);
+
+		EstimateVo cateringVo = estimateService.getCateringid(estivo.getCateringtype());
+		if (cateringVo != null) {
+			estivo.setCateringid(cateringVo.getCateringid());
+			estivo.setCateringprice(cateringVo.getCateringprice());
+		}    
+		System.out.println("cateringVo:" + cateringVo);
+		
+		EstimateVo dressVo = estimateService.getDressid(estivo.getDressname());
+		if (dressVo != null) {
+			estivo.setDressid(dressVo.getDressid());
+			estivo.setDressprice(dressVo.getDressprice());
+		}    
+		System.out.println("DressVo:" + dressVo);
+		
+		EstimateVo studioVo = estimateService.getstudioid(estivo.getStudioname());
+		if (studioVo != null) {
+			estivo.setStudioid(studioVo.getStudioid());
+			estivo.setStudioprice(studioVo.getStudioprice());
+		}    
+		System.out.println("StudioVo:" + studioVo);
+		
+		ModelAndView mv = new ModelAndView();
+		mv.addObject("estivo", estivo);
+		mv.addObject("map", map);
+		mv.setViewName("redirect:/Reservation01");
+		
+		return mv; 
+    }
+	*/
 }

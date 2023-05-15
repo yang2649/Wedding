@@ -94,7 +94,7 @@
 
    </select>
    
-<!-- dressid 조회 -->
+<!-- studioid 조회 -->
    <select id="GetStudioid"
 		resultType="com.green.estimate.vo.EstimateVo">
 
@@ -123,7 +123,7 @@
 		DRESSID,
 		TOTALCOST
 		) VALUES ( 
-	    'ES1000',
+	    'ES'|| SEQ_ESTIMATE.NEXTVAL,
 		#{ estiname },
 		#{ memid    },
 		TO_DATE(#{ resdate  }, 'YYYY-MM-DD'),
@@ -140,3 +140,6 @@
 
 
 </mapper>
+
+
+
