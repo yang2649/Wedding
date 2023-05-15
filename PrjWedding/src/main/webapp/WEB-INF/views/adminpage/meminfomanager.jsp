@@ -59,7 +59,7 @@
 <img src="/img/side_main.jpg" width="100%" height="100%">
 <body>
 	<div id="main">
-		<h2>사용자 목록</h2>
+		<h2>회원 목록</h2>
 		<table id="memberTable">
 			<thead>
 				<tr>
@@ -151,9 +151,11 @@ p {
 
 
 <!-- 슬라이드 메뉴 분리 -->
-<jsp:include page="/WEB-INF/views/part_menu/slidemenu.jsp" />
+<jsp:include page="/WEB-INF/views/adminslidemenu.jsp" />
 <!-- 메인 메뉴 -->
 
+<!-- 푸터 분리 -->
+<jsp:include page="/WEB-INF/views/part_menu/footer.jsp" />
 
 </body>
 </html>
