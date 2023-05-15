@@ -34,7 +34,7 @@ public class EstimateController {
 	}
 	
 
-	/*
+	/* test
 	// 견적서에 리스트 출력
 	@RequestMapping("/Reservation/Estimatelist")
 	public  String alllist( Model model ) {

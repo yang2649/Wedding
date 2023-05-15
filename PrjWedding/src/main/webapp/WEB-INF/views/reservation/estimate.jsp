@@ -6,7 +6,7 @@
 <!DOCTYPE html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>견적서</title>
 <!-- css 부분 사용 -->
 <link rel="shortcut icon" href="/img/favicon.ico">
 <link rel="stylesheet" href="./css/loginstyle.css">

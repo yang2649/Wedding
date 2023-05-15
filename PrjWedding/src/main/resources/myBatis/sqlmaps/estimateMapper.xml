@@ -6,7 +6,7 @@
 
 <mapper namespace="Estimate">
 
-<!-- halllist 조회 -->
+<!-- halllist 조회하기 -->
    <select id         = "HallList"
            resultType = "com.green.estimate.vo.EstimateVo"  >
    
