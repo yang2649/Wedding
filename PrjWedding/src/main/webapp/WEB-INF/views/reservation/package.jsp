@@ -56,8 +56,6 @@
 
 
 
-
-
 //테이블 생성
 function data_display(vo) {
    
@@ -86,13 +84,6 @@ function data_display(vo) {
    return html;
    
 } 
-
-
-
-
-
-
-
 
 
 
