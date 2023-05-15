@@ -6,6 +6,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Home</title>
+<!-- 잡다한 헤드 부분 분리 -->
+<jsp:include page="/WEB-INF/views/part_menu/head_resources.jsp" />
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script
 	src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
@@ -65,143 +67,17 @@ p {
 
 </head>
 <body>
-<div class="container">
-    <div class="header">
-   <a href="/" class="logo">
-      <div style="margin: 0; padding: 15px; text-align: center;">
-                <div style="margin: 0;">Green</div>
-                <div style="margin: 0;">Wedding</div>
-    </div>
-    </a>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light" style="margin-right: 90px; background-color: white !important;">
-        
-        <div class="container-fluid">
-        <!-- 화면 축소시 햄버거 버튼 (현재는 삭제) -->
-   		<!-- <button class="navbar-toggler navbar-toggler-icon" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"></button> -->
-   		<div class="collapse navbar-collapse" id="navbarNav">
-         <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-          
+<!-- 헤더 부분 분리 -->
+<jsp:include page="/WEB-INF/views/part_menu/header.jsp" />
 
-          		<!-- VENUE -->
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                VENUE
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="#">venue</a></li>
-                  <li><a class="dropdown-item" href="#">예시1</a></li>
-                  <li><a class="dropdown-item" href="#">예시2</a></li>
-                </ul>
-              </li>
-            
-              <!-- CATERRING -->
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                CATERRING
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="#">뷔페</a></li>
-                  <li><a class="dropdown-item" href="#">예시1</a></li>
-                  <li><a class="dropdown-item" href="#">예시2</a></li>
-                </ul>
-              </li>
-              
-              <!-- COOPERATIVE -->
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                COOPERATIVE
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="#">cooperative</a></li>
-                  <li><a class="dropdown-item" href="#">예시1</a></li>
-                  <li><a class="dropdown-item" href="#">예시2</a></li>
-                </ul>
-              </li>
-              
-              
-              <!-- RESERVATION -->
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                RESERVATION
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="#">예약하기</a></li>
-                  <li><a class="dropdown-item" href="#">예약절차</a></li>
-                  <li><a class="dropdown-item" href="#">비용안내</a></li>
-                </ul>
-              </li>
-              
-              
-             <!-- COMMUNITY -->
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                COMMUNITY
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="#">고객 후기</a></li>
-                  <li><a class="dropdown-item" href="#">공지 사항</a></li>
-                  <li><a class="dropdown-item" href="#">자료실</a></li>
-                </ul>
-              </li>
-              
-              
-              <!-- Location -->
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  LOCATION
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="#">Directions</a></li>
-                  <li><a class="dropdown-item" href="#">Studio location</a></li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </div>
-  </div>
+<!--유정 로그인 분리-->
+<jsp:include page="/WEB-INF/views/part_menu/login.jsp" />
 
-<!-- 햄버거 모양 토글 -->
-<div class="menu-toggle">
-  <span class="bar"></span>
-  <span class="bar"></span>
-  <span class="bar"></span>
-</div>
 
-<!-- 슬라이딩 메뉴 -->
-<div class="sliding-menu">
-  <ul>
-    <li>
-      <ul>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      	<li><a href="#">로그인</a></li>
-        <li><hr></li>
-        <li><a href="/User/List">사용자 목록</a></li>
-        <li><a href="/User/WriteForm">사용자 등록</a></li>
-        <li><hr></li>
-        <li><a href="/Menus/List">메뉴 목록</a></li>
-        <li><a href="/Menus/WriteForm2">메뉴 등록</a></li>
-        <li><hr></li>
-        <li><a href="/Board/List?menu_id=MENU01">게시물 목록</a></li>
-        <li><a href="/Board/WriteForm?menu_id=MENU01&bnum=0&lvl=0&step=0&nref=0">게시물 등록</a></li>
-        <li><hr></li>
-        <li><a href="/Pds/List?menu_id=MENU01&nowpage=1">자료실 목록</a></li>
-        <li><a href="/Pds/WriteForm?menu_id=MENU01&bnum=0&lvl=0&step=0&nref=0">자료실 등록</a></li>
-        <li><hr></li>
-        <li><a href="/Pds/List?menu_id=MENU01&nowpage=1">페이징 자료실 목록</a></li>
-        <li><a href="/Pds/WriteForm?menu_id=MENU01&bnum=0&lvl=0&step=0&nref=0&nowpage=1">페이징 자료실 등록</a></li>
-      </ul>
-    </li>
-  </ul>
-</div>
-
-<div class="sliding-menu-overlay"></div>
+<!-- 슬라이드 메뉴 분리 -->
+<jsp:include page="/WEB-INF/views/part_menu/slidemenu.jsp" />
+<!--카카오문의-->
+<jsp:include page="/WEB-INF/views/part_menu/kakao.jsp" />
 
 		<!-- 메인 메뉴 -->
 		
@@ -345,63 +221,12 @@ p {
            />
     </div><br><br><br>
   
-  <!-- footer 마지막 부분 -->
-<footer>
-  <div class="container-fluid" style="background-color: black; color: white; text-align: center;">
-    <div class="row">
-      <div class="col-md-12">
-        <div class="copytext text-center">
-          <br>
-          <p>주소 : 부산 부산진구 중앙대로 749 THE GREEN(주) GREEN WEDDING 사업자등록번호 : 1234-56-7890 | 대표차 : 김그린</p>
-          <p>&copy; 2023 Your Company. All Rights Reserved.</p>
-          <br>
-        </div>
-      </div>
-    </div>
-  </div>
-</footer>
+<!-- 푸터 분리 -->
+<jsp:include page="/WEB-INF/views/part_menu/footer.jsp" />
+
 
     
 <script>
-const menuButton = document.querySelector('.menu-toggle');
-const slidingMenu = document.querySelector('.sliding-menu');
-const slidingMenuOverlay = document.querySelector('.sliding-menu-overlay');
-
-menuButton.addEventListener('click', function() {
-slidingMenu.classList.toggle('open');
-slidingMenuOverlay.classList.toggle('open');
-});
-
-slidingMenuOverlay.addEventListener('click', function() {
-  slidingMenu.classList.remove('open');
-  slidingMenuOverlay.classList.remove('open');
-});
-
-$(window).scroll(function() {
-  // 스크롤 위치가 50px 이상인 경우
-  if ($(this).scrollTop() > 50) {
-    $('div.header').slideUp();
-    $('.menu-toggle').addClass('scrolled');
-    if ($('.sliding-menu').hasClass('open')) {
-      $('.sliding-menu').removeClass('open'); // 슬라이딩 메뉴 숨기기
-    }
-    if ($('.sliding-menu-overlay').hasClass('open')) {
-      $('.sliding-menu-overlay').removeClass('open'); // 슬라이딩 메뉴 오버레이 숨기기
-    }
-  } 
-  // 스크롤 위치가 50px 미만인 경우
-  else {
-    $('div.header').slideDown();
-    $('.menu-toggle').removeClass('scrolled');
-    if ($('.sliding-menu').hasClass('open')) {
-      $('.sliding-menu').removeClass('open'); // 슬라이딩 메뉴 숨기기
-    }
-    if ($('.sliding-menu-overlay').hasClass('open')) {
-      $('.sliding-menu-overlay').removeClass('open'); // 슬라이딩 메뉴 오버레이 숨기기
-    }
-  }
-});
-
  //슬라이드
  var slideIndex = 0; //slide index
 
