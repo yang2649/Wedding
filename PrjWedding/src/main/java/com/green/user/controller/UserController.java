@@ -67,6 +67,16 @@ public class UserController {
 		return "redirect:/User/List";
 	}
 	
+	// 관리자 회원삭제
+	@RequestMapping("/User/AdminDelete")
+	public String adminDelete(String memid) {
+
+		// 삭제
+		userService.deleteUser(memid);
+
+		return "redirect:/Adminpage/Meminfomanager";
+	}
+	
 	// 유정 로그인
 	// 로그인체크
 	@RequestMapping("/loginprocess")
