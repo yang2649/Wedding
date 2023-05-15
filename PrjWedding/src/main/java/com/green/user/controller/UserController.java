@@ -55,6 +55,17 @@ public class UserController {
 
 		return "user/list";   
 	}
+
+
+	// 회원삭제
+	@RequestMapping("/User/Delete")
+	public String delete(String memid) {
+
+		// 삭제
+		userService.deleteUser(memid);
+
+		return "redirect:/User/List";
+	}
 	
 	// 유정 로그인
 	// 로그인체크
