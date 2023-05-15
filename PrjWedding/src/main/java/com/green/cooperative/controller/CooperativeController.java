@@ -19,10 +19,10 @@ public class CooperativeController {
 	public  String  Studio3() {
 		return "cooperative/spring";   
 	}
-	/*@RequestMapping("/Cooperative02") 
+	@RequestMapping("/Cooperative02") 
 	public  String  Cooperative02() {
 		return "cooperative/dress";   
-	}*/
+	}
 	@RequestMapping("/Cooperative05") 
 	public  String  Cooperative03() {
 		return "cooperative/invitation";   
