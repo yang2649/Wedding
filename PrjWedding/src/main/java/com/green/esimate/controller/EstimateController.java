@@ -95,7 +95,7 @@ public class EstimateController {
 		return estivo;
 	}
 	
-	// studio 가격 불러오기
+	// studio 가격 불러오기//
 	@RequestMapping("/Reservation/Studioprice")
 	@ResponseBody
 	public EstimateVo getStudioPrice(@RequestParam("studioname") String studioname) {

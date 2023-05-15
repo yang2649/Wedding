@@ -8,7 +8,7 @@
 <!DOCTYPE html>
 <head>
 <meta charset="UTF-8">
-<title>견적서</title>
+<title>셀프 견적</title>
 <!-- css 부분 사용 -->
 <link rel="shortcut icon" href="/img/favicon.ico">
 <link rel="stylesheet" href="./css/loginstyle.css">
