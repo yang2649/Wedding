@@ -87,11 +87,67 @@
    </update>
    
    
+    <!-- 관리자 목록 조회 : DESC : 최신순   -->
+   <select id         = "AdminUserList"
+           resultType = "com.green.user.vo.UserVo"  >
+   
+     SELECT    MEMID
+   	         , MEMPW
+   	         , MEMNAME
+   	         , MEMPH
+   	         , EMAIL
+   	         , TO_CHAR(JOINDATE, 'YYYY-MM-DD HH24:MI:SS')  JOINDATE
+   	         , LVL
+       FROM      MEMBERLIST
+       ORDER BY  JOINDATE   DESC         
+   
+   </select> 
+   
+
+   <!-- 관리자 회원 정보보기 -->
+    <select id="GetUserById"
+            resultType = "com.green.user.vo.UserVo">
+   
+       SELECT  MEMID
+   	         , MEMPW
+   	         , MEMNAME
+   	         , MEMPH
+   	         , EMAIL
+   	         , TO_CHAR(JOINDATE, 'YYYY-MM-DD')  JOINDATE
+   	         , LVL
+   	    FROM   MEMBERLIST
+   	    WHERE  MEMID =  #{ memid }
+   
+   </select>
+   
+
+	<!-- 관리자 회원 정보 수정 -->
+   <update  id="AdminUpdate">
+   
+   	  UPDATE   MEMBERLIST
+   	    SET    MEMNAME  = #{ memname },
+   	    	   MEMPW    = #{ mempw },
+   	           MEMPH    = #{ memph },
+   	           EMAIL    = #{ email },
+   	           LVL      = #{ lvl   }
+   	    WHERE  MEMID    = #{ memid }
+         AND   MEMPW    = #{ mempw }
+         
+   </update>
+   
+   
+   <!-- 회원 정보 삭제 -->
+   
+   <delete id="UserDelete">
+   
+      DELETE  FROM   MEMBERLIST
+        WHERE  MEMID = #{ memid }  
+           
+   </delete>
+   
    
     
 </mapper>
-
-
 
 
 
