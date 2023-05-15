@@ -184,7 +184,6 @@ p {
     </div>
   </div>
   
-  <!-- footer 마지막 부분 -->
 
 <!-- 푸터 분리 -->
 <jsp:include page="/WEB-INF/views/part_menu/footer.jsp" />
