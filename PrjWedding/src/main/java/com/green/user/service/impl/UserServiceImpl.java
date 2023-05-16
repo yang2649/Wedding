@@ -20,129 +20,110 @@ import com.green.user.vo.UserVo;
 public class UserServiceImpl implements UserService {
 
 	@Autowired
-	private UserDao  userDao;
-	
+	private UserDao userDao;
+
 	@Override
 	public void insertUser(UserVo user) {
-		
-		userDao.insertUser( user );
-		
+
+		userDao.insertUser(user);
+
 	}
 
 	@Override
 	public UserVo getLogin(HashMap<String, Object> map) {
-		
-		UserVo  userVo  =  userDao.getLogin( map );
-		
-		return  userVo;
+
+		UserVo userVo = userDao.getLogin(map);
+
+		return userVo;
 	}
-
-
 
 	@Override
 	public List getUserList() {
-		
-		List    userList = userDao.getUserList();
-		
+
+		List userList = userDao.getUserList();
+
 		return userList;
 	}
 
-	
 	@Override
-	public UserVo getUser( HashMap<String, Object> map) {
-		
-		UserVo  user  =  userDao.getUser( map );
-		
+	public UserVo getUser(HashMap<String, Object> map) {
+
+		UserVo user = userDao.getUser(map);
+
 		return user;
 	}
 
-
 	@Override
 	public void updateUser(HashMap<String, Object> map) {
-		
+
 		userDao.updateUser(map);
-		
+
 	}
 
 	@Override
 	public UserVo getAdminUserInfo(HashMap<String, Object> map) {
-		
-		UserVo  adminuserinfo  =  userDao.getAdminUserInfo( map );
-		
+
+		UserVo adminuserinfo = userDao.getAdminUserInfo(map);
+
 		return adminuserinfo;
 	}
 
 	@Override
 	public List getAdminUserList() {
-		
-		List    adminUserList = userDao.getAdminUserList();
-		
+
+		List adminUserList = userDao.getAdminUserList();
+
 		return adminUserList;
 	}
 
 	@Override
 	public List getAdminEstiList() {
-		
-		List    adminEstiList = userDao.getAdminEstiList();
-		
+
+		List adminEstiList = userDao.getAdminEstiList();
+
 		return adminEstiList;
 	}
 
 	@Override
 	public List getAdminFavList() {
-		
-		List    adminFavList = userDao.getAdminFavList();
-		
+
+		List adminFavList = userDao.getAdminFavList();
+
 		return adminFavList;
 	}
 
 	@Override
 	public UserVo getUserById(String userId) {
-		
-		UserVo  userById  =  userDao.getUserById( userId );
-		
+
+		UserVo userById = userDao.getUserById(userId);
+
 		return userById;
 	}
 
 	@Override
 	public void adminUpdate(HashMap<String, Object> map) {
-		
+
 		userDao.adminUpdate(map);
 	}
 
 	@Override
 	public void deleteUser(String memid) {
-		
-		userDao.deleteUser( memid );
-		
+
+		userDao.deleteUser(memid);
+
 	}
 
+	// 아이디 찾기
+	@Override
+	public UserVo FindId(String memname, String email) {
+		return userDao.FindId(memname, email);
+	}
 
+	// 비밀번호 찾기
 
-	
-
-
-
-	
-
-
-
-	
-
+	@Override
+	public UserVo FindPw(String memid, String email) {
+		return userDao.FindPw(memid, email);
+	}
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

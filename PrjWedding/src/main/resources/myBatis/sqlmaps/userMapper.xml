@@ -3,150 +3,170 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="User">  
+<mapper namespace="User">
 
-   <!-- 회원가입 -->
-   <insert id="UserInsert">
-   
-       INSERT INTO MEMBERLIST (
-		      MEMID
-			, MEMPW
-			, MEMNAME
-			, MEMPH
-			, EMAIL
-			, LVL
+	<!-- 회원가입 -->
+	<insert id="UserInsert">
+
+		INSERT INTO MEMBERLIST (
+		MEMID
+		, MEMPW
+		, MEMNAME
+		, MEMPH
+		, EMAIL
+		, LVL
 		) VALUES (
-		    #{ memid     },
-		    #{ mempw     },
-		    #{ memname   },
-		    #{ memph     },
-		    #{ email     },
-		    '1'	    
-		)       
-   
-   </insert>
- 
-  <!-- 로그인 -->
-  <select id         = "GetLogin"
-           resultType = "com.green.user.vo.UserVo">
-      
-      SELECT    MEMID
-              , MEMPW
-              , MEMNAME
-              , MEMPH
-              , EMAIL
-              , JOINDATE
-       
-       FROM    MEMBERLIST
-       WHERE   MEMID  = #{ memid }
-        AND    MEMPW  = #{ mempw }
-   	      
-   </select>
-   
-   <!-- 목록 조회 : DESC : 최신순   -->
-   <select id         = "UserList"
-           resultType = "com.green.user.vo.UserVo"  >
-   
-     SELECT    MEMID
-   	         , MEMPW
-   	         , MEMNAME
-   	         , MEMPH
-   	         , EMAIL
-   	         , TO_CHAR(JOINDATE, 'YYYY-MM-DD HH24:MI:SS')  JOINDATE
-       FROM      MEMBERLIST
-       ORDER BY  JOINDATE   DESC         
-   
-   </select> 
-   
-   <!-- 내 정보보기 -->
-    <select id="GetUser"
-            resultType = "com.green.user.vo.UserVo">
-   
-       SELECT  MEMID
-   	         , MEMPW
-   	         , MEMNAME
-   	         , MEMPH
-   	         , EMAIL
-   	         , TO_CHAR(JOINDATE, 'YYYY-MM-DD')  JOINDATE
-   	    FROM   MEMBERLIST
-   	    WHERE  MEMID =  #{ memid }
-   
-   </select>
-   
-   <!-- 내 정보 수정 -->
-   <update  id="UpdateUser">
-   
-   	  UPDATE   MEMBERLIST
-   	    SET    MEMNAME  = #{ memname },
-   	    	   MEMPW    = #{ mempw },
-   	           MEMPH    = #{ memph },
-   	           EMAIL    = #{ email }
-   	    WHERE  MEMID    = #{ memid }
-         AND   MEMPW    = #{ mempw }
-         
-   </update>
-   
-   
-    <!-- 관리자 목록 조회 : DESC : 최신순   -->
-   <select id         = "AdminUserList"
-           resultType = "com.green.user.vo.UserVo"  >
-   
-     SELECT    MEMID
-   	         , MEMPW
-   	         , MEMNAME
-   	         , MEMPH
-   	         , EMAIL
-   	         , TO_CHAR(JOINDATE, 'YYYY-MM-DD HH24:MI:SS')  JOINDATE
-   	         , LVL
-       FROM      MEMBERLIST
-       ORDER BY  JOINDATE   DESC         
-   
-   </select> 
-   
+		#{ memid },
+		#{ mempw },
+		#{ memname },
+		#{ memph },
+		#{ email },
+		'1'
+		)
 
-   <!-- 관리자 회원 정보보기 -->
-    <select id="GetUserById"
-            resultType = "com.green.user.vo.UserVo">
-   
-       SELECT  MEMID
-   	         , MEMPW
-   	         , MEMNAME
-   	         , MEMPH
-   	         , EMAIL
-   	         , TO_CHAR(JOINDATE, 'YYYY-MM-DD')  JOINDATE
-   	         , LVL
-   	    FROM   MEMBERLIST
-   	    WHERE  MEMID =  #{ memid }
-   
-   </select>
-   
+	</insert>
+
+	<!-- 로그인 -->
+	<select id="GetLogin" resultType="com.green.user.vo.UserVo">
+
+		SELECT MEMID
+		, MEMPW
+		, MEMNAME
+		, MEMPH
+		, EMAIL
+		, JOINDATE
+
+		FROM MEMBERLIST
+		WHERE MEMID = #{ memid }
+		AND MEMPW = #{ mempw }
+
+	</select>
+
+	<!-- 목록 조회 : DESC : 최신순 -->
+	<select id="UserList" resultType="com.green.user.vo.UserVo">
+
+		SELECT MEMID
+		, MEMPW
+		, MEMNAME
+		, MEMPH
+		, EMAIL
+		, TO_CHAR(JOINDATE, 'YYYY-MM-DD HH24:MI:SS') JOINDATE
+		FROM MEMBERLIST
+		ORDER BY JOINDATE DESC
+
+	</select>
+
+	<!-- 내 정보보기 -->
+	<select id="GetUser" resultType="com.green.user.vo.UserVo">
+
+		SELECT MEMID
+		, MEMPW
+		, MEMNAME
+		, MEMPH
+		, EMAIL
+		, TO_CHAR(JOINDATE, 'YYYY-MM-DD') JOINDATE
+		FROM MEMBERLIST
+		WHERE MEMID = #{ memid }
+
+	</select>
+
+	<!-- 내 정보 수정 -->
+	<update id="UpdateUser">
+
+		UPDATE MEMBERLIST
+		SET MEMNAME = #{ memname },
+		MEMPW = #{ mempw },
+		MEMPH = #{ memph },
+		EMAIL = #{ email }
+		WHERE MEMID = #{ memid }
+		AND MEMPW = #{ mempw }
+
+	</update>
+
+
+	<!-- 관리자 목록 조회 : DESC : 최신순 -->
+	<select id="AdminUserList" resultType="com.green.user.vo.UserVo">
+
+		SELECT MEMID
+		, MEMPW
+		, MEMNAME
+		, MEMPH
+		, EMAIL
+		, TO_CHAR(JOINDATE, 'YYYY-MM-DD HH24:MI:SS') JOINDATE
+		, LVL
+		FROM MEMBERLIST
+		ORDER BY JOINDATE DESC
+
+	</select>
+
+
+	<!-- 관리자 회원 정보보기 -->
+	<select id="GetUserById" resultType="com.green.user.vo.UserVo">
+
+		SELECT MEMID
+		, MEMPW
+		, MEMNAME
+		, MEMPH
+		, EMAIL
+		, TO_CHAR(JOINDATE, 'YYYY-MM-DD') JOINDATE
+		, LVL
+		FROM MEMBERLIST
+		WHERE MEMID = #{ memid }
+
+	</select>
+
 
 	<!-- 관리자 회원 정보 수정 -->
-   <update  id="AdminUpdate">
-   
-   	  UPDATE   MEMBERLIST
-   	    SET    MEMNAME  = #{ memname },
-   	    	   MEMPW    = #{ mempw },
-   	           MEMPH    = #{ memph },
-   	           EMAIL    = #{ email },
-   	           LVL      = #{ lvl   }
-   	    WHERE  MEMID    = #{ memid }
-         AND   MEMPW    = #{ mempw }
-         
-   </update>
-   
-   
-   <!-- 회원 정보 삭제 -->
-   
-   <delete id="UserDelete">
-   
-      DELETE  FROM   MEMBERLIST
-        WHERE  MEMID = #{ memid }  
-           
-   </delete>
-   
-   
-    
+	<update id="AdminUpdate">
+
+		UPDATE MEMBERLIST
+		SET MEMNAME = #{ memname },
+		MEMPW = #{ mempw },
+		MEMPH = #{ memph },
+		EMAIL = #{ email },
+		LVL = #{ lvl }
+		WHERE MEMID = #{ memid }
+		AND MEMPW = #{ mempw }
+
+	</update>
+
+
+	<!-- 회원 정보 삭제 -->
+
+	<delete id="UserDelete">
+
+		DELETE FROM MEMBERLIST
+		WHERE MEMID = #{ memid }
+
+	</delete>
+
+
+	<!-- 아이디 찾기 -->
+
+
+	<select id="findId" resultType="com.green.user.vo.UserVo">
+		SELECT MEMID as memid
+		FROM
+		MEMBERLIST
+		WHERE MEMNAME = #{memname}
+		AND EMAIL = #{email}
+	</select>
+
+
+
+	<!-- 다른 쿼리들... -->
+
+
+
+	<!-- 비밀번호 찾기 -->
+	<select id="FindPw" resultType="com.green.user.vo.UserVo">
+		SELECT MEMPW as mempw
+		FROM MEMBERLIST
+		WHERE MEMID = #{memid}
+		AND EMAIL = #{email}
+	</select>
+
+
 </mapper>
 
 

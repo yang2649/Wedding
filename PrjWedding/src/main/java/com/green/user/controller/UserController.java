@@ -264,6 +264,87 @@ public class UserController {
 		}
 
 		
+		// 아이디 찾기
+		
+		@RequestMapping("/Findid")
+		public String findId(@RequestParam("memname") String memname,
+		        @RequestParam("email") String email,
+		        HttpSession session,
+		        Model model) {
+		    UserVo user = userService.FindId(memname, email);
+		    if (user != null) {
+		        session.setAttribute("memid", user.getMemid()); // 세션에 memid 저장
+		        model.addAttribute("user", user);
+		    } else {
+		        session.setAttribute("memid", null); // 사용자를 찾지 못한 경우에도 세션에 memid null로 저장
+		        model.addAttribute("message", "User not found");
+		        return "user/findidrs";
+		    }
+		    return "user/findidrs";
+		}
+			
+			@RequestMapping("/User/FindidForm")
+			public ModelAndView findIdForm(HttpSession session) {
+			    ModelAndView mv = new ModelAndView();
+			    mv.setViewName("user/findid");
+			    return mv;
+			}
+
+			@RequestMapping("/Findidrs")
+			public String FindIdResult(@RequestParam String memname, @RequestParam String email, Model model) {
+			    try {
+			        UserVo vo = userService.FindId(memname, email);
+			        String memid = vo.getMemid();
+			        model.addAttribute("memid", memid);
+			        return "user/findidrs";
+			    } catch (Exception e) {
+			        model.addAttribute("message", "An error occurred while processing your request.");
+			        return "user/error";
+			    }
+			}
+		
+	  
+			
+		 // 비밀번호 찾기
+			
+			@RequestMapping("/Findpw")
+			public String findPw(@RequestParam("memid") String memid,
+			        @RequestParam("email") String email,
+			        HttpSession session,
+			        Model model) {
+			    UserVo user = userService.FindPw(memid, email);
+			    if (user != null) {
+			        session.setAttribute("mempw", user.getMempw()); // 세션에 mempw 저장
+			        model.addAttribute("user", user);
+			    } else {
+			        session.setAttribute("foundPw", null);
+			        model.addAttribute("message", "Password not found.");
+			        return "user/findpwrs";
+			    }
+			    return "user/findpwrs";
+			}
+			
+			@RequestMapping("/User/FindpwForm")
+			public ModelAndView findPasswordForm(HttpSession session) {
+			    ModelAndView mv = new ModelAndView();
+			    mv.setViewName("user/findpw");
+			    return mv;
+			}
+			
+			@RequestMapping("/Findpwrs")
+			public String findPasswordResult(@RequestParam String memid, @RequestParam String email, Model model) {
+			    try {
+			        UserVo vo = userService.FindPw(memid, email);
+			        String mempw = vo.getMempw();
+			        model.addAttribute("mempw", mempw);
+			        return "user/findpwrs";
+			    } catch (Exception e) {
+			        model.addAttribute("message", "An error occurred while processing your request.");
+			        return "user/error";
+			    }
+			}
+		
+		
 		
 }
 

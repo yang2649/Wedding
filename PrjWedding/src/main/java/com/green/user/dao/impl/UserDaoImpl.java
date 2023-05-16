@@ -105,6 +105,29 @@ public class UserDaoImpl implements UserDao {
 		
 		sqlSession.delete("User.UserDelete", memid );
 	}
+	
+	 //아이디 찾기
+	
+		@Override
+		public UserVo FindId(String memname, String email) {
+		    UserVo params = new UserVo();
+		    params.setMemname(memname);
+		    params.setEmail(email);
+		    return sqlSession.selectOne("User.findId", params);
+		}
+
+		
+		
+		// 비밀번호 찾기
+		
+		@Override
+		public UserVo FindPw(String memid, String email) {
+			UserVo params = new UserVo();
+		    params.setMemid(memid);
+		    params.setEmail(email);
+			
+			return sqlSession.selectOne("User.FindPw", params);
+		}
 
 
 

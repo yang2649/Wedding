@@ -26,8 +26,8 @@
         </form>
         <br>
         <div class="links">
-          <a href="#">아이디 찾기</a>
-          <a href="#">비밀번호 찾기</a>
+          <a href="/User/FindidForm">아이디 찾기</a>
+          <a href="/User/FindpwForm">비밀번호 찾기</a>
           <a href="#" id="join" onclick="showJoin();">회원가입</a>
         </div>
       </div>

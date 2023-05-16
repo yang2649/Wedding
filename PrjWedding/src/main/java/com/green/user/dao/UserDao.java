@@ -31,7 +31,11 @@ public interface UserDao {
 
 	void deleteUser(String memid);
 	
-	
+	// 아이디 찾기
+	UserVo FindId(String memname, String email);
+
+	// 비밀번호 찾기
+	UserVo FindPw(String memid, String email);
 
 
 
