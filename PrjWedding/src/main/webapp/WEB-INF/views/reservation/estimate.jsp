@@ -8,7 +8,7 @@
 <!DOCTYPE html>
 <head>
 <meta charset="UTF-8">
-<title>셀프 견적</title>
+<title>Insert title here</title>
 <!-- css 부분 사용 -->
 <link rel="shortcut icon" href="/img/favicon.ico">
 <link rel="stylesheet" href="./css/loginstyle.css">
@@ -79,7 +79,7 @@
 }
 
 
-.hallcard {
+.hallcard, .cateringcard {
  display: flex;
  bheight: 800px;
  padding: 20xp;
@@ -202,52 +202,53 @@ input[type="number"] {
     <div class="input-form">
        <div class="hallcard">
         <div class="hallcard-body">
-         <img class="card-img" src="./img/mypage/esti.jpg" alt="esti image">
+         <img class="card-img" src="./img/hall/ahall02.jpg" alt="hall image">
         </div>
         <div class="card-footer" style="display: flex; align-items: center;">
-          <input type="button" id="InputHallname"  name="hallname" value="greenhall" style="font-size:24px" required>        
-          <li>greenhall hallosprice :</li>
+          <input type="button" class="InputHallname" id="InputHallname"  name="hallname" value="greenhall" style="font-size:24px" required>        
+          <li>greenhall : 1000000</li>
           <li><a href="/Reservation/Hallprice?hallname=${ estivo.hallname }">${ estivo.hallosprice }</a></li>
          </div>
        </div>
        
        <div class="hallcard">
          <div class="hallcard-body">
-          <img class="card-img" src="./img/mypage/esti.jpg" alt="esti image">
+          <img class="card-img" src="./img/hall/bhall01.jpg" alt="hall image">
          </div>
          <div class="card-footer" style="display: flex; align-items: center;">
-          <input type="button" id="InputHallname"   name="hallname" value="redhall" style="font-size:24px" required>
-          <p>redhall price : </p>
+          <input type="button" class="InputHallname" id="InputHallname"   name="hallname" value="redhall" style="font-size:24px" required>
+          <li>redhall price : 1200000</li>
+          <li><a href="/Reservation/Hallprice?hallname=${ estivo.hallname }">${ estivo.hallosprice }</a></li>
          </div>
        </div> 
   
        <div class=hallcard>
          <div class="hallcard-body">
-          <img class="card-img" src="./img/mypage/esti.jpg" alt="esti image">
+          <img class="card-img" src="./img/hall/chall01.jpg" alt="hall image">
          </div>
          <div class="card-footer" style="display: flex; align-items: center;">
-          <input type="button" id="InputHallname"   name="hallname" value="bluehall" style="font-size:24px" required>
-          <p>red price</p>
+          <input type="button" class="InputHallname" id="InputHallname"   name="hallname" value="bluehall" style="font-size:24px" required>
+          <p>bluehall price : 1300000</p>
          </div>
        </div> 
       
        <div class=hallcard>
          <div class="hallcard-body">
-          <img class="card-img" src="./img/mypage/esti.jpg" alt="esti image">
+          <img class="card-img" src="./img/hall/dhall01.jpg" alt="hall image">
          </div>
          <div class="card-footer" style="display: flex; align-items: center;">
-         <input type="button" id="InputHallname"  name="hallname" value="blackhall" style="font-size:24px" required>
-         <p>black price</p>
+         <input type="button" class="InputHallname" id="InputHallname"  name="hallname" value="blackhall" style="font-size:24px" required>
+         <p>blackhall price : 1500000</p>
         </div>
        </div>
        
        <div class=hallcard>
         <div class="hallcard-body">
-          <img class="card-img" src="./img/mypage/esti.jpg" alt="esti image">
+          <img class="card-img" src="./img/hall/viphall01.jpg" alt="hall image">
         </div>
         <div class="card-footer" style="display: flex; align-items: center;">
-         <input type="button" id="InputHallname" name="hallname" value="viphall" style="font-size:24px" required>    
-	     <p>viphall price</p> 
+         <input type="button" class="InputHallname" id="InputHallname" name="hallname" value="viphall" style="font-size:24px" required>    
+	     <p>viphall price : 2000000</p> 
 	    </div> 
 	   </div> 
    </div>
@@ -260,21 +261,36 @@ input[type="number"] {
  <form onsubmit="copyInfo(); return false;">
   <div class="catering-contanier">
     <div class="input-form">
-    <input type="button" id="InputCateringtype"  name="cateringtype" value="일반뷔페" style="font-size:24px" required>
-    <input type="button" id="InputCateringtype"  name="cateringtype" value="프리미엄" style="font-size:24px" required>
-	</div>
-   </div>
-  </form>
+       <div class="cateringcard">
+        <div class="cateringcard-body">
+         <img class="card-img" src="./img/buffet/buffet01.jpg" alt="esti image">
+        </div>
+        <div class="card-footer" style="display: flex; align-items: center;">
+         <input type="button" class="InputCateringtype" id="InputCateringtype"  name="cateringtype" value="일반뷔페" style="font-size:24px" required>
+	    </div>
+	   </div>
+	   
+	   <div class="cateringcard">
+        <div class="cateringcard-body">
+         <img class="card-img" src="./img/buffet/buffet15.jpg" alt="esti image">
+        </div>
+        <div class="card-footer" style="display: flex; align-items: center;">
+         <input type="button" class="InputCateringtype" id="InputCateringtype"  name="cateringtype" value="프리미엄" style="font-size:24px" required>
+        </div>
+       </div>
+      </div> 
+     </div>
+   </form>
   
 
 <h2 class="estititle">본식 드레스 목록 <span class="triangle-icon" onclick="toggledressContainer()">▼</span></h2>
   <form onsubmit="copyInfo(); return false;">
    <div class="dress-contanier">
-    <input type="button" id="InputDressname"  name="dressname" value="블루밍 드레스" style="font-size:24px" required>
-    <input type="button" id="InputDressname"  name="dressname" value="드레스2" style="font-size:24px"  required>
-    <input type="button" id="InputDressname"  name="dressname" value="드레스3" style="font-size:24px"  required>
-    <input type="button" id="InputDressname"  name="dressname" value="드레스4" style="font-size:24px"  required>
-    <input type="button" id="InputDressname"  name="dressname" value="드레스5" style="font-size:24px"  required> 
+    <input type="button" class="InputDressname" id="InputDressname"  name="dressname" value="블루밍 드레스" style="font-size:24px" required>
+    <input type="button" class="InputDressname"  name="dressname" value="드레스2" style="font-size:24px"  required>
+    <input type="button" class="InputDressname"  name="dressname" value="드레스3" style="font-size:24px"  required>
+    <input type="button" class="InputDressname"  name="dressname" value="드레스4" style="font-size:24px"  required>
+    <input type="button" class="InputDressname"  name="dressname" value="드레스5" style="font-size:24px"  required> 
    </div>
   </form>
 
@@ -282,9 +298,9 @@ input[type="number"] {
 <h2 class="estititle">스튜디오 목록 <span class="triangle-icon" onclick="toggledressContainer()">▼</span></h2>
   <form onsubmit="copyInfo(); return false;">
    <div class="studio-contanier"> 
-    <input type="button" id="InputStudioname"  name="studioname" value="Fillmoment" style="font-size:24px" required>
-    <input type="button" id="InputStudioname"  name="studioname" value="Steso" style="font-size:24px"  required>
-    <input type="button" id="InputStudioname"  name="studioname" value="너를 봄" style="font-size:24px"  required>
+    <input type="button" class="InputStudioname" id="InputStudioname"  name="studioname" value="Fillmoment" style="font-size:24px" required>
+    <input type="button" class="InputStudioname" id="InputStudioname"  name="studioname" value="Steso" style="font-size:24px"  required>
+    <input type="button" class="InputStudioname" id="InputStudioname"  name="studioname" value="너를 봄" style="font-size:24px"  required>
    </div>
 </form>
 
@@ -438,11 +454,10 @@ return false;
 
 <script>
 // 홀가격 가져오기
-$('#InputHallname').on('click', function() {
+$('.InputHallname').on('click', function() {
     alert('ㅋㅋㅋ');
 	copyInfo(this.value, '', '', '')
-	
-	
+		
     // 선택된 홀 이름 가져오기
     var hallname = $(this).val();
     
@@ -458,35 +473,41 @@ $('#InputHallname').on('click', function() {
             // hallprice 값을 파싱하여 변수에 저장
             let hallosprice = parseInt(data.hallosprice);
             console.log(hallosprice);
+            
+            //계산
+            calculateTotal();
+            
         },
         error: function() {
             alert('Failed to get hall info.');
         }
     });
-    
-    
+        
 });
 
 // 뷔페가격 가져오기
-$('#InputCateringtype').on('click', function() {
+$('.InputCateringtype').on('click', function() {
     alert('ㅋㅋㅋ');
 	copyInfo('', this.value, '', '')
 	
-    // 선택된 홀 이름 가져오기
+    // 선택된 뷔페 이름 가져오기
     var cateringtype = $(this).val();
     
-    // AJAX 요청을 사용하여 해당 홀에 대한 정보 가져오기
+    // AJAX 요청을 사용하여 해당 뷔페에 대한 정보 가져오기
     $.ajax({
         url: 'Reservation/Cateringprice',
         type: 'POST',
         data: { cateringtype: cateringtype },
         success: function(data) {
-            // 가져온 정보를 사용하여 hallprice 입력란의 값을 설정
+            // 가져온 정보를 사용하여 cateringprice 입력란의 값을 설정
             $('#cateringprice').val(data.cateringprice);
 
             // cateringprice 값을 파싱하여 변수에 저장
             let cateringprice = parseInt(data.cateringprice);
             console.log(cateringprice);
+            
+            //계산
+            calculateTotal();
         },
         error: function() {
             alert('Failed to get hall info.');
@@ -495,14 +516,14 @@ $('#InputCateringtype').on('click', function() {
 });
 
 //드레스 가격 가져오기
-$('#InputDressname').on('click', function() {
+$('.InputDressname').on('click', function() {
     alert('ㅋㅋㅋ');
 	copyInfo('',  '', this.value, '')
 	
-    // 선택된 홀 이름 가져오기
+    // 선택된 드레스 이름 가져오기
     var dressname = $(this).val();
     
-    // AJAX 요청을 사용하여 해당 홀에 대한 정보 가져오기
+    // AJAX 요청을 사용하여 해당 드레스에 대한 정보 가져오기
     $.ajax({
         url: 'Reservation/Dressprice',
         type: 'POST',
@@ -514,6 +535,9 @@ $('#InputDressname').on('click', function() {
             // dressprice 값을 파싱하여 변수에 저장
             let dressprice = parseInt(data.dressprice);
             console.log(dressprice);
+            
+            //계산
+            calculateTotal();
         },
         error: function() {
             alert('Failed to get hall info.');
@@ -522,14 +546,14 @@ $('#InputDressname').on('click', function() {
 });
 
 //스튜디오 가격 가져오기
-$('#InputStudioname').on('click', function() {
+$('.InputStudioname').on('click', function() {
     alert('ㅋㅋㅋ');
 	copyInfo('',  '', '', this.value)
 	
-    // 선택된 홀 이름 가져오기
+    // 선택된 스튜디오 이름 가져오기
     var studioname = $(this).val();
     
-    // AJAX 요청을 사용하여 해당 홀에 대한 정보 가져오기
+    // AJAX 요청을 사용하여 해당 스튜디오에 대한 정보 가져오기
     $.ajax({
         url: 'Reservation/Studioprice',
         type: 'POST',
@@ -541,20 +565,18 @@ $('#InputStudioname').on('click', function() {
             // studioprice 값을 파싱하여 변수에 저장
             let studioprice = parseInt(data.studioprice);
             console.log(studioprice);
+            
+            //계산
+            calculateTotal();
         },
         error: function() {
             alert('Failed to get hall info.');
         }
     });
 });
-</script>
 
 
-
-
-<script>
 // 가격 계산
-// 이벤트 리스너 추가
 document.querySelector('#hallosprice').addEventListener('input', calculateTotal);
 document.querySelector('#cateringprice').addEventListener('input', calculateTotal);
 document.querySelector('#dressprice').addEventListener('input', calculateTotal);
@@ -575,14 +597,7 @@ calculateTotal();
 
 </script>
 
-<script>
-/*
-function showesticomp() {
-	window.open("/Reservation/Estimatecomp", "팝업 테스트",
-			"width=500, height=550, top=250, left=650");
-}
-*/
-</script>
+
 </body>
 </html>
 
