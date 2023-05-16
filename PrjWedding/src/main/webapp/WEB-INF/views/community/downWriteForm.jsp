@@ -5,6 +5,9 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<!-- 헤드 분리 -->
+<jsp:include page="/WEB-INF/views/part_menu/head_resources.jsp" />
+
 <script src="https://code.jquery.com/jquery.min.js"></script>
 
 <script>
@@ -18,7 +21,20 @@
   });
 </script>
 </head>
-<body>
+<body><!-- 헤더 부분 분리 -->
+<jsp:include page="/WEB-INF/views/part_menu/header.jsp" />
+
+  
+<!--유정 로그인 분리--> <!-- 이 부분만 안뜸  -->
+<jsp:include page="/WEB-INF/views/part_menu/login.jsp" />
+
+
+<!-- 슬라이드 메뉴 분리 -->
+<jsp:include page="/WEB-INF/views/part_menu/slidemenu.jsp" />
+<!--카카오문의-->
+<jsp:include page="/WEB-INF/views/part_menu/kakao.jsp" />
+		<!-- 메인 메뉴 -->
+<div class="container-top" style="margin: 200px;"></div>
   <form action="/Community03Write" method="POST" 
         enctype="multipart/form-data"   >    
  <table id="table">   
@@ -47,6 +63,8 @@
      </td>
    </tr> 
    </table>
-
+<div class="container-bottom" style="margin: 300px;"></div>
+ <!-- 푸터 분리 -->
+<jsp:include page="/WEB-INF/views/part_menu/footer.jsp" />
 </body>
 </html>
