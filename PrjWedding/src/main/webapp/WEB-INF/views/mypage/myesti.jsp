@@ -4,13 +4,88 @@
 
 <!DOCTYPE html>
 <html>
+<head>
+<jsp:include page="/WEB-INF/views/part_menu/head_resources.jsp" />
+
+<style>
+.myesticontainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  width: 1200px;
+  height: 2000px;
+  margin-left: 20px;
+}
+
+.esticard {
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #FFFFFF;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.infotitle {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.esticontent {
+  flex-grow: 1; /* 내용 영역이 남은 공간을 모두 차지하도록 설정 */
+}
+
+.table-container {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.table-container table {
+  width: 100%;
+}
+
+.table-container td {
+  padding: 5px 0;
+}
+
+.button-container {
+  text-align: right;
+}
+
+.button-container a {
+  margin-left: 10px;
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- 헤더 부분 분리 --> <!-- 문제없음 -->
+<jsp:include page="/WEB-INF/views/part_menu/header.jsp" />
+
+
+<!--유정 로그인 분리--> <!-- 문제있음 (여기만 안뜸) -->
+<jsp:include page="/WEB-INF/views/part_menu/login.jsp" />
+
+
+<!-- 슬라이드 메뉴 분리 -->
+<jsp:include page="/WEB-INF/views/part_menu/slidemenu.jsp" />
+
+<!--카카오문의-->
+<jsp:include page="/WEB-INF/views/part_menu/kakao.jsp" />
+
 
 <!-- 내 견적서 -->
 
-<div class="container" style="margin: auto; padding:15px 15px 15px 120px;">
+<div class="myesticontainer">
   <c:forEach var="mypage" items="${estiList}">
-    <div class="col">
-       <h2 class=infotitle>${ mypage.estiname }</h2>
+    <div class="col-4"> 
+     <div class="esticard">
+       <h2 class=estititle>${ mypage.estiname }</h2>
            <table>
       		 <tr>
       		 <td>예약일 : </td> 
@@ -40,107 +115,21 @@
         	 <td>본식 드레스 이름 : </td> 
              <td>${ mypage.dressname }</td> 
              </tr>
- 
              <tr>
         	 <td>총 가격 : </td> 
              <td>${ mypage.totalcost }</td> 
              </tr>
              <tr>
              <td>
-             <a class="btn btn-primary btn-sm" href="/User/UpdateForm?memid=${ user.memid }">확인</a>&nbsp;&nbsp;
-             <a class="btn btn-primary btn-sm" href="/User/Delete?memid=${ user.memid }">삭제</a>&nbsp;&nbsp;
+             <a class="btn btn-primary btn-sm" href="#">확인</a>&nbsp;&nbsp;
+             <a class="btn btn-primary btn-sm" href="#">삭제</a>&nbsp;&nbsp;
              </td>
              </tr>
           </table>
+          </div>
         </div>
        </c:forEach>
       </div>
-
-<script>
-
-	const menuButton = document.querySelector('.menu-toggle');
-	const slidingMenu = document.querySelector('.sliding-menu');
-	const slidingMenuOverlay = document.querySelector('.sliding-menu-overlay');
-
-  menuButton.addEventListener('click', function() {
-    slidingMenu.classList.toggle('open');
-    slidingMenuOverlay.classList.toggle('open');
-  });
-  
-  slidingMenuOverlay.addEventListener('click', function() {
-	  slidingMenu.classList.remove('open');
-	  slidingMenuOverlay.classList.remove('open');
-	});
-  
-  
-  $(window).scroll(function() {
-	  // 스크롤 위치가 50px 이상인 경우
-	  if ($(this).scrollTop() > 50) {
-	    $('div.header').slideUp();
-	    $('.menu-toggle').addClass('scrolled');
-	    $('.bar').css('background-color', '#fff'); // 색깔 변경
-	    if ($('.sliding-menu').hasClass('open')) {
-	      $('.sliding-menu').removeClass('open'); // 슬라이딩 메뉴 숨기기
-	    }
-	    if ($('.sliding-menu-overlay').hasClass('open')) {
-	      $('.sliding-menu-overlay').removeClass('open'); // 슬라이딩 메뉴 오버레이 숨기기
-	    }
-	  } 
-	  // 스크롤 위치가 50px 미만인 경우
-	  else {
-	    $('div.header').slideDown();
-	    $('.menu-toggle').removeClass('scrolled');
-	    $('.bar').css('background-color', '#000'); // 색깔 변경
-	    if ($('.sliding-menu').hasClass('open')) {
-	      $('.sliding-menu').removeClass('open'); // 슬라이딩 메뉴 숨기기
-	    }
-	    if ($('.sliding-menu-overlay').hasClass('open')) {
-	      $('.sliding-menu-overlay').removeClass('open'); // 슬라이딩 메뉴 오버레이 숨기기
-	    }
-	  }
-	});
-  
-  // 스크롤 위치에 따른 메뉴 버튼 색상 변경
-  window.addEventListener('scroll', function() {
-    const menuToggle = document.querySelector('.menu-toggle');
-	  if (window.scrollY > 50) {
-	    menuToggle.classList.add('scrolled');
-	  } else {
-	    menuToggle.classList.remove('scrolled');
-	  }
-	});
-  
- 
-  // 유정 로그인  
-  $(function(){
-	  $("#confirm").click(function(){
-         modalClose(); //모달 닫기 함수 호출	      
-	      
-	  });
-	  $("#modal-open").click(function(){        
-	      $("#popup").css('display','flex').hide().fadeIn();
-	      //팝업을 flex속성으로 바꿔준 후 hide()로 숨기고 다시 fadeIn()으로 효과
-	  });
-	  $("#close").click(function(){
-	      modalClose(); //모달 닫기 함수 호출
-	  });
-	  $("#join").click(function(){
-	      modalClose(); //회원가입 눌렀을 때도 모달 닫기 함수 호출
-	  });
-	  function modalClose(){
-	      $("#popup").fadeOut(); //페이드아웃 효과
-	  }
-	});
-
-  
-   //유정 회원가입
-    function showJoin(){
-        window.open("User/WriteForm","팝업 테스트","width=450, height=400, top=350, left=650");
-      }     
-   
-   
-
-</script>
 
 </body>
 </html>

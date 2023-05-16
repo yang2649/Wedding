@@ -35,33 +35,6 @@ public class EstimateController {
 	}
 	
 
-	/*
-	// 견적서에 리스트 출력
-	@RequestMapping("/Reservation011111")
-	public  String alllist( Model model ) {
-		
-		List hallList = estimateService.getHallList();
-		System.out.println("hallList" + hallList);
-		List dressList = estimateService.getDressList();
-		List cateringList = estimateService.getCateringList();
-		List studioList = estimateService.getStudioList();
-		
-		model.addAttribute("hallList", hallList);
-		model.addAttribute("dressList", dressList);
-		model.addAttribute("cateringList", cateringList);
-	    model.addAttribute("studioList", studioList);
-		
-	    
-		System.out.println("hallList" + hallList);
-		System.out.println("dressList" + dressList);
-		System.out.println("cateringList" + cateringList);
-		System.out.println("studioList" + studioList);
-		
-		return "reservation/estimate2222";
-		
-	}
-	*/
-	
 	// hall 가격 불러오기
 	@RequestMapping("/Reservation/Hallprice")
 	@ResponseBody
@@ -143,6 +116,7 @@ public class EstimateController {
 		estivo.setCateringtype((String) map.get("cateringtype"));
 		estivo.setStudioname((String) map.get("studioname"));
 		estivo.setDressname((String) map.get("dressname"));
+		estivo.setTotalcost(Integer.parseInt((String) map.get("totalcost")));
 
 		EstimateVo hallVo = estimateService.getHallid(estivo.getHallname());
 		if (hallVo != null) {

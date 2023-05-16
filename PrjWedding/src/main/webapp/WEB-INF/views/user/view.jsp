@@ -2,10 +2,38 @@
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
->
+<head>
+<jsp:include page="/WEB-INF/views/part_menu/head_resources.jsp" />
 
-<!-- 내 정보 보기 -->
-		
+<style> 
+.myinfocontainer {
+  display: flex;
+  flex-direction: row;
+  background-color: #FFFFFF;
+  border: 1px solid black;
+  }
+</style>
+</head>
+
+<body>
+
+<!-- 헤더 부분 분리 --> <!-- 문제없음 -->
+<jsp:include page="/WEB-INF/views/part_menu/header.jsp" />
+
+
+<!--유정 로그인 분리--> <!-- 문제있음 (여기만 안뜸) -->
+<jsp:include page="/WEB-INF/views/part_menu/login.jsp" />
+
+
+<!-- 슬라이드 메뉴 분리 -->
+<jsp:include page="/WEB-INF/views/part_menu/slidemenu.jsp" />
+
+<!--카카오문의-->
+<jsp:include page="/WEB-INF/views/part_menu/kakao.jsp" />
+
+
+
+<!-- 내 정보 보기 -->	
 <img src="./img/side_main.jpg" width="100%" height="100%" >
 <nav class="nav nav-pills nav-justified" >
   <a class="nav-item nav-link active" href="/Mypage01" style="background-color: rgb(200, 200, 200)">내 정보 보기</a>
@@ -15,8 +43,7 @@
 
 <br><br><br><br><br><br><br><br><br>
 
-<body>
-<div class="container" style="margin: auto; padding:15px 15px 15px 120px;">
+<div class="myinfocontainer" >
  <div class="infocard">
   <div id="main">
      <h2 class=infotitle>내 정보</h2>

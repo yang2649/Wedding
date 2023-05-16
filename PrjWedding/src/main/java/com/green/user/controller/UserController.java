@@ -168,7 +168,7 @@ public class UserController {
 			System.out.println( "update 후 user:" + user );
 			System.out.println( "update 후 map:" + map );
 			
-			mv.setViewName("redirect:/User/View");
+			mv.setViewName("redirect:/Mypage01");
 			
 			return mv;
 		}
