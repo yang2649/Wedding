@@ -54,6 +54,11 @@ nav  {
   position: relative;
   margin: auto; 
 }
+ a{
+ color: black;
+    text-decoration: none;
+     font-family: 'Cinzel', serif;
+ }  
 </style>
 </head>
 <body>
@@ -79,11 +84,11 @@ nav  {
 <nav class="nav nav-pills nav-justified" >
   <a class="nav-item nav-link" href="/Community01" style="color: rgb(0, 0, 0)">공지사항</a>
   <a class="nav-item nav-link" href="/Community02" style="color: rgb(0, 0, 0)">이벤트</a>
-  <a class="nav-item nav-link" href="/Community03" style="color: rgb(0, 0, 0)">자료실</a>
+  <a class="nav-item nav-link active" href="/Community03" style="background-color: rgb(200, 200, 200)">자료실</a>
   <a class="nav-item nav-link" href="/Community04" style="color: rgb(0, 0, 0)">FAQ</a>
   <a class="nav-item nav-link" href="/Community05" style="color: rgb(0, 0, 0)">후기글</a>
 </nav>		
-
+<br><br><br><br><br><br><br><br>
 <!-- =============================여기서부터 내용==================================== -->
  	<div id="text-table">
 	  	<h1 style="text-align: center;">
@@ -96,22 +101,20 @@ nav  {
 <div class="faq_group">
     <div class="table">
       <div class="block">
-        <li style="margin:auto;">자료실 다운로드 목록</li>
+        <li style="margin:auto; font-weight: bold; " >자료실 다운로드 목록</li>
       
       </div>
     </div>
       <hr>
-    <c:forEach var="vo" items="${downList}">
+    <c:forEach var="vo" items="${downList}" >
     <div class="table">
       <div class="block">
         <a href="Community03View?idx=${vo.idx}"style="color: black">
         
-        <span style=" margin:0px 150px 0px 300px;">
+        <span style=" margin: 10px auto;">
         ${vo.title }
         </span>
-       <span>
-       &nbsp;🔻&nbsp;
-       </span>
+     
         </a>  
       </div>
     </div>

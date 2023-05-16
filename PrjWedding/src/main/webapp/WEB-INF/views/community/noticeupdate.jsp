@@ -23,7 +23,11 @@
    
    input[type=text]  { width : 100%; }
    textarea          { width : 100%; height : 400px; padding:10px;} 
-      
+   table {
+   border : 1px solid black;
+  border-collapse : collapse;
+  margin:auto;
+   }   
 </style>
 </head>
 <body>

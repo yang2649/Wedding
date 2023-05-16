@@ -8,7 +8,30 @@
 <title>Insert title here</title>
 <!-- 헤드 분리 -->
 <jsp:include page="/WEB-INF/views/part_menu/head_resources.jsp" />
+<style>
 
+  #table td:first-child  { width : 15%;  height : 50px;}
+  #table td:nth-child(2) { width : 35%;  height : 50px;}
+  #table td:nth-child(3) { width : 15%;  height :  50px; }
+  #table td:last-child   { width : 35%;  height : 50px;}
+  
+  #table tr:nth-child(4) { height : 600px;,
+                           vertical-align : top; }
+  #table td:last-child   { text-align : center; }    
+ 
+     table {
+     width:900px;
+   border : 1px solid black;
+   border-collapse : collapse;
+   margin:auto;
+   }  
+   tr,td{
+   border : 1px solid black;
+   border-collapse : collapse;
+  
+   }  
+   h2{ text-align:center; margin:30px;}
+</style>
 </head>
 <body>
 <!-- 헤더 부분 분리 -->
@@ -74,7 +97,7 @@
      <a class="btn btn-primary btn-sm"
         href="/Community03Delete?idx=${vo.idx }">삭제</a><span></span>
      <a class="btn btn-primary btn-sm"
-        href="/Pds/List?menu_id=${vo.menu_id}&nowpage=${map.nowpage}">목록으로</a><span></span>
+        href="/Community03">목록으로</a><span></span>
      <a class="btn btn-primary btn-sm"
         href="javascript:history.back()">이전으로</a><span></span>
      <a class="btn btn-primary btn-sm"

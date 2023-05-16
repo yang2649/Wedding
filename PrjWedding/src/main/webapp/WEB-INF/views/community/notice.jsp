@@ -18,6 +18,17 @@
 
 
 <style>
+ a{
+ color: black;
+    text-decoration: none;
+     font-family: 'Cinzel', serif;
+ }  
+li, a{
+    font-family: 'Cinzel', serif;
+    font-size: 18px;
+    
+}
+
 
  .community-container {
   max-width: 1200px;
@@ -27,6 +38,16 @@
 ul{
 display:flex;
 }
+
+.notice-date{ width:100px; }
+.notice-tit{ width:700px; }
+.notice-cont{right: 50px;
+    position: absolute; }
+.notice-cont-i    {right: 65px;
+    position: absolute; }
+ a{
+   color: black;
+ }   
 </style>
 </head>
 <body>
@@ -48,7 +69,7 @@ display:flex;
 		
 <img src="./img/side_main.jpg" width="100%" height="100%" >
 <nav class="nav nav-pills nav-justified" >
-  <a class="nav-item nav-link" href="/Community01" style="color: rgb(0, 0, 0)">공지사항</a>
+  <a class="nav-item nav-link active" href="/Community01" style="background-color: rgb(200, 200, 200)">공지사항</a>
   <a class="nav-item nav-link" href="/Community02" style="color: rgb(0, 0, 0)">이벤트</a>
   <a class="nav-item nav-link" href="/Community03" style="color: rgb(0, 0, 0)">자료실</a>
   <a class="nav-item nav-link" href="/Community04" style="color: rgb(0, 0, 0)">FAQ</a>
@@ -63,17 +84,17 @@ display:flex;
 	  	</div>
 	  	<br><br>
 	   <div class="community-container">
+      <a href="Community01WriteForm" ><div style="text-align:right;">공지사항 글쓰기</div></a>
 	   <hr>
       
      <div id="not">
        <hr>
        <div id="not-pan">
-      <a href="Community01WriteForm" ><div style="text-align:right;">공지사항 글쓰기</div></a>
          <ul>
-            <li class="notice-date" style="display: ">날짜</li>
-            <li class="notice-tit">제목</li>
-            <li class="notice-name" style="display:none">글쓴이</li>
-            <li class="notice-cont" style="display:">조회수</li>
+            <li class="notice-date" style=" width:100px; font-weight: bold;  font-size: 20px;">날짜</li>
+            <li class="notice-tit" style=" width:150px; font-weight: bold;  font-size: 20px;">제목</li>
+            <li class="notice-name" style="display:none; ">글쓴이</li>
+            <li class="notice-cont" style="font-weight: bold;  font-size: 20px;" >조회수</li>
          </ul>
          <hr>
 
@@ -82,7 +103,7 @@ display:flex;
             <li class="notice-date" style="display: ">${fn:substring( CommunityVo.regdate, 0, 10) }</li>
             <li class="notice-tit"><a href="Community01View?idx=${CommunityVo.idx}">${ CommunityVo.title }</a></li>
             <li class="notice-name" style="display:none">${ CommunityVo.writer }</li>
-            <li class="notice-cont" style="display:">${ CommunityVo.readcount }</li>         
+            <li class="notice-cont-i" style="display:">${ CommunityVo.readcount }</li>         
      </ul>
          <hr>
        </c:forEach>  

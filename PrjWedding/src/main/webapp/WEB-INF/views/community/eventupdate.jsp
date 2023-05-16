@@ -51,7 +51,7 @@
      <div class="container-top" style="margin: 170px;"></div>
 
  
-   <caption><h2>${ menuname } 자료실 정보 수정</h2></caption>
+   <caption><h2>이벤트 내용 수정</h2></caption>
   <table id="table">   
    <tr>
      <td>글번호</td>

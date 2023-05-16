@@ -15,7 +15,11 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <style>
 
-
+ a{
+ color: black;
+    text-decoration: none;
+     font-family: 'Cinzel', serif;
+ }  
 
 li {
   display: flex;
@@ -24,7 +28,7 @@ li {
   font-size: 20px;
 }
 
-
+.card{ font-family: 'Cinzel', serif;}
 
 body {
 	padding-top: 80px; /* 헤더 높이만큼 패딩 추가 */
@@ -73,7 +77,7 @@ nav  {
   <a class="nav-item nav-link" href="/Community02" style="color: rgb(0, 0, 0)">이벤트</a>
   <a class="nav-item nav-link" href="/Community03" style="color: rgb(0, 0, 0)">자료실</a>
   <a class="nav-item nav-link" href="/Community04" style="color: rgb(0, 0, 0)">FAQ</a>
-  <a class="nav-item nav-link" href="/Community05" style="color: rgb(0, 0, 0)">후기글</a>
+   <a class="nav-item nav-link active" href="/Community05" style="background-color: rgb(200, 200, 200)">후기글</a>
 </nav>			
 
 <br><br><br><br><br><br><br><br>

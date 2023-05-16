@@ -7,7 +7,30 @@
 <title>Insert title here</title>
 <!-- 헤드 분리 -->
 <jsp:include page="/WEB-INF/views/part_menu/head_resources.jsp" />
+<style>
 
+
+  #table td:first-child  { width : 15%;  height : 50px;}
+  #table td:nth-child(2) { width : 35%;  height : 50px;}
+  #table td:nth-child(3) { width : 15%;  height :  50px; }
+  #table td:last-child   { width : 35%;  height : 50px;}
+  
+  #table tr:nth-child(4) { height : 600px;,
+                           vertical-align : top; }
+  #table td:last-child   { text-align : center; }    
+ 
+     table {
+     width:900px;
+   border : 1px solid black;
+   border-collapse : collapse;
+   margin:auto;
+   }  
+   tr,td{
+   border : 1px solid black;
+   border-collapse : collapse;
+  
+   }  
+</style>
 </head>
 <body>
   <!-- 헤더 부분 분리 -->
@@ -27,7 +50,7 @@
       <div id="main">
 
      
-  <h2>공지사항 보기</h2>
+  <h2 style="text-align: center;">공지사항 보기</h2>
     
   <table id="table">   
    <tr>

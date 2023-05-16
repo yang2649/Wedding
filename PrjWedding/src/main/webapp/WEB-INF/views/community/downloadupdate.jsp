@@ -14,17 +14,29 @@
 <style>
    input                       { height: 32px;  }
 
-   #table  td:nth-of-type(1)   { width : 150px;  text-align:center;  }  
-   #table  td:nth-of-type(2)   { width : 400px;  text-align:center;  }  
-   #table  td:nth-of-type(3)   { width : 150px;  text-align:center;  }  
-   #table  td:nth-of-type(4)   { width : 400px;  text-align:center;  }  
+   #table  td:nth-of-type(1)   { width : 150px;  text-align:center; height:50px;  }  
+   #table  td:nth-of-type(2)   { width : 400px;  text-align:center; height:50px; }  
+   #table  td:nth-of-type(3)   { width : 150px;  text-align:center; height:50px; }  
+   #table  td:nth-of-type(4)   { width : 400px;  text-align:center; height:50px; }  
+   
    
    #table  td[colspan]         { text-align: left;  }  
    
    input[type=text]  { width : 100%; }
-   textarea          { width : 100%; height : 400px; padding:10px;} 
+   textarea          { width : 100%; height : 700px; padding:10px;} 
    
-   table { margin:auto; }   
+
+     table {
+     width:900px;
+   border : 1px solid black;
+   border-collapse : collapse;
+   margin:auto;
+   }  
+   tr,td{
+   border : 1px solid black;
+   border-collapse : collapse;
+  
+   }  
 </style>
 </head>
 <body>
