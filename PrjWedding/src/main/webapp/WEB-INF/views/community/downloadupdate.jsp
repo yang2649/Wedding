@@ -23,7 +23,8 @@
    
    input[type=text]  { width : 100%; }
    textarea          { width : 100%; height : 400px; padding:10px;} 
-      
+   
+   table { margin:auto; }   
 </style>
 </head>
 <body>
@@ -48,8 +49,8 @@
      <input type="hidden"  name="idx"     value="${ vo.idx     }" />
  
  
-  <table id="table">   
    <caption><h2> 자료실 정보 수정</h2></caption>
+  <table id="table">   
    <tr>
      <td>글번호</td>
      <td>${ vo.idx }</td>
@@ -82,7 +83,7 @@
      </td>
    </tr> 
   </table>
-  <div class="container-bottom" style="margin: 300px;"></div>
+  <div class="container-bottom" style="margin:300px;"></div>
  <!-- 푸터 분리 -->
 <jsp:include page="/WEB-INF/views/part_menu/footer.jsp" />
 

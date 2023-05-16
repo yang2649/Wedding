@@ -49,7 +49,7 @@ nav  {
   font-size: 20px;
 }
 
-	   .community-container {
+ .community-container {
   max-width: 1200px;
   position: relative;
   margin: auto; 
@@ -83,57 +83,8 @@ nav  {
   <a class="nav-item nav-link" href="/Community04" style="color: rgb(0, 0, 0)">FAQ</a>
   <a class="nav-item nav-link" href="/Community05" style="color: rgb(0, 0, 0)">후기글</a>
 </nav>		
-<br><br><br><br><br><br><br><br>
-<script>
-  const menuButton = document.querySelector('.menu-toggle');
-  const slidingMenu = document.querySelector('.sliding-menu');
-  const slidingMenuOverlay = document.querySelector('.sliding-menu-overlay');
 
-  menuButton.addEventListener('click', function () {
-    slidingMenu.classList.toggle('open');
-    slidingMenuOverlay.classList.toggle('open');
-  });
-
-  slidingMenuOverlay.addEventListener('click', function () {
-    slidingMenu.classList.remove('open');
-    slidingMenuOverlay.classList.remove('open');
-  });
-
-  $(document).ready(function () {
-    $('#main-slider').bxSlider({
-      auto: true,
-      autoControls: true,
-      stopAutoOnClick: true,
-      pager: true,
-      speed: 500,
-      pause: 4000,
-      slideMargin: 0
-    });
-
-    let lastScrollTop = 0;
-
-    $(window).scroll(function () {
-        const currentScrollTop = $(this).scrollTop();
-        const header = $('.header');
-
-        if (currentScrollTop > lastScrollTop) {
-          header.addClass('hide-header');
-        } else {
-          header.removeClass('hide-header');
-        }
-
-        if (currentScrollTop > 0) {
-          header.addClass('sticky');
-          menuButton.classList.add('gold'); // 메뉴 버튼 색상 변경 코드 추가
-        } else {
-          header.removeClass('sticky');
-          menuButton.classList.remove('gold'); // 메뉴 버튼 색상 변경 코드 추가
-        }
-        lastScrollTop = currentScrollTop;
-      });
-    });
-</script>
- <!-- =============================여기서부터 내용==================================== -->
+<!-- =============================여기서부터 내용==================================== -->
  	<div id="text-table">
 	  	<h1 style="text-align: center;">
 			<span style="color: rgb(191, 131, 101);" ">Download</span></h1>
@@ -168,7 +119,7 @@ nav  {
     </c:forEach>
 </div>
 </div>
-   <div class="container" style="margin: 300px;"></div>
+   <div class="container-footer" style="margin: 300px;"></div>
 
  <!-- 푸터 분리 -->
 <jsp:include page="/WEB-INF/views/part_menu/footer.jsp" />

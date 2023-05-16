@@ -114,7 +114,7 @@ form input[type=password]:focus {
 border-bottom: 2px solid #FFDAB9;
 }
 
-form input[type=submit] {
+.popup-box form input[type=submit] {
 background-color: #FFDAB9;
 color: #fff;
 padding: 14px 20px;
@@ -127,7 +127,7 @@ font-size: 20px;
 font-weight: bold;
 }
 
-form input[type=submit]:hover {
+.popup-box form input[type=submit]:hover {
 background-color: #f8f8f8;
 color: #FFDAB9;
 border: 2px solid #FFDAB9;
@@ -137,7 +137,7 @@ border: 2px solid #FFDAB9;
 /* 추가된 스타일 */
 form input[type=text],
 form input[type=password],
-form input[type=submit] {
+.popup-box form input[type=submit] {
   display: block; /* input 요소들이 한 줄에 나오지 않고 블록 요소처럼 표시 */
   width: 100%;
   font-family: 'Noto Sans KR', sans-serif; /* 폰트 설정 */

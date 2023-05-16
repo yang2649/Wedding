@@ -5,6 +5,9 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<!-- 헤드 분리 -->
+<jsp:include page="/WEB-INF/views/part_menu/head_resources.jsp" />
+
 <link rel="stylesheet" href="./css/common.css" />
 
 <style>
@@ -19,15 +22,29 @@
    
    input[type=text]  { width : 100%; }
    textarea          { width : 100%; height : 400px; padding:10px;} 
-      
+   table{ margin:auto;
+    
+    }  
 </style>
 </head>
 <body>
+ <!-- 헤더 부분 분리 -->
+<jsp:include page="/WEB-INF/views/part_menu/header.jsp" />
+  
+<!--유정 로그인 분리--> <!-- 이 부분만 안뜸  -->
+<jsp:include page="/WEB-INF/views/part_menu/login.jsp" />
+
+<!-- 슬라이드 메뉴 분리 -->
+<jsp:include page="/WEB-INF/views/part_menu/slidemenu.jsp" />
+<!--카카오문의-->
+<jsp:include page="/WEB-INF/views/part_menu/kakao.jsp" />
+		<!-- 메인 메뉴 -->
+  <div class="container-top" style=" margin:170px;" ></div>
   <form action="/Community04Update" method="POST" >   
   <input type="hidden"  name="idx"     value="${  vo.idx     }" />
 
-  <table id="table">   
    <caption><h2>FAQ 내용 수정</h2></caption>
+  <table id="table">   
    <tr>
      <td>글번호</td>
      <td>${ vo.idx }</td>
@@ -60,6 +77,12 @@
      </td>
    </tr> 
   </table>
+  <div class="container-bottom" style="margin:300px;" ></div>
+
+ <!-- 푸터 분리 -->
+<jsp:include page="/WEB-INF/views/part_menu/footer.jsp" />  
+	  
+
 
 </body>
 </html>

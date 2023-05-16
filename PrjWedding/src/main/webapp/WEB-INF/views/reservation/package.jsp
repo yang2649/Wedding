@@ -31,7 +31,6 @@ function data_display(vo) {
    
    vo.forEach(function(data, index) {    
 	      html += '<div class="data-item">';
-	      html += '<div class="event-image"><img src="Pds/download/external/" width="300px" high="300px"></div>';
 	      html += '<div class="event-text">';
 	      html += '<hr>';
 	      html += '<h3>' + data.package_title + '</h3>';
@@ -80,7 +79,7 @@ function data_display(vo) {
                
          success : function(data){
             console.log(data);
-            alert(data);
+         //   alert(data);
             let tableEl = document.getElementById('data-container');
            
             let html = data_display(data);

@@ -5,8 +5,25 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<!-- 헤드 분리 -->
+<jsp:include page="/WEB-INF/views/part_menu/head_resources.jsp" />
+
 </head>
 <body>
+ <!-- 헤더 부분 분리 -->
+<jsp:include page="/WEB-INF/views/part_menu/header.jsp" />
+
+  
+<!--유정 로그인 분리--> <!-- 이 부분만 안뜸  -->
+<jsp:include page="/WEB-INF/views/part_menu/login.jsp" />
+
+
+<!-- 슬라이드 메뉴 분리 -->
+<jsp:include page="/WEB-INF/views/part_menu/slidemenu.jsp" />
+<!--카카오문의-->
+<jsp:include page="/WEB-INF/views/part_menu/kakao.jsp" />
+ <div class="container-top" style="margin: 200px;"></div>
+		<!-- 메인 메뉴 -->
   <form action="/Community01Write" method="POST" >
  <table id="table">   
    <tr>
@@ -28,5 +45,8 @@
    </tr> 
    </table>
 
+ <!-- 푸터 분리 -->
+<jsp:include page="/WEB-INF/views/part_menu/footer.jsp" />  
+	  
 </body>
 </html>

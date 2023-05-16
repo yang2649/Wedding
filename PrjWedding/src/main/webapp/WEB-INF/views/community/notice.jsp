@@ -91,8 +91,9 @@ display:flex;
      </div>
 	   </div>
      <div class="foot-container"  style="margin: 300px;">
-   
-
+   </div>
+<!-- 푸터 분리 -->
+<jsp:include page="/WEB-INF/views/part_menu/footer.jsp" />  
      
 </body>
 </html>
