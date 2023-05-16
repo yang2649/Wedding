@@ -112,7 +112,7 @@
 					<li><a href="#">Inquiry Details (문의내역)</a></li>
 					<!-- 문의 내역이라는 뜻입니다 -->
 					<br>
-					<li><a href="#">Steamed List(찜 목록)</a></li>
+					<li><a href="/Mypage02">Steamed List(찜 목록)</a></li>
 					<!-- 찜 목록 이라는뜻 입니다 -->
 				</ul>
 			</li>

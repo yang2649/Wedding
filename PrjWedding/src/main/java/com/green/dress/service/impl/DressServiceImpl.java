@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 
 import com.green.dress.dao.DressDao;
 import com.green.dress.service.DressService;
-import com.green.p.vo.PVo;
+import com.green.dress.vo.DressVo;
 
 // UserServiceImpl userService = new UserServiceImpl();
 
@@ -18,17 +18,42 @@ public class DressServiceImpl implements DressService {
 	@Autowired
 	private DressDao  dressDao;
 
-
-
 	@Override
-	public List<PVo> getDressList(HashMap<String, Object> map) {
-List<PVo>    dressList = dressDao.getDressList(map);
+	public List<DressVo> getDressList(HashMap<String, Object> map) {
+List<DressVo>    dressList = dressDao.getDressList(map);
 		
 		return  dressList;
 	}
-	
+
+@Override
+	public void insertfav(HashMap<String, Object> map) {
+	System.out.println("asd"+map);
+	dressDao.insertfav(map);
+	}
+
+
+@Override
+public List<DressVo> getPList(HashMap<String, Object> map) {
+	List<DressVo>    dressList = dressDao.getPList(map);
+	System.out.println("asd"+map);
+	return  dressList;
+}
+
+
+@Override
+public void deletefav(DressVo vo) {
+	dressDao.deletefav(vo);
 	
 }
+
+
+
+
+
+
+}
+
+
 
 
 

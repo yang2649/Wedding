@@ -10,7 +10,7 @@
 <!-- head 부분 분리 -->
 <!-- 헤드 내부에 스타일 태그 삽입 -->
 <head>
-<title>GGIm</title>
+<title>fav</title>
 <jsp:include page="/WEB-INF/views/part_menu/head_resources.jsp" />
 
 <style>

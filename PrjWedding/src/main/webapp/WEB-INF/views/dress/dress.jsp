@@ -160,7 +160,7 @@ display: flex;
 	</div> <br><br>
 </div>
  <div id="dress">
- <form action="/GGim" method="Post">
+ <form action="/fav" method="Post">
   <div>     
    <input type="hidden"  name="memid"   value="${ map.memid }" />
    <input type="hidden"  name="dressid" />
@@ -223,7 +223,7 @@ display: flex;
     	btn.addEventListener('click', function(e) {    		
     		
     		dressid.value = this.dataset.dressid; 
-    		form.action = '/GGim';
+    		form.action = '/fav';
     		form.submit();
     		
     	});

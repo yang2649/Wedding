@@ -41,7 +41,7 @@
 					<li><a href="/Mypage03">Estimate (견적서)</a></li>
 					<!-- 견적서라는 뜻입니다 -->
 					<br>
-					<li><a href="#">Steamed List(찜 목록)</a></li>
+					<li><a href="/Mypage02">Steamed List(찜 목록)</a></li>
 					<!-- 찜 목록 이라는뜻 입니다 -->
 				</ul>
 			</li>
