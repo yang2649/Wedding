@@ -179,7 +179,7 @@
 		#{ cateringid },
 		#{ studioid   },
 		#{ dressid    },
-		 SYSDATE
+		#{ totalcost  }
 
 		)
 	</insert>

@@ -14,7 +14,7 @@ public class EstimateVo {
 	private String cateringid;
 	private String studioid;
 	private String dressid;
-	private String totalcost;
+	private int    totalcost;
 	
 	// HALL
 	private String hallname;
@@ -51,7 +51,7 @@ public class EstimateVo {
 	public EstimateVo() {}
 
 	public EstimateVo(String estiid, String estiname, String memid, String resdate, String restime, String guestnum,
-			String hallid, String cateringid, String studioid, String dressid, String totalcost, String hallname,
+			String hallid, String cateringid, String studioid, String dressid, int totalcost, String hallname,
 			int hallosprice, int hallpsprice, String cateringtype, int cateringprice, String studioname,
 			int studioprice, String dressname, String dressfor, int dressprice, String dressimage, String optionid,
 			String optionname, int optionprice, String addid, int quantity, String favid) {
@@ -166,11 +166,11 @@ public class EstimateVo {
 		this.dressid = dressid;
 	}
 
-	public String getTotalcost() {
+	public int getTotalcost() {
 		return totalcost;
 	}
 
-	public void setTotalcost(String totalcost) {
+	public void setTotalcost(int totalcost) {
 		this.totalcost = totalcost;
 	}
 

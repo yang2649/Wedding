@@ -113,14 +113,14 @@ public class EstimateController {
 	public ModelAndView estimateForm() {
 		
 		ModelAndView mv = new ModelAndView();
-		mv.setViewName("reservation/estimate2222");
+		mv.setViewName("reservation/estimate");
 		
 		return mv; 
 	}
 	
 	
 	
-	@RequestMapping("/Reservation/Estimate2222")
+	@RequestMapping("/Reservation/Estimate")
 	public ModelAndView insertEstimate(  
 	    HttpSession   session,
 	    @RequestParam HashMap<String, Object> map ) {  
@@ -180,7 +180,7 @@ public class EstimateController {
 		mv.addObject("estivo", estivo);
 		mv.addObject("map", map);
 		mv.setViewName("redirect:/Reservation01");
-		System.out.println( estivo );
+		System.out.println( "estivo" + estivo );
 		System.out.println("map :" + map);
 		
 		return mv;

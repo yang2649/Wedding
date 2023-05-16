@@ -359,8 +359,8 @@ input[type="number"] {
  </div>
  <div class="output-group">
         <label for="total">Total Price:</label>
-        <input type="number" id="total" value="0" readonly>
-        <button type="submit" id="submit" onclick="showesticomp();"> 견적서 저장하기 </button> 
+        <input type="number" id="total" name="totalcost" value="0" readonly>
+        <button type="submit" id="submit" > 견적서 저장하기 </button> 
  </div>
  </div>
   </form>
@@ -455,7 +455,6 @@ return false;
 <script>
 // 홀가격 가져오기
 $('.InputHallname').on('click', function() {
-    alert('ㅋㅋㅋ');
 	copyInfo(this.value, '', '', '')
 		
     // 선택된 홀 이름 가져오기
@@ -487,7 +486,6 @@ $('.InputHallname').on('click', function() {
 
 // 뷔페가격 가져오기
 $('.InputCateringtype').on('click', function() {
-    alert('ㅋㅋㅋ');
 	copyInfo('', this.value, '', '')
 	
     // 선택된 뷔페 이름 가져오기
@@ -517,7 +515,6 @@ $('.InputCateringtype').on('click', function() {
 
 //드레스 가격 가져오기
 $('.InputDressname').on('click', function() {
-    alert('ㅋㅋㅋ');
 	copyInfo('',  '', this.value, '')
 	
     // 선택된 드레스 이름 가져오기
@@ -547,7 +544,6 @@ $('.InputDressname').on('click', function() {
 
 //스튜디오 가격 가져오기
 $('.InputStudioname').on('click', function() {
-    alert('ㅋㅋㅋ');
 	copyInfo('',  '', '', this.value)
 	
     // 선택된 스튜디오 이름 가져오기
