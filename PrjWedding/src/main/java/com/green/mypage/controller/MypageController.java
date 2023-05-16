@@ -25,7 +25,7 @@ public class MypageController {
 
 
 //------------------------------------------------------------------
-	
+	/*
 	@RequestMapping("/Mypage01")
 	public ModelAndView myinfoList() {
 		
@@ -44,6 +44,7 @@ public class MypageController {
 		return mv;
 	}
 	
+	
 	@RequestMapping("/Mypage03")
 	public ModelAndView myestiList() {
 		
@@ -52,11 +53,11 @@ public class MypageController {
 		
 		return mv;
 	}
-
+*/
 
 //------------------------- 내 견적서 ------------------------------
 	
-	@RequestMapping("/Mypage/Myesti")
+	@RequestMapping("/Mypage03")
 	public ModelAndView estiList(HttpSession session, @RequestParam HashMap<String, Object> map) {
 	   
 	    UserVo user = (UserVo) session.getAttribute("login");

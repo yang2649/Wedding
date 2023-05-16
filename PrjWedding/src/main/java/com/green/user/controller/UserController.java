@@ -124,7 +124,7 @@ public class UserController {
 	  }
 				
 		// 내 정보 보기
-		@RequestMapping("/User/View")    
+		@RequestMapping("/Mypage01")    
 		public ModelAndView getUser(HttpSession session) {
 			
 		    UserVo user = (UserVo) session.getAttribute("login");
