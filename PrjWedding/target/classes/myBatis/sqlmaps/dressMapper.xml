@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="Dress">  
+   <select id="DressList" resultType="com.green.dress.vo.DressVo">
+    SELECT DRESSIMAGE, DRESSID, DRESSNAME, DRESSPRICE
+    FROM DRESS
+    WHERE DRESSID BETWEEN 1 AND 24
+    ORDER BY DRESSID ASC
+  </select>
+
+   <!-- 목록 조회 : DESC : 최신순   -->
+   <select id         = "favList"
+           resultType = "com.green.dress.vo.DressVo"  >
+ SELECT    
+         F.DRESSID,      
+         F.FAVID,      
+         D.DRESSNAME,       
+         D.DRESSPRICE,
+         D.DRESSIMAGE
+       FROM      
+       DRESS D JOIN FAVORITES F 
+                ON D.DRESSID = F.DRESSID
+                JOIN MEMBERLIST M
+                ON F.MEMID = M.MEMID 
+WHERE M.MEMID=#{memid}
+   </select>  
+   
+   
+   <insert  id="favInsert">
+ INSERT INTO FAVORITES (
+    FAVID,   
+    MEMID,
+    DRESSID
+   	) VALUES (
+	( SELECT NVL(MAX(FAVID), 0) + 1 FROM FAVORITES ),
+      #{memid},
+      #{dressid}
+  )
+     </insert>
+           
+
+   <delete  id="favDelete">
+       
+		DELETE  FROM  FAVORITES
+		 WHERE  FAVID=#{favid}
+		             
+   </delete>
+
+ 
+</mapper>
+
+
+
+
+
+   
