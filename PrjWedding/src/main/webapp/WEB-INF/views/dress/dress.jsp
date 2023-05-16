@@ -166,18 +166,14 @@ display: flex;
    <input type="hidden"  name="dressid" />
    <c:forEach var="dress" items="${ dressList }" >
       <div id="dressimg">
-        <img src="${dress.dressimage}"  />
-        <p style="font-family: 'Noto Sans KR', sans-serif; font-size: 25px; ">${dress.dressname}</p> 
-        <p style="font-family: 'Noto Sans KR', sans-serif; font-size: 15px; ">${dress.dressprice} ₩</p> 
-        <div style="text-align:center;">
-        <input class="dressbtn" type="button" value="찜하기" data-dressid="${dress.dressid }">
+             <img src="${dress.dressimage}"  />
+<p>   ${dress.dressname}</p>
+        <div style="text-align:center">
+        <input class= "dressbtn" type="button" value="찜하기" data-dressid="${dress.dressid }">
         </div>
       </div>    
    </c:forEach>
-     
-</div>
-  
-   
+</div>   
     
   
   

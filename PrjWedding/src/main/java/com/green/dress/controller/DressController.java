@@ -1,5 +1,6 @@
 package com.green.dress.controller;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
@@ -23,36 +24,40 @@ public class DressController {
 	
 	// 회원목록조회 -> 회원목록을 조회해서 회원목록패이지(user/list.jsp)로 이동
 	// http://localhost:9090/User/List
+	
+	
 	@RequestMapping("/Cooperative09")
-	public  ModelAndView list( HttpSession session,
-			@RequestParam HashMap<String, Object> map) {
-		
-		UserVo user = (UserVo) session.getAttribute("login");
-		// db 조회
-		 List<PVo> dressList = dressService.getDressList(map); 
-		 String  dressid  =  (String)map.get("dressid");
-		 String  dressname  =  (String)map.get("dressname");
-		 String  dressprice  =  (String)map.get("dressprice");
-		 String  memid    = user.getMemid();
-		 
-		 
-		  PVo PVo = (PVo) map.get("PVo");
-		 
-		  map.put("dressname", dressname );
-		  map.put("dressprice", dressprice );
-		 map.put("memid", memid );
-		 map.put("dressid",dressid);
-		 ModelAndView mv = new ModelAndView();
-		
-		 System.out.println("map" + map);
-		// System.out.println("조회된 시용자 목록:" + userList );
-		mv.setViewName("dress/dress");
-		mv.addObject("dressList", dressList);
-		mv.addObject("PVo", PVo);
-		mv.addObject("map",map);
-		
-		return mv;    // /WEB-INF/views/  user/list   .jsp
+	public ModelAndView list(HttpSession session, @RequestParam HashMap<String, Object> map) {
+	    ModelAndView mv = new ModelAndView();
+
+	    UserVo user = (UserVo) session.getAttribute("login");
+	    if (user == null) {
+	    	List<PVo> dressList = dressService.getDressList(map);
+	        mv.setViewName("dress/dress");
+	        mv.addObject("dressList", dressList);
+	        return mv;
+	        
+	       
+	    }else {
+	    	
+
+	    String memid = user.getMemid();
+	    String dressid = (String) map.get("dressid");
+	    map.put("memid", memid);
+	    map.put("dressid", dressid);
+
+	    List<PVo> dressList = dressService.getDressList(map);
+
+	    mv.setViewName("dress/dress");
+	    mv.addObject("dressList", dressList);
+	    mv.addObject("map", map);
+	    mv.addObject("PVo", new PVo());
+
+	    return mv;
+	    }
 	}
-	
-	
+	@RequestMapping("/PlzLogin") 
+	public  String  Parking() {
+		return "dress/plzlogin";   
+	}
 }

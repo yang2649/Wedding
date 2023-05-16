@@ -2,6 +2,7 @@ package com.green.p.dao.impl;
 
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,12 +26,16 @@ public class PDaoImpl implements PDao {
 	}
 
 	@Override
-	public PVo getPList(HashMap<String, Object> map) {
-		PVo    dressList  =  (PVo) sqlSession.selectList("P.PList",map); 
+	public List<PVo> getPList(HashMap<String, Object> map) {
+		List<PVo>    dressList  =   sqlSession.selectList("P.ggimList",map); 
 		
 		return  dressList;
 	}
 
+	@Override
+	public void deleteGGim(PVo vo) {
+         sqlSession.delete("P.ggimDelete",vo);		
+	}
 
 	
 

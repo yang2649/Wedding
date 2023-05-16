@@ -7,15 +7,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class WizetController {
 	
 	
-	@RequestMapping("/Location") 
+	@RequestMapping("/Location01") 
 	public  String  Location() {
 		return "wizet/location";   
 	}
-	@RequestMapping("/Map") 
-	public  String  Map() {
-		return "wizet/map";   
-	}
-	@RequestMapping("/Parking") 
+	@RequestMapping("/Location02") 
 	public  String  Parking() {
 		return "wizet/parking";   
 	}

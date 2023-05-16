@@ -27,12 +27,26 @@ public class PServiceImpl implements PService {
 
 
 @Override
-public PVo getPList(HashMap<String, Object> map) {
-	PVo    dressList = pDao.getPList(map);
-	
+public List<PVo> getPList(HashMap<String, Object> map) {
+	List<PVo>    dressList = pDao.getPList(map);
+	System.out.println("asd"+map);
 	return  dressList;
 }
+
+
+@Override
+public void deleteggim(PVo vo) {
+	pDao.deleteGGim(vo);
+	
 }
+
+
+
+
+
+
+}
+
 
 
 

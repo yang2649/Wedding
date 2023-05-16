@@ -102,8 +102,7 @@
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <li><a class="dropdown-item" href="Location01">찾아오시는 길</a></li>
-                  <li><a class="dropdown-item" href="Location02">약도</a></li>
-                  <li><a class="dropdown-item" href="Location03">주차안내</a></li>
+                  <li><a class="dropdown-item" href="Location02">주차안내</a></li>
                 </ul>
               </li>
             </ul>
