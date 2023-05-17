@@ -103,13 +103,12 @@
 						<li style="font-size: 1.2rem;"><a href="/logout">로그아웃</a></li>
 					</c:if>
 					<li><hr></li>
-					<li><a href="/Adminpage/Meminfomanager">회원 관리</a></li>
+					<li><a href="/Adminpage/Adminmemlist">회원 관리</a></li>
 					<br>
-					<li><a href="/Adminpage/Favlistmanager">찜 목록 관리</a></li>
+					<li><a href="/Adminpage/Adminfavlist">찜 목록 관리</a></li>
 					<br>
-					<li><a href="/Adminpage/Estilistmanager">견적서 관리</a></li>
+					<li><a href="/Adminpage/Adminestilist">견적서 관리</a></li>
 					<br>
-					<li><a href="/Adminpage/Communitymanager">게시판 관리</a></li>
 				</ul>
 			</li>
 		</ul>
