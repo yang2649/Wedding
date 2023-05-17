@@ -182,8 +182,8 @@
    <div class="studio-contanier"> 
     <input type="button" class="InputStudioname" id="InputStudioname"  name="studioname" value="Fillmoment" style="font-size:18px" required>
     <p>Fillmoment : 12000000</p>
-    <input type="button" class="InputStudioname" id="InputStudioname"  name="studioname" value="Steso" style="font-size:18px"  required>
-    <p>Steso : 9000000</p>
+    <input type="button" class="InputStudioname" id="InputStudioname"  name="studioname" value="Ateso" style="font-size:18px"  required>
+    <p>Ateso : 9000000</p>
     <input type="button" class="InputStudioname" id="InputStudioname"  name="studioname" value="너를 봄" style="font-size:18px"  required>
     <p>너를 봄 : 14000000</p>
    </div>
