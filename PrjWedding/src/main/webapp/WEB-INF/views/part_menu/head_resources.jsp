@@ -1,9 +1,19 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="theme-color" content="#363636">
+<meta name="msapplication-navbutton-color" content="#363636">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<title>header_resources</title>
+
+<!-- 파비콘 -->
+<link rel="shortcut icon" href="./img/favicon.ico">
 
 <!-- jquery 사용 -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -15,19 +25,19 @@
 	href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
 
 <!-- css 부분 사용 -->
-<link rel="shortcut icon" href="./img/favicon.ico">
-<link rel="stylesheet" href="./css/loginstyle.css">
-<link rel="stylesheet" href="./css/mypage.css">
-<link rel="stylesheet" href="./css/estimate.css">
-<link rel="stylesheet" href="./css/btn.css">
-<link rel="stylesheet" href="./css/styles.css">
-<link rel="stylesheet" href="./css/slide.css">
+<link rel="shortcut icon" href="/img/favicon.ico">
+<link rel="stylesheet" href="/css/loginstyle.css">
+<link rel="stylesheet" href="/css/mypage.css">
+<link rel="stylesheet" href="/css/estimate.css">
+<link rel="stylesheet" href="/css/btn.css">
+<link rel="stylesheet" href="/css/styles.css">
+<link rel="stylesheet" href="/css/slide.css">
 
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-<link rel="shortcut icon" href="/img/favicon.ico">
+
 
 <!-- Bootstrap CSS -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -57,6 +67,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Castoro+Titling&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet"> <!-- 이부분 폰트가 문제가 있는듯? -->
+
+
 <!-- 폰트 수정 -->
 
 <!-- owl css 사용 -->
