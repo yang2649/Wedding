@@ -6,34 +6,10 @@
 	
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="theme-color" content="#363636">
-<meta name="msapplication-navbutton-color" content="#363636">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<title>Home</title>
+<head><meta charset="UTF-8">
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="path/to/jquery.bxslider.min.js"></script>
-
-<link rel="shortcut icon" href="./img/favicon.ico">
-
-<!-- 구글 폰트 -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Nanum+Gothic:wght@700&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Lora:wght@500&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Castoro+Titling&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-
-
-<!-- 카카오 api 사용 앱 키 -->
-<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=af4768f3d5d87505fcfd4296a54fc669"></script>
+<!-- head 부분 분리 -->
+<jsp:include page="/WEB-INF/views/part_menu/head_resources.jsp" />
 
 </head>
 
@@ -53,7 +29,7 @@
 
 
 <!-- 헤더 부분 분리 -->
-<jsp:include page="header.jsp" />
+<jsp:include page="./part_menu/adminheader.jsp" />
 
   
   
