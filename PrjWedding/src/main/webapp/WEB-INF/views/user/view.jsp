@@ -120,7 +120,7 @@
 <img src="./img/side_main.jpg" width="100%" height="100%" >
 <nav class="nav nav-pills nav-justified" >
   <a class="nav-item nav-link active" href="/Mypage01" style="background-color: rgb(200, 200, 200)">내 정보 보기</a>
-  <a class="nav-item nav-link" href="/Mypage02" style="color: rgb(0, 0, 0)">찜리스트</a>
+  <a class="nav-item nav-link" href="/Mypage02" style="color: rgb(0, 0, 0)">찜 목록</a>
   <a class="nav-item nav-link " href="/Mypage03" style="color: rgb(0, 0, 0)">내 견적서</a>
 </nav>		
 

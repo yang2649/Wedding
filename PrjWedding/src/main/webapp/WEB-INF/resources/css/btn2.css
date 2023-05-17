@@ -11,6 +11,7 @@
  margin: auto; 
  font-family: 'Noto Sans KR';
 }
+
 .info-output {
 	margin: 30px;
 }
@@ -65,7 +66,7 @@
 #card-footer{
 	text-align: center;
 }
-.hallcard, .cateringcard {
+.hallcard, .cateringcard, .studiocard {
  display: flex;
  bheight: 800px;
  padding: 20xp;
@@ -89,6 +90,27 @@ p{
   border-radius: 25px;
 } 
 
+ .dresscard  {
+ display: flex;
+ bheight: 800px;
+ padding: 20xp;
+ margin: 20px 0;
+ border: 6px solid #c6d7ff;
+ border-radius: 10px;
+ width: 300px;
+ height: 428px;
+ display: inline-block;
+ vertical-align: top;
+ margin-right: 20px;
+ 
+}
+
+.dresscard-img {
+  width: 288px;
+  height: 350px;
+  border-radius: 25px;
+
+}
 
 .output-container {
   display: flex;
@@ -122,10 +144,12 @@ input[type="submit"] {
   width: 300px;
   height: 200px;
 }
+
 input[type="button"]:hover,input[type="submit"]:hover{
   background-color:#ff8080;
   transition: 0.7s;
 }
+
 input[type="button"]focus,input[type="submit"]focus {
   outline-color: transparent;
   outline-style:solid;

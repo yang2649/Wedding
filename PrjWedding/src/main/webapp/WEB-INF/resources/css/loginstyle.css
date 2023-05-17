@@ -99,7 +99,7 @@ color: #333;
 
 form input[type=text],
 form input[type=password] {
-width: 100%;
+width: 90%;
 padding: 12px 20px;
 margin: 8px 0;
 box-sizing: border-box;
@@ -173,10 +173,7 @@ label[for="username"], label[for="password"] {
 
 
 /* 회원가입 페이지 팝업*/
-.window {
-	
-	
-}
+
 
 div.join {
   width: 500px;

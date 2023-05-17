@@ -130,9 +130,10 @@
  <form onsubmit="copyInfo(); return false;">
   <div class="catering-contanier">
     <div class="input-form">
+    
        <div class="cateringcard">
         <div class="cateringcard-body">
-         <img class="card-img" src="./img/buffet/buffet01.jpg" alt="esti image">
+         <img class="card-img" src="./img/buffet/buffet01.jpg" alt="catering image">
         </div>
         <div class="card-footer" style="display: flex; align-items: center;">
          <input type="button" class="InputCateringtype" id="InputCateringtype"  name="cateringtype" value="일반뷔페" style="font-size:18px" required>
@@ -142,7 +143,7 @@
 	   
 	   <div class="cateringcard">
         <div class="cateringcard-body">
-         <img class="card-img" src="./img/buffet/buffet15.jpg" alt="esti image">
+         <img class="card-img" src="./img/buffet/pri.jpg" alt="catering image">
         </div>
         <div class="card-footer" style="display: flex; align-items: center;">
          <input type="button" class="InputCateringtype" id="InputCateringtype"  name="cateringtype" value="프리미엄" style="font-size:18px" required>
@@ -157,22 +158,89 @@
 <h2 class="estititle">본식 드레스 목록 <span class="triangle-icon" onclick="toggledressContainer()">▼</span></h2>
   <form onsubmit="copyInfo(); return false;">
    <div class="dress-contanier">
-    <input type="button" class="InputDressname" id="InputDressname"  name="dressname"  value="BE ABSOLUTELY1"     style="font-size:18px"  required>
-    <p>BE ABSOLUTELY1 : 1000000</p>
-    <input type="button" class="InputDressname" id="InputDressname"  name="dressname"  value="LE MEILLEUR CHEF1"  style="font-size:18px"  required>
-    <p>LE MEILLEUR CHEF1 : 1100000</p>
-    <input type="button" class="InputDressname" id="InputDressname"  name="dressname"  value="ROBE DE RÊVE1"      style="font-size:18px"  required>
-    <p>ROBE DE RÊVE1 : 1200000</p>
-    <input type="button" class="InputDressname" id="InputDressname"  name="dressname"  value="LA PERFECTION1"     style="font-size:18px"  required>
-    <p>LA PERFECTION1 : 1300000</p>
-    <input type="button" class="InputDressname" id="InputDressname"  name="dressname"  value="JOUR DE MEMORABLE1" style="font-size:18px"  required> 
-    <p>JOUR DE MEMORABLE1 : 1400000</p>
-    <input type="button" class="InputDressname" id="InputDressname"  name="dressname"  value="BE MY MUSE0"        style="font-size:18px"  required> 
-    <p>BE MY MUSE0 : 1500000</p>
-    <input type="button" class="InputDressname" id="InputDressname"  name="dressname"  value="LOVE IN BLANC1"     style="font-size:18px"  required> 
-    <p>LOVE IN BLANC1 : 1600000</p>
-    <input type="button" class="InputDressname" id="InputDressname"  name="dressname"  value="POUVOIR DE1"        style="font-size:18px"  required> 
-    <p>POUVOIR DE1 : 1700000</p>
+    <div class="input-form">
+    
+       <div class="dresscard">
+        <div class="dresscard-body">
+         <img class="dresscard-img" src="./img/드레스/a01.jpg" alt="dress image">
+        </div>
+        <div class="card-footer" style="display: flex; align-items: center;">
+        <input type="button" class="InputDressname" id="InputDressname"  name="dressname"  value="BE ABSOLUTELY1"     style="font-size:18px"  required>
+        <p>BE ABSOLUTELY1 : 1000000</p>
+        </div>
+	   </div>
+	   
+	   <div class="dresscard">
+        <div class="dresscard-body">
+         <img class="dresscard-img" src="./img/드레스/b01.jpg" alt="dress image">
+        </div>
+        <div class="card-footer" style="display: flex; align-items: center;">
+        <input type="button" class="InputDressname" id="InputDressname"  name="dressname"  value="LE MEILLEUR CHEF1"  style="font-size:18px"  required> 
+        <p>LE MEILLEUR CHEF1 : 1100000</p>
+        </div>
+	   </div>
+	   
+	   <div class="dresscard">
+        <div class="dresscard-body">
+         <img class="dresscard-img" src="./img/드레스/c01.jpg" alt="dress image">
+        </div>
+        <div class="card-footer" style="display: flex; align-items: center;">
+        <input type="button" class="InputDressname" id="InputDressname"  name="dressname"  value="ROBE DE RÊVE1"      style="font-size:18px"  required>
+        <p>ROBE DE RÊVE1 : 1200000</p>
+        </div>
+	   </div>
+	   
+	   <div class="dresscard">
+        <div class="dresscard-body">
+         <img class="dresscard-img" src="./img/드레스/d01.jpg" alt="dress image">
+        </div>
+        <div class="card-footer" style="display: flex; align-items: center;">
+         <input type="button" class="InputDressname" id="InputDressname"  name="dressname"  value="LA PERFECTION1"     style="font-size:18px"  required>
+         <p>LA PERFECTION1 : 1300000</p>
+        </div>
+	   </div>
+	   
+	   <div class="dresscard">
+        <div class="dresscard-body">
+         <img class="dresscard-img" src="./img/드레스/f01.jpg" alt="dress image">
+        </div>
+        <div class="card-footer" style="display: flex; align-items: center;">
+         <input type="button" class="InputDressname" id="InputDressname"  name="dressname"  value="JOUR DE MEMORABLE1" style="font-size:18px"  required> 
+         <p>JOUR DE MEMORABLE1 : 1400000</p>
+        </div>
+	   </div>
+	   
+	   <div class="dresscard">
+        <div class="dresscard-body">
+         <img class="dresscard-img" src="./img/드레스/g01.jpg" alt="dress image">
+        </div>
+        <div class="card-footer" style="display: flex; align-items: center;">
+         <input type="button" class="InputDressname" id="InputDressname"  name="dressname"  value="LOVE IN BLANC1"     style="font-size:18px"  required> 
+         <p>BE MY MUSE0 : 1500000</p>
+        </div>
+	   </div>
+         
+       <div class="dresscard">
+        <div class="dresscard-body">
+         <img class="dresscard-img" src="./img/드레스/h01.jpg" alt="dress image">
+        </div>
+        <div class="card-footer" style="display: flex; align-items: center;">
+         <input type="button" class="InputDressname" id="InputDressname"  name="dressname"  value="LOVE IN BLANC1"     style="font-size:18px"  required> 
+         <p>LOVE IN BLANC1 : 1600000</p>
+        </div>
+	   </div>
+           
+         
+       <div class="dresscard">
+        <div class="dresscard-body">
+         <img class="dresscard-img" src="./img/드레스/i01.jpg" alt="dress image">
+        </div>
+        <div class="card-footer" style="display: flex; align-items: center;">
+         <input type="button" class="InputDressname" id="InputDressname"  name="dressname"  value="POUVOIR DE1"        style="font-size:18px"  required> 
+         <p>POUVOIR DE1 : 1700000</p>
+        </div>
+	   </div>
+    </div>
    </div>
   </form>
 
@@ -180,14 +248,39 @@
 <h2 class="estititle">스튜디오 목록 <span class="triangle-icon" onclick="toggledressContainer()">▼</span></h2>
   <form onsubmit="copyInfo(); return false;">
    <div class="studio-contanier"> 
-    <input type="button" class="InputStudioname" id="InputStudioname"  name="studioname" value="Fillmoment" style="font-size:18px" required>
-    <p>Fillmoment : 12000000</p>
-    <input type="button" class="InputStudioname" id="InputStudioname"  name="studioname" value="Ateso" style="font-size:18px"  required>
-    <p>Ateso : 9000000</p>
-    <input type="button" class="InputStudioname" id="InputStudioname"  name="studioname" value="너를 봄" style="font-size:18px"  required>
-    <p>너를 봄 : 14000000</p>
-   </div>
-</form>
+   
+     <div class="studiocard">
+        <div class="studiocard-body">
+          <img class="card-img" src="./img/studio/a01.jpg" alt="studio image">
+        </div>
+        <div class="card-footer" style="display: flex; align-items: center;">
+         <input type="button" class="InputStudioname" id="InputStudioname"  name="studioname" value="Fillmoment" style="font-size:18px" required>
+         <p>Fillmoment : 12000000</p>
+        </div>
+	   </div>
+	   
+     <div class="studiocard">
+        <div class="studiocard-body">
+          <img class="card-img" src="./img/studio/b01.jpg" alt="studio image">
+        </div>
+        <div class="card-footer" style="display: flex; align-items: center;">
+         <input type="button" class="InputStudioname" id="InputStudioname"  name="studioname" value="Steso" style="font-size:18px"  required>
+         <p>Steso : 9000000</p>
+        </div>
+	   </div>
+	   
+     <div class="studiocard">
+        <div class="studiocard-body">
+          <img class="card-img" src="./img/studio/c01.jpg" alt="studio image">
+        </div>
+        <div class="card-footer" style="display: flex; align-items: center;">
+         <input type="button" class="InputStudioname" id="InputStudioname"  name="studioname" value="너를 봄" style="font-size:18px"  required>
+        <p>너를 봄 : 14000000</p>
+        </div>
+	   </div>
+     
+     </div>
+    </form>
 <br><br>
 
  </div> 
@@ -247,7 +340,7 @@
  <div class="output-group">
         <label for="total" class="pricelabel">Total Price:</label>
         <input type="number" id="total" name="totalcost" value="0" readonly>
-        <button type="submit" id="submit" style="position: absolute; right: 201px; top: 647px;">저장</button> 
+        <button  type="submit" id="submit" style="position: absolute; right: 201px; top: 647px;">저장</button> 
  </div>
  </div>
   </form>

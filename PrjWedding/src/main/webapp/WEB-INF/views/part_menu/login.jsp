@@ -77,7 +77,7 @@
 		//유정 회원가입
 		function showJoin() {
 			window.open("User/WriteForm", "팝업 테스트",
-					"width=500, height=550, top=250, left=650");
+					"width=550, height=600, top=250, left=650");
 		}
 	</script>
 
