@@ -164,9 +164,9 @@ marging:auto;
 <div class="customer-notice">  	
   <hr>
    <div id="moneyselect">
-   <p>최소금액 :</p> <input type="number"  id="start" value="3000000"><br>
-   <p>최대금액 : </p><input type="number"  id="end" value="8000000"><br>
-  <input type="button" id="deptsearch" value="보기"/>
+   <p>최소금액 :</p> &nbsp;&nbsp;<input type="number"  id="start" ><br>
+   <p>최대금액 : </p><input type="number"  id="end" ><br> &nbsp;&nbsp;&nbsp;
+  <input type="button" id="deptsearch" value="입력하기"/>
 
    </div>
   
