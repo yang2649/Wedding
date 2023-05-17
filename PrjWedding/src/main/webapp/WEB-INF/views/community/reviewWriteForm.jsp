@@ -56,6 +56,7 @@
 <form action="/Community05Write" method="POST" 
         enctype="multipart/form-data"   >    
         <h2>후기 카드 쓰기</h2>
+   <input type="hidden"  name="memid" value="${ map.memid }" />
  <table id="table">   
     <tr>
      <th>글쓴이</th>

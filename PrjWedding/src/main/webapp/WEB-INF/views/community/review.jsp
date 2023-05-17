@@ -15,7 +15,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <style>
 
- a{
+button{
  color: black;
     text-decoration: none;
      font-family: 'Cinzel', serif;
@@ -89,7 +89,7 @@ nav  {
 	  	<h1 style="text-align: center;">
 			<span style="color: rgb(191, 131, 101);" ">고객 후기</span></h1>
 			<br><br>
-     <a href="/Community05WriteForm">새글쓰기</a>
+     <button id="reviewWrite"> 후기카드 쓰기 </button>
 			<hr>
 	  	</div>
 	  	
@@ -102,7 +102,11 @@ nav  {
   <div class="card-body">
     <p class="card-text">${vo.cont}</p><br>
      <p class="event-atag" style="text-align: right;">
-     <a href="/Community05Delete?idx=${vo.idx}">삭제하기</a>    
+         <c:if test="${not empty sessionScope.login.memid }">
+        <c:if test="${sessionScope.login.memid eq vo.memid }">    
+        <a href="/Community05Delete?idx=${vo.idx}">내 카드 삭제하기</a>    
+        </c:if>
+    </c:if>
    </p>
   </div>
 </div>
@@ -116,7 +120,20 @@ nav  {
  <!-- 푸터 분리 -->
 <jsp:include page="/WEB-INF/views/part_menu/footer.jsp" />  
 	  
+<script>
+const reviewWriteEl = document.getElementById("reviewWrite")
 
+ reviewWriteEl.onclick = function(e) {
+  var memId = "${user.memid}";
+  if (memId == null || memId == "") {
+    e.preventDefault(); // 기본 동작 막기
+    alert("로그인 후 이용해주세요.");
+  } else {
+    // memId가 존재하는 경우, 페이지 이동
+    window.location.href = "/Community05WriteForm?memid=" + memId;
+  }
+};
+</script>
 
 
 
