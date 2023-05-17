@@ -61,7 +61,7 @@ public class UserController {
 	@RequestMapping("/User/Delete")
 	public String delete(String memid) {
 
-		// 삭제
+		// 삭제되면 홈으로
 		userService.deleteUser(memid);
 
 		return "redirect:/";

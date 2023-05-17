@@ -75,7 +75,6 @@ tr {
 <!-- 슬라이드 메뉴 분리 -->
 <jsp:include page="/WEB-INF/views/part_menu/slidemenu.jsp" />
 
-
 <!--카카오문의--> 
 <jsp:include page="/WEB-INF/views/part_menu/kakao.jsp" />
 
