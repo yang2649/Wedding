@@ -84,7 +84,8 @@
 
 <body>
 	<div id="main">
-		<h2><td>${ member.memname }</td>회원님의 찜목록</h2>
+		<h2><td>${ member.memname }</td> 회원님의 찜 목록</h2>
+		<br>
 		<table id="memfavTable">
 			<thead>
 				<tr>

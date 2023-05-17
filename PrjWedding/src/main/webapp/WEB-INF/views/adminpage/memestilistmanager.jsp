@@ -84,7 +84,8 @@
 
 <body>
 	<div id="main">
-		<h2>회원 목록</h2>
+		<h2><td>${ member.memname }</td> 회원님의 견적서 목록</h2>
+		<br>
 		<table id="memberTable">
 			<thead>
 				<tr>
