@@ -145,7 +145,11 @@ nav  {
 	  	</div>
 	  	<br><br>
  <div class="community-container">
-  <a href="Community02WriteForm">새글쓰기</a>
+    <c:if test="${not empty sessionScope.login.memid }">
+        <c:if test="${sessionScope.login.memid eq 'admin' }">
+      <a href="Community02WriteForm">새글쓰기</a>
+        </c:if>
+    </c:if>
 	   <hr>
 	 <c:forEach var="vo" items="${vo}">
    <div class="event-parent">
@@ -160,9 +164,14 @@ nav  {
        <p>자세한 문의는 예약실로 상담예약 부탁드립니다. Tel. 041-520-9999</p>  
 	   </div>	   
    </div>
+      <c:if test="${not empty sessionScope.login.memid }">
+        <c:if test="${sessionScope.login.memid eq 'admin' }">
    <p class="event-atag" style="text-align: right;">
    <a href="/Community02UpdateForm?idx=${vo.idx}">수정하기</a>  <a href="/Community02Delete?idx=${vo.idx}">삭제하기</a>    
    </p>
+    
+        </c:if>
+    </c:if>
    
    <hr>
 	 </c:forEach>

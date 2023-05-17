@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@taglib prefix="c"  uri="http://java.sun.com/jsp/jstl/core" %>    
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,10 +11,10 @@
 <style>
 
 
-  #table td:first-child  { width : 15%;  height : 50px;}
-  #table td:nth-child(2) { width : 35%;  height : 50px;}
-  #table td:nth-child(3) { width : 15%;  height :  50px; }
-  #table td:last-child   { width : 35%;  height : 50px;}
+  #table td:first-child  { width : 15%;  height : 50px;  text-align : center; }
+  #table td:nth-child(2) { width : 35%;  height : 50px;  text-align : center; }
+  #table td:nth-child(3) { width : 15%;  height : 50px;  text-align : center; }
+  #table td:last-child   { width : 35%;  height : 50px;  text-align : center;}
   
   #table tr:nth-child(4) { height : 600px;,
                            vertical-align : top; }
@@ -79,10 +80,14 @@
    <br>
    <br>
      <td colspan="4" style="high:30px;">
+      <c:if test="${not empty sessionScope.login.memid }">
+        <c:if test="${sessionScope.login.memid eq 'admin' }">
      <a class="btn btn-primary btn-sm"
         href="/Community01UpdateForm?idx=${vo.idx}">수정</a><span></span>
      <a class="btn btn-primary btn-sm"
-        href="/Community01Delete?idx=${vo.idx}">삭제</a><span></span>
+        href="/Community01Delete?idx=${vo.idx}">삭제</a><span></span>        
+        </c:if>
+    </c:if>
      <a class="btn btn-primary btn-sm"
         href="/Community01">목록으로</a><span></span>
      <a class="btn btn-primary btn-sm"

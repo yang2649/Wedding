@@ -465,6 +465,7 @@
        FROM      BOARD B LEFT JOIN FILES F ON F.IDX=B.IDX
        WHERE     
           MENU_ID  =  'MENU05'
+       ORDER BY   FILE_NUM  DESC 
    </select>  
 
      <insert id="ReviewWrite">
