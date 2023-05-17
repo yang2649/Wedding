@@ -53,7 +53,7 @@ public class DressController {
 	    }
 	}
 	@RequestMapping("/PlzLogin") 
-	public  String  Parking() {
+	public  String  Plzlogin() {
 		return "dress/plzlogin";   
 	}
 	
