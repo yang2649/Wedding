@@ -84,7 +84,12 @@ display:flex;
 	  	</div>
 	  	<br><br>
 	   <div class="community-container">
-      <a href="Community01WriteForm" ><div style="text-align:right;">공지사항 글쓰기</div></a>
+	    <c:if test="${not empty sessionScope.login.memid }">
+        <c:if test="${sessionScope.login.memid eq 'admin' }">
+        <a href="Community01WriteForm" ><div style="text-align:right;">공지사항 글쓰기</div></a>
+    
+        </c:if>
+    </c:if>
 	   <hr>
       
      <div id="not">

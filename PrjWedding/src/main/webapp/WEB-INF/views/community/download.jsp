@@ -96,7 +96,11 @@ nav  {
 	  	</div>
 	 <br><br>
 	   <div class="community-container">
-        <a href="Community03WriteForm">새 글쓰기</a>
+	       <c:if test="${not empty sessionScope.login.memid }">
+        <c:if test="${sessionScope.login.memid eq 'admin' }">
+        <a href="Community03WriteForm">새 글쓰기</a>     
+        </c:if>
+    </c:if>
         <hr>
 <div class="faq_group">
     <div class="table">

@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -15,6 +16,7 @@ import com.green.community.service.CommunityService;
 import com.green.community.vo.BoardFilesVo;
 import com.green.community.vo.CommunityVo;
 import com.green.community.vo.ComuFilesVo;
+import com.green.user.vo.UserVo;
 
 
 
@@ -26,9 +28,10 @@ public class CommunityController {
 	
 	// 공지사항 페이지 리스트 가져오기
 	@RequestMapping("/Community01")
-	public ModelAndView noticeList(
+	public ModelAndView noticeList( HttpSession session,
 			@RequestParam HashMap<String, Object> map) {
 		
+	
 		//공지사항 목록
 		String  menu_id  = (String)map.get("menu_id");
 		List<CommunityVo> notList = communityService.getNoticeList(menu_id);
@@ -39,6 +42,7 @@ public class CommunityController {
 		
 		mv.setViewName("community/notice");
 		mv.addObject( "notList",notList);
+		
 		mv.addObject("map", map);
 		
 		System.out.println(notList);
@@ -48,7 +52,7 @@ public class CommunityController {
 
 	//공지사항 보기
 	@RequestMapping("/Community01View")
-	public ModelAndView noticeView(
+	public ModelAndView noticeView( HttpSession session,
 			@RequestParam HashMap<String, Object> map) {
 		
 		CommunityVo  communityVo  =  communityService.getNotice(map);  

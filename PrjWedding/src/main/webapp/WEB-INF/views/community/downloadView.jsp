@@ -10,14 +10,14 @@
 <jsp:include page="/WEB-INF/views/part_menu/head_resources.jsp" />
 <style>
 
-  #table td:first-child  { width : 15%;  height : 50px;}
-  #table td:nth-child(2) { width : 35%;  height : 50px;}
-  #table td:nth-child(3) { width : 15%;  height :  50px; }
-  #table td:last-child   { width : 35%;  height : 50px;}
+  #table td:first-child  { width : 15%;  height : 50px;  text-align : center; }
+  #table td:nth-child(2) { width : 35%;  height : 50px;  text-align : center; }
+  #table td:nth-child(3) { width : 15%;  height :  50px; text-align : center; }
+  #table td:last-child   { width : 35%;  height : 50px;  text-align : center; }
   
   #table tr:nth-child(4) { height : 600px;,
                            vertical-align : top; }
-  #table td:last-child   { text-align : center; }    
+
  
      table {
      width:900px;
@@ -91,11 +91,14 @@
    </tr>   
    <tr>     
      <td colspan="4">
-    
+        <c:if test="${not empty sessionScope.login.memid }">
+        <c:if test="${sessionScope.login.memid eq 'admin' }">
      <a class="btn btn-primary btn-sm"
         href="/Community03UpdateForm?idx=${vo.idx }">수정</a><span></span>
      <a class="btn btn-primary btn-sm"
         href="/Community03Delete?idx=${vo.idx }">삭제</a><span></span>
+        </c:if>
+    </c:if>
      <a class="btn btn-primary btn-sm"
         href="/Community03">목록으로</a><span></span>
      <a class="btn btn-primary btn-sm"

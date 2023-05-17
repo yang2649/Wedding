@@ -149,7 +149,12 @@ h1{ text-align: center;}
 	  	<div style="text-align:right; margin:0px 250px 0px 0px;" >
 	  	</div>
 	   <div class="community-container">
-	  	<a href="/Community04WriteForm">새 글쓰기</a>
+	       <c:if test="${not empty sessionScope.login.memid }">
+        <c:if test="${sessionScope.login.memid eq 'admin' }">
+     	<a href="/Community04WriteForm">새 글쓰기</a>
+        </c:if>
+    </c:if>
+	  
 	   <hr>
 	 <div class="faq_group">
     <div class="table">
@@ -172,7 +177,11 @@ h1{ text-align: center;}
 			<span style=" position: absolute;
     left: 87%;
     transform: translateX(-13%);">
-			    <a href="Community04UpdateForm?idx=${vo.idx}">수정하기</a><a href="/Community04Delete?idx=${vo.idx} ">삭제하기</a>    
+    	       <c:if test="${not empty sessionScope.login.memid }">
+        <c:if test="${sessionScope.login.memid eq 'admin' }">
+	    <a href="Community04UpdateForm?idx=${vo.idx}">수정하기</a><a href="/Community04Delete?idx=${vo.idx} ">삭제하기</a>    
+        </c:if>
+    </c:if>
 			</span>
                
                   </p>
