@@ -140,7 +140,7 @@ text-align: center;
     <!-- 포토 -->
     <div id="text-table">
 		<h1 style="text-align: center;">
-			<span style="color: rgb(191, 131, 101);" ">Imege</span></h1>
+			<span style="color: rgb(191, 131, 101);" ">image</span></h1>
 	</div><br><br>
 	<div id="root">
     <div style="display: flex; flex-wrap: wrap; justify-content: center;">

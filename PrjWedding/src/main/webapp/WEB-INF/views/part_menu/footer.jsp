@@ -12,9 +12,9 @@
       <div class="col-md-12">
         <div class="copytext text-center">
           <br>
-          <p>주소 : 부산 부산진구 중앙대로 749 THE GREEN(주) GREEN WEDDING 사업자등록번호 : 1234-56-7890 | 대표차 : 김그린</p>
+          <p>주소 : 부산 부산진구 중앙대로 749 THE GREEN(주) GREEN WEDDING 사업자등록번호 : 1234-56-7890 | 대표자 : 김그린</p>
           <a href="https://instagram.com/greenwedding2023?igshid=ZGUzMzM3NWJiOQ==" target="_blank">
-          <img src="./img/instar.png" style="width: 33px; float: left ; "></a>
+          <img src="./img/instar.png" style="width: 33px; height:33px; float: left ; "></a>
           <p>&copy; 2023 Your Company. All Rights Reserved.</p>
           <br>
         </div>
