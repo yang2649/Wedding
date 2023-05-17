@@ -487,9 +487,9 @@ public class CommunityController {
 		}
 		
 		@RequestMapping("/Community05Delete")
-		public ModelAndView reviewDelete(
+		public ModelAndView reviewDelete(HttpSession session,
 				@RequestParam HashMap<String, Object> map){
-		
+			communityService.reviewDelete(map); 
 			System.out.println( "딜리트 맵" + map);
 		
 			
