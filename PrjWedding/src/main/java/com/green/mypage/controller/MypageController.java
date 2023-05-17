@@ -102,6 +102,8 @@ public class MypageController {
 		ModelAndView mv = new ModelAndView();
 		mv.setViewName("redirect:/Mypage03"); 
 		
+		
+		
 		return mv;
 	}
 	
