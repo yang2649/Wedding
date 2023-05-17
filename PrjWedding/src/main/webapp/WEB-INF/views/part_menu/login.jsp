@@ -17,9 +17,9 @@
         <span class="popup-close" id="popup-close">&times;</span>
         <h2 class="Green-Wedding">Green Wedding</h2> 
         <form action="/loginprocess" method="POST">
-          <label for="userid">ID</label>
+          <label for="userid" class="loginlabel">ID</label>
           <input type="text" id="userid" name="memid" value="">
-          <label for="password">Password</label>
+          <label for="password" class="loginlabel">Password</label>
           <input type="password" id="password" name="mempw" value="">
           <br>
           <input type="submit" value="로그인">

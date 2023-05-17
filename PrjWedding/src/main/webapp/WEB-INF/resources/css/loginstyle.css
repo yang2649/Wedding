@@ -87,7 +87,7 @@ color: #333;
 }
 */
 
-form label {
+.loginlabel {
   margin-top: 75px;	
   display: block;
   margin-bottom: 10px;

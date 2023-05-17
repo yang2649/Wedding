@@ -173,7 +173,7 @@
 		#{ estiname },
 		#{ memid    },
 		TO_DATE(#{ resdate  }, 'YYYY-MM-DD'),
-		TO_DATE(#{ restime  }, 'HH24:MI'),
+		#{ restime    },
 		#{ guestnum   },	 
 		#{ hallid     },
 		#{ cateringid },
