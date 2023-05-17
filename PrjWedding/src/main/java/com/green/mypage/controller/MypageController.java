@@ -88,7 +88,7 @@ public class MypageController {
 	    return mv;
 	}
 	
-//------------------------- 내 견적서 삭제------------------------------//
+//------------------------- 내 견적서 삭제------------------------------
 
 	@RequestMapping("/Myesti/Delete")
 	public ModelAndView myestidelete(String estiid ) {
