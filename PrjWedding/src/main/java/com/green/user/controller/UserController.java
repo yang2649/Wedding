@@ -143,7 +143,7 @@ public class UserController {
 		}
 		
 		// 내 정보 수정
-		@RequestMapping("/User/UpdateForm")    
+		@RequestMapping("/UpdateForm")    
 		public ModelAndView updateForm(HttpSession session) {
 			
 			UserVo user = (UserVo) session.getAttribute("login");

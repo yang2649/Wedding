@@ -24,6 +24,7 @@
   width: 50rem;
   height: auto;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -78,8 +79,7 @@ tr {
 <!--카카오문의--> <!-- 문제없음 -->
 <jsp:include page="/WEB-INF/views/part_menu/kakao.jsp" />
 
-
-<br><br><br><br><br><br><br><br><br> <!-- 안하면 헤더 부분에 가려저서 썻습니다 -->
+<!-- 안하면 헤더 부분에 가려저서 썻습니다 -->
 <!-- 내 정보 보기 -->
 <img src="./img/side_main.jpg" width="100%" height="100%" >
 <nav class="nav nav-pills nav-justified" >
@@ -123,11 +123,12 @@ tr {
    </tr>
    <tr>
      <th>가입일</th>
-     <td><input type="indate"  name="joindate" value="${ sessionScope.login.joindate }" readonly /></td>
+     <td><input type="text"  name="joindate" value="${ user.joindate }" readonly /></td>
    </tr>
    <tr>
      <td colspan="2">
      <input class="btn btn-primary btn-sm button" type="submit" value="수정" />
+     <a class="btn btn-primary btn-sm button" href="/Mypage01" >취소</a>
      </td>
    </tr>
   </table>
