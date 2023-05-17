@@ -9,6 +9,7 @@ public class CommunityVo {
 	private  String   writer;
 	private  String   regdate;
 	private  int      readcount;
+	private  String   memid;
 	
 	// board 답글 여부
 	private  int      bnum;
@@ -32,9 +33,10 @@ public class CommunityVo {
 	public CommunityVo() {
 		
 	}
-	public CommunityVo(int idx, String title, String cont, String writer, String regdate, int readcount, int bnum, int lvl,
-			int step, int nref, int delnum, int parent, int filescount, String menu_id, String menu_name,
-			int menu_seq) {
+
+	public CommunityVo(int idx, String title, String cont, String writer, String regdate, int readcount, String memid,
+			int bnum, int lvl, int step, int nref, int delnum, int parent, int filescount, String menu_id,
+			String menu_name, int menu_seq) {
 
 		this.idx = idx;
 		this.title = title;
@@ -42,6 +44,7 @@ public class CommunityVo {
 		this.writer = writer;
 		this.regdate = regdate;
 		this.readcount = readcount;
+		this.memid = memid;
 		this.bnum = bnum;
 		this.lvl = lvl;
 		this.step = step;
@@ -53,111 +56,151 @@ public class CommunityVo {
 		this.menu_name = menu_name;
 		this.menu_seq = menu_seq;
 	}
-	
-	// Getter /Setter 
+
 	public int getIdx() {
 		return idx;
 	}
+
 	public void setIdx(int idx) {
 		this.idx = idx;
 	}
+
 	public String getTitle() {
 		return title;
 	}
+
 	public void setTitle(String title) {
 		this.title = title;
 	}
+
 	public String getCont() {
 		return cont;
 	}
+
 	public void setCont(String cont) {
 		this.cont = cont;
 	}
+
 	public String getWriter() {
 		return writer;
 	}
+
 	public void setWriter(String writer) {
 		this.writer = writer;
 	}
+
 	public String getRegdate() {
 		return regdate;
 	}
+
 	public void setRegdate(String regdate) {
 		this.regdate = regdate;
 	}
+
 	public int getReadcount() {
 		return readcount;
 	}
+
 	public void setReadcount(int readcount) {
 		this.readcount = readcount;
 	}
+
+	public String getMemid() {
+		return memid;
+	}
+
+	public void setMemid(String memid) {
+		this.memid = memid;
+	}
+
 	public int getBnum() {
 		return bnum;
 	}
+
 	public void setBnum(int bnum) {
 		this.bnum = bnum;
 	}
+
 	public int getLvl() {
 		return lvl;
 	}
+
 	public void setLvl(int lvl) {
 		this.lvl = lvl;
 	}
+
 	public int getStep() {
 		return step;
 	}
+
 	public void setStep(int step) {
 		this.step = step;
 	}
+
 	public int getNref() {
 		return nref;
 	}
+
 	public void setNref(int nref) {
 		this.nref = nref;
 	}
+
 	public int getDelnum() {
 		return delnum;
 	}
+
 	public void setDelnum(int delnum) {
 		this.delnum = delnum;
 	}
+
 	public int getParent() {
 		return parent;
 	}
+
 	public void setParent(int parent) {
 		this.parent = parent;
 	}
+
 	public int getFilescount() {
 		return filescount;
 	}
+
 	public void setFilescount(int filescount) {
 		this.filescount = filescount;
 	}
+
 	public String getMenu_id() {
 		return menu_id;
 	}
+
 	public void setMenu_id(String menu_id) {
 		this.menu_id = menu_id;
 	}
+
 	public String getMenu_name() {
 		return menu_name;
 	}
+
 	public void setMenu_name(String menu_name) {
 		this.menu_name = menu_name;
 	}
+
 	public int getMenu_seq() {
 		return menu_seq;
 	}
+
 	public void setMenu_seq(int menu_seq) {
 		this.menu_seq = menu_seq;
 	}
+
 	@Override
 	public String toString() {
 		return "CommunityVo [idx=" + idx + ", title=" + title + ", cont=" + cont + ", writer=" + writer + ", regdate="
-				+ regdate + ", readcount=" + readcount + ", bnum=" + bnum + ", lvl=" + lvl + ", step=" + step
-				+ ", nref=" + nref + ", delnum=" + delnum + ", parent=" + parent + ", filescount=" + filescount
-				+ ", menu_id=" + menu_id + ", menu_name=" + menu_name + ", menu_seq=" + menu_seq + "]";
+				+ regdate + ", readcount=" + readcount + ", memid=" + memid + ", bnum=" + bnum + ", lvl=" + lvl
+				+ ", step=" + step + ", nref=" + nref + ", delnum=" + delnum + ", parent=" + parent + ", filescount="
+				+ filescount + ", menu_id=" + menu_id + ", menu_name=" + menu_name + ", menu_seq=" + menu_seq + "]";
 	}
+	
 	
 
 }
