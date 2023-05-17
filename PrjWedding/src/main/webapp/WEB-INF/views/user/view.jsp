@@ -8,10 +8,56 @@
 <style> 
 .myinfocontainer {
   display: flex;
-  flex-direction: row;
+  justify-content: center; /* Horizontally center align */
   background-color: #FFFFFF;
-  border: 1px solid black;
+}
+
+.infocard {
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 25px;
+  margin: 10px;
+  width: 50rem;
+  height: auto;
+  display: flex;
+  justify-content: center; /* Horizontally center align */
+  align-items: center; /* Vertically center align */
+}
+
+.infotitle h2 {
+  font-family: 'Castoro Titling', cursive;
+  font-size: 80px;
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.button {
+   background-color: #FA8072;
+    color: white;
+    border: none;
+    margin-top: 5%;
+    padding: 12px 30px;
+    border-radius: 20px;
+    
   }
+  
+  .button:hover {
+      background-color:#ff8080;
+      transition: 0.7s;
+  }
+   .button:focus {
+    outline-color: transparent;
+    outline-style:solid;
+    box-shadow: 0 0 0 4px #c0c0c0;
+}
+
+tr {
+    margin-bottom: 120px;
+    margin-top: 120px;
+  }
+
+
 </style>
 </head>
 
@@ -46,12 +92,13 @@
 <div class="myinfocontainer" >
  <div class="infocard">
   <div id="main">
-     <h2 class=infotitle>내 정보</h2>
+     <h2 class=infotitle>내 정보보기</h2>
      <table>
        <tr>
         <td>아이디</td> 
         <td>${ user.memid }</td> 
        </tr>
+       <br>
        <tr>
         <td>암호</td> 
         <td>${ user.mempw }</td> 
@@ -74,8 +121,8 @@
        </tr>
        <tr>
         <td  colspan="2">
-          <a class="btn btn-primary btn-sm" href="/User/UpdateForm?memid=${ user.memid }">회원수정</a>&nbsp;&nbsp;
-          <a class="btn btn-primary btn-sm" href="/User/Delete?memid=${ user.memid }">회원삭제</a>&nbsp;&nbsp;
+          <a class="btn btn-primary btn-sm button" href="/User/UpdateForm?memid=${ user.memid }">회원수정</a>&nbsp;&nbsp;
+          <a class="btn btn-primary btn-sm button" href="/User/Delete?memid=${ user.memid }">회원삭제</a>&nbsp;&nbsp;
         </td>
        </tr>
      
@@ -83,6 +130,11 @@
      </div>
      </div>
   </div>
+ <br><br><br><br><br><br>
+ 
+    <!-- 푸터 분리 -->
+<jsp:include page="/WEB-INF/views/part_menu/footer.jsp" />
+  
 </body>
 </html>
 
