@@ -78,6 +78,8 @@ tr {
 <!--카카오문의--> <!-- 문제없음 -->
 <jsp:include page="/WEB-INF/views/part_menu/kakao.jsp" />
 
+
+<br><br><br><br><br><br><br><br><br> <!-- 안하면 헤더 부분에 가려저서 썻습니다 -->
 <!-- 내 정보 보기 -->
 <img src="./img/side_main.jpg" width="100%" height="100%" >
 <nav class="nav nav-pills nav-justified" >
