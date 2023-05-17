@@ -95,6 +95,13 @@
   z-index: 99999;
 }
 
+p {
+  text-align: center;
+  margin: 10px;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 18px;
+}
+
 
 </style>
 </head>
@@ -124,12 +131,12 @@
   <a class="nav-item nav-link " href="/Mypage03" style="color: rgb(0, 0, 0)">내 견적서</a>
 </nav>		
 
-<br><br><br><br><br><br><br><br><br>
+<p style ="font-size:40px; color:orange; margin-top:250px;"> 내 정보 </p>
+
 
 <div class="myinfocontainer" >
  <div class="infocard">
   <div id="main">
-     <h2 class=infotitle>내 정보보기</h2>
      <table>
        <tr>
         <td>아이디</td> 

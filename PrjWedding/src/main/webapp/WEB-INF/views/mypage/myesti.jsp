@@ -137,7 +137,7 @@
              <td>${ mypage.studioname }</td> 
              </tr>
              <tr>
-        	 <td>본식 드레스 이름 : </td> 
+        	 <td>본식 드레스 이름 :   </td> 
              <td>${ mypage.dressname }</td> 
              </tr>
              <tr>
@@ -146,7 +146,6 @@
              </tr>
              <tr>
              <td>
-             <a class="btn btn-primary btn-sm button" href="#">확인</a>&nbsp;&nbsp;
              <a class="btn btn-primary btn-sm button" href="/Myesti/Delete">삭제</a>&nbsp;&nbsp;
              </td>
              </tr>
