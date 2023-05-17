@@ -13,3 +13,4 @@ public interface MypageService {
 	void deleteMyesti(String estiid);
 
 }
+ 

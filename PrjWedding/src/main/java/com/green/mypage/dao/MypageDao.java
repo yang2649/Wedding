@@ -12,4 +12,5 @@ public interface MypageDao {
 
 	void deleteMyesti(String estiid);
 
+	
 }

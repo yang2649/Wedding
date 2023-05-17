@@ -13,6 +13,7 @@ import com.green.mypage.vo.MypageVo;
 public class MypageDaoImpl implements MypageDao {
 
 	
+	
 	@Autowired
 	private SqlSession sqlSession;
 

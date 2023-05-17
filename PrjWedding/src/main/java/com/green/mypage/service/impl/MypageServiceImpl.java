@@ -12,7 +12,7 @@ import com.green.mypage.vo.MypageVo;
 @Service("mypageService")
 public class MypageServiceImpl implements MypageService {
 
-
+ 
 	@Autowired
 	private MypageDao mypageDao;
 	

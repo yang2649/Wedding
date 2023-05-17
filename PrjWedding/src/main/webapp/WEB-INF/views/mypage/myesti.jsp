@@ -160,7 +160,8 @@
        </c:forEach>
       </div>
  <br><br><br><br><br><br>
- 
+  
+  
     <!-- 푸터 분리 -->
 <jsp:include page="/WEB-INF/views/part_menu/footer.jsp" />
 </body>
