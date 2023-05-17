@@ -57,15 +57,7 @@
     margin-top: 120px;
   }
   
-.td {
-  display: block; /* input 요소들이 한 줄에 나오지 않고 블록 요소처럼 표시 */
-  width: 100%;
-  font-family: 'Noto Sans KR', sans-serif; /* 폰트 설정 */
-}
 
-.td {
-border-bottom: 2px solid #FFDAB9;
-}
 
 .confirm-box-overlay {
   position: absolute;
