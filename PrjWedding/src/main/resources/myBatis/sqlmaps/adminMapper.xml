@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="Admin">  
+ 
+  <!-- 로그인 -->
+  <select id         = "GetAdminLogin"
+           resultType = "com.green.admin.vo.AdminVo">
+      
+      SELECT    MEMID
+              , MEMPW
+              , MEMNAME
+              , MEMPH
+              , EMAIL
+              , JOINDATE
+       
+       FROM    MEMBERLIST
+       WHERE   MEMID  = #{ memid }
+        AND    MEMPW  = #{ mempw }
+        AND    LVL    = 0
+   	      
+   </select>
+   
+      
+    <!-- 관리자모드 모든 회원 목록 조회 : DESC : 최신순   -->
+   <select id         = "AdminMemList"
+           resultType = "com.green.admin.vo.AdminVo"  >
+   
+     SELECT    MEMID
+   	         , MEMPW
+   	         , MEMNAME
+   	         , MEMPH
+   	         , EMAIL
+   	         , TO_CHAR(JOINDATE, 'YYYY-MM-DD HH24:MI:SS')  JOINDATE
+   	         , LVL
+       FROM      MEMBERLIST
+       ORDER BY  JOINDATE   DESC         
+   
+   </select> 
+
+   <!-- 관리자 회원 정보보기 -->
+    <select id="GetMember"
+            resultType = "com.green.admin.vo.AdminVo">
+   
+       SELECT  MEMID
+   	         , MEMPW
+   	         , MEMNAME
+   	         , MEMPH
+   	         , EMAIL
+   	         , TO_CHAR(JOINDATE, 'YYYY-MM-DD')  JOINDATE
+   	         , LVL
+   	    FROM   MEMBERLIST
+   	    WHERE  MEMID =  #{ memid }
+   
+   </select>
+   
+
+	<!-- 관리자 회원 정보 수정 -->
+   <update  id="AdminUpdate">
+   
+   	  UPDATE   MEMBERLIST
+   	    SET    MEMNAME  = #{ memname },
+   	    	   MEMPW    = #{ mempw },
+   	           MEMPH    = #{ memph },
+   	           EMAIL    = #{ email },
+   	           LVL      = #{ lvl   }
+   	    WHERE  MEMID    = #{ memid }
+         AND   MEMPW    = #{ mempw }
+         
+   </update>
+   
+   
+   <!-- 관리자 회원 정보 삭제 -->
+   
+   <delete id="AdminDelete">
+   
+      DELETE  FROM   MEMBERLIST
+        WHERE  MEMID = #{ memid }  
+           
+   </delete>
+   
+   <!-- 찜 목록 조회 : DESC : 최신순   -->
+   <select id         = "AdminFavList"
+           resultType = "com.green.admin.vo.AdminVo"  >
+   SELECT    F.FAVID       
+           , D.DRESSID      
+           , D.DRESSNAME
+           , D.DRESSPRICE
+           , D.DRESSIMAGE
+           , M.MEMID
+           , M.MEMNAME
+    FROM     MEMBERLIST M, DRESS D, FAVORITES F 
+    WHERE    M.MEMID = F.MEMID
+     AND     F.DRESSID=D.DRESSID
+                
+    ORDER BY F.FAVID DESC    
+   </select>  
+   
+   
+   <!-- 견적서 목록 조회 DESC -->
+   <select id         = "AdminEstiList"
+           resultType = "com.green.admin.vo.AdminVo"  >
+   SELECT    E.ESTIID       
+           , M.MEMID
+           , M.MEMNAME      
+           , E.ESTINAME
+           , E.RESDATE
+           , E.RESTIME
+           , E.GUESTNUM
+           , H.HALLNAME
+           , C.CATERINGTYPE
+           , S.STUDIONAME
+           , D.DRESSNAME
+           , SUM((E.GUESTNUM * C.CATERINGPRICE) + H.HALLOSPRICE + S.STUDIOPRICE + D.DRESSPRICE ) TOTALCOST
+    FROM     MEMBERLIST M, ESTIMATES E, HALL H, CATERING C, STUDIO S, DRESS D 
+    WHERE    M.MEMID = E.MEMID
+     AND     H.HALLID = E.HALLID
+     AND     C.CATERINGID = E.CATERINGID
+     AND     S.STUDIOID = E.STUDIOID
+     AND     D.DRESSID = E.DRESSID
+    
+    GROUP BY E.ESTIID, M.MEMID, M.MEMNAME, E.ESTINAME, E.RESDATE, E.RESTIME, E.GUESTNUM, H.HALLNAME, C.CATERINGTYPE, S.STUDIONAME, D.DRESSNAME              
+    ORDER BY E.ESTIID DESC
+   
+   </select> 
+   
+   
+   <!-- 해당 회원 찜 목록 정보 -->
+   <select id         = "GetMemFav"
+           resultType = "com.green.admin.vo.AdminVo"  >
+   SELECT    F.FAVID       
+           , D.DRESSID      
+           , D.DRESSNAME
+           , D.DRESSFOR
+           , D.DRESSPRICE
+           , D.DRESSIMAGE
+           , M.MEMID
+           , M.MEMNAME
+    FROM     MEMBERLIST M, DRESS D, FAVORITES F 
+    WHERE    M.MEMID   = F.MEMID
+     AND     F.DRESSID = D.DRESSID
+     AND     M.MEMID   = #{ memid }
+                
+    ORDER BY F.FAVID DESC   
+   </select>       
+   
+   <select id="GetFavIdByMemId" parameterType="java.lang.String" resultType="com.green.admin.vo.AdminVo">
+   SELECT    F.FAVID       
+           , D.DRESSID      
+           , D.DRESSNAME
+           , D.DRESSFOR
+           , D.DRESSPRICE
+           , D.DRESSIMAGE
+           , M.MEMID
+           , M.MEMNAME
+    FROM     MEMBERLIST M, DRESS D, FAVORITES F 
+    WHERE    M.MEMID   = F.MEMID
+     AND     F.DRESSID = D.DRESSID
+     AND     M.MEMID   = #{ memid }
+                
+    ORDER BY F.FAVID DESC 
+   </select>
+
+   
+   <select id="GetEstiIdByMemId" parameterType="java.lang.String" resultType="com.green.admin.vo.AdminVo">
+   SELECT    E.ESTIID       
+           , M.MEMID
+           , M.MEMNAME      
+           , E.ESTINAME
+           , E.RESDATE
+           , E.RESTIME
+           , E.GUESTNUM
+           , H.HALLNAME
+           , C.CATERINGTYPE
+           , S.STUDIONAME
+           , D.DRESSNAME
+           , SUM((E.GUESTNUM * C.CATERINGPRICE) + H.HALLOSPRICE + S.STUDIOPRICE + D.DRESSPRICE ) TOTALCOST
+    FROM     MEMBERLIST M, ESTIMATES E, HALL H, CATERING C, STUDIO S, DRESS D 
+    WHERE    M.MEMID = E.MEMID
+     AND     H.HALLID = E.HALLID
+     AND     C.CATERINGID = E.CATERINGID
+     AND     S.STUDIOID = E.STUDIOID
+     AND     D.DRESSID = E.DRESSID
+     AND     M.MEMID = #{ memid }
+    
+    GROUP BY E.ESTIID, M.MEMID, M.MEMNAME, E.ESTINAME, E.RESDATE, E.RESTIME, E.GUESTNUM, H.HALLNAME, C.CATERINGTYPE, S.STUDIONAME, D.DRESSNAME              
+    ORDER BY E.ESTIID DESC
+   </select>
+   
+    
+</mapper>
+
+
+
+   
