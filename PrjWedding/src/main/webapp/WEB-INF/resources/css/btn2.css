@@ -1,0 +1,175 @@
+@charset "UTF-8";
+
+
+.all-container {
+ display: flex;
+ background-color: #FFFFFF;
+ border: 6px solid #fdf2fc;
+ max-width: 1400px;
+ position: relative;
+ max-height: 700px;
+ margin: auto; 
+ font-family: 'Noto Sans KR';
+}
+.info-output {
+	margin: 30px;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: row;
+  background-color: #FFFFFF;
+  /*border: 1px solid black;*/
+  width: 70%;
+  padding: 10px;
+  bottom: 0;   /* 아래쪽 끝까지 고정 */
+  max-height: 700px;
+  overflow-y: scroll;
+  
+}
+
+.input-form {
+  flex-grow: 1;
+  padding: 20px;
+}
+
+.InputHallname {
+    font-size: 16px;
+    width: 150px; /* 원하는 가로 크기 */
+    height: 40px; /* 원하는 세로 크기 */
+  }
+  
+.InputCateringtype {
+    font-size: 16px;
+    width: 150px; /* 원하는 가로 크기 */
+    height: 40px; /* 원하는 세로 크기 */
+  }
+ .card-footer{
+ 	height: 60px;
+ 	text-align: center;
+ }
+.dress-contanier input[type="button"]{
+	width: 200px;
+	height: 40px;
+	
+}
+.studio-contanier input[type="button"]{
+	width: 200px;
+	height: 40px;
+}
+.hall-container {
+ width: 900px;
+ height: 700px;
+}
+
+#card-footer{
+	text-align: center;
+}
+.hallcard, .cateringcard {
+ display: flex;
+ bheight: 800px;
+ padding: 20xp;
+ margin: 20px 0;
+ border: 6px solid #c6d7ff;
+ border-radius: 10px;
+ width: 300px;
+ height: 250px;
+ display: inline-block;
+ vertical-align: top;
+ margin-right: 20px;
+ 
+}
+p{
+	margin-top: 13px;
+}
+
+.card-img {
+  width: 288px;
+  height: 183px;
+  border-radius: 25px;
+} 
+
+
+.output-container {
+  display: flex;
+  flex-direction: row;
+  background-color: #eee;
+  /*border: 1px solid black;*/
+  width: 30%;
+  padding: 10px;
+  max-height: 700px;
+  box-sizing: border-box;
+  overflow: scroll;
+  font-weight: bold;
+
+}
+
+.estititle {
+  font-size:20px;
+  min-height:30px; 
+  min-width: 120px;
+}
+
+input[type="button"] {
+  min-height:30px; 
+  min-width: 120px;
+  background-color:#fdf2fc;
+  color: #8080c0;
+  border:none; 
+  border-radius:10px; 
+}
+input[type="submit"] {
+  width: 300px;
+  height: 200px;
+}
+input[type="button"]:hover,input[type="submit"]:hover{
+  background-color:#ff8080;
+  transition: 0.7s;
+}
+input[type="button"]focus,input[type="submit"]focus {
+  outline-color: transparent;
+  outline-style:solid;
+  box-shadow: 0 0 0 4px #c0c0c0;
+}
+
+.hallcard button{
+    background-color:#fdf2fc;
+    color: #8080c0;
+    border:none; 
+    border-radius:10px; 
+    padding:15px;
+    min-height:30px; 
+    min-width: 120px;
+}
+
+.input-group {
+  margin-bottom: -13px;
+}
+
+.pricelabel {
+  display: inline-block;
+  width: 120px;
+  font-size: 16px;
+  text-align: left;
+  position: sticky;
+  left: 40px;
+}
+
+input[type="number"] {
+    width: 174px;
+
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+}
+
+.output-group {
+  margin-top: 30px;
+}
+
+#total {
+  font-weight: bold;
+  margin: -7px;
+}
+
+

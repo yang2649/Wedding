@@ -11,165 +11,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>셀프 견적</title>
-
-
-<!-- jquery 사용 -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script
-	src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/fslightbox/3.4.1/index.min.js"></script>
-
+<!-- 잡다한 헤드 부분 분리 -->
+<jsp:include page="/WEB-INF/views/part_menu/head_resources.jsp" />
 <!-- css 부분 사용 -->
 <link rel="shortcut icon" href="/img/favicon.ico">
-<link rel="stylesheet" href="./css/loginstyle.css">
-<link rel="stylesheet" href="/css/common.css">
-<link rel="stylesheet" href="/css/styles.css">
-<link rel="stylesheet" href="/css/slide.css">
-
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
-<link rel="shortcut icon" href="/img/favicon.ico">
-
-<!-- Bootstrap CSS -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
-
-<!-- 글 폰트 -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100&display=swap" rel="stylesheet">
-
-<link rel="stylesheet"
-	href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-<!-- 구글 폰트 -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Nanum+Gothic:wght@700&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Lora:wght@500&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Castoro+Titling&display=swap" rel="stylesheet">
-
-<style>
-<!-- -->
-
-.all-container {
- display: flex;
- background-color: #FFFFFF;
- border: 1px solid black;
- max-width: 1400px;
- position: relative;
- max-height: 700px;
- margin: auto; 
-}
-
-.input-container {
-  display: flex;
-  flex-direction: row;
-  background-color: #FFFFFF;
-  border: 1px solid black;
-  width: 70%;
-  padding: 10px;
-  bottom: 0;   /* 아래쪽 끝까지 고정 */
-  max-height: 600px;
-  overflow-y: scroll;
-  
-}
-
-.input-form {
-  flex-grow: 1;
-  padding: 20px;
-}
-
-
-.hall-container {
- width: 900px;
- height: 700px;
-}
-
-
-.hallcard, .cateringcard {
- display: flex;
- bheight: 800px;
- padding: 20xp;
- margin: 20px 0;
- border: 3px solid black;
- border-radius: 10px;
- width: 300px;
- height: 250px;
- display: inline-block;
- vertical-align: top;
- margin-right: 20px;
- 
-}
-
-.card-img {
-  width: 250px;
-  height: auto;
-  border-radius: 25px;
-} 
-
-
-.output-container {
-  display: flex;
-  flex-direction: row;
-  background-color: #eee;
-  border: 1px solid black;
-  width: 30%;
-  padding: 10px;
-  max-height: 700px;
-  box-sizing: border-box;
-
-}
-
-.estititle {
-  font-size:24px;
-  width:300px;
-  height:50px;
-}
-
-input[type="button"] {
-  width: 150px;
-  height: 50px;
-}
-
-.input-group {
-  margin-bottom: 10px;
-}
-
-.pricelabel {
-  display: inline-block;
-  width: 120px;
-  font-size: 16px;
-}
-
-input[type="number"] {
-  width: 150px;
-  height: 30px;
-  padding: 5px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-.output-group {
-  margin-top: 20px;
-}
-
-#total {
-  font-weight: bold;
-}
-
-
-
-</style>
+<link rel="stylesheet" href="/css/btn2.css">
 </head>
 
 <body>
@@ -230,8 +76,8 @@ input[type="number"] {
          <img class="card-img" src="./img/hall/ahall02.jpg" alt="hall image">
         </div>
         <div class="card-footer" style="display: flex; align-items: center;">
-          <input type="button" class="InputHallname" id="InputHallname"  name="hallname" value="greenhall" style="font-size:24px" required>        
-          <p>greenhall : 1000000</p>
+          <input type="button" class="InputHallname" id="InputHallname"  name="hallname" value="greenhall" style="font-size:18px" required>        
+          <p>　1000000₩</p>
          </div>
        </div>
        
@@ -240,8 +86,8 @@ input[type="number"] {
           <img class="card-img" src="./img/hall/bhall01.jpg" alt="hall image">
          </div>
          <div class="card-footer" style="display: flex; align-items: center;">
-          <input type="button" class="InputHallname" id="InputHallname"   name="hallname" value="redhall" style="font-size:24px" required>
-          <p>redhall price : 1200000</p>
+          <input type="button" class="InputHallname" id="InputHallname"   name="hallname" value="redhall" style="font-size:18px" required>
+          <p>　1200000₩</p>
          </div>
        </div> 
   
@@ -250,8 +96,8 @@ input[type="number"] {
           <img class="card-img" src="./img/hall/chall01.jpg" alt="hall image">
          </div>
          <div class="card-footer" style="display: flex; align-items: center;">
-          <input type="button" class="InputHallname" id="InputHallname"   name="hallname" value="bluehall" style="font-size:24px" required>
-          <p>bluehall price : 1300000</p>
+          <input type="button" class="InputHallname" id="InputHallname"   name="hallname" value="bluehall" style="font-size:18px" required>
+          <p>　1300000₩</p>
          </div>
        </div> 
       
@@ -260,8 +106,8 @@ input[type="number"] {
           <img class="card-img" src="./img/hall/dhall01.jpg" alt="hall image">
          </div>
          <div class="card-footer" style="display: flex; align-items: center;">
-         <input type="button" class="InputHallname" id="InputHallname"  name="hallname" value="blackhall" style="font-size:24px" required>
-         <p>blackhall price : 1500000</p>
+         <input type="button" class="InputHallname" id="InputHallname"  name="hallname" value="blackhall" style="font-size:18px" required>
+         <p>　1500000₩</p>
         </div>
        </div>
        
@@ -270,8 +116,8 @@ input[type="number"] {
           <img class="card-img" src="./img/hall/viphall01.jpg" alt="hall image">
         </div>
         <div class="card-footer" style="display: flex; align-items: center;">
-         <input type="button" class="InputHallname" id="InputHallname" name="hallname" value="viphall" style="font-size:24px" required>    
-	     <p>viphall price : 2000000</p> 
+         <input type="button" class="InputHallname" id="InputHallname" name="hallname" value="viphall" style="font-size:18px" required>    
+	     <p>　2000000₩</p> 
 	    </div> 
 	   </div> 
    </div>
@@ -289,8 +135,8 @@ input[type="number"] {
          <img class="card-img" src="./img/buffet/buffet01.jpg" alt="esti image">
         </div>
         <div class="card-footer" style="display: flex; align-items: center;">
-         <input type="button" class="InputCateringtype" id="InputCateringtype"  name="cateringtype" value="일반뷔페" style="font-size:24px" required>
-         <p>일반뷔페 : 20000</p>
+         <input type="button" class="InputCateringtype" id="InputCateringtype"  name="cateringtype" value="일반뷔페" style="font-size:18px" required>
+         <p>　20000₩</p>
 	    </div>
 	   </div>
 	   
@@ -299,8 +145,8 @@ input[type="number"] {
          <img class="card-img" src="./img/buffet/buffet15.jpg" alt="esti image">
         </div>
         <div class="card-footer" style="display: flex; align-items: center;">
-         <input type="button" class="InputCateringtype" id="InputCateringtype"  name="cateringtype" value="프리미엄" style="font-size:24px" required>
-         <p>프리미엄 : 120000</p>
+         <input type="button" class="InputCateringtype" id="InputCateringtype"  name="cateringtype" value="프리미엄" style="font-size:18px" required>
+         <p>　120000₩</p>
         </div>
        </div>
       </div> 
@@ -311,21 +157,21 @@ input[type="number"] {
 <h2 class="estititle">본식 드레스 목록 <span class="triangle-icon" onclick="toggledressContainer()">▼</span></h2>
   <form onsubmit="copyInfo(); return false;">
    <div class="dress-contanier">
-    <input type="button" class="InputDressname" id="InputDressname"  name="dressname"  value="BE ABSOLUTELY1"     style="font-size:24px"  required>
+    <input type="button" class="InputDressname" id="InputDressname"  name="dressname"  value="BE ABSOLUTELY1"     style="font-size:18px"  required>
     <p>BE ABSOLUTELY1 : 1000000</p>
-    <input type="button" class="InputDressname" id="InputDressname"  name="dressname"  value="LE MEILLEUR CHEF1"  style="font-size:24px"  required>
+    <input type="button" class="InputDressname" id="InputDressname"  name="dressname"  value="LE MEILLEUR CHEF1"  style="font-size:18px"  required>
     <p>LE MEILLEUR CHEF1 : 1100000</p>
-    <input type="button" class="InputDressname" id="InputDressname"  name="dressname"  value="ROBE DE RÊVE1"      style="font-size:24px"  required>
+    <input type="button" class="InputDressname" id="InputDressname"  name="dressname"  value="ROBE DE RÊVE1"      style="font-size:18px"  required>
     <p>ROBE DE RÊVE1 : 1200000</p>
-    <input type="button" class="InputDressname" id="InputDressname"  name="dressname"  value="LA PERFECTION1"     style="font-size:24px"  required>
+    <input type="button" class="InputDressname" id="InputDressname"  name="dressname"  value="LA PERFECTION1"     style="font-size:18px"  required>
     <p>LA PERFECTION1 : 1300000</p>
-    <input type="button" class="InputDressname" id="InputDressname"  name="dressname"  value="JOUR DE MEMORABLE1" style="font-size:24px"  required> 
+    <input type="button" class="InputDressname" id="InputDressname"  name="dressname"  value="JOUR DE MEMORABLE1" style="font-size:18px"  required> 
     <p>JOUR DE MEMORABLE1 : 1400000</p>
-    <input type="button" class="InputDressname" id="InputDressname"  name="dressname"  value="BE MY MUSE0"        style="font-size:24px"  required> 
+    <input type="button" class="InputDressname" id="InputDressname"  name="dressname"  value="BE MY MUSE0"        style="font-size:18px"  required> 
     <p>BE MY MUSE0 : 1500000</p>
-    <input type="button" class="InputDressname" id="InputDressname"  name="dressname"  value="LOVE IN BLANC1"     style="font-size:24px"  required> 
+    <input type="button" class="InputDressname" id="InputDressname"  name="dressname"  value="LOVE IN BLANC1"     style="font-size:18px"  required> 
     <p>LOVE IN BLANC1 : 1600000</p>
-    <input type="button" class="InputDressname" id="InputDressname"  name="dressname"  value="POUVOIR DE1"        style="font-size:24px"  required> 
+    <input type="button" class="InputDressname" id="InputDressname"  name="dressname"  value="POUVOIR DE1"        style="font-size:18px"  required> 
     <p>POUVOIR DE1 : 1700000</p>
    </div>
   </form>
@@ -334,11 +180,11 @@ input[type="number"] {
 <h2 class="estititle">스튜디오 목록 <span class="triangle-icon" onclick="toggledressContainer()">▼</span></h2>
   <form onsubmit="copyInfo(); return false;">
    <div class="studio-contanier"> 
-    <input type="button" class="InputStudioname" id="InputStudioname"  name="studioname" value="Fillmoment" style="font-size:24px" required>
+    <input type="button" class="InputStudioname" id="InputStudioname"  name="studioname" value="Fillmoment" style="font-size:18px" required>
     <p>Fillmoment : 12000000</p>
-    <input type="button" class="InputStudioname" id="InputStudioname"  name="studioname" value="Steso" style="font-size:24px"  required>
+    <input type="button" class="InputStudioname" id="InputStudioname"  name="studioname" value="Steso" style="font-size:18px"  required>
     <p>Steso : 9000000</p>
-    <input type="button" class="InputStudioname" id="InputStudioname"  name="studioname" value="너를 봄" style="font-size:24px"  required>
+    <input type="button" class="InputStudioname" id="InputStudioname"  name="studioname" value="너를 봄" style="font-size:18px"  required>
     <p>너를 봄 : 14000000</p>
    </div>
 </form>
@@ -354,7 +200,8 @@ input[type="number"] {
 <div>
 <form method="POST" action="/Reservation/Estimate">
 
- <input type="text" class="estititle" name="estiname" placeholder="견적서 이름을 입력하세요">
+ <input type="text" class="estititle" name="estiname" placeholder="견적서 이름을 입력하세요" 
+ style="text-align: center;position: absolute;width: 380px;right: 20px;">
  <br><br>
  <div class="info-output">
  <div>
@@ -364,35 +211,35 @@ input[type="number"] {
    <p>예상 하객수 :      <span id="outputGuest"></span><input type="hidden" id="guestnum" name="guestnum"></p>
  
 
-   <p>홀   이름 :        <span id="outputHallName"></span>
+   <p style="font: bold;">Hall :        <span id="outputHallName"></span>
                          <input type="hidden" id="hallname" name="hallname"></p>
    <div class="input-group">
-   <label for="hallosprice"  class="pricelabel">Hall Price:</label>
+   <label for="hallosprice"  class="pricelabel">Price:</label>
    <input type="number" id="hallosprice" name="hallosprice" value="<c:out value="${estivo.hallosprice}" />" />
   </div>
   
-  <p>뷔페 타입 :   <span id="outputCateringtype" ></span>
+  <p>Buffet :   <span id="outputCateringtype" ></span>
                    <input type="hidden" id="cateringtype" name="cateringtype"></p>
   <div class="input-group">
-   <label for="cateringprice" class="pricelabel">Catering Price:</label>
+   <label for="cateringprice" class="pricelabel">Price:</label>
    <input type="number" id="cateringprice" name="cateringprice" value="<c:out value="${estivo.cateringprice}" />">
   </div>
 
   
   
-  <p>드레스 이름 :   <span id="outputDressName"></span>
+  <p>Dress :   <span id="outputDressName"></span>
                 <input type="hidden" id="dressname" name="dressname"></p>
   <div class="input-group">
-    <label for="dressprice"  class="pricelabel">Dress Price:</label>
+    <label for="dressprice"  class="pricelabel">Price:</label>
     <input type="number" id="dressprice" name="dressprice" value="<c:out value="${estivo.dressprice}" />">
   </div>
  
   
 
-  <p>스튜디오 이름 :   <span id="outputStudioName" ></span>
+  <p>Studio :   <span id="outputStudioName" ></span>
                 <input type="hidden" id="studioname" name="studioname"></p>
   <div class="input-group">
-        <label for="studioprice"  class="pricelabel">Studio Price:</label>
+        <label for="studioprice"  class="pricelabel">Price:</label>
         <input type="number" id="studioprice" name="studioprice" value="<c:out value="${estivo.studioprice}" />">
   </div>
   
@@ -400,7 +247,7 @@ input[type="number"] {
  <div class="output-group">
         <label for="total" class="pricelabel">Total Price:</label>
         <input type="number" id="total" name="totalcost" value="0" readonly>
-        <button type="submit" id="submit" >저장</button> 
+        <button type="submit" id="submit" style="position: absolute; right: 201px; top: 647px;">저장</button> 
  </div>
  </div>
   </form>
@@ -640,8 +487,6 @@ calculateTotal();
 
 </body>
 </html>
-
-
 
 
 
