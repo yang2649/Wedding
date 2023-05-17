@@ -9,7 +9,7 @@ public interface MypageDao {
 	List<MypageVo> getEstiList(String memid);
 
 	List<MypageVo> getFavList(String memid);
-
+ 
 	void deleteMyesti(String estiid);
 
 	

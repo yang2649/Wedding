@@ -91,7 +91,7 @@ public class MypageController {
 //------------------------- 내 견적서 삭제------------------------------
 
 	@RequestMapping("/Myesti/Delete")
-	public ModelAndView myestidelete(String estiid ) {
+	public ModelAndView myestidelete(String estiid ) { 
 	
 	    MypageVo mypage = new MypageVo();
 	    mypage.setEstiid(mypage.getEstiid());	     

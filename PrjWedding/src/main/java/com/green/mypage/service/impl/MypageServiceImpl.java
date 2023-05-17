@@ -20,7 +20,7 @@ public class MypageServiceImpl implements MypageService {
 		
 		List<MypageVo> estiList = mypageDao.getEstiList( memid );
 		
-		return estiList;
+		return estiList; 
 	}
 
 	@Override

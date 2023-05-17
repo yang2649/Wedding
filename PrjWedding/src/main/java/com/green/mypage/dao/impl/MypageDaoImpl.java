@@ -16,7 +16,7 @@ public class MypageDaoImpl implements MypageDao {
 	
 	
 	@Autowired
-	private SqlSession sqlSession;
+	private SqlSession sqlSession; 
 
 	@Override
 	public List<MypageVo> getEstiList(String memid) {
