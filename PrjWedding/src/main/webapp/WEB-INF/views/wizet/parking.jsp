@@ -86,6 +86,10 @@ div.widget_text_wrap {
     display: block;
     box-sizing: border-box;
 }
+#parking{
+color: rgb(232, 153, 110);
+
+}
 
 </style>
 
@@ -115,40 +119,23 @@ div.widget_text_wrap {
 <h2>
 <img style="text-align: center;  width:1000px;" src="img/parking.jpg" >
 </h2>
-<p style="line-height: 2;">
-<span style="font-size: 18px;">
-<strong>도로명 주소</strong>
- : 부산 부산진구 중앙대로 749</span>
- </p>
-<p style="line-height: 2;">
-<strong>
-<span style="font-size: 18px;">
-지번 주소
-</span>
-</strong>
-<span style="font-size: 18px;">
-&nbsp;: &nbsp;부산 부산진구 부전동 266-2
-</span>
-</p>
-<p style="line-height: 2;">
-<span style="font-size: 18px;">
-<strong>
-상담전화
-</strong>
- :</span>
-<strong>
-<span style="color: rgb(232, 153, 110); font-size: 18px;">
-&nbsp;052-912-1000
-</span>
-</strong>
-</p>
-<p>
+<div class="parking" style="font-size: 25px;">
+<span id="parking">헤도주차장</span>
+<p>부산광역시 부산진구 부전동 266-2</p>
+<span id="parking">유진주차장</span>
+<p>부산광역시 부산진구 부전동 266-22</p>
+<span id="parking">대림주차장</span>
+<p>부산광역시 부산진구 부전동 97-1</p>
+<span id="parking">트루엘어반스테이 주차장</span>
+<p>부산광역시 부산진구 부전동 129-1</p>
 <br>
-</p>
-</div>
-</div>
+<br>
+<br>
 
 
+
+</div>
+</div></div>
 
 
 

@@ -30,7 +30,7 @@ li {
    padding-top:60px;
    text-align:center;
    margin:auto;
-width: 1000px;}
+width: 800px;}
    .text-table h2{
    text-align:center;
 
@@ -52,7 +52,7 @@ div.widget_text_wrap {
         margin:auto;
 
       text-align: center;
-
+ }
 
 
 </style>
@@ -80,20 +80,12 @@ div.widget_text_wrap {
   <a class="nav-item nav-link " href="/Location02" style="color: rgb(0, 0, 0)">주차안내</a>
 </nav>   
 
-<div class="text-table "><div><h2>
-<span id = "location" style="letter-spacing: -1px; ">Location</span>
-</h2><hr><p style="line-height: 2;"><span style="font-size: 18px;"></span>
+<div class="text-table "><div>
+<h2 style="text-align: left;">Location</h2>
+<hr><p style="line-height: 2;"><span style="font-size: 18px;"></span>
 </p>
 </div>
 </div>
-
-<div class="LOCATION">
-	<div style="height: 50px; background-color: #FFFFFF;"></div>
-	 <div style="height: 50px; background-color: #FFFFFF;"></div>
-	 <div style="height: 50px; background-color: #FFFFFF;"></div>
-</div>
- 
-
  <!-- 카카오 웹 api 사용 -->
 <div class = "map"  id="map" ></div>
 <div id="clickLatlng"></div>
@@ -135,38 +127,23 @@ var marker = new kakao.maps.Marker({
     
 });
 </script>
-
-
-
-
-
-
-
-
-
 <div doz_type="text" 
       class="widget _text_wrap widget_text_wrap fr-view  default_padding " 
       id="text_w2021021623e171f6d38ee">
       
             <div class="text-table ">
-            <div>
-            <table class="tableStrong tableHorizontal" id="308421" style="width: 100%;">
-            <tbody><tr>
-            <td style="width: 14.52%; vertical-align: top;">
-            <div style="text-align: center;">
-            <img src="https://cdn.imweb.me/upload/S2020061561967776cbf38/eb14ded2d6f6a.gif" class="fr-fin fr-dii">
-            </div>
-            </td>
-            <td style="width: 85.48%; vertical-align: middle;padding:20px;">
-            <p>
-            <strong>
+       
+  
             <span style="font-size: 18px;">주소</span>
-            </strong>
-            </p>
-            <p>도로명 주소
+           
+         
+            <p>
+            
+            
+               도로명 주소
 : 부산 부산진구 중앙대로 749
 지번 주소
-&nbsp;: &nbsp;부산 부산진구 부전동 266-2</p> <br>
+&nbsp;: &nbsp;부산 부산진구 부전동 266-2</p> 
 <strong>
 상담전화
 </strong> :
@@ -174,10 +151,19 @@ var marker = new kakao.maps.Marker({
 <span style="color: rgb(232, 153, 110); font-size: 18px;">
 &nbsp;052-912-1000
 </span>
-</strong>
-</td>
-</tr>
-</tbody></table></div></div></div>
+</strong><br><br><br>
+<p> ※기차 이용시 </p>
+<p>부산역에서 하차후 지하철 부산역(노포행 1호선 ) </p>
+ <p>&nbsp;서면역에서 하차 부전역 방향으로 도보 3분</p><br>
+<p> ※버스 이용시 </p>
+<p>부산종합버스터미널 하차후 지하철 노포역 (다대포행 1호선) </p>
+ <p>&nbsp;서면역에서 하차 부전역 방향으로 도보 3분</p><br>
+<p>부산서부 사상터미널에서 하차후 지하철 사상역(장산행 2호선 ) </p>
+ <p>&nbsp;서면역에서 하차 부전역 방향으로 도보 3분</p><br>
+</div></div><br><br>
+
+
+
 
   
 
