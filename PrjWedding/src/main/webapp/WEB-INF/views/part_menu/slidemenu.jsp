@@ -98,4 +98,14 @@
 			menuToggle.classList.remove('scrolled');
 		}
 	});
+	
+	$(document).ready(function() {
+	    $('a').on('click', function(event) {
+	        var loginStatus = "${sessionScope.login}";
+	        if (loginStatus === null || loginStatus === "") {
+	            event.preventDefault(); // 링크 클릭 이벤트의 기본 동작 중지
+	            alert("로그인이 필요합니다."); // 로그인이 필요한 경우 알림 메시지 출력
+	        }
+	    });
+	});
 </script>
