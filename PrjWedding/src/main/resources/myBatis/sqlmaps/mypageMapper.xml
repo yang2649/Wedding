@@ -24,7 +24,7 @@
           join CATERING CA on ES.cateringid = CA.cateringid
           join STUDIO STU on ES.studioid = STU.studioid
           join DRESS DR on ES.DRESSID = DR.DRESSID
-  WHERE   ES.MEMID = #{memid}
+  WHERE   ES.MEMID = #{ memid }
 
    
    </select> 
