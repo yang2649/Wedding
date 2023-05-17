@@ -100,21 +100,7 @@
 	});
 	
 	
-	document.addEventListener('DOMContentLoaded', function() {
-	    var mypageLinks = document.querySelectorAll('#mypage');
-	    for (var i = 0; i < mypageLinks.length; i++) {
-	      mypageLinks[i].addEventListener('click', function(event) {
-	        // 로그인 확인
-	        var isLogin = <c:if test="${sessionScope.login == null}">true</c:if>;
-	        if (isLogin) {
-	          event.preventDefault(); // 클릭 이벤트의 기본 동작 중지
-	          alert('로그인이 필요합니다.'); // 로그인이 필요한 경우 알림 메시지 출력
-	        }
-	      });
-	    }
-	  });
+
 </script>
-
-
 
 
