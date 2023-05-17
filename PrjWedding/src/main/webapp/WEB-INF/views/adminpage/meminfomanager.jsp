@@ -7,6 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Insert title here</title>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 <!-- css 부분 사용 -->
 <link rel="shortcut icon" href="/img/favicon.ico">
 <link rel="stylesheet" href="./css/loginstyle.css">
@@ -53,63 +54,78 @@
 .pointer-cursor {
 	cursor: pointer;
 }
-</style>
 
+</style>
 </head>
 <img src="/img/side_main.jpg" width="100%" height="100%">
-<body>
-	<div id="main">
-		<h2>회원 목록</h2>
-		<table id="memberTable">
-			<thead>
-				<tr>
-					<th>아이디</th>
-					<th>비밀번호</th>
-					<th>이름</th>
-					<th>연락처</th>
-					<th>이메일</th>
-					<th>가입일</th>
-					<th>회원등급</th>
-				</tr>
-			</thead>
-			<tbody>
-				<c:forEach var="user" items="${ mList }">
-					<tr>
-						<td>${ user.memid    }</td>
-						<td>${ user.mempw    }</td>
-						<td>${ user.memname  }</td>
-						<td>${ user.memph    }</td>
-						<td>${ user.email    }</td>
-						<td>${ user.joindate }</td>
-						<td>${ user.lvl      }</td>
-					</tr>
-				</c:forEach>
-			</tbody>
-		</table>
-	</div>
-	<script>
-  // 테이블 row에 마우스 이벤트 리스너 추가
-  var rows = document.querySelectorAll('#memberTable tbody tr');
-  rows.forEach(function(row) {
-    row.addEventListener('mouseenter', function(e) {
-      // 마우스가 row에 올라갔을 때의 동작
-      row.classList.add('pointer-cursor'); // 손 모양 커서로 변경
-      row.style.backgroundColor = 'lightgray';
+<!-- 내 정보 보기 -->
+<adminnav class="nav nav-pills nav-justified">
+  <a class="nav-item nav-link active" href="/Adminpage/Meminfomanager?memid=${member.memid}">상세 정보 관리</a>
+  <a class="nav-item nav-link" href="/Adminpage/Memfavlistmanager?memid=${member.memid}" style="color: #000000;">찜 목록 관리</a>
+  <a class="nav-item nav-link" href="/Adminpage/Memestilistmanager?memid=${member.memid}" style="color: #000000;">견적서 관리</a>
+</adminnav>
+
+<script>
+  // 마우스 이벤트 리스너 추가
+  var tabs = document.querySelectorAll('adminnav .nav-link:not(.active)');
+
+  tabs.forEach(function(tab) {
+    tab.addEventListener('mouseenter', function(e) {
+      tab.style.backgroundColor = '#0474BC';
+      tab.style.color = '#FFFFFF';
     });
-  
-    row.addEventListener('mouseleave', function(e) {
-      // 마우스가 row에서 벗어났을 때의 동작
-      row.classList.remove('pointer-cursor'); // 커서 모양 원래대로
-      row.style.backgroundColor = ''; // 이전의 배경색으로 복원하거나 다른 스타일 변경
-    });
-  
-    // 클릭 이벤트 핸들러 추가
-    row.addEventListener('click', function(e) {
-      var memid = row.cells[0].innerText; // 회원 아이디 추출
-      window.location.href = '/Adminpage/Adminview?memid=' + memid; // 상세 정보 페이지로 이동
+
+    tab.addEventListener('mouseleave', function(e) {
+      tab.style.backgroundColor = '';
+      tab.style.color = '#000000';
     });
   });
-  </script>
+</script>
+
+<body>
+	<div class="container" style="margin: auto; padding: 15px 15px 15px 120px;">
+		<div class="infocard">
+			<div id="main">
+				<h2 class=infotitle>회원 상세 정보</h2>
+				<table>
+					<tr>
+						<td>아이디</td>
+						<td>${ member.memid }</td>
+					</tr>
+					<tr>
+						<td>암호</td>
+						<td>${ member.mempw }</td>
+					</tr>
+					<tr>
+						<td>이름</td>
+						<td>${ member.memname }</td>
+					</tr>
+					<tr>
+						<td>전화번호</td>
+						<td>${ member.memph }</td>
+					</tr>
+					<tr>
+						<td>이메일</td>
+						<td>${ member.email }</td>
+					</tr>
+					<tr>
+						<td>가입일</td>
+						<td>${ member.joindate }</td>
+					</tr>
+					<tr>
+						<td>접근권한</td>
+						<td>${ member.lvl }</td>
+					</tr>
+					<tr>
+						<td colspan="2">
+						<a class="btn btn-primary btn-sm" href="/Adminpage/AdminUpdateForm?memid=${clickedUser.memid}">회원 정보 수정</a>&nbsp;&nbsp;
+						<a class="btn btn-primary btn-sm" href="/Admin/AdminDelete?memid=${ clickedUser.memid }">회원 삭제</a>&nbsp;&nbsp;</td>
+					</tr>
+
+				</table>
+			</div>
+		</div>
+	</div>
 <head>
 <style>
 table {
@@ -159,3 +175,10 @@ p {
 
 </body>
 </html>
+
+
+
+
+
+
+

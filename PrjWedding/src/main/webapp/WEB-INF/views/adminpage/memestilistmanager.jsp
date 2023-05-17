@@ -57,31 +57,62 @@
 
 </head>
 <img src="/img/side_main.jpg" width="100%" height="100%">
+<!-- 내 정보 보기 -->
+<adminnav class="nav nav-pills nav-justified">
+  <a class="nav-item nav-link" href="/Adminpage/Meminfomanager?memid=${member.memid}" style="color: #000000;">상세 정보 관리</a>
+  <a class="nav-item nav-link" href="/Adminpage/Memfavlistmanager?memid=${member.memid}" style="color: #000000;">찜 목록 관리</a>
+  <a class="nav-item nav-link active" href="/Adminpage/Memestilistmanager?memid=${member.memid}">견적서 관리</a>
+</adminnav>
+
+<script>
+  // 마우스 이벤트 리스너 추가
+  var tabs = document.querySelectorAll('adminnav .nav-link:not(.active)');
+
+  tabs.forEach(function(tab) {
+    tab.addEventListener('mouseenter', function(e) {
+      tab.style.backgroundColor = '#0474BC';
+      tab.style.color = '#FFFFFF';
+    });
+
+    tab.addEventListener('mouseleave', function(e) {
+      tab.style.backgroundColor = '';
+      tab.style.color = '#000000';
+    });
+  });
+</script>
+
+
 <body>
 	<div id="main">
 		<h2>회원 목록</h2>
 		<table id="memberTable">
 			<thead>
 				<tr>
-					<th>아이디</th>
-					<th>비밀번호</th>
-					<th>이름</th>
-					<th>연락처</th>
-					<th>이메일</th>
-					<th>가입일</th>
-					<th>회원등급</th>
+					<th>견적서 아이디</th>
+					<th>견적서 이름</th>
+					<th>예약일</th>
+					<th>예약시간</th>
+					<th>하객수</th>
+					<th>홀</th>
+					<th>피로연</th>
+					<th>스튜디오</th>
+					<th>드레스이름</th>
+					<th>예상비용</th>
 				</tr>
 			</thead>
 			<tbody>
-				<c:forEach var="user" items="${ mList }">
+				<c:forEach var="admin" items="${ eList }">
 					<tr>
-						<td>${ user.memid    }</td>
-						<td>${ user.mempw    }</td>
-						<td>${ user.memname  }</td>
-						<td>${ user.memph    }</td>
-						<td>${ user.email    }</td>
-						<td>${ user.joindate }</td>
-						<td>${ user.lvl      }</td>
+						<td>${ admin.estiid         }</td>
+						<td>${ admin.estiname       }</td>
+						<td>${ admin.resdate       }</td>
+						<td>${ admin.restime       }</td>
+						<td>${ admin.guestnum      }</td>
+						<td>${ admin.hallname      }</td>
+						<td>${ admin.cateringtype  }</td>
+						<td>${ admin.studioname    }</td>
+						<td>${ admin.dressname     }</td>
+						<td>${ admin.totalcost     }</td>
 					</tr>
 				</c:forEach>
 			</tbody>
@@ -116,6 +147,7 @@ table {
 	width: 95%;
 	border-collapse: collapse;
 	margin: 0 0 0 30px;
+	text-align: center;
 }
 
 th, td {

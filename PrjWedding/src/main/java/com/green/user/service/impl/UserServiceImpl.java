@@ -61,49 +61,11 @@ public class UserServiceImpl implements UserService {
 	}
 
 	@Override
-	public UserVo getAdminUserInfo(HashMap<String, Object> map) {
-
-		UserVo adminuserinfo = userDao.getAdminUserInfo(map);
-
-		return adminuserinfo;
-	}
-
-	@Override
-	public List getAdminUserList() {
-
-		List adminUserList = userDao.getAdminUserList();
-
-		return adminUserList;
-	}
-
-	@Override
-	public List getAdminEstiList() {
-
-		List adminEstiList = userDao.getAdminEstiList();
-
-		return adminEstiList;
-	}
-
-	@Override
-	public List getAdminFavList() {
-
-		List adminFavList = userDao.getAdminFavList();
-
-		return adminFavList;
-	}
-
-	@Override
 	public UserVo getUserById(String userId) {
 
 		UserVo userById = userDao.getUserById(userId);
 
 		return userById;
-	}
-
-	@Override
-	public void adminUpdate(HashMap<String, Object> map) {
-
-		userDao.adminUpdate(map);
 	}
 
 	@Override

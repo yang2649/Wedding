@@ -7,6 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Insert title here</title>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 <!-- css 부분 사용 -->
 <link rel="shortcut icon" href="/img/favicon.ico">
 <link rel="stylesheet" href="./css/loginstyle.css">
@@ -53,69 +54,91 @@
 .pointer-cursor {
 	cursor: pointer;
 }
-</style>
 
+</style>
 </head>
 <img src="/img/side_main.jpg" width="100%" height="100%">
+<!-- 내 정보 보기 -->
+<adminnav class="nav nav-pills nav-justified">
+  <a class="nav-item nav-link" href="/Adminpage/Meminfomanager?memid=${member.memid}" style="color: #000000;">상세 정보 관리</a>
+  <a class="nav-item nav-link active" href="/Adminpage/Memfavlistmanager?memid=${member.memid}" >찜 목록 관리</a>
+  <a class="nav-item nav-link" href="/Adminpage/Memestilistmanager?memid=${member.memid}" style="color: #000000;">견적서 관리</a>
+</adminnav>
+
+<script>
+  // 마우스 이벤트 리스너 추가
+  var tabs = document.querySelectorAll('adminnav .nav-link:not(.active)');
+
+  tabs.forEach(function(tab) {
+    tab.addEventListener('mouseenter', function(e) {
+      tab.style.backgroundColor = '#0474BC';
+      tab.style.color = '#FFFFFF';
+    });
+
+    tab.addEventListener('mouseleave', function(e) {
+      tab.style.backgroundColor = '';
+      tab.style.color = '#000000';
+    });
+  });
+</script>
+
 <body>
 	<div id="main">
-		<h2>회원 목록</h2>
-		<table id="memberTable">
+		<h2><td>${ member.memname }</td>회원님의 찜목록</h2>
+		<table id="memfavTable">
 			<thead>
 				<tr>
-					<th>아이디</th>
-					<th>비밀번호</th>
-					<th>이름</th>
-					<th>연락처</th>
-					<th>이메일</th>
-					<th>가입일</th>
-					<th>회원등급</th>
+					<th>드레스아이디</th>
+					<th>드레스이름</th>
+					<th>드레스용도</th>
+					<th>드레스가격</th>
+					<th>드레스이미지</th>
 				</tr>
 			</thead>
 			<tbody>
-				<c:forEach var="user" items="${ mList }">
+				<c:forEach var="admin" items="${ fList }">
 					<tr>
-						<td>${ user.memid    }</td>
-						<td>${ user.mempw    }</td>
-						<td>${ user.memname  }</td>
-						<td>${ user.memph    }</td>
-						<td>${ user.email    }</td>
-						<td>${ user.joindate }</td>
-						<td>${ user.lvl      }</td>
+						<td>${ admin.dressid    }</td>
+						<td>${ admin.dressname  }</td>
+						<td>${ admin.dressfor   }</td>
+						<td>${ admin.dressprice }</td>
+						<td>${ admin.dressimage }</td>
 					</tr>
 				</c:forEach>
 			</tbody>
 		</table>
 	</div>
 	<script>
-  // 테이블 row에 마우스 이벤트 리스너 추가
-  var rows = document.querySelectorAll('#memberTable tbody tr');
-  rows.forEach(function(row) {
-    row.addEventListener('mouseenter', function(e) {
-      // 마우스가 row에 올라갔을 때의 동작
-      row.classList.add('pointer-cursor'); // 손 모양 커서로 변경
-      row.style.backgroundColor = 'lightgray';
-    });
-  
-    row.addEventListener('mouseleave', function(e) {
-      // 마우스가 row에서 벗어났을 때의 동작
-      row.classList.remove('pointer-cursor'); // 커서 모양 원래대로
-      row.style.backgroundColor = ''; // 이전의 배경색으로 복원하거나 다른 스타일 변경
-    });
-  
-    // 클릭 이벤트 핸들러 추가
-    row.addEventListener('click', function(e) {
-      var memid = row.cells[0].innerText; // 회원 아이디 추출
-      window.location.href = '/Adminpage/Adminview?memid=' + memid; // 상세 정보 페이지로 이동
-    });
-  });
-  </script>
-<head>
-<style>
+		// 테이블 row에 마우스 이벤트 리스너 추가
+		var rows = document.querySelectorAll('#memFavTable tbody tr');
+		rows.forEach(function(row) {
+			row.addEventListener('mouseenter', function(e) {
+				// 마우스가 row에 올라갔을 때의 동작
+				row.classList.add('pointer-cursor'); // 손 모양 커서로 변경
+				row.style.backgroundColor = 'lightgray';
+			});
+
+			row.addEventListener('mouseleave', function(e) {
+				// 마우스가 row에서 벗어났을 때의 동작
+				row.classList.remove('pointer-cursor'); // 커서 모양 원래대로
+				row.style.backgroundColor = ''; // 이전의 배경색으로 복원하거나 다른 스타일 변경
+			});
+
+			// 클릭 이벤트 핸들러 추가
+			row.addEventListener('click', function(e) {
+				var favid = row.cells[0].innerText; // 회원 아이디 추출
+				window.location.href = '/Adminpage/Meminfomanager?favid='
+						+ favid; // 상세 정보 페이지로 이동
+			});
+		});
+	</script>
+
+	<style>
 table {
 	width: 95%;
 	border-collapse: collapse;
 	margin: 0 0 0 30px;
+	text-align: center;
 }
 
 th, td {
@@ -159,3 +182,10 @@ p {
 
 </body>
 </html>
+
+
+
+
+
+
+

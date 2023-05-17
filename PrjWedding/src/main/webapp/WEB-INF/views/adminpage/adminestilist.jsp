@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Insert title here</title>
+<title>Admin Estimate List</title>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <!-- css 부분 사용 -->
 <link rel="shortcut icon" href="/img/favicon.ico">
@@ -14,14 +14,8 @@
 <link rel="stylesheet" href="/css/styles.css">
 <link rel="stylesheet" href="/css/slide.css">
 
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
-<link rel="shortcut icon" href="/img/favicon.ico">
-
-<!-- Bootstrap CSS -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
+<!-- 기타 head 요소 분리 -->
+<jsp:include page="/WEB-INF/views/part_menu/head_resources.jsp" />
 
 <!-- 글 폰트 -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -59,29 +53,37 @@
 <img src="/img/side_main.jpg" width="100%" height="100%">
 <body>
 	<div id="main">
-		<h2>회원 목록</h2>
-		<table id="memberTable">
+		<h2>견적서 목록</h2>
+		<table id="estimateTable">
 			<thead>
 				<tr>
-					<th>아이디</th>
-					<th>비밀번호</th>
-					<th>이름</th>
-					<th>연락처</th>
-					<th>이메일</th>
-					<th>가입일</th>
-					<th>회원등급</th>
+					<th>회원아이디</th>
+					<th>회원이름</th>
+					<th>견적서이름</th>
+					<th>예약일</th>
+					<th>예약시간</th>
+					<th>하객수</th>
+					<th>홀</th>
+					<th>피로연</th>
+					<th>스튜디오</th>
+					<th>드레스이름</th>
+					<th>예상비용</th>
 				</tr>
 			</thead>
 			<tbody>
-				<c:forEach var="user" items="${ mList }">
+				<c:forEach var="admin" items="${ eList }">
 					<tr>
-						<td>${ user.memid    }</td>
-						<td>${ user.mempw    }</td>
-						<td>${ user.memname  }</td>
-						<td>${ user.memph    }</td>
-						<td>${ user.email    }</td>
-						<td>${ user.joindate }</td>
-						<td>${ user.lvl      }</td>
+						<td>${ admin.memid         }</td>
+						<td>${ admin.memname       }</td>
+						<td>${ admin.estiname      }</td>
+						<td>${ admin.resdate       }</td>
+						<td>${ admin.restime       }</td>
+						<td>${ admin.guestnum      }</td>
+						<td>${ admin.hallname      }</td>
+						<td>${ admin.cateringtype  }</td>
+						<td>${ admin.studioname    }</td>
+						<td>${ admin.dressname     }</td>
+						<td>${ admin.totalcost     }</td>
 					</tr>
 				</c:forEach>
 			</tbody>
@@ -89,7 +91,7 @@
 	</div>
 	<script>
   // 테이블 row에 마우스 이벤트 리스너 추가
-  var rows = document.querySelectorAll('#memberTable tbody tr');
+  var rows = document.querySelectorAll('#estimateTable tbody tr');
   rows.forEach(function(row) {
     row.addEventListener('mouseenter', function(e) {
       // 마우스가 row에 올라갔을 때의 동작
@@ -105,8 +107,8 @@
   
     // 클릭 이벤트 핸들러 추가
     row.addEventListener('click', function(e) {
-      var memid = row.cells[0].innerText; // 회원 아이디 추출
-      window.location.href = '/Adminpage/Adminview?memid=' + memid; // 상세 정보 페이지로 이동
+      var estiid = row.cells[0].innerText; // 회원 아이디 추출
+      window.location.href = '/Adminpage/memfavlistmanager?estoid=' + estiid; // 상세 정보 페이지로 이동
     });
   });
   </script>
@@ -116,6 +118,7 @@ table {
 	width: 95%;
 	border-collapse: collapse;
 	margin: 0 0 0 30px;
+	text-align: center;
 }
 
 th, td {

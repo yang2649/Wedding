@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Insert title here</title>
+<title>Admin Member List</title>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <!-- css 부분 사용 -->
 <link rel="shortcut icon" href="/img/favicon.ico">
@@ -14,14 +14,8 @@
 <link rel="stylesheet" href="/css/styles.css">
 <link rel="stylesheet" href="/css/slide.css">
 
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
-<link rel="shortcut icon" href="/img/favicon.ico">
-
-<!-- Bootstrap CSS -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
+<!-- 기타 head 요소 분리 -->
+<jsp:include page="/WEB-INF/views/part_menu/head_resources.jsp" />
 
 <!-- 글 폰트 -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -73,15 +67,15 @@
 				</tr>
 			</thead>
 			<tbody>
-				<c:forEach var="user" items="${ mList }">
+				<c:forEach var="admin" items="${ mList }">
 					<tr>
-						<td>${ user.memid    }</td>
-						<td>${ user.mempw    }</td>
-						<td>${ user.memname  }</td>
-						<td>${ user.memph    }</td>
-						<td>${ user.email    }</td>
-						<td>${ user.joindate }</td>
-						<td>${ user.lvl      }</td>
+						<td>${ admin.memid    }</td>
+						<td>${ admin.mempw    }</td>
+						<td>${ admin.memname  }</td>
+						<td>${ admin.memph    }</td>
+						<td>${ admin.email    }</td>
+						<td>${ admin.joindate }</td>
+						<td>${ admin.lvl      }</td>
 					</tr>
 				</c:forEach>
 			</tbody>
@@ -106,7 +100,7 @@
     // 클릭 이벤트 핸들러 추가
     row.addEventListener('click', function(e) {
       var memid = row.cells[0].innerText; // 회원 아이디 추출
-      window.location.href = '/Adminpage/Adminview?memid=' + memid; // 상세 정보 페이지로 이동
+      window.location.href = '/Adminpage/Meminfomanager?memid=' + memid; // 상세 정보 페이지로 이동
     });
   });
   </script>
@@ -116,6 +110,7 @@ table {
 	width: 95%;
 	border-collapse: collapse;
 	margin: 0 0 0 30px;
+	text-align: center;
 }
 
 th, td {

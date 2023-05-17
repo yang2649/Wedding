@@ -54,50 +54,11 @@ public class UserDaoImpl implements UserDao {
 	}
 
 	@Override
-	public List getAdminUserList() {
-		
-		List    adminUserList  =  sqlSession.selectList("User.AdminUserList"); 
-		
-		return  adminUserList;
-	}
-
-	@Override
-	public List getAdminEstiList() {
-		
-		List    adminEstiList  =  sqlSession.selectList("User.AdminEstiList"); 
-		
-		return  adminEstiList;
-	}
-
-	@Override
-	public List getAdminFavList() {
-		
-		List    adminFavList  =  sqlSession.selectList("User.AdminFavList"); 
-		
-		return  adminFavList;
-	}
-
-	@Override
-	public UserVo getAdminUserInfo(HashMap<String, Object> map) {
-		
-		UserVo  adminuserinfo = sqlSession.selectOne("User.GetAdminUserInfo", map);
-		
-		return adminuserinfo;
-	}
-
-	@Override
 	public UserVo getUserById(String userId) {
 		
 		UserVo userById = sqlSession.selectOne("User.GetUserById", userId);
 		
 		return userById;
-	}
-
-	@Override
-	public void adminUpdate(HashMap<String, Object> map) {
-
-		System.out.println("daoimpl : " + map);
-		sqlSession.update("User.AdminUpdate", map);
 	}
 
 	@Override
