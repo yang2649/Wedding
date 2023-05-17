@@ -72,7 +72,7 @@
    </tr> 
    <tr>     
      <td colspan="2">
-     <input type="submit" class="btn btn-primary btn-sm button" value="가입" />
+     <input type="submit" class="btn btn-primary btn-sm button" value="가입" style="position: absolute;left: 69px;" />
      </td>
    </tr> 
   </table>

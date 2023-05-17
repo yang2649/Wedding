@@ -148,7 +148,7 @@
              </tr>
              <tr>
              <td>
-             <a class="btn btn-primary btn-sm button" href="/Myesti/Delete?estiid=${ mypage.estiid }"">삭제</a>&nbsp;&nbsp;
+             <a class="btn btn-primary btn-sm button" href="/Myesti/Delete?estiid=${ mypage.estiid }">삭제</a>&nbsp;&nbsp;
              </td>
              </tr>
             </table>
