@@ -8,7 +8,17 @@
 <!DOCTYPE html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>셀프 견적</title>
+
+
+<!-- jquery 사용 -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script
+	src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fslightbox/3.4.1/index.min.js"></script>
+
 <!-- css 부분 사용 -->
 <link rel="shortcut icon" href="/img/favicon.ico">
 <link rel="stylesheet" href="./css/loginstyle.css">
@@ -25,8 +35,8 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
 
-<!-- 글 폰트 --><link rel="preconnect" href="https://fonts.googleapis.com">
-
+<!-- 글 폰트 -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100&display=swap" rel="stylesheet">
 
@@ -46,8 +56,9 @@
 <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Castoro+Titling&display=swap" rel="stylesheet">
-<style>
 
+<style>
+<!-- -->
 
 .all-container {
  display: flex;
@@ -55,6 +66,7 @@
  border: 1px solid black;
  max-width: 1400px;
  position: relative;
+ max-height: 700px;
  margin: auto; 
 }
 
@@ -64,7 +76,10 @@
   background-color: #FFFFFF;
   border: 1px solid black;
   width: 70%;
+  padding: 10px;
   bottom: 0;   /* 아래쪽 끝까지 고정 */
+  max-height: 600px;
+  overflow-y: scroll;
   
 }
 
@@ -72,6 +87,7 @@
   flex-grow: 1;
   padding: 20px;
 }
+
 
 .hall-container {
  width: 900px;
@@ -108,6 +124,7 @@
   border: 1px solid black;
   width: 30%;
   padding: 10px;
+  max-height: 700px;
   box-sizing: border-box;
 
 }
@@ -117,6 +134,7 @@
   width:300px;
   height:50px;
 }
+
 input[type="button"] {
   width: 150px;
   height: 50px;
@@ -126,7 +144,7 @@ input[type="button"] {
   margin-bottom: 10px;
 }
 
-label {
+.pricelabel {
   display: inline-block;
   width: 120px;
   font-size: 16px;
@@ -149,10 +167,13 @@ input[type="number"] {
   font-weight: bold;
 }
 
+
+
 </style>
 </head>
 
 <body>
+
 <!-- 헤더 부분 분리 -->
 <jsp:include page="/WEB-INF/views/part_menu/header.jsp" />
 
@@ -163,6 +184,10 @@ input[type="number"] {
 
 <!-- 슬라이드 메뉴 분리 -->
 <jsp:include page="/WEB-INF/views/part_menu/slidemenu.jsp" />
+
+<!--카카오문의-->
+<jsp:include page="/WEB-INF/views/part_menu/kakao.jsp" />
+
 		<!-- 메인 메뉴 -->
 		
 <img src="/img/side_main.jpg" width="100%" height="100%" >
@@ -170,7 +195,7 @@ input[type="number"] {
   <a class="nav-item nav-link" href="/Reservation01" style="color: rgb(0, 0, 0)">견적서</a>
   <a class="nav-item nav-link active" href="/Reservation02" style="background-color: rgb(200, 200, 200)">Package</a>
 </nav>	
-<br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br>
 
 <!-- 견적서 시작 -->
 <div class="all-container">
@@ -206,8 +231,7 @@ input[type="number"] {
         </div>
         <div class="card-footer" style="display: flex; align-items: center;">
           <input type="button" class="InputHallname" id="InputHallname"  name="hallname" value="greenhall" style="font-size:24px" required>        
-          <li>greenhall : 1000000</li>
-          <li><a href="/Reservation/Hallprice?hallname=${ estivo.hallname }">${ estivo.hallosprice }</a></li>
+          <p>greenhall : 1000000</p>
          </div>
        </div>
        
@@ -217,8 +241,7 @@ input[type="number"] {
          </div>
          <div class="card-footer" style="display: flex; align-items: center;">
           <input type="button" class="InputHallname" id="InputHallname"   name="hallname" value="redhall" style="font-size:24px" required>
-          <li>redhall price : 1200000</li>
-          <li><a href="/Reservation/Hallprice?hallname=${ estivo.hallname }">${ estivo.hallosprice }</a></li>
+          <p>redhall price : 1200000</p>
          </div>
        </div> 
   
@@ -267,6 +290,7 @@ input[type="number"] {
         </div>
         <div class="card-footer" style="display: flex; align-items: center;">
          <input type="button" class="InputCateringtype" id="InputCateringtype"  name="cateringtype" value="일반뷔페" style="font-size:24px" required>
+         <p>일반뷔페 : 20000</p>
 	    </div>
 	   </div>
 	   
@@ -276,6 +300,7 @@ input[type="number"] {
         </div>
         <div class="card-footer" style="display: flex; align-items: center;">
          <input type="button" class="InputCateringtype" id="InputCateringtype"  name="cateringtype" value="프리미엄" style="font-size:24px" required>
+         <p>프리미엄 : 120000</p>
         </div>
        </div>
       </div> 
@@ -286,11 +311,22 @@ input[type="number"] {
 <h2 class="estititle">본식 드레스 목록 <span class="triangle-icon" onclick="toggledressContainer()">▼</span></h2>
   <form onsubmit="copyInfo(); return false;">
    <div class="dress-contanier">
-    <input type="button" class="InputDressname" id="InputDressname"  name="dressname" value="블루밍 드레스" style="font-size:24px" required>
-    <input type="button" class="InputDressname"  name="dressname" value="드레스2" style="font-size:24px"  required>
-    <input type="button" class="InputDressname"  name="dressname" value="드레스3" style="font-size:24px"  required>
-    <input type="button" class="InputDressname"  name="dressname" value="드레스4" style="font-size:24px"  required>
-    <input type="button" class="InputDressname"  name="dressname" value="드레스5" style="font-size:24px"  required> 
+    <input type="button" class="InputDressname" id="InputDressname"  name="dressname"  value="BE ABSOLUTELY1"     style="font-size:24px"  required>
+    <p>BE ABSOLUTELY1 : 1000000</p>
+    <input type="button" class="InputDressname" id="InputDressname"  name="dressname"  value="LE MEILLEUR CHEF1"  style="font-size:24px"  required>
+    <p>LE MEILLEUR CHEF1 : 1100000</p>
+    <input type="button" class="InputDressname" id="InputDressname"  name="dressname"  value="ROBE DE RÊVE1"      style="font-size:24px"  required>
+    <p>ROBE DE RÊVE1 : 1200000</p>
+    <input type="button" class="InputDressname" id="InputDressname"  name="dressname"  value="LA PERFECTION1"     style="font-size:24px"  required>
+    <p>LA PERFECTION1 : 1300000</p>
+    <input type="button" class="InputDressname" id="InputDressname"  name="dressname"  value="JOUR DE MEMORABLE1" style="font-size:24px"  required> 
+    <p>JOUR DE MEMORABLE1 : 1400000</p>
+    <input type="button" class="InputDressname" id="InputDressname"  name="dressname"  value="BE MY MUSE0"        style="font-size:24px"  required> 
+    <p>BE MY MUSE0 : 1500000</p>
+    <input type="button" class="InputDressname" id="InputDressname"  name="dressname"  value="LOVE IN BLANC1"     style="font-size:24px"  required> 
+    <p>LOVE IN BLANC1 : 1600000</p>
+    <input type="button" class="InputDressname" id="InputDressname"  name="dressname"  value="POUVOIR DE1"        style="font-size:24px"  required> 
+    <p>POUVOIR DE1 : 1700000</p>
    </div>
   </form>
 
@@ -299,15 +335,18 @@ input[type="number"] {
   <form onsubmit="copyInfo(); return false;">
    <div class="studio-contanier"> 
     <input type="button" class="InputStudioname" id="InputStudioname"  name="studioname" value="Fillmoment" style="font-size:24px" required>
+    <p>Fillmoment : 12000000</p>
     <input type="button" class="InputStudioname" id="InputStudioname"  name="studioname" value="Steso" style="font-size:24px"  required>
+    <p>Steso : 9000000</p>
     <input type="button" class="InputStudioname" id="InputStudioname"  name="studioname" value="너를 봄" style="font-size:24px"  required>
+    <p>너를 봄 : 14000000</p>
    </div>
 </form>
+<br><br>
 
  </div> 
 </div>  
 </div>
-
 
 <!-- 오른쪽 견적서 출력 영역 -->
 <div class="output-container">
@@ -316,6 +355,7 @@ input[type="number"] {
 <form method="POST" action="/Reservation/Estimate">
 
  <input type="text" class="estititle" name="estiname" placeholder="견적서 이름을 입력하세요">
+ <br><br>
  <div class="info-output">
  <div>
  
@@ -327,14 +367,14 @@ input[type="number"] {
    <p>홀   이름 :        <span id="outputHallName"></span>
                          <input type="hidden" id="hallname" name="hallname"></p>
    <div class="input-group">
-   <label for="hallosprice">Hall Price:</label>
+   <label for="hallosprice"  class="pricelabel">Hall Price:</label>
    <input type="number" id="hallosprice" name="hallosprice" value="<c:out value="${estivo.hallosprice}" />" />
   </div>
   
   <p>뷔페 타입 :   <span id="outputCateringtype" ></span>
                    <input type="hidden" id="cateringtype" name="cateringtype"></p>
   <div class="input-group">
-   <label for="cateringprice">Catering Price:</label>
+   <label for="cateringprice" class="pricelabel">Catering Price:</label>
    <input type="number" id="cateringprice" name="cateringprice" value="<c:out value="${estivo.cateringprice}" />">
   </div>
 
@@ -343,7 +383,7 @@ input[type="number"] {
   <p>드레스 이름 :   <span id="outputDressName"></span>
                 <input type="hidden" id="dressname" name="dressname"></p>
   <div class="input-group">
-    <label for="dressprice">Dress Price:</label>
+    <label for="dressprice"  class="pricelabel">Dress Price:</label>
     <input type="number" id="dressprice" name="dressprice" value="<c:out value="${estivo.dressprice}" />">
   </div>
  
@@ -352,15 +392,15 @@ input[type="number"] {
   <p>스튜디오 이름 :   <span id="outputStudioName" ></span>
                 <input type="hidden" id="studioname" name="studioname"></p>
   <div class="input-group">
-        <label for="studioprice">Studio Price:</label>
+        <label for="studioprice"  class="pricelabel">Studio Price:</label>
         <input type="number" id="studioprice" name="studioprice" value="<c:out value="${estivo.studioprice}" />">
   </div>
   
  </div>
  <div class="output-group">
-        <label for="total">Total Price:</label>
+        <label for="total" class="pricelabel">Total Price:</label>
         <input type="number" id="total" name="totalcost" value="0" readonly>
-        <button type="submit" id="submit" > 견적서 저장하기 </button> 
+        <button type="submit" id="submit" >저장</button> 
  </div>
  </div>
   </form>
@@ -368,6 +408,7 @@ input[type="number"] {
  </div>  
    
 </div>
+<br><br><br><br><br><br><br><br><br><br>
 
 
 
@@ -593,6 +634,9 @@ calculateTotal();
 
 </script>
 
+
+  <!-- 푸터 분리 -->
+<jsp:include page="/WEB-INF/views/part_menu/footer.jsp" />
 
 </body>
 </html>
