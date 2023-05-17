@@ -444,35 +444,40 @@ public class CommunityController {
 		
 		// 리뷰 -------------------------------------------------
 		@RequestMapping("/Community05")
-		public ModelAndView reviewList(
+		public ModelAndView reviewList(HttpSession session,
 				@RequestParam HashMap<String, Object> map) {
-			
+		
+			   UserVo user = (UserVo)session.getAttribute("login");
 			List<CommunityVo> vo = communityService.reviewList(map);
-			System.out.println("Boardfile:" + vo);
+		
 			
 			ModelAndView mv = new ModelAndView();
 			mv.setViewName("community/review");
 			mv.addObject("vo", vo);
+			mv.addObject("user", user );
 			
 			return mv;
 		}
 		
 		@RequestMapping("/Community05WriteForm")
-		public ModelAndView reviewWriteForm(
+		public ModelAndView reviewWriteForm(HttpSession session,
 				@RequestParam HashMap<String, Object> map) {
 			
 			// if 로그인 안하면 로그인 하라는 경고창 띄움..
 			// 
+			System.out.println(map);
 			ModelAndView mv = new ModelAndView();
 			mv.setViewName("community/reviewWriteForm");
+			mv.addObject("map",map);
 			return mv;
 		}
 		
 		@RequestMapping("/Community05Write")
-		public ModelAndView reviewWrite(
+		public ModelAndView reviewWrite(HttpSession session,
 				@RequestParam HashMap<String, Object> map,
 				HttpServletRequest request) {
-			
+			 
+			System.out.println( "map리뷰 :" + map);
 			communityService.reviewWrite(map, request);
 			
 			ModelAndView mv = new ModelAndView();
@@ -486,7 +491,7 @@ public class CommunityController {
 				@RequestParam HashMap<String, Object> map){
 		
 			System.out.println( "딜리트 맵" + map);
-			communityService.reviewDelete(map); // idx만 넘기면되는데
+		
 			
 			ModelAndView mv = new ModelAndView();
 			mv.setViewName("redirect:/Community05");
