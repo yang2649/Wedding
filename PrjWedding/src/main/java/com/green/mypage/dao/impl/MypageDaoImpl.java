@@ -32,4 +32,11 @@ public class MypageDaoImpl implements MypageDao {
 		return favList;
 	}
 
+	@Override
+	public void deleteMyesti(String estiid) {
+		
+		sqlSession.delete("Mypage.MyestiDelete", estiid );
+		
+	}
+
 }

@@ -61,6 +61,7 @@ public class MypageController {
 	public ModelAndView estiList(HttpSession session, @RequestParam HashMap<String, Object> map) {
 	   
 	    UserVo user = (UserVo) session.getAttribute("login");
+	    
 	    List<MypageVo> estiList;
 	    System.out.println("user:" + user);
 	    
@@ -86,41 +87,26 @@ public class MypageController {
 	    mv.setViewName("mypage/myesti");  
 	    return mv;
 	}
+	
+//------------------------- 내 견적서 삭제------------------------------
 
-//------------------------- 찜 목록 ------------------------------
-	@RequestMapping("/Mypage/Myfav")
-	public ModelAndView favList(HttpSession session, @RequestParam HashMap<String, Object> map) {
-	   
-	    UserVo user = (UserVo) session.getAttribute("login");
-	    List<MypageVo> favList;
-	    
+	@RequestMapping("/Myesti/Delete")
+	public ModelAndView myestidelete(String estiid ) {
+	
 	    MypageVo mypage = new MypageVo();
-	    mypage.setMemid(user.getMemid());
+	    mypage.setEstiid(mypage.getEstiid());	     
+		System.out.println("mypageeee:" + mypage);
 	    
-	    favList = mypageService.getFavList(mypage.getMemid());
-	    System.out.println("fav:" + favList );
-	    
-	    // mypage에 favList의 첫 번째 항목을 저장
-	    if (!favList.isEmpty()) {
-	        mypage = favList.get(0);
-	    }
-	   
-	    ModelAndView mv = new ModelAndView();
-	    mv.addObject("favList", favList);
-	    mv.addObject("map", map);	    
-	    mv.addObject("mypage", mypage); 
-	    
-	    System.out.println("map:" + map);
-	    System.out.println("favList:" + favList);
-	    System.out.println("mypage:" + mypage);
+		mypageService.deleteMyesti( estiid );
 
-	    
-	    mv.setViewName("mypage/myfav");  
-	    return mv;
+		ModelAndView mv = new ModelAndView();
+		mv.setViewName("redirect:/Mypage03"); 
+		
+		return mv;
 	}
 	
-
 	
+
 }
 
 

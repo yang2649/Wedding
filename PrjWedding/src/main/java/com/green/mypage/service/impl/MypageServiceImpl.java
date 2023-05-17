@@ -33,4 +33,11 @@ public class MypageServiceImpl implements MypageService {
 		return favList;
 	}
 
+	@Override
+	public void deleteMyesti(String estiid) {
+		
+		mypageDao.deleteMyesti(estiid);
+		
+	}
+
 }

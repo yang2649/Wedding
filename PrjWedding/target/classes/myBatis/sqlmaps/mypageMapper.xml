@@ -29,19 +29,13 @@
    
    </select> 
    
-   <!-- 찜 목록   -->
-   <select id         = "FavList"
-           resultType = "com.green.mypage.vo.MypageVo"  >
-   
-   SELECT  DRESSNAME,
-           DRESSPRICE,
-           DRESSIMAGE
-  FROM     FAVORITES FA join DRESS DR on FA.DRESSID = DR.DRESSID
-  WHERE    FA.MEMID = #{memid}
-   
-   </select> 
-   
  
+  <delete id="MyestiDelete" >
+
+		DELETE FROM ESTIMATES
+		WHERE  ESTIID = #{ estiid }
+
+	</delete>
  
     
 </mapper>

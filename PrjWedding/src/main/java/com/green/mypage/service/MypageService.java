@@ -10,4 +10,6 @@ public interface MypageService {
 
 	List<MypageVo> getFavList(String memid);
 
+	void deleteMyesti(String estiid);
+
 }

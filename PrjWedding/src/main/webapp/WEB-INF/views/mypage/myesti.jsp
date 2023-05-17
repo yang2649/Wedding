@@ -111,6 +111,8 @@
         <div class="col-sm-12">
          <div class="esticard">
           <h2 class=estititle>${ mypage.estiname }</h2>
+           <form action="/Myesti/Delete" method="POST">
+           <input type="hidden" name="estiid" value="${mypage.estiid}" />
            <table>
       		 <tr>
       		 <td>예약일 : </td> 
@@ -146,10 +148,11 @@
              </tr>
              <tr>
              <td>
-             <a class="btn btn-primary btn-sm button" href="/Myesti/Delete">삭제</a>&nbsp;&nbsp;
+             <a class="btn btn-primary btn-sm button" href="/Myesti/Delete?estiid=${ mypage.estiid }"">삭제</a>&nbsp;&nbsp;
              </td>
              </tr>
-          </table>
+            </table>
+           </form>
           </div>
         </div>
         </div>
