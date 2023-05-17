@@ -52,10 +52,56 @@
     box-shadow: 0 0 0 4px #c0c0c0;
 }
 
-tr {
+.tr {
     margin-bottom: 120px;
     margin-top: 120px;
   }
+  
+.td {
+  display: block; /* input 요소들이 한 줄에 나오지 않고 블록 요소처럼 표시 */
+  width: 100%;
+  font-family: 'Noto Sans KR', sans-serif; /* 폰트 설정 */
+}
+
+.td {
+border-bottom: 2px solid #FFDAB9;
+}
+
+.confirm-box-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9998; /* 배경의 z-index 값을 낮춤 */
+}
+
+.confirm-box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.confirm-box-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  z-index: 9999;
+}
+
+.confirm-box button {
+  margin-top: 10px;
+  position: relative;
+  z-index: 99999;
+}
 
 
 </style>
@@ -63,11 +109,11 @@ tr {
 
 <body>
 
-<!-- 헤더 부분 분리 --> <!-- 문제없음 -->
+<!-- 헤더 부분 분리 --> 
 <jsp:include page="/WEB-INF/views/part_menu/header.jsp" />
 
 
-<!--유정 로그인 분리--> <!-- 문제있음 (여기만 안뜸) -->
+<!--유정 로그인 분리--> 
 <jsp:include page="/WEB-INF/views/part_menu/login.jsp" />
 
 
@@ -76,7 +122,6 @@ tr {
 
 <!--카카오문의-->
 <jsp:include page="/WEB-INF/views/part_menu/kakao.jsp" />
-
 
 
 <!-- 내 정보 보기 -->	
@@ -121,8 +166,8 @@ tr {
        </tr>
        <tr>
         <td  colspan="2">
-          <a class="btn btn-primary btn-sm button" href="/User/UpdateForm?memid=${ user.memid }">회원수정</a>&nbsp;&nbsp;
-          <a class="btn btn-primary btn-sm button" href="/User/Delete?memid=${ user.memid }">회원삭제</a>&nbsp;&nbsp;
+          <a class="btn btn-primary btn-sm button" href="/UpdateForm?memid=${ user.memid }">회원수정</a>&nbsp;&nbsp;
+          <a class="btn btn-primary btn-sm button" onclick="confirmDelete('${user.memid}')">회원삭제</a>&nbsp;&nbsp;
         </td>
        </tr>
      
@@ -135,6 +180,36 @@ tr {
     <!-- 푸터 분리 -->
 <jsp:include page="/WEB-INF/views/part_menu/footer.jsp" />
   
+  
+<script>
+
+function confirmDelete(memid) {
+	  var confirmBox = document.createElement('div');
+	  confirmBox.className = 'confirm-box';
+	  confirmBox.innerHTML = `
+	    <div class="confirm-box-overlay"></div>
+	    <div class="confirm-box-content">
+	      <p>회원 탈퇴를 진행하시겠습니까?</p>
+	      <button class="btn btn-primary btn-sm button" onclick="deleteMember('${ user.memid }')">예</button>
+	      <button class="btn btn-primary btn-sm button" onclick="closeConfirmBox()">아니오</button>
+	    </div>
+	  `;
+	  document.body.appendChild(confirmBox);
+	}
+
+	function deleteMember(memid) {
+      location.href="/User/Delete?memid=" + memid;
+	  console.log('회원 삭제:', memid);
+	  closeConfirmBox();
+	}
+
+	function closeConfirmBox() {
+	  var confirmBox = document.querySelector('.confirm-box');
+	  confirmBox.parentNode.removeChild(confirmBox);
+	}
+
+</script>  
+
 </body>
 </html>
 
