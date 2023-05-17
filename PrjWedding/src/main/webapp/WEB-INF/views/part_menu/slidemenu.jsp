@@ -33,13 +33,13 @@
 					<li style="font-size: 1.2rem;"><a href="/logout">로그아웃</a></li>
 				</c:if>
 				<li><hr></li>
-				<li><a href="/Mypage01">Information</a></li>
+				<li><a id="mypage" href="/Mypage01">Information</a></li>
 				<!-- 내 정보 창입니다 -->
 				<br>
-				<li><a href="/Mypage03">Estimate</a></li>
+				<li><a id="mypage" href="/Mypage03">Estimate</a></li>
 				<!-- 견적서라는 뜻입니다 -->
 				<br>
-				<li><a href="/Mypage02">Steamed List</a></li>
+				<li><a id="mypage" href="/Mypage02">Steamed List</a></li>
 				<!-- 찜 목록 이라는뜻 입니다 -->
 			</ul>
 		</li>
@@ -99,13 +99,20 @@
 		}
 	});
 	
-	$(document).ready(function() {
-	    $('a').on('click', function(event) {
-	        var loginStatus = "${sessionScope.login}";
-	        if (loginStatus === null || loginStatus === "") {
-	            event.preventDefault(); // 링크 클릭 이벤트의 기본 동작 중지
-	            alert("로그인이 필요합니다."); // 로그인이 필요한 경우 알림 메시지 출력
+	
+	document.addEventListener('DOMContentLoaded', function() {
+	    var mypageLinks = document.querySelectorAll('#mypage');
+	    for (var i = 0; i < mypageLinks.length; i++) {
+	      mypageLinks[i].addEventListener('click', function(event) {
+	        // 로그인 확인
+	        var isLogin = <c:if test="${sessionScope.login == null}">true</c:if>;
+	        if (isLogin) {
+	          event.preventDefault(); // 클릭 이벤트의 기본 동작 중지
+	          alert('로그인이 필요합니다.'); // 로그인이 필요한 경우 알림 메시지 출력
 	        }
-	    });
-	});
+	      });
+	    }
+	  });
 </script>
+
+
