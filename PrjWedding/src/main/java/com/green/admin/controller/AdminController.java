@@ -19,7 +19,7 @@ import org.springframework.web.servlet.ModelAndView;
 import com.green.admin.service.AdminService;
 import com.green.admin.vo.AdminVo;
 import com.green.user.vo.UserVo;
-
+ 
 @Controller
 public class AdminController {
 
