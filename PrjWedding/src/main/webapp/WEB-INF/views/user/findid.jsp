@@ -71,6 +71,7 @@
     </form>
 
     <script>
+    /* 수정 */
     /* 유효성 검사 */
     function validateForm() {
         var memname = document.getElementById("memname").value;

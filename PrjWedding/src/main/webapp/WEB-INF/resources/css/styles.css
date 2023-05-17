@@ -377,14 +377,14 @@ li {
 
 
 /* 위의 헤더 부분 로고 설정 */
-body {
-	padding-top: 80px; /* 헤더 높이만큼 패딩 추가 */
+/* body {
+	padding-top: 80px; 헤더 높이만큼 패딩 추가
 }
 
 li {
   display: flex;
   justify-content: center;
-}
+} */
 
 .logo {
 	font-family: 'EB GARAMOND', serif;

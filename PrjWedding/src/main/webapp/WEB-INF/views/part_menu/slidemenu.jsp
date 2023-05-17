@@ -8,125 +8,94 @@
 <meta charset="UTF-8">
 
 
-	<!-- 햄버거 모양 토글 -->
-	<div class="menu-toggle">
-		<span class="bar"></span> 
-		<span class="bar"></span> 
-		<span class="bar"></span>
-	</div>
+<!-- 햄버거 모양 토글 -->
+<div class="menu-toggle">
+	<span class="bar"></span> <span class="bar"></span> <span class="bar"></span>
+</div>
 
-	<!-- 슬라이딩 메뉴 -->
-	<div class="sliding-menu">
-		<ul>
-			<li>
-				<ul>
+<!-- 슬라이딩 메뉴 -->
+<div class="sliding-menu">
+	<ul>
+		<li>
+			<ul>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<!--유정 로그인-->
+				<li><hr></li>
+				<c:if test="${sessionScope.login != null}">
+					<li style="font-size: 1.1rem;">${ sessionScope.login.memname }
+						님 환영합니다<br>
+					</li>
 					<br>
-					<br>
-					<br>
-					<br>
-					<br>
-					<!--유정 로그인-->
-					<li><hr></li>
-					<c:if test="${sessionScope.login != null}">
-						<li style="font-size: 1.1rem;">${ sessionScope.login.memname }
-							님 환영합니다<br>
-						</li>
-						<br>
-						<li style="font-size: 1.2rem;"><a href="/logout">로그아웃</a></li>
-					</c:if>
-					<li><hr></li>
-					<li><a href="/Mypage01">Information(내 정보창)</a></li>
-					<!-- 내 정보 창입니다 -->
-					<br>
-					<li><a href="/Mypage03">Estimate (견적서)</a></li>
-					<!-- 견적서라는 뜻입니다 -->
-					<br>
-					<li><a href="/Mypage02">Steamed List(찜 목록)</a></li>
-					<!-- 찜 목록 이라는뜻 입니다 -->
-				</ul>
-			</li>
-		</ul>
-	</div>
+					<li style="font-size: 1.2rem;"><a href="/logout">로그아웃</a></li>
+				</c:if>
+				<li><hr></li>
+				<li><a href="/Mypage01">Information</a></li>
+				<!-- 내 정보 창입니다 -->
+				<br>
+				<li><a href="/Mypage03">Estimate</a></li>
+				<!-- 견적서라는 뜻입니다 -->
+				<br>
+				<li><a href="/Mypage02">Steamed List</a></li>
+				<!-- 찜 목록 이라는뜻 입니다 -->
+			</ul>
+		</li>
+	</ul>
+</div>
 <!-- test -->
-	<div class="sliding-menu-overlay"></div>
+<div class="sliding-menu-overlay"></div>
 
-	<!-- 수정 -->
-	<!-- js 코드 작성 -->
-	<script>
-		const menuButton = document.querySelector('.menu-toggle');
-		const slidingMenu = document.querySelector('.sliding-menu');
-		const slidingMenuOverlay = document
-				.querySelector('.sliding-menu-overlay');
+<script>
+	const menuButton = document.querySelector('.menu-toggle');
+	const slidingMenu = document.querySelector('.sliding-menu');
+	const slidingMenuOverlay = document.querySelector('.sliding-menu-overlay');
 
-		menuButton.addEventListener('click', function() {
-			slidingMenu.classList.toggle('open');
-			slidingMenuOverlay.classList.toggle('open');
-		});
+	menuButton.addEventListener('click', function() {
+		slidingMenu.classList.toggle('open');
+		slidingMenuOverlay.classList.toggle('open');
+	});
 
-		slidingMenuOverlay.addEventListener('click', function() {
-			slidingMenu.classList.remove('open');
-			slidingMenuOverlay.classList.remove('open');
-		});
+	slidingMenuOverlay.addEventListener('click', function() {
+		slidingMenu.classList.remove('open');
+		slidingMenuOverlay.classList.remove('open');
+	});
 
-		 /* 로그인 되었을때 - 헤더 부분이 안내려가는 부분 이부분 */
-/*
-		//팝업창 열기
-		function popupOpen() {
-			const popupContainer = document.querySelector('.popup-container');
-			popupContainer.style.display = 'flex';
+	$(window).scroll(function() {
+		// 스크롤 위치가 50px 이상인 경우
+		if ($(this).scrollTop() > 50) {
+			$('div.header').slideUp();
+			$('.menu-toggle').addClass('scrolled');
+			$('.bar').css('background-color', '#fff'); // 색깔 변경
+			if ($('.sliding-menu').hasClass('open')) {
+				$('.sliding-menu').removeClass('open'); // 슬라이딩 메뉴 숨기기
+			}
+			if ($('.sliding-menu-overlay').hasClass('open')) {
+				$('.sliding-menu-overlay').removeClass('open'); // 슬라이딩 메뉴 오버레이 숨기기
+			}
 		}
-
-		// 팝업창 닫기
-		function popupClose() {
-			const popupContainer = document.querySelector('.popup-container');
-			popupContainer.style.display = 'none';
+		// 스크롤 위치가 50px 미만인 경우
+		else {
+			$('div.header').slideDown();
+			$('.menu-toggle').removeClass('scrolled');
+			$('.bar').css('background-color', '#000'); // 색깔 변경
+			if ($('.sliding-menu').hasClass('open')) {
+				$('.sliding-menu').removeClass('open'); // 슬라이딩 메뉴 숨기기
+			}
+			if ($('.sliding-menu-overlay').hasClass('open')) {
+				$('.sliding-menu-overlay').removeClass('open'); // 슬라이딩 메뉴 오버레이 숨기기
+			}
 		}
-
-		// 로그인 버튼 클릭 시 팝업창 열기
-		const loginButton = document.querySelector('.sliding-menu li ul li a');
-		loginButton.addEventListener('click', popupOpen);
-
-		// 팝업창 닫기 버튼 클릭 시 팝업창 닫기
-		const closeButton = document.querySelector('.popup-close');
-		closeButton.addEventListener('click', popupClose);
-*/
-		/* 일단 여기가 문제였음 */
-		$(window).scroll(function() {
-			// 스크롤 위치가 50px 이상인 경우
-			if ($(this).scrollTop() > 50) {
-				$('div.header').slideUp();
-				$('.menu-toggle').addClass('scrolled');
-				$('.bar').css('background-color', '#fff'); // 색깔 변경
-				if ($('.sliding-menu').hasClass('open')) {
-					$('.sliding-menu').removeClass('open'); // 슬라이딩 메뉴 숨기기
-				}
-				if ($('.sliding-menu-overlay').hasClass('open')) {
-					$('.sliding-menu-overlay').removeClass('open'); // 슬라이딩 메뉴 오버레이 숨기기
-				}
-			}
-			// 스크롤 위치가 50px 미만인 경우
-			else {
-				$('div.header').slideDown();
-				$('.menu-toggle').removeClass('scrolled');
-				$('.bar').css('background-color', '#000'); // 색깔 변경
-				if ($('.sliding-menu').hasClass('open')) {
-					$('.sliding-menu').removeClass('open'); // 슬라이딩 메뉴 숨기기
-				}
-				if ($('.sliding-menu-overlay').hasClass('open')) {
-					$('.sliding-menu-overlay').removeClass('open'); // 슬라이딩 메뉴 오버레이 숨기기
-				}
-			}
-		});
-
-		// 스크롤 위치에 따른 메뉴 버튼 색상 변경
-		window.addEventListener('scroll', function() {
-			const menuToggle = document.querySelector('.menu-toggle');
-			if (window.scrollY > 50) {
-				menuToggle.classList.add('scrolled');
-			} else {
-				menuToggle.classList.remove('scrolled');
-			}
-		});
-
-		
-	</script>
+	});
+	// 스크롤 위치에 따른 메뉴 버튼 색상 변경
+	window.addEventListener('scroll', function() {
+		const menuToggle = document.querySelector('.menu-toggle');
+		if (window.scrollY > 50) {
+			menuToggle.classList.add('scrolled');
+		} else {
+			menuToggle.classList.remove('scrolled');
+		}
+	});
+</script>

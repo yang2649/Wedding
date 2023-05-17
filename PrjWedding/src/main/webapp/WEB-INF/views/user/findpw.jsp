@@ -7,59 +7,62 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="shortcut icon" href="/img/favicon.ico">
 <style>
-    body {
+     body {
         font-family: Arial, sans-serif;
         background-color: #333;
         color: #fff;
         padding: 20px;
     }
 
-    .popup-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: 100vh;
-    }
-
-    .popup {
-        max-width: 400px;
-        background-color: rgba(0, 0, 0, 0.8);
-        padding: 20px;
-        border-radius: 10px;
+    h2 {
         text-align: center;
-    }
-
-    h1 {
         margin-bottom: 30px;
     }
 
-    label,
-    input,
-    input[type="submit"] {
-        display: block;
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #222;
+        border-radius: 10px;
+    }
+
+    label {
+        color: #fff;
         margin-bottom: 10px;
+    }
+
+    input[type="text"],
+    input[type="email"] {
         width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        border: none;
     }
 
     input[type="submit"] {
-        background-color: #fff;
-        color: #333;
-        padding: 10px;
-        border: none;
+        background-color: #555;
+        color: #fff;
+        padding: 10px 20px;
         border-radius: 5px;
+        border: none;
         cursor: pointer;
+        transition: background-color 0.3s;
     }
 
     input[type="submit"]:hover {
-        background-color: #eee;
+        background-color: #777;
     }
 </style>
 </head>
 <body>
 <div class="popup-container">
     <div class="popup">
-        <h1>Find Password</h1>
+        <h2>Find your Password</h2>
         <form action="/Findpwrs" method="post" onsubmit="return validateForm()">
             <label for="memid">ID:</label>
             <input type="text" id="memid" name="memid" value="${user.memid}" required>
