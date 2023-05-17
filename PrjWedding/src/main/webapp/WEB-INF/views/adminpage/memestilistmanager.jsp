@@ -58,33 +58,31 @@
 </head>
 <img src="/img/side_main.jpg" width="100%" height="100%">
 <!-- 내 정보 보기 -->
-<adminnav class="nav nav-pills nav-justified">
-  <a class="nav-item nav-link" href="/Adminpage/Meminfomanager?memid=${member.memid}" style="color: #000000;">상세 정보 관리</a>
-  <a class="nav-item nav-link" href="/Adminpage/Memfavlistmanager?memid=${member.memid}" style="color: #000000;">찜 목록 관리</a>
-  <a class="nav-item nav-link active" href="/Adminpage/Memestilistmanager?memid=${member.memid}">견적서 관리</a>
-</adminnav>
+<adminnav class="nav nav-pills nav-justified"> <a class="nav-item nav-link" href="/Adminpage/Meminfomanager?memid=${member.memid}" style="color: #000000;">상세 정보 관리</a> <a class="nav-item nav-link" href="/Adminpage/Memfavlistmanager?memid=${member.memid}" style="color: #000000;">찜 목록 관리</a> <a class="nav-item nav-link active" href="/Adminpage/Memestilistmanager?memid=${member.memid}">견적서 관리</a> </adminnav>
 
 <script>
-  // 마우스 이벤트 리스너 추가
-  var tabs = document.querySelectorAll('adminnav .nav-link:not(.active)');
+	// 마우스 이벤트 리스너 추가
+	var tabs = document.querySelectorAll('adminnav .nav-link:not(.active)');
 
-  tabs.forEach(function(tab) {
-    tab.addEventListener('mouseenter', function(e) {
-      tab.style.backgroundColor = '#0474BC';
-      tab.style.color = '#FFFFFF';
-    });
+	tabs.forEach(function(tab) {
+		tab.addEventListener('mouseenter', function(e) {
+			tab.style.backgroundColor = '#0474BC';
+			tab.style.color = '#FFFFFF';
+		});
 
-    tab.addEventListener('mouseleave', function(e) {
-      tab.style.backgroundColor = '';
-      tab.style.color = '#000000';
-    });
-  });
+		tab.addEventListener('mouseleave', function(e) {
+			tab.style.backgroundColor = '';
+			tab.style.color = '#000000';
+		});
+	});
 </script>
 
 
 <body>
 	<div id="main">
-		<h2><td>${ member.memname }</td> 회원님의 견적서 목록</h2>
+		<h2>
+			<td>${ member.memname }</td> 회원님의 견적서 목록
+		</h2>
 		<br>
 		<table id="memberTable">
 			<thead>
@@ -120,28 +118,32 @@
 		</table>
 	</div>
 	<script>
-  // 테이블 row에 마우스 이벤트 리스너 추가
-  var rows = document.querySelectorAll('#memberTable tbody tr');
-  rows.forEach(function(row) {
-    row.addEventListener('mouseenter', function(e) {
-      // 마우스가 row에 올라갔을 때의 동작
-      row.classList.add('pointer-cursor'); // 손 모양 커서로 변경
-      row.style.backgroundColor = 'lightgray';
-    });
-  
-    row.addEventListener('mouseleave', function(e) {
-      // 마우스가 row에서 벗어났을 때의 동작
-      row.classList.remove('pointer-cursor'); // 커서 모양 원래대로
-      row.style.backgroundColor = ''; // 이전의 배경색으로 복원하거나 다른 스타일 변경
-    });
-  
-    // 클릭 이벤트 핸들러 추가
-    row.addEventListener('click', function(e) {
-      var memid = row.cells[0].innerText; // 회원 아이디 추출
-      window.location.href = '/Adminpage/Adminview?memid=' + memid; // 상세 정보 페이지로 이동
-    });
-  });
-  </script>
+		// 테이블 row에 마우스 이벤트 리스너 추가
+		var rows = document.querySelectorAll('#memberTable tbody tr');
+		rows.forEach(function(row) {
+			row.addEventListener('mouseenter', function(e) {
+				// 마우스가 row에 올라갔을 때의 동작
+				row.classList.add('pointer-cursor'); // 손 모양 커서로 변경
+				row.style.backgroundColor = 'lightgray';
+			});
+
+			row.addEventListener('mouseleave', function(e) {
+				// 마우스가 row에서 벗어났을 때의 동작
+				row.classList.remove('pointer-cursor'); // 커서 모양 원래대로
+				row.style.backgroundColor = ''; // 이전의 배경색으로 복원하거나 다른 스타일 변경
+			});
+
+			// 클릭 이벤트 핸들러 추가
+/* 			row.addEventListener('click', function(e) {
+				var cols = row.cells; // 현재 클릭된 행의 모든 셀 가져오기
+				var estiid = cols[0].innerText; // 첫 번째 셀에서 견적서 ID 추출
+				var link = document.createElement('a'); // 링크 엘리먼트 생성
+				link.href = '/Mypage/Myesti?estiid=' + estiid; // 상세 정보 페이지 URL 설정
+				link.target = '_blank'; // 새 창에서 열도록 설정
+				link.click(); // 링크 클릭
+			}); */
+		});
+	</script>
 <head>
 <style>
 table {

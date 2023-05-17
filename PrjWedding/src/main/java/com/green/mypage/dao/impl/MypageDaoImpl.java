@@ -13,8 +13,6 @@ import com.green.mypage.vo.MypageVo;
 public class MypageDaoImpl implements MypageDao {
 
 	
-	
-	
 	@Autowired
 	private SqlSession sqlSession; 
 
@@ -40,5 +38,6 @@ public class MypageDaoImpl implements MypageDao {
 		sqlSession.delete("Mypage.MyestiDelete", estiid );
 		
 	}
+
 
 }

@@ -106,10 +106,12 @@
     });
   
     // 클릭 이벤트 핸들러 추가
-    row.addEventListener('click', function(e) {
-      var estiid = row.cells[0].innerText; // 회원 아이디 추출
-      window.location.href = '/Adminpage/memfavlistmanager?estoid=' + estiid; // 상세 정보 페이지로 이동
+/*     row.addEventListener('click', function(e) {
+      var cols = row.cells; // 현재 클릭된 행의 모든 셀 가져오기
+      var estiid = cols[0].innerText; // 첫 번째 셀에서 견적서 ID 추출
+      window.location.href = '/Mypage/Myesti?estiid=' + estiid; // 상세 정보 페이지로 이동
     });
+ */
   });
   </script>
 <head>

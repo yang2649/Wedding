@@ -18,6 +18,8 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.green.admin.service.AdminService;
 import com.green.admin.vo.AdminVo;
+import com.green.mypage.service.MypageService;
+import com.green.mypage.vo.MypageVo;
 import com.green.user.vo.UserVo;
  
 @Controller
@@ -25,6 +27,9 @@ public class AdminController {
 
 	@Autowired
 	private AdminService  adminService;
+	
+	@Autowired
+	private MypageService mypageService;
 
 	
 //============================================================================================================================//	
@@ -207,7 +212,40 @@ public class AdminController {
 	}
 
 	//관리자> 해당 회원 견적서 정보 조회
-
+/*	@RequestMapping("/EstiByMem")
+	public ModelAndView estiList(HttpSession session, @PathVariable String esetid) {
+		
+	    UserVo user = adminService.getUserVo(estid);
+	    
+	    List<MypageVo> estiList;
+	    System.out.println("user:" + user);
+	    
+	    MypageVo mypage = new MypageVo();
+	    mypage.setMemid(user.getMemid());
+	    
+	    estiList = mypageService.getEstiList(mypage.getMemid());
+	    System.out.println("estiii:" + estiList );
+	   
+	    HashMap<String, Object> map = userService.getEstiId(estid);
+	    
+	    ModelAndView mv = new ModelAndView();
+	    mv.addObject("estiList", estiList);
+	    mv.addObject("map", map);
+	    
+	    // mypage에 estiList의 첫 번째 항목을 저장
+	    if (!estiList.isEmpty()) {
+	        mypage = estiList.get(0);
+	    }
+	    
+	    mv.addObject("mypage", mypage);    
+	    System.out.println("map:" + map);
+	    System.out.println("estiList:" + estiList);
+	    System.out.println("mypage:" + mypage);
+	    mv.setViewName("mypage/myesti");  
+	    return mv;
+	}
+*/
+	
 //============================================================================================================================//	
 	
 	//관리자> 해당 회원 정보 수정
