@@ -64,7 +64,7 @@ public class UserController {
 		// 삭제
 		userService.deleteUser(memid);
 
-		return "redirect:/User/List";
+		return "redirect:/";
 	}
 	
 	// 관리자 회원삭제
