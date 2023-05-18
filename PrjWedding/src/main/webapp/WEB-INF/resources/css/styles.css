@@ -233,7 +233,6 @@ header.sticky {
 .sliding-menu {
   text-decoration: none; 
   position: fixed;
-  top: 50px;
   right: -400px;
   width: 350px;
   height: 100%;
