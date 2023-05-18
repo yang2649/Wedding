@@ -89,11 +89,10 @@
 		<table id="memfavTable">
 			<thead>
 				<tr>
-					<th>드레스아이디</th>
-					<th>드레스이름</th>
-					<th>드레스용도</th>
-					<th>드레스가격</th>
-					<th>드레스이미지</th>
+					<th>드레스 아이디</th>
+					<th>드레스 이름</th>
+					<th>드레스 용도</th>
+					<th>드레스 대여료</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -102,8 +101,7 @@
 						<td>${ admin.dressid    }</td>
 						<td>${ admin.dressname  }</td>
 						<td>${ admin.dressfor   }</td>
-						<td>${ admin.dressprice }</td>
-						<td>${ admin.dressimage }</td>
+						<td>${ admin.dressprice }원</td>
 					</tr>
 				</c:forEach>
 			</tbody>

@@ -81,6 +81,7 @@
            
    </delete>
    
+   
    <!-- 찜 목록 조회 : DESC : 최신순   -->
    <select id         = "AdminFavList"
            resultType = "com.green.admin.vo.AdminVo"  >
@@ -95,16 +96,15 @@
     WHERE    M.MEMID = F.MEMID
      AND     F.DRESSID=D.DRESSID
                 
-    ORDER BY F.FAVID DESC    
+    ORDER BY F.FAVID DESC
    </select>  
    
    
    <!-- 견적서 목록 조회 DESC -->
    <select id         = "AdminEstiList"
            resultType = "com.green.admin.vo.AdminVo"  >
-   SELECT    E.ESTIID       
-           , M.MEMID
-           , M.MEMNAME      
+     SELECT  E.ESTIID       
+           , M.MEMID      
            , E.ESTINAME
            , E.RESDATE
            , E.RESTIME
@@ -113,7 +113,7 @@
            , C.CATERINGTYPE
            , S.STUDIONAME
            , D.DRESSNAME
-           , SUM((E.GUESTNUM * C.CATERINGPRICE) + H.HALLOSPRICE + S.STUDIOPRICE + D.DRESSPRICE ) TOTALCOST
+           , TO_CHAR(SUM((E.GUESTNUM * C.CATERINGPRICE) + H.HALLOSPRICE + S.STUDIOPRICE + D.DRESSPRICE ), 'FM999G999G999G999') || '원' TOTALCOST
     FROM     MEMBERLIST M, ESTIMATES E, HALL H, CATERING C, STUDIO S, DRESS D 
     WHERE    M.MEMID = E.MEMID
      AND     H.HALLID = E.HALLID
@@ -121,7 +121,7 @@
      AND     S.STUDIOID = E.STUDIOID
      AND     D.DRESSID = E.DRESSID
     
-    GROUP BY E.ESTIID, M.MEMID, M.MEMNAME, E.ESTINAME, E.RESDATE, E.RESTIME, E.GUESTNUM, H.HALLNAME, C.CATERINGTYPE, S.STUDIONAME, D.DRESSNAME              
+    GROUP BY E.ESTIID, M.MEMID, E.ESTINAME, E.RESDATE, E.RESTIME, E.GUESTNUM, H.HALLNAME, C.CATERINGTYPE, S.STUDIONAME, D.DRESSNAME            
     ORDER BY E.ESTIID DESC
    
    </select> 
@@ -134,7 +134,7 @@
            , D.DRESSID      
            , D.DRESSNAME
            , D.DRESSFOR
-           , D.DRESSPRICE
+           , TO_CHAR( D.DRESSPRICE ) || '원'
            , D.DRESSIMAGE
            , M.MEMID
            , M.MEMNAME
@@ -176,7 +176,7 @@
            , C.CATERINGTYPE
            , S.STUDIONAME
            , D.DRESSNAME
-           , SUM((E.GUESTNUM * C.CATERINGPRICE) + H.HALLOSPRICE + S.STUDIOPRICE + D.DRESSPRICE ) TOTALCOST
+           , TO_CHAR(SUM((E.GUESTNUM * C.CATERINGPRICE) + H.HALLOSPRICE + S.STUDIOPRICE + D.DRESSPRICE ), 'FM999G999G999G999') || '원' TOTALCOST
     FROM     MEMBERLIST M, ESTIMATES E, HALL H, CATERING C, STUDIO S, DRESS D 
     WHERE    M.MEMID = E.MEMID
      AND     H.HALLID = E.HALLID

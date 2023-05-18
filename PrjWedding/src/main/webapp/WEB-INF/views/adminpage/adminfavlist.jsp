@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -57,11 +57,11 @@
 		<table id="favoriteTable">
 			<thead>
 				<tr>
-					<th>드레스아이디</th>
-					<th>드레스이름</th>
-					<th>드레스가격</th>
-					<th>회원아이디</th>
-					<th>회원이름</th>
+					<th>드레스 아이디</th>
+					<th>드레스 이름</th>
+					<th>드레스 대여료</th>
+					<th>회원 아이디</th>
+					<th>회원 이름</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -69,7 +69,7 @@
 					<tr>
 						<td>${ admin.dressid    }</td>
 						<td>${ admin.dressname  }</td>
-						<td>${ admin.dressprice }</td>
+						<td>${ admin.dressprice }원</td>
 						<td>${ admin.memid      }</td>
 						<td>${ admin.memname    }</td>
 					</tr>
