@@ -136,7 +136,7 @@ header.sticky {
 }
 
 .header a:last-child {
-  margin-right: 15px; /* 5px에서 15px로 수정 */
+  margin: auto; /* 5px에서 15px로 수정 */
 }
 
 .header a:hover {

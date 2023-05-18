@@ -126,9 +126,12 @@ display:flex;
 }
 
 p{
-marging:auto;
+margin:12px ;
 }
 
+div{font-family: 'Cinzel', serif;}
+ 
+h5{ text-align: center; font-weight: bold;} 
 </style>
 
 </head>
@@ -163,6 +166,7 @@ marging:auto;
 	   <div class="reservation-container">	  	
 <div class="customer-notice">  	
   <hr>
+  <h3>보고싶은 패키지의 금액 구간대를 고르세요.</h3>
    <div id="moneyselect">
    <p>최소금액 :</p> &nbsp;&nbsp;<input type="number"  id="start" ><br>
    <p>최대금액 : </p><input type="number"  id="end" ><br> &nbsp;&nbsp;&nbsp;
