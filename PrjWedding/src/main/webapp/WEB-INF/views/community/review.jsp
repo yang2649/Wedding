@@ -103,7 +103,7 @@ nav  {
     <p class="card-text">${vo.cont}</p><br>
      <p class="event-atag" style="text-align: right;">
          <c:if test="${not empty sessionScope.login.memid }">
-        <c:if test="${sessionScope.login.memid eq vo.memid }">    
+        <c:if test="${sessionScope.login.memid eq vo.memid or sessionScope.login.memid eq 'admin'}">    
         <a href="/Community05Delete?idx=${vo.idx}">내 카드 삭제하기</a>    
         </c:if>
     </c:if>
