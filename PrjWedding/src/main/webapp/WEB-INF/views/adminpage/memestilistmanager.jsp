@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Insert title here</title>
+<title>Member Estimate List</title>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <!-- css 부분 사용 -->
 <link rel="shortcut icon" href="/img/favicon.ico">
@@ -89,14 +89,14 @@
 				<tr>
 					<th>견적서 아이디</th>
 					<th>견적서 이름</th>
-					<th>예약일</th>
-					<th>예약시간</th>
-					<th>하객수</th>
+					<th>예약 일</th>
+					<th>예약 시간</th>
+					<th>예상 하객수</th>
 					<th>홀</th>
 					<th>피로연</th>
 					<th>스튜디오</th>
-					<th>드레스이름</th>
-					<th>예상비용</th>
+					<th>드레스 이름</th>
+					<th>예상 비용</th>
 				</tr>
 			</thead>
 			<tbody>

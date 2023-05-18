@@ -57,17 +57,17 @@
 		<table id="estimateTable">
 			<thead>
 				<tr>
-					<th>회원아이디</th>
-					<th>회원이름</th>
-					<th>견적서이름</th>
-					<th>예약일</th>
-					<th>예약시간</th>
-					<th>하객수</th>
+					<th>회원 아이디</th>
+					<th>회원 이름</th>
+					<th>견적서 이름</th>
+					<th>예약 일</th>
+					<th>예약 시간</th>
+					<th>예상 하객수</th>
 					<th>홀</th>
 					<th>피로연</th>
 					<th>스튜디오</th>
-					<th>드레스이름</th>
-					<th>예상비용</th>
+					<th>드레스 이름</th>
+					<th>예상 비용</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -90,30 +90,34 @@
 		</table>
 	</div>
 	<script>
-  // 테이블 row에 마우스 이벤트 리스너 추가
-  var rows = document.querySelectorAll('#estimateTable tbody tr');
-  rows.forEach(function(row) {
-    row.addEventListener('mouseenter', function(e) {
-      // 마우스가 row에 올라갔을 때의 동작
-      row.classList.add('pointer-cursor'); // 손 모양 커서로 변경
-      row.style.backgroundColor = 'lightgray';
-    });
-  
-    row.addEventListener('mouseleave', function(e) {
-      // 마우스가 row에서 벗어났을 때의 동작
-      row.classList.remove('pointer-cursor'); // 커서 모양 원래대로
-      row.style.backgroundColor = ''; // 이전의 배경색으로 복원하거나 다른 스타일 변경
-    });
-  
-    // 클릭 이벤트 핸들러 추가
-/*     row.addEventListener('click', function(e) {
-      var cols = row.cells; // 현재 클릭된 행의 모든 셀 가져오기
-      var estiid = cols[0].innerText; // 첫 번째 셀에서 견적서 ID 추출
-      window.location.href = '/Mypage/Myesti?estiid=' + estiid; // 상세 정보 페이지로 이동
-    });
- */
-  });
-  </script>
+		// 테이블 row에 마우스 이벤트 리스너 추가
+		var rows = document.querySelectorAll('#estimateTable tbody tr');
+		rows.forEach(function(row) {
+			row.addEventListener('mouseenter', function(e) {
+				// 마우스가 row에 올라갔을 때의 동작
+				row.cl
+				assList.add('pointer-cursor'); // 손 모양 커서로 변경
+				row.style.backgroundColor = 'lightgray';
+			});
+
+			row.addEventListener('mouseleave', function(e) {
+				// 마우스가 row에서 벗어났을 때의 동작
+				row.classList.remove('pointer-cursor'); // 커서 모양 원래대로
+				row.style.backgroundColor = ''; // 이전의 배경색으로 복원하거나 다른 스타일 변경
+			});
+
+			// 클릭 이벤트 핸들러 추가
+			row.addEventListener('click', function(e) {
+				var cols = row.cells; // 현재 클릭된 행의 모든 셀 가져오기
+				var estiid = cols[0].innerText; // 첫 번째 셀에서 견적서 ID 추출
+				var link = document.createElement('a'); // 링크 엘리먼트 생성
+				link.href = '/Adminpage/memestilistmanager?memid=' + memid; // 상세 정보 페이지 URL 설정
+				link.target = '_blank'; // 새 창에서 열도록 설정
+				link.click(); // 링크 클릭
+			});
+
+		});
+	</script>
 <head>
 <style>
 table {
