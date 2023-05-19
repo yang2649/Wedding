@@ -43,7 +43,7 @@
 <body>
  <div class="join-container"> 
   <div class="join" id="main">
-  <h2 class="jointitle">Sign up</h2>
+  <h2 class="jointitle">회원 가입</h2>
   <form action="/User/Write" method="POST" >
   <table>
    <tr>
