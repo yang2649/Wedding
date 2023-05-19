@@ -28,7 +28,6 @@
 a{
     font-family: 'Cinzel', serif;
     font-size: 18px;
-    
 } */
 
 

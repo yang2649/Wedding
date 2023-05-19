@@ -6,13 +6,9 @@
 <head>
 <meta charset="UTF-8">
 <title>review</title>
-
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <!-- 헤드 분리 -->
 <jsp:include page="/WEB-INF/views/part_menu/head_resources.jsp" />
 
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <style>
 
 button{
@@ -31,9 +27,9 @@ button{
 .card{ font-family: 'Cinzel', serif;}
 
 /* body {
-	padding-top: 80px; /* 헤더 높이만큼 패딩 추가 */
+	padding-top: 80px;
 }
- */
+ 
 /* li {
   display: flex;
   justify-content: center;
