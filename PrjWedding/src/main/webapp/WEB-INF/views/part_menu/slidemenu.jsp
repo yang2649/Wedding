@@ -4,9 +4,7 @@
 <!-- JSTL 라이브러리 -->
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
-
 <meta charset="UTF-8">
-
 
 <!-- 햄버거 모양 토글 -->
 <div class="menu-toggle">
@@ -33,18 +31,33 @@
 					<li style="font-size: 1.2rem;"><a href="/logout">로그아웃</a></li>
 				</c:if>
 				<li><hr></li>
-				<li><a id="mypage" href="/Mypage01">Information</a></li>
-				<!-- 내 정보 창입니다 -->
-				<br>
-				<li><a id="mypage" href="/Mypage03">Estimate</a></li>
-				<!-- 견적서라는 뜻입니다 -->
-				<br>
-				<li><a id="mypage" href="/Mypage02">Steamed List</a></li>
-				<!-- 찜 목록 이라는뜻 입니다 -->
+				<c:choose>
+					<c:when test="${sessionScope.login == null}">
+						<li><a id="mypage" href="javascript:void(0);" onclick="showLoginAlert(event)">Information</a></li>
+						<!-- 내 정보 창입니다 -->
+						<br>
+						<li><a id="mypage" href="javascript:void(0);" onclick="showLoginAlert(event)">Steamed List</a></li>
+						<!-- 찜목록 뜻입니다 -->
+						<br>
+						<li><a id="mypage" href="javascript:void(0);" onclick="showLoginAlert(event)">Estimate</a></li>
+						<!-- 견적서라는 뜻입니다 -->
+					</c:when>
+					<c:otherwise>
+						<li><a id="mypage" href="/Mypage01">Information</a></li>
+						<!-- 내 정보 창입니다 -->
+						<br>
+							<li><a id="mypage" href="/Mypage02">Steamed List</a></li>
+						<!-- 견적서라는 뜻입니다 -->
+						<br>
+						<li><a id="mypage" href="/Mypage03">Estimate</a></li>
+						<!-- 찜 목록 이라는뜻 입니다 -->
+					</c:otherwise>
+				</c:choose>
 			</ul>
 		</li>
 	</ul>
 </div>
+
 <!-- test -->
 <div class="sliding-menu-overlay"></div>
 
@@ -98,10 +111,9 @@
 			menuToggle.classList.remove('scrolled');
 		}
 	});
-	
-	
-	
 
+	function showLoginAlert(event) {
+		event.preventDefault();
+		alert("로그인 후 이용 가능합니다.");
+	}
 </script>
-
-
