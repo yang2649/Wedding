@@ -94,7 +94,7 @@ p {
 		<p>신씨비단과 함께 하세요.</p>
 		<p><br></p>
 		<p>- 신씨비단 -</p>
-	</div><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	</div>
 	
 	<!-- 슬라이드 -->
     <div id="index_03">
@@ -109,7 +109,7 @@ p {
                 <li><img src="./img/hanbok/s06.jpg" alt="슬라이드6" style="width: 600px; height: 800px;"></li>
             </ul>
         </div>
-    </div>
+    </div><br><br><br><br><br><br><br><br><br><br><br><br><br>
     <br>
 	<div id="text-table">
 		<h1 style="text-align: center;">

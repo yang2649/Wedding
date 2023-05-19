@@ -84,7 +84,7 @@ p {
 		<p>고객들 만족하는 하루로 만들어 드립니다.</p>
 		<p><br></p>
 	</div><br><br><br><br>
-	<div id="ddd">
+	<div id="ddd" style="text-align: center;">
 	<h2>
   	<video muted autoplay loop style="width: 80%; text-align: center;">
       <source src="./img/makeup/vd.mp4" type="video/mp4">
