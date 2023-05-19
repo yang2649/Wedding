@@ -36,20 +36,20 @@
 						<li><a id="mypage" href="javascript:void(0);" onclick="showLoginAlert(event)">Information</a></li>
 						<!-- 내 정보 창입니다 -->
 						<br>
+						<li><a id="mypage" href="javascript:void(0);" onclick="showLoginAlert(event)">Steamed List</a></li>
+						<!-- 찜목록 뜻입니다 -->
+						<br>
 						<li><a id="mypage" href="javascript:void(0);" onclick="showLoginAlert(event)">Estimate</a></li>
 						<!-- 견적서라는 뜻입니다 -->
-						<br>
-						<li><a id="mypage" href="javascript:void(0);" onclick="showLoginAlert(event)">Steamed List</a></li>
-						<!-- 찜 목록 이라는뜻 입니다 -->
 					</c:when>
 					<c:otherwise>
 						<li><a id="mypage" href="/Mypage01">Information</a></li>
 						<!-- 내 정보 창입니다 -->
 						<br>
-						<li><a id="mypage" href="/Mypage03">Estimate</a></li>
+							<li><a id="mypage" href="/Mypage02">Steamed List</a></li>
 						<!-- 견적서라는 뜻입니다 -->
 						<br>
-						<li><a id="mypage" href="/Mypage02">Steamed List</a></li>
+						<li><a id="mypage" href="/Mypage03">Estimate</a></li>
 						<!-- 찜 목록 이라는뜻 입니다 -->
 					</c:otherwise>
 				</c:choose>
