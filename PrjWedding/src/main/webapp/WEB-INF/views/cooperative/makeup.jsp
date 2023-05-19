@@ -81,7 +81,7 @@ p {
 		<p><br></p>
 		<p>Green Make Up</p>
 		<p><br></p>
-		<p>고객들 만족하는 하루로 만들어 드립니다.</p>
+		<p>고객들 만족하는 하루로 만들어 드립니다.</ p>
 		<p><br></p>
 	</div><br><br><br><br>
 	<div id="ddd" style="text-align: center;">

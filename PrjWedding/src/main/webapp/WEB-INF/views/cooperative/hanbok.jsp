@@ -50,7 +50,7 @@ p {
 #text-table h1 {
   font-family: 'Noto Sans KR', sans-serif;
 }
-
+ 
 
 
 
