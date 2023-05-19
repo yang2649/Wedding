@@ -30,11 +30,11 @@
 
 <style>
 /* body 메뉴 폰트 및 사이즈 */
-nav  {
+/* nav  {
   font-family: 'Times New Roman';
   font-size: 20px;
 }
-
+ */
 p {
   text-align: center;
   margin: 10px;
