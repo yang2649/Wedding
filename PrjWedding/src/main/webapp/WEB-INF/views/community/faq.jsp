@@ -16,16 +16,16 @@
 
 <style>
 
-li {
+/* li {
   display: flex;
   justify-content: center;
   font-family: 'Cinzel', serif;
   font-size: 20px;
-}
+} */
 
 
-body {
-	padding-top: 80px; /* 헤더 높이만큼 패딩 추가 */
+/* body {
+	padding-top: 80px; 
 }
 
 li {
@@ -35,14 +35,14 @@ li {
 
 .gold {
   color: #FFD700;
-}
+} */
 
 /* body 메뉴 폰트 및 사이즈 */
-nav  {
+/* nav  {
   font-family: 'Times New Roman';
   font-size: 20px;
 }
-
+ */
 h1{ text-align: center;}
 
 
@@ -82,9 +82,9 @@ h1{ text-align: center;}
   position: relative;
   margin: auto; 
 }
-
+/* 
 body {
-	padding-top: 80px; /* 헤더 높이만큼 패딩 추가 */
+	padding-top: 80px;  
 }
 
 li {
@@ -95,20 +95,20 @@ li {
 .gold {
   color: #FFD700;
 }
-
+ */
 /* body 메뉴 폰트 및 사이즈 */
 nav div {
-  font-family: 'Times New Roman';
+  font-family: 'Times New Roman'; 
   font-size: 20px;
 }
 
 h1{ text-align: center;}
 
- a{
+/*  a{
  color: black;
     text-decoration: none;
      font-family: 'Cinzel', serif;
- }  
+ }   */
 
 
 </style>

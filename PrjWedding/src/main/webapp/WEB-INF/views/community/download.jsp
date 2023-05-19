@@ -14,14 +14,12 @@
 
 <style>
 
-
-
-li {
+/* li {
   display: flex;
   justify-content: center;
   font-family: 'Cinzel', serif;
   font-size: 20px;
-}
+} */
 
 
 
@@ -30,8 +28,8 @@ h1{ text-align: center;}
 
 
 
-body {
-	padding-top: 80px; /* 헤더 높이만큼 패딩 추가 */
+/* body {
+	padding-top: 80px; 
 }
 
 li {
@@ -41,24 +39,24 @@ li {
 
 .gold {
   color: #FFD700;
-}
+} */
 
 /* body 메뉴 폰트 및 사이즈 */
-nav  {
+/* nav  {
   font-family: 'Times New Roman';
   font-size: 20px;
-}
+} */
 
  .community-container {
   max-width: 1200px;
   position: relative;
   margin: auto; 
 }
- a{
+  a{
  color: black;
     text-decoration: none;
-     font-family: 'Cinzel', serif;
- }  
+     
+ }   
 </style>
 </head>
 <body>
@@ -73,6 +71,7 @@ nav  {
 
 <!-- 슬라이드 메뉴 분리 -->
 <jsp:include page="/WEB-INF/views/part_menu/slidemenu.jsp" />
+
 <!--카카오문의-->
 <jsp:include page="/WEB-INF/views/part_menu/kakao.jsp" />
 

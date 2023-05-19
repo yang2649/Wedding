@@ -18,23 +18,26 @@
 
 
 <style>
- a{
+
+/* 이쪽부분이 문제라 해당 슬라이딩 메뉴 부분에 문제가 생김 - */ 
+/*  a{
  color: black;
     text-decoration: none;
      font-family: 'Cinzel', serif;
  }  
-li, a{
+a{
     font-family: 'Cinzel', serif;
     font-size: 18px;
     
-}
+} */
 
 
- .community-container {
+.community-container {
   max-width: 1200px;
   position: relative;
   margin: auto; 
 }
+/* 수정불가 */
 ul{
 display:flex;
 }
@@ -55,12 +58,13 @@ display:flex;
 <jsp:include page="/WEB-INF/views/part_menu/header.jsp" />
 
   
-<!--유정 로그인 분리--> <!-- 이 부분만 안뜸  -->
+<!--유정 로그인 분리--> 
 <jsp:include page="/WEB-INF/views/part_menu/login.jsp" />
 
 
 <!-- 슬라이드 메뉴 분리 -->
 <jsp:include page="/WEB-INF/views/part_menu/slidemenu.jsp" />
+
 <!--카카오문의-->
 <jsp:include page="/WEB-INF/views/part_menu/kakao.jsp" />
  

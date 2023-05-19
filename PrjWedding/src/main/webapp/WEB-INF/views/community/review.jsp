@@ -21,27 +21,27 @@ button{
      font-family: 'Cinzel', serif;
  }  
 
-li {
+/* li {
   display: flex;
   justify-content: center;
   font-family: 'Cinzel', serif;
   font-size: 20px;
-}
+} */
 
 .card{ font-family: 'Cinzel', serif;}
 
-body {
+/* body {
 	padding-top: 80px; /* 헤더 높이만큼 패딩 추가 */
 }
-
-li {
+ */
+/* li {
   display: flex;
   justify-content: center;
-}
-
+} */
+/* 
 .gold {
   color: #FFD700;
-}
+} */
 
 /* body 메뉴 폰트 및 사이즈 */
 nav  {
