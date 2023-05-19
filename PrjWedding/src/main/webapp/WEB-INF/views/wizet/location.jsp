@@ -6,18 +6,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-
-<!-- head 부분 분리 -->
-<!-- 헤드 내부에 스타일 태그 삽입 -->
-<head>
-<title>fav</title>
+<title>Green Wedding</title>
+<!-- 잡다한 헤드 부분 분리 -->
 <jsp:include page="/WEB-INF/views/part_menu/head_resources.jsp" />
-
+<!-- css 부분 사용 -->
+<link rel="shortcut icon" href="/img/favicon.ico">
+<link rel="stylesheet" href="/css/btn2.css">
 <style>
 /* body 메뉴 폰트 및 사이즈 */
-body {
-   padding-top: 80px; /* 헤더 높이만큼 패딩 추가 */
-}
 
 li {
   display: flex;
@@ -72,7 +68,7 @@ div.widget_text_wrap {
 
 <!-- 슬라이드 메뉴 분리 -->
 <jsp:include page="/WEB-INF/views/part_menu/slidemenu.jsp" />
-<img src="./img/side_main.jpg" width="100%" height="100%">
+<img src="/img/side_main.jpg" width="100%" height="100%" >
 	
 
 <nav class="nav nav-pills nav-justified">

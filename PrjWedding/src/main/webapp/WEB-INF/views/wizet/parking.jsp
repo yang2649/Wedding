@@ -9,9 +9,6 @@
 <jsp:include page="/WEB-INF/views/part_menu/head_resources.jsp" />
 <style>
 
-body {
-   padding-top: 80px; /* 헤더 높이만큼 패딩 추가 */
-}
 
 li {
   display: flex;
