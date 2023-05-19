@@ -20,16 +20,15 @@
 <style>
 
 /* 이쪽부분이 문제라 해당 슬라이딩 메뉴 부분에 문제가 생김 - */ 
-/*  a{
+
+.community-container {
  color: black;
     text-decoration: none;
      font-family: 'Cinzel', serif;
- }  
-a{
-    font-family: 'Cinzel', serif;
     font-size: 18px;
-} */
-
+ }  
+ 
+a{  text-decoration: none;}
 
 .community-container {
   max-width: 1200px;
@@ -89,7 +88,7 @@ display:flex;
 	   <div class="community-container">
 	    <c:if test="${not empty sessionScope.login.memid }">
         <c:if test="${sessionScope.login.memid eq 'admin' }">
-        <a href="Community01WriteForm" ><div style="text-align:right;">공지사항 글쓰기</div></a>
+        <a href="Community01WriteForm" id="commnity-a"><div style="text-align:right;">공지사항 글쓰기</div></a>
     
         </c:if>
     </c:if>

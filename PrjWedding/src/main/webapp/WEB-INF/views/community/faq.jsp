@@ -28,10 +28,7 @@
 	padding-top: 80px; 
 }
 
-li {
-  display: flex;
-  justify-content: center;
-}
+\
 
 .gold {
   color: #FFD700;
@@ -141,6 +138,7 @@ h1{ text-align: center;}
 </nav>		
 <br><br><br><br><br><br><br><br>
      <!-- =============================여기서부터 내용==================================== -->
+
   	<div id="text-table">
 	  	<h1 style="text-align: center;">
 			<span style="color: rgb(191, 131, 101);" ">FAQ</span></h1>
@@ -163,9 +161,9 @@ h1{ text-align: center;}
       </div>
     </div>
       <hr>
-      <div class="customer-notice">
+      <div class="customer-notice" >
             <c:forEach var="vo" items="${faqList}">
-               <div class="faqTitle" id="show-${vo.idx}">
+               <div class="faqTitle" id="show-${vo.idx}" >
                   <ul class="show">
                      <li >${vo.title}</li>
                      <li><span class="material-symbols-outlined">expand_more</span></li>
@@ -196,6 +194,7 @@ h1{ text-align: center;}
       </div>
    </div>
 </div>
+  
    <div class="container-footer" style="margin: 300px;"></div>
    
    <script>

@@ -104,7 +104,7 @@ li {
 <div class="faq_group">
     <div class="table">
       <div class="block">
-        <li style="margin:auto; font-weight: bold; " >자료실 다운로드 목록</li>
+        <li style="margin:auto; font-weight: bold; " id="down" >자료실 다운로드 목록</li>
       
       </div>
     </div>
