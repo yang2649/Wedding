@@ -15,9 +15,9 @@
   background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
-  align-items: center;
-  z-index: 9999; /* 모달 창이 위에 표시되도록 설정 */
-  overflow-y: auto; /* 스크롤바 추가 */
+  align-items: flex-start; /* 화면 상단에 정렬되도록 설정 */
+  z-index: 9999;
+  overflow-y: auto;
 }
 
 .terms-modal-content {
@@ -28,12 +28,23 @@
   font-family: Arial, sans-serif;
 }
 
+
 .terms-modal-content h3 {
   font-size: 24px;
   font-weight: bold;
 }
 
-.terms-modal-content h10,
+.terms-modal-content h10{
+	font-size: 30px;
+	font-weight: bold;
+	text-align: center;
+	justify-content: center; /* 가로 방향으로 중앙 정렬 */
+	
+	
+}
+
+
+
 .terms-modal-content h11,
 .terms-modal-content h12,
 .terms-modal-content h13,
@@ -123,7 +134,7 @@
 <!-- 약관 동의서 시작 -->
 <div class="terms-modal" id="terms-modal" style="display: none;">
   <div class="terms-modal-content">
-    <h10>약관 동의서</h10>
+    <h10>회원 약관 동의서</h10>
     <p>회원가입을 위해 아래의 약관을 읽고 동의해주세요.</p>
     <hr>
     <h11>제 1조 (약관 동의)</h11>
