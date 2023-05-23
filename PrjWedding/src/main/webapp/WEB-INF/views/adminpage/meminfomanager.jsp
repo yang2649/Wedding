@@ -118,8 +118,8 @@
 					</tr>
 					<tr>
 						<td colspan="2">
-						<a class="btn btn-primary btn-sm" href="/Adminpage/AdminUpdateForm?memid=${clickedUser.memid}">회원 정보 수정</a>&nbsp;&nbsp;
-						<a class="btn btn-primary btn-sm" href="/Admin/AdminDelete?memid=${ clickedUser.memid }">회원 삭제</a>&nbsp;&nbsp;</td>
+						<a class="btn btn-primary btn-sm" href="/Adminpage/AdminUpdateForm?memid=${ member.memid }">회원 정보 수정</a>&nbsp;&nbsp;
+						<a class="btn btn-primary btn-sm" href="/Admin/AdminDelete?memid=${ member.memid }">회원 삭제</a>&nbsp;&nbsp;</td>
 					</tr>
 
 				</table>
