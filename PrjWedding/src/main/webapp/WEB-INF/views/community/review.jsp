@@ -85,7 +85,13 @@ nav  {
 	  	<h1 style="text-align: center;">
 			<span style="color: rgb(191, 131, 101);" ">고객 후기</span></h1>
 			<br><br>
-     <button id="reviewWrite"> 후기카드 쓰기 </button>
+     <button id="reviewWrite" style="    background-color:#fdf2fc;
+    color: #8080c0;
+    border:none; 
+    border-radius:10px; 
+    padding:15px;
+    min-height:30px; 
+    min-width: 120px;"> 후기카드 쓰기 </button>
 			<hr>
 	  	</div>
 	  	
